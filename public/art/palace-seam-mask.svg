@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1983" height="793" viewBox="0 0 1983 793" preserveAspectRatio="none">
+  <defs>
+    <filter id="edge" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+  </defs>
+  <path fill="#fff" filter="url(#edge)" d="M 264 -100 L 252 4 C 239 52 266 75 245 115 C 225 151 199 147 205 178 C 211 208 185 213 167 238 C 146 269 159 298 141 320 C 119 351 137 384 107 408 C 76 432 106 466 69 492 C 34 514 65 539 48 567 C 22 602 62 626 43 651 C 26 686 51 716 73 739 C 104 765 89 787 87 893 L 2083 893 L 2083 -100 Z"/>
+</svg>

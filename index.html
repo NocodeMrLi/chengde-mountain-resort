@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN" data-version="r10-contour-seam-20261001">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#e9dfc8" />
+    <meta name="description" content="移步入画，游赏承德避暑山庄宫殿、湖泊、平原与山峦四景区。拖动画卷探索景点，感受昼夜晴雨。" />
+    <title>山庄入画 · 承德避暑山庄互动长卷</title>
+    <link rel="preload" href="./art/yan-yu-lake.png" as="image" />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <div id="app" class="app">
+      <div class="grain" aria-hidden="true"></div>
+
+      <div id="intro" class="intro">
+        <div class="intro-art" aria-hidden="true"></div>
+        <div class="intro-shade" aria-hidden="true"></div>
+        <div class="intro-top"><span class="mini-seal">热河</span><span>一卷湖山 · 四时入画</span><span class="intro-index">CHENGDE · 1703</span></div>
+        <div class="intro-content">
+          <div class="eyebrow"><span></span> 清 · 避暑山庄湖区 <span></span></div>
+          <div class="intro-heading"><span class="intro-aside">御园山水<br/>一日千年</span><h1>山庄<span>入</span>画</h1></div>
+          <p>舟行碧波，步入烟岚。<br />在一幅会呼吸的长卷里，重游承德湖山。</p>
+          <button id="enterBtn" class="enter-btn" type="button"><span>展卷入园</span><span class="enter-arrow">↗</span></button>
+          <div class="intro-hint">建议开启声音 · 拖动看景 · 点击画中景点</div>
+          <div class="intro-routes" aria-label="从全景直达胜景"><span>或择一景先行</span><button type="button" data-enter-spot="yanyu">烟雨楼</button><button type="button" data-enter-spot="danbo">澹泊敬诚</button><button type="button" data-enter-spot="wanshu">万树园</button><button type="button" data-enter-spot="simian">四面云山</button></div>
+        </div>
+        <div class="intro-bottom"><span>承德避暑山庄 · 湖区写意游园</span><span>原创互动长卷</span></div>
+      </div>
+
+      <main id="experience" class="experience is-hidden" aria-label="承德避暑山庄互动长卷">
+        <div id="scene" class="scene" aria-label="可拖动的山庄湖区长卷" tabindex="0">
+          <div id="world" class="world">
+            <img class="art-panel art-one" src="./art/yan-yu-lake.png" alt="淡彩绘制的避暑山庄湖面、烟雨楼与山林" draggable="false" />
+            <img class="art-panel art-bridge" src="./art/lake-passage-no-sun.png" alt="连接烟雨楼与金山的湖上水道" draggable="false" />
+            <img class="art-panel art-two" src="./art/jinshan-moonlight.png" alt="淡彩绘制的金山、登山廊与月色江声庭院" draggable="false" />
+            <img class="art-panel art-palace" src="./art/palace-hall.png" alt="澹泊敬诚殿与丽正门的宫殿区长卷" draggable="false" />
+            <img class="art-panel art-plains" src="./art/plains-wenyuan-clean.png" alt="万树园与文津阁的平原区长卷" draggable="false" />
+            <img class="art-panel art-mountain" src="./art/mountain-view.png" alt="四面云山与锤峰落照的山峦区长卷" draggable="false" />
+            <div id="treeLayer" class="tree-layer" aria-hidden="true"></div>
+            <div id="lampLayer" class="lamp-layer" aria-hidden="true"></div>
+            <div class="join-veil" aria-hidden="true"></div>
+            <div id="artTargetLayer" class="art-target-layer"></div>
+            <div id="worldEffects" class="world-effects" aria-hidden="true"></div>
+            <div id="hotspotLayer" class="hotspot-layer"></div>
+            <div id="deerLayer" class="deer-layer" aria-hidden="true"></div>
+            <div id="peopleLayer" class="people-layer" aria-hidden="true"></div>
+            <div id="boat" class="boat" aria-hidden="true">
+              <img class="boat-painting" src="./art/painted-boat.png" alt="" draggable="false" />
+              <img class="boat-reflection" src="./art/painted-boat.png" alt="" draggable="false" />
+              <i class="ripple ripple-a"></i><i class="ripple ripple-b"></i>
+            </div>
+            <div id="walker" class="walker" aria-hidden="true"><img src="./art/person-red.png" alt="" draggable="false" /></div>
+          </div>
+          <div id="screenEffects" class="screen-effects" aria-hidden="true"></div>
+          <div class="cloud cloud-one" aria-hidden="true"></div><div class="cloud cloud-two" aria-hidden="true"></div>
+          <div class="night-tint" aria-hidden="true"></div><div class="moon" aria-hidden="true"></div>
+          <div class="rain-mist" aria-hidden="true"></div><canvas id="weatherCanvas" class="weather-canvas" aria-hidden="true"></canvas>
+          <div class="water-light" aria-hidden="true"></div>
+          <div class="scene-edge left" aria-hidden="true"></div><div class="scene-edge right" aria-hidden="true"></div>
+        </div>
+
+        <header class="topbar">
+          <button id="homeBtn" class="brand" type="button" aria-label="返回入口"><span class="brand-seal">庄</span><span><strong>山庄入画</strong><small>CHENGDE HANDSCROLL</small></span></button>
+          <div class="top-center">一 湖 一 山 一 卷 诗</div>
+          <div class="top-actions">
+            <button id="soundBtn" class="text-btn" type="button" aria-label="开启音乐" aria-pressed="false"><span class="control-glyph">♪</span><span class="label">音乐关</span></button>
+            <button id="helpBtn" class="round-btn" type="button" aria-label="游览说明">?</button>
+          </div>
+        </header>
+
+        <div class="vertical-mark" aria-hidden="true"><span>康 熙 四 十 二 年 始 建</span><i></i></div>
+        <div class="scene-caption"><span id="regionName">青莲岛 · 烟雨楼</span><span id="weatherText">晴 · 午后</span></div>
+        <nav class="zone-nav" aria-label="四景区游历"><button type="button" data-zone="lake">湖泊</button><button type="button" data-zone="palace">宫殿</button><button type="button" data-zone="plains">平原</button><button type="button" data-zone="mountain">山峦</button></nav>
+
+        <aside id="storyPanel" class="story-panel" aria-live="polite">
+          <button id="closeStory" class="story-close" type="button" aria-label="关闭景点介绍">×</button>
+          <div class="story-top"><span id="storyIndex">湖山其一</span><span class="story-line"></span><span>画中寻胜</span></div>
+          <h2 id="storyTitle">烟雨楼</h2>
+          <p id="storySubtitle" class="story-subtitle">青莲岛上，楼阁临水。</p>
+          <p id="storyDescription" class="story-description">凭栏望去，湖山相映。</p>
+          <div class="story-actions"><button id="storyHomeBtn" class="story-home" type="button">← 返回全景</button><button id="nextSpotBtn" class="story-next" type="button">继续游赏 <span>→</span></button></div>
+        </aside>
+
+        <nav class="bottom-ui" aria-label="游园操作">
+          <div class="explore-block"><span class="small-label">游园手帖 <b id="visitedCount">00</b> / 11</span><div class="explore-title">移步换景，心随舟行。</div></div>
+          <div id="spotNav" class="spot-nav" aria-label="景点导航"></div>
+          <div class="scene-controls">
+            <button id="nightBtn" class="mode-btn" type="button" aria-pressed="false" title="切换昼夜"><span>☾</span><small>夜游</small></button>
+            <button id="rainBtn" class="mode-btn" type="button" aria-pressed="false" title="切换晴雨"><span>☂</span><small>烟雨</small></button>
+            <div class="control-divider"></div>
+            <button id="zoomOutBtn" class="zoom-btn" type="button" aria-label="缩小画卷">−</button><button id="zoomInBtn" class="zoom-btn" type="button" aria-label="放大画卷">+</button>
+          </div>
+        </nav>
+        <div class="progress-track"><div id="progressFill" class="progress-fill"></div><div id="progressThumb" class="progress-thumb"></div></div>
+        <div class="keyboard-hint">拖动画卷　·　点击景点</div>
+        <div id="depthGuard" class="depth-guard" aria-hidden="true" hidden></div>
+        <section id="depthPortal" class="depth-portal" aria-label="景点近景探索" hidden>
+          <div class="depth-backdrop" aria-hidden="true"></div>
+          <div class="depth-mist" aria-hidden="true"></div>
+          <img id="depthForeground" class="depth-foreground" src="./art/hammer-foreground.png" alt="" draggable="false" />
+          <button id="depthDeer" class="depth-deer" type="button" aria-label="近看梅花鹿的动作"><img class="near-deer-alert" src="./art/deer-stag-alert.png" alt="" /><img class="near-deer-graze" src="./art/deer-stag-graze.png" alt="" /><img class="near-deer-walk" src="./art/deer-stag-walk.png" alt="" /><i></i></button>
+          <header class="depth-header"><button id="depthBack" class="depth-back" type="button">← 回望山庄全景</button><span id="depthKicker">园外借景 · 磬锤峰</span></header>
+          <button id="depthPeak" class="depth-target" type="button" aria-label="细看景点"><span id="depthAction">细看</span></button>
+          <button id="depthCloud" class="depth-cloud-button" type="button">拨云观景　↗</button>
+          <div id="guidePanel" class="guide-panel" aria-label="景点导览">
+            <div class="guide-actions"><span id="guideTitle">随景解说</span><button id="guidePlay" type="button">阅读讲解</button><button id="guideReplay" type="button" hidden>↺ 重播</button></div>
+            <p id="guideCaption" aria-live="polite" hidden></p><a id="guideSource" href="#" target="_blank" rel="noopener noreferrer" hidden>景点资料 · 避暑山庄官网 ↗</a>
+          </div>
+          <div id="depthInfo" class="depth-info" hidden><button id="depthInfoClose" type="button" aria-label="关闭近景介绍">×</button><small id="depthInfoKicker">湖山深处 · 画中寻胜</small><h2 id="depthInfoTitle">磬锤峰</h2><p id="depthInfoBody"></p></div>
+        </section>
+      </main>
+
+      <div id="helpDialog" class="dialog-backdrop" hidden>
+        <section class="help-dialog" role="dialog" aria-modal="true" aria-labelledby="helpTitle">
+          <button id="closeHelp" class="dialog-close" type="button" aria-label="关闭">×</button>
+          <div class="eyebrow dark"><span></span> 游 园 指 南 <span></span></div>
+          <h2 id="helpTitle">请君入画</h2>
+          <div class="help-grid"><div><b>一 · 游卷</b><p>拖动画面、滚动鼠标漫游长卷；点击上方四景区名称可快速跳转。</p></div><div><b>二 · 寻胜</b><p>点击景点标记游览，轻触湖水泛起涟漪。画中游人与画舫静留原处。</p></div><div><b>三 · 四时</b><p>切换夜色或烟雨；点击右上角可播放舒缓古琴录音。</p></div></div>
+          <p class="help-note">本卷为依据景点特征创作的写意游园图，景观相对位置并非精确地图。画面美术为本项目原创生成。景点提供文字讲解。</p>
+          <p class="audio-credit">音乐：<a href="https://commons.wikimedia.org/wiki/File:Pingsha_Luoyan.ogg" target="_blank" rel="noopener noreferrer">《平沙落雁》古琴演奏及录音 · Charlie Huang</a>，依 <a href="https://creativecommons.org/licenses/by/2.5/" target="_blank" rel="noopener noreferrer">CC BY 2.5</a> 使用。本站将原 Ogg 录音转为 AAC，并做轻微低、高频过滤；播放时降低音量，曲首尾淡入淡出。</p>
+          <button id="resumeBtn" class="enter-btn dark-btn" type="button"><span>继续游园</span><span>↗</span></button>
+        </section>
+      </div>
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+      <audio id="siteMusic" preload="none" loop src="./audio/pingsha-luoyan.m4a"></audio>
+      <audio id="guideAudio" preload="metadata"></audio>
+    </div>
+  </body>
+</html>
