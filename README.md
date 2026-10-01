@@ -4,6 +4,8 @@
 
 **公开演示：** https://nocodemrli.github.io/chengde-mountain-resort/
 
+**线上构建标识：** https://nocodemrli.github.io/chengde-mountain-resort/deployment.json
+
 > 独立创作的写意互动作品，非承德避暑山庄官方产品、导航地图、建筑测绘或历史复原。磬锤峰在山庄园外，作为园内借景呈现。
 
 ## 已实现的游览内容
