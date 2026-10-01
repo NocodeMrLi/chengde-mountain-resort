@@ -739,7 +739,7 @@ function stopGuide(){
   guideSerial++;guideMode='idle';guideSpeaking=false;guideLine=0;
   guideAudio.pause();guideAudio.currentTime=0;
   $('guideCaption').hidden=true;$('guideCaption').textContent='';
-  $('guideSource').hidden=true;$('guideReplay').hidden=true;
+  $('guideReplay').hidden=true;
   $('guidePlay').textContent=approvedGuideAudio?'▶ 听讲解':'阅读讲解';
   $('depthPortal').classList.remove('guide-active');
   updateMusicEnvelope();
@@ -751,12 +751,6 @@ function prepareGuide(key){
   $('guideTitle').textContent=key==='deer'?'静观鹿影':`随景解说 · ${key==='chuifeng'?'锤峰落照':spots.find((spot)=>spot.id===key)?.name||''}`;
 }
 
-function showGuideSource(){
-  const source=guideScripts[guideKey]?.source;
-  $('guideSource').hidden=!source;
-  if(source)$('guideSource').href=source;
-}
-
 function toggleGuide(){
   if(!guideScripts[guideKey])return;
   if(!approvedGuideAudio){
@@ -765,7 +759,6 @@ function toggleGuide(){
     $('guideCaption').hidden=!opening;
     $('guideCaption').textContent=opening?guideScripts[guideKey].lines.join(''):'';
     $('guidePlay').textContent=opening?'收起讲解':'阅读讲解';
-    if(opening)showGuideSource();else $('guideSource').hidden=true;
     return;
   }
   if(guideMode==='playing'){
@@ -792,7 +785,7 @@ function startGuide(){
   $('depthPortal').classList.add('guide-active');
   $('guideCaption').hidden=false;$('guideReplay').hidden=false;
   $('guideCaption').textContent=lines.join('');
-  $('guidePlay').textContent='Ⅱ 暂停';showGuideSource();updateMusicEnvelope();
+  $('guidePlay').textContent='Ⅱ 暂停';updateMusicEnvelope();
   guideAudio.play().catch(()=>{
     if(serial!==guideSerial)return;
     guideMode='reading';guideSpeaking=false;updateMusicEnvelope();
