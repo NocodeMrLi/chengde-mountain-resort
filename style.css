@@ -357,3 +357,11 @@
 @media(max-width:360px){.region-near-camera-ui p{max-width:112px;font-size:8px}.region-near-copy h3{font-size:30px}.region-near-copy>small{font-size:8px}}
 @media(max-height:550px) and (min-width:701px){.region-near-copy{bottom:18px}.region-near-copy h3{font-size:31px;margin:3px 0 5px}.region-near-copy>small{display:none}.region-near-reading{max-height:25dvh}.region-near-camera-ui{bottom:23px}.region-near-focus-card{top:78px}}
 @media(prefers-reduced-motion:reduce){.region-near-canvas,.region-near-target>small{transition:none!important}.region-near-mist,.region-near-water,.region-near .region-rain,.region-near-load p:before{animation:none!important}.region-canvas.is-locating{transition:none!important}}
+
+/* Region controls preserve a bounded camera and constant touch target sizes. */
+.region-canvas-frame{overflow:clip}.region-marker small{pointer-events:none}
+.region-zoom-tools{display:flex;align-items:center;gap:0;border:1px solid #f1dfb398;background:#3b4035bb;backdrop-filter:blur(8px)}
+.region-zoom-tools button{min-width:44px;border:0;background:transparent;font-size:18px;padding:7px 9px;backdrop-filter:none}.region-zoom-tools button:last-child{font-size:11px;border-left:1px solid #f1dfb34d}
+.region-zoom-tools output{min-width:43px;text-align:center;font:11px Georgia,serif}.region-zoom-tools button[aria-disabled="true"]{opacity:.45;cursor:default}
+@media(max-width:700px){.region-tools{right:4%;flex-wrap:wrap}.region-zoom-tools{margin-left:auto}.region-zoom-tools output{min-width:35px}.region-zoom-tools button{min-width:44px;min-height:44px;padding:7px 6px}.region-zoom-tools button:last-child{font-size:10px}.region-tools{gap:3px}.region-tools>button{padding:7px 5px}}
+@media(max-width:380px){.region-zoom-tools{margin-left:0}.region-tools{max-width:100%;gap:2px}.region-tools>button{min-width:44px}.region-zoom-tools output{min-width:31px}}

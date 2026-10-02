@@ -1,0 +1,14 @@
+{
+  "failed": {
+    "state": "error",
+    "visited": [],
+    "retry": true
+  },
+  "restored": {
+    "pan": "translate3d(-679.625px, -375.225px, 0px)",
+    "zoom": "115%"
+  },
+  "success": [
+    "k03"
+  ]
+}

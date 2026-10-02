@@ -1,0 +1,54 @@
+{
+  "zoomButtons": {
+    "zoom": "132%",
+    "width": 4316,
+    "height": 1726
+  },
+  "return": {
+    "transform": "translate3d(-1437.66px, -680.737px, 0px)",
+    "width": "4315.74px",
+    "height": "1725.86px",
+    "zoom": "132%"
+  },
+  "pinch": "160%",
+  "mobile": {
+    "overflow": false,
+    "controls": [
+      {
+        "id": "regionDay",
+        "w": 44,
+        "h": 44
+      },
+      {
+        "id": "regionRain",
+        "w": 44,
+        "h": 44
+      },
+      {
+        "id": "regionSound",
+        "w": 44,
+        "h": 44
+      },
+      {
+        "id": "regionZoomOut",
+        "w": 44,
+        "h": 44
+      },
+      {
+        "id": "regionZoomIn",
+        "w": 44,
+        "h": 44
+      },
+      {
+        "id": "regionReset",
+        "w": 44,
+        "h": 44
+      }
+    ],
+    "scroll": 0
+  },
+  "mainReturn": {
+    "origin": "translate3d(-835.029px, 0px, 0px) scale(1)",
+    "after": "translate3d(-835.029px, 0px, 0px) scale(1)"
+  }
+}
