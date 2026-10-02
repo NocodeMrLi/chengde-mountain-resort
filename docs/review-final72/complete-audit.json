@@ -1,0 +1,50 @@
+{
+  "build": "1019035f5063",
+  "total": 72,
+  "ready": 72,
+  "regionalNear": 68,
+  "uniqueRegionalNear": 68,
+  "mainNear": [
+    {
+      "id": "k02",
+      "name": "芝径云堤",
+      "art": "url('http://127.0.0.1:4195/art/near-dike.webp?v=6565ffd65fdc')",
+      "visited": true
+    },
+    {
+      "id": "q01",
+      "name": "丽正门",
+      "art": "url('http://127.0.0.1:4195/art/near-lizheng.webp?v=8eb1f7fe6030')",
+      "visited": true
+    },
+    {
+      "id": "q08",
+      "name": "水心榭",
+      "art": "url('http://127.0.0.1:4195/art/near-shuixin.webp?v=578052128bee')",
+      "visited": true
+    },
+    {
+      "id": "q20",
+      "name": "万树园",
+      "art": "url('http://127.0.0.1:4195/art/near-wanshu.webp?v=d7230989a03d')",
+      "visited": true
+    }
+  ],
+  "atlas": {
+    "rows": 72,
+    "text": "找到 72 / 72 景 · 已游览 24 景",
+    "enabled": true
+  },
+  "nav360": {
+    "width": 360,
+    "overflow": false,
+    "lastInside": true,
+    "navScroll": 939
+  },
+  "nav430": {
+    "width": 430,
+    "overflow": false,
+    "lastInside": true,
+    "navScroll": 873
+  }
+}

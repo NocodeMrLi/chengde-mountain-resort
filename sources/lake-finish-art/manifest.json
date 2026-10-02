@@ -1,0 +1,302 @@
+[
+  {
+    "original": "sources/lake-finish-art/beian-region-original.png",
+    "runtime": "public/art/beian-region.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3366906,
+    "runtimeBytes": 548856,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词、AI辅助生成；依历史线索作意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/lake-finish-art/cailing-original.png",
+    "runtime": "public/art/cailing-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3202791,
+    "runtimeBytes": 492010,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词、AI辅助生成；依历史线索作意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/lake-finish-art/changhong-original.png",
+    "runtime": "public/art/changhong-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3162425,
+    "runtimeBytes": 491952,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词、AI辅助生成；依历史线索作意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/lake-finish-art/fangzhu-original.png",
+    "runtime": "public/art/fangzhu-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 2993932,
+    "runtimeBytes": 425252,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词、AI辅助生成；依历史线索作意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/lake-finish-art/futian-original.png",
+    "runtime": "public/art/futian-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3161654,
+    "runtimeBytes": 500172,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词、AI辅助生成；依历史线索作意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/lake-finish-art/haopu-original.png",
+    "runtime": "public/art/haopu-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3362346,
+    "runtimeBytes": 536550,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词、AI辅助生成；依历史线索作意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/lake-finish-art/huzhou-region-original.png",
+    "runtime": "public/art/huzhou-region.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3183814,
+    "runtimeBytes": 497662,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词、AI辅助生成；依历史线索作意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/lake-finish-art/jingshui-original.png",
+    "runtime": "public/art/jingshui-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3301169,
+    "runtimeBytes": 524052,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词、AI辅助生成；依历史线索作意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/lake-finish-art/jinshan-region-original.png",
+    "runtime": "public/art/jinshan-region.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3141874,
+    "runtimeBytes": 471850,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词、AI辅助生成；依历史线索作意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/lake-finish-art/lengxiang-original.png",
+    "runtime": "public/art/lengxiang-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3445213,
+    "runtimeBytes": 607406,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词、AI辅助生成；依历史线索作意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/lake-finish-art/linfang-original.png",
+    "runtime": "public/art/linfang-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3221480,
+    "runtimeBytes": 492288,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词、AI辅助生成；依历史线索作意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/lake-finish-art/pingxiang-original.png",
+    "runtime": "public/art/pingxiang-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3221109,
+    "runtimeBytes": 501104,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词、AI辅助生成；依历史线索作意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/lake-finish-art/qingque-original.png",
+    "runtime": "public/art/qingque-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3108611,
+    "runtimeBytes": 454718,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词、AI辅助生成；依历史线索作意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/lake-finish-art/ruyihu-original.png",
+    "runtime": "public/art/ruyihu-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3156898,
+    "runtimeBytes": 457708,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词、AI辅助生成；依历史线索作意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/lake-finish-art/shiji-original.png",
+    "runtime": "public/art/shiji-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3207794,
+    "runtimeBytes": 508422,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词、AI辅助生成；依历史线索作意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/lake-finish-art/shuanghu-original.png",
+    "runtime": "public/art/shuanghu-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3193971,
+    "runtimeBytes": 488114,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词、AI辅助生成；依历史线索作意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/lake-finish-art/shuanghu-region-original.png",
+    "runtime": "public/art/shuanghu-region.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3103284,
+    "runtimeBytes": 446852,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词、AI辅助生成；依历史线索作意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/lake-finish-art/shuiliu-original.png",
+    "runtime": "public/art/shuiliu-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3269141,
+    "runtimeBytes": 514970,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词、AI辅助生成；依历史线索作意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/lake-finish-art/tianyu-original.png",
+    "runtime": "public/art/tianyu-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3216909,
+    "runtimeBytes": 498968,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词、AI辅助生成；依历史线索作意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/lake-finish-art/xiangyuan-original.png",
+    "runtime": "public/art/xiangyuan-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3378547,
+    "runtimeBytes": 562820,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词、AI辅助生成；依历史线索作意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/lake-finish-art/xishui-region-original.png",
+    "runtime": "public/art/xishui-region.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3299256,
+    "runtimeBytes": 523282,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词、AI辅助生成；依历史线索作意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/lake-finish-art/yingzhuan-original.png",
+    "runtime": "public/art/yingzhuan-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3430601,
+    "runtimeBytes": 582964,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词、AI辅助生成；依历史线索作意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/lake-finish-art/yongcui-original.png",
+    "runtime": "public/art/yongcui-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3274996,
+    "runtimeBytes": 518702,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词、AI辅助生成；依历史线索作意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/lake-finish-art/yuanjin-original.png",
+    "runtime": "public/art/yuanjin-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3339191,
+    "runtimeBytes": 530518,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词、AI辅助生成；依历史线索作意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/lake-finish-art/zhiyu-original.png",
+    "runtime": "public/art/zhiyu-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3183440,
+    "runtimeBytes": 505146,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词、AI辅助生成；依历史线索作意境演绎，非实拍或精确复原"
+  }
+]

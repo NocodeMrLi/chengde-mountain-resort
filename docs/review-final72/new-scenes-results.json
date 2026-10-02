@@ -1,0 +1,274 @@
+{
+  "scenes": [
+    {
+      "id": "k32",
+      "title": "镜水云岑",
+      "art": "/art/jingshui-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "k18",
+      "title": "天宇咸畅",
+      "art": "/art/tianyu-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "k23",
+      "title": "香远益清",
+      "art": "/art/xiangyuan-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "k17",
+      "title": "濠濮间想",
+      "art": "/art/haopu-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "k22",
+      "title": "莺啭乔木",
+      "art": "/art/yingzhuan-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "k35",
+      "title": "甫田丛樾",
+      "art": "/art/futian-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "k36",
+      "title": "水流云在",
+      "art": "/art/shuiliu-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "k27",
+      "title": "芳渚临流",
+      "art": "/art/fangzhu-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "q04",
+      "title": "如意湖",
+      "art": "/art/ruyihu-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "q05",
+      "title": "青雀舫",
+      "art": "/art/qingque-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "q12",
+      "title": "冷香亭",
+      "art": "/art/lengxiang-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "q13",
+      "title": "采菱渡",
+      "art": "/art/cailing-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "q19",
+      "title": "萍香泮",
+      "art": "/art/pingxiang-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "k33",
+      "title": "双湖夹镜",
+      "art": "/art/shuanghu-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "k34",
+      "title": "长虹饮练",
+      "art": "/art/changhong-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "q34",
+      "title": "涌翠岩",
+      "art": "/art/yongcui-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "k25",
+      "title": "远近泉声",
+      "art": "/art/yuanjin-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "k31",
+      "title": "石矶观鱼",
+      "art": "/art/shiji-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "q32",
+      "title": "临芳墅",
+      "art": "/art/linfang-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "q33",
+      "title": "知鱼矶",
+      "art": "/art/zhiyu-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    }
+  ],
+  "mobile": [
+    {
+      "width": 360,
+      "overflow": false,
+      "title": "长虹饮练",
+      "readingBottom": 765,
+      "tools": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 44,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "title": "青雀舫",
+      "readingBottom": 765,
+      "tools": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 44,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "width": 430,
+      "overflow": false,
+      "title": "涌翠岩",
+      "readingBottom": 765,
+      "tools": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 44,
+          "h": 44
+        }
+      ]
+    }
+  ],
+  "regions": [
+    {
+      "key": "jinshan",
+      "art": 1983
+    },
+    {
+      "key": "beian",
+      "art": 1983
+    },
+    {
+      "key": "huzhou",
+      "art": 1983
+    },
+    {
+      "key": "shuanghu",
+      "art": 1983
+    },
+    {
+      "key": "xishui",
+      "art": 1983
+    }
+  ],
+  "build": "1019035f5063",
+  "windowRain": {
+    "interior": false,
+    "window": false,
+    "rain": "block"
+  }
+}
