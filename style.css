@@ -2,7 +2,7 @@
 
 :root{font-family:'Noto Serif SC','Songti SC','STSong',serif;color:#352c20;background:#d8c9aa;font-synthesis:none}*{box-sizing:border-box}html,body,#app{width:100%;height:100%;margin:0;overflow:hidden}button{font:inherit;cursor:pointer}button:focus-visible{outline:2px solid #9a4b31;outline-offset:3px}button:disabled{opacity:.4;cursor:not-allowed}.app{position:relative;isolation:isolate}.grain{position:fixed;z-index:40;inset:0;pointer-events:none;opacity:.11;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.65'/%3E%3C/svg%3E")}.is-hidden{visibility:hidden;pointer-events:none}
 
-.intro{position:absolute;inset:0;z-index:30;overflow:hidden;color:#fff9e8;background:#342e24;transition:opacity 1s ease,transform 1.15s ease}.intro.leaving{opacity:0;transform:scale(1.035);pointer-events:none}.intro-art{position:absolute;inset:-5%;background:url('./art/yan-yu-lake.png') center 54% / cover no-repeat;filter:saturate(.77) contrast(1.03);animation:introDrift 25s ease-in-out infinite alternate}.intro-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(29,35,28,.74),rgba(29,35,28,.51) 44%,rgba(25,28,24,.2) 80%),linear-gradient(0deg,rgba(29,35,28,.65),transparent 35%,rgba(28,26,19,.25))}.intro-top,.intro-bottom{position:absolute;left:4.2%;right:4.2%;display:flex;align-items:center;justify-content:space-between;z-index:1;letter-spacing:.2em;font-size:12px}.intro-top{top:4.4%}.intro-top>span:nth-child(2){margin-left:18px;margin-right:auto}.intro-index{font-family:Georgia,serif;letter-spacing:.16em;color:#f3dfaf}.mini-seal{display:inline-grid;place-items:center;border:1px solid #e7c891;width:42px;height:42px;writing-mode:vertical-rl;letter-spacing:0;font-weight:700;color:#f3d59f}.intro-bottom{bottom:5%;font-size:11px;color:#e5d8b9}.intro-content{position:absolute;z-index:2;left:12%;top:50%;transform:translateY(-45%);max-width:790px}.eyebrow{display:flex;align-items:center;gap:14px;letter-spacing:.5em;font-size:13px;color:#ead2a0}.eyebrow span{width:31px;height:1px;background:#ddc28d}.intro-heading{display:flex;align-items:center;gap:26px;margin:22px 0 10px}.intro-heading h1{font-weight:500;font-size:clamp(70px,9.2vw,160px);letter-spacing:.08em;white-space:nowrap;line-height:1.3;margin:0;text-shadow:0 5px 45px rgba(0,0,0,.2)}.intro-heading h1 span{color:#f0d5a1}.intro-aside{font-size:15px;writing-mode:vertical-rl;letter-spacing:.38em;line-height:1.9;border-right:1px solid rgba(250,229,183,.65);padding-right:16px;color:#ead7b3}.intro-content p{font-size:17px;line-height:2.1;letter-spacing:.17em;margin:20px 0 29px;color:#f5ead6}.enter-btn{display:flex;align-items:center;justify-content:space-between;gap:70px;min-width:220px;padding:17px 19px 17px 30px;border:1px solid #e7c78b;color:#f8e6be;background:rgba(81,57,34,.45);letter-spacing:.35em;font-size:15px;transition:background .25s,transform .25s,box-shadow .25s}.enter-btn:hover{background:#a44f36;transform:translateY(-3px);box-shadow:0 12px 35px rgba(0,0,0,.22)}.enter-arrow{font-family:Georgia,serif;font-size:24px;letter-spacing:0}.intro-hint{margin-top:18px;letter-spacing:.12em;font-size:11px;color:#decfac}@keyframes introDrift{from{transform:scale(1)}to{transform:scale(1.09) translateX(-1%)}}
+.intro{position:absolute;inset:0;z-index:30;overflow:hidden;color:#fff9e8;background:#342e24;transition:opacity 1s ease,transform 1.15s ease}.intro.leaving{opacity:0;transform:scale(1.035);pointer-events:none}.intro-art{position:absolute;inset:-5%;background:url('./art/yan-yu-lake.webp') center 54% / cover no-repeat;filter:saturate(.77) contrast(1.03);animation:introDrift 25s ease-in-out infinite alternate}.intro-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(29,35,28,.74),rgba(29,35,28,.51) 44%,rgba(25,28,24,.2) 80%),linear-gradient(0deg,rgba(29,35,28,.65),transparent 35%,rgba(28,26,19,.25))}.intro-top,.intro-bottom{position:absolute;left:4.2%;right:4.2%;display:flex;align-items:center;justify-content:space-between;z-index:1;letter-spacing:.2em;font-size:12px}.intro-top{top:4.4%}.intro-top>span:nth-child(2){margin-left:18px;margin-right:auto}.intro-index{font-family:Georgia,serif;letter-spacing:.16em;color:#f3dfaf}.mini-seal{display:inline-grid;place-items:center;border:1px solid #e7c891;width:42px;height:42px;writing-mode:vertical-rl;letter-spacing:0;font-weight:700;color:#f3d59f}.intro-bottom{bottom:5%;font-size:11px;color:#e5d8b9}.intro-content{position:absolute;z-index:2;left:12%;top:50%;transform:translateY(-45%);max-width:790px}.eyebrow{display:flex;align-items:center;gap:14px;letter-spacing:.5em;font-size:13px;color:#ead2a0}.eyebrow span{width:31px;height:1px;background:#ddc28d}.intro-heading{display:flex;align-items:center;gap:26px;margin:22px 0 10px}.intro-heading h1{font-weight:500;font-size:clamp(70px,9.2vw,160px);letter-spacing:.08em;white-space:nowrap;line-height:1.3;margin:0;text-shadow:0 5px 45px rgba(0,0,0,.2)}.intro-heading h1 span{color:#f0d5a1}.intro-aside{font-size:15px;writing-mode:vertical-rl;letter-spacing:.38em;line-height:1.9;border-right:1px solid rgba(250,229,183,.65);padding-right:16px;color:#ead7b3}.intro-content p{font-size:17px;line-height:2.1;letter-spacing:.17em;margin:20px 0 29px;color:#f5ead6}.enter-btn{display:flex;align-items:center;justify-content:space-between;gap:70px;min-width:220px;padding:17px 19px 17px 30px;border:1px solid #e7c78b;color:#f8e6be;background:rgba(81,57,34,.45);letter-spacing:.35em;font-size:15px;transition:background .25s,transform .25s,box-shadow .25s}.enter-btn:hover{background:#a44f36;transform:translateY(-3px);box-shadow:0 12px 35px rgba(0,0,0,.22)}.enter-arrow{font-family:Georgia,serif;font-size:24px;letter-spacing:0}.intro-hint{margin-top:18px;letter-spacing:.12em;font-size:11px;color:#decfac}@keyframes introDrift{from{transform:scale(1)}to{transform:scale(1.09) translateX(-1%)}}
 
 .experience{position:absolute;inset:0;background:#dbcdb0;transition:visibility .1s}.scene{position:absolute;inset:0;overflow:hidden;touch-action:none;cursor:grab;outline:none}.scene.dragging{cursor:grabbing}.world{position:absolute;top:0;left:0;height:100%;width:max-content;will-change:transform}.art-panel{height:100%;width:auto;display:block;float:left;user-select:none;pointer-events:none}.join-veil{position:absolute;top:0;bottom:0;width:100px;left:var(--join-x,0px);transform:translateX(-50%);background:linear-gradient(90deg,transparent,#e5dcc4 48%,rgba(229,220,196,.62) 51%,transparent);mix-blend-mode:soft-light;pointer-events:none}.hotspot-layer{position:absolute;inset:0;pointer-events:none}.hotspot{position:absolute;display:flex;flex-direction:column;align-items:center;gap:4px;transform:translate(-50%,-50%);border:0;background:none;color:#4b3825;text-shadow:0 1px 3px #eee1c4,0 -1px 3px #eee1c4;pointer-events:auto;white-space:nowrap;transition:transform .25s,filter .25s}.hotspot:hover,.hotspot:focus-visible{transform:translate(-50%,-57%) scale(1.07);filter:drop-shadow(0 3px 6px #48331e66)}.hotspot-dot{width:37px;height:37px;display:grid;place-items:center;border-radius:50%;background:rgba(245,231,196,.88);border:1px solid #926c40;box-shadow:0 0 0 6px #f1dfbd55,0 2px 12px #4a3c2977;color:#9c5137;font-size:21px;line-height:1}.hotspot-name{font-weight:700;letter-spacing:.28em;font-size:14px;padding:3px 10px;background:#f1e3c6d9;box-shadow:0 2px 13px #2b211234}.hotspot.active .hotspot-dot{color:#f4e8cc;background:#9a4d32;box-shadow:0 0 0 7px #a6503455,0 2px 15px #4a2a2399}.hotspot.active .hotspot-name{color:#fff6dc;background:#8d4933}.cloud{position:absolute;pointer-events:none;width:42vw;height:10vw;border-radius:50%;background:radial-gradient(ellipse,#fffbec8f 4%,transparent 70%);filter:blur(21px);opacity:.6;animation:cloudMove 24s linear infinite alternate}.cloud-one{left:8%;top:7%}.cloud-two{left:56%;top:16%;animation-duration:33s;animation-direction:alternate-reverse}@keyframes cloudMove{to{transform:translateX(16vw)}}.water-light{position:absolute;left:0;right:0;bottom:8%;height:22%;pointer-events:none;opacity:.18;background:repeating-linear-gradient(173deg,transparent 0 18px,#fff9df 19px 20px,transparent 21px 38px);mask-image:linear-gradient(90deg,transparent,#0008 30%,#0008 70%,transparent);animation:waterDrift 9s linear infinite alternate}@keyframes waterDrift{to{transform:translateX(28px) scaleY(.9)}}.night-tint{position:absolute;inset:0;background:linear-gradient(#101c35b8,#1a2945a6 60%,#0d233c96);mix-blend-mode:multiply;opacity:0;pointer-events:none;transition:opacity 1.2s}.experience.night .night-tint{opacity:1}.experience.night .world{filter:brightness(.72) saturate(.75)}.experience.night .hotspot{filter:drop-shadow(0 0 7px #ffe6ab);color:#f6dfaf}.experience.night .hotspot:hover{filter:drop-shadow(0 0 14px #ffe6ab)}.moon{position:absolute;right:12%;top:9%;width:58px;height:58px;border-radius:50%;background:#fff3ca;box-shadow:0 0 22px #ffeeb1,0 0 90px 35px #ffe9a144;opacity:0;transition:opacity 1s;pointer-events:none}.experience.night .moon{opacity:.85}.rain-mist{position:absolute;inset:0;background:linear-gradient(#8c9b9d33,#d2ded987 72%,#e6e8d075);opacity:0;pointer-events:none;transition:opacity .6s}.rain-lines{position:absolute;inset:-25%;pointer-events:none;opacity:0;background:repeating-linear-gradient(106deg,transparent 0 19px,#e4f0e48c 20px,#e4f0e48c 21px,transparent 22px 39px);mask-image:linear-gradient(transparent,#000 25%,#000 78%,transparent);animation:rainFall .6s linear infinite}.experience.raining .rain-mist{opacity:.65}.experience.raining .rain-lines{opacity:.32}.experience.raining .world{filter:saturate(.72) contrast(.95)}.experience.night.raining .world{filter:brightness(.65) saturate(.65)}@keyframes rainFall{to{transform:translate(-27px,82px)}}.scene-edge{position:absolute;top:0;bottom:0;width:6%;pointer-events:none}.scene-edge.left{left:0;background:linear-gradient(90deg,#e9dabb88,transparent)}.scene-edge.right{right:0;background:linear-gradient(-90deg,#e9dabb88,transparent)}
 
@@ -93,9 +93,83 @@
 .touch-ripple{position:absolute;width:14px;height:6px;border:1px solid #dbebe1;border-radius:50%;transform:translate(-50%,-50%);box-shadow:0 0 0 1px #718a8480;animation:touchWater 1.3s ease-out forwards}
 .touch-ripple:after{content:'';position:absolute;inset:-1px;border:1px solid #e2f0e9;border-radius:50%;animation:touchWater 1.3s .2s ease-out forwards}
 @keyframes touchWater{to{opacity:0;transform:translate(-50%,-50%) scale(6,3)}}
-.intro-art{background-image:url('./art/yan-yu-lake-clean.png')}
+.intro-art{background-image:url('./art/yan-yu-lake-clean.webp')}
 .art-bridge{left:var(--bridge-x);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 var(--overlap));mask-image:linear-gradient(90deg,transparent 0,#000 var(--overlap))}
 .experience.boating.boarding .walker{opacity:.95}
+.github-link{display:inline-grid;place-items:center;flex:none;width:44px;height:44px;color:#5a4733;border:1px solid #b79b72;background:#f2e5c9a6;transition:background .2s,transform .2s}
+.github-link::before{content:'';width:19px;height:19px;background:currentColor;-webkit-mask:url('./art/github-mark.svg') center / contain no-repeat;mask:url('./art/github-mark.svg') center / contain no-repeat}
+.github-link:hover{background:#e6d1a7;transform:translateY(-2px)}
+.github-link:focus-visible{outline:2px solid #a34f36;outline-offset:3px}
+.intro-github{color:#f6e8c7;border-color:#e7c8919c;background:#342e2466}
+.intro-github:hover{background:#9d563aca}
+.top-github{height:38px;width:38px}
+
+/* Camera travel stays anchored to the selected point in the painting. */
+.experience.depth-travel .world{transition:transform .8s cubic-bezier(.2,.72,.18,1)}
+.depth-portal button:focus-visible,.depth-error button:focus-visible{outline:2px solid #fff2cc;outline-offset:4px}
+
+/* Separate painted layers keep the people and moored boat in the Yanyu close view. */
+.depth-life{position:absolute;z-index:1;inset:0;pointer-events:none;opacity:0;transform:scale(.78) translateY(7%);transition:transform 1.65s cubic-bezier(.19,.8,.2,1),opacity 1s ease}
+.depth-portal.open.yanyu-close .depth-life{opacity:1;transform:scale(1)}
+.depth-life img{position:absolute;display:block;object-fit:contain;filter:drop-shadow(0 1px 1px #382e2855)}
+.depth-person{width:clamp(31px,4.2vw,61px);height:auto;transform:translate(-50%,-100%)}
+.depth-person-left{left:36%;top:66%}
+.depth-person-right{left:68%;top:67%;width:clamp(28px,3.7vw,54px)}
+.depth-painted-boat{left:55%;top:81%;width:clamp(94px,13vw,178px);height:auto;transform:translate(-50%,-20%)}
+.depth-portal:not(.yanyu-close) .depth-life{display:none}
+.depth-portal.open .depth-mist{opacity:var(--mist-opacity,.58)}
+.depth-portal.clear-mist .depth-mist{opacity:0}
+.experience.night .depth-portal{--mist-opacity:.28}
+.experience.raining .depth-portal{--mist-opacity:.44}
+.experience.night.raining .depth-portal{--mist-opacity:.24}
+.experience.night .depth-portal.ready .depth-backdrop,.experience.night .depth-portal.ready .depth-foreground,.experience.night .depth-portal.ready .depth-life{filter:brightness(.57) saturate(.72)}
+.depth-portal.ready .depth-backdrop{transition:transform .25s ease-out,filter .4s ease}
+.depth-portal.ready .depth-foreground{transition:transform .28s ease-out,opacity .4s ease}
+.depth-portal.ready .depth-backdrop{transform:scale(1.02) translate3d(var(--parallax-back-x,0px),var(--parallax-back-y,0px),0)}
+.depth-portal.ready .depth-foreground{transform:scale(1.03) translate3d(var(--parallax-front-x,0px),var(--parallax-front-y,0px),0)}
+.depth-atmosphere,.depth-rain{position:absolute;z-index:3;inset:0;pointer-events:none;opacity:0;transition:opacity .8s ease}
+.experience.night .depth-atmosphere{opacity:.88;background:linear-gradient(#172945bd,#18304bbb 53%,#11273caa);mix-blend-mode:multiply}
+.experience.raining .depth-rain{opacity:.34;background:linear-gradient(#80919748,#aebbb368 72%,#dce3db28),repeating-linear-gradient(106deg,transparent 0 19px,#e9f0e5a3 20px,#e9f0e5a3 21px,transparent 22px 39px);background-size:auto,100% 140%;animation:depthRain 1.3s linear infinite}
+@keyframes depthRain{to{background-position:0 0,-27px 82px}}
+
+/* A diffuse overlap avoids a bright ruler-like strip at the image join. */
+.join-veil{opacity:.2;width:clamp(90px,12vw,220px);background:linear-gradient(90deg,transparent,#e7dcc54d 48%,transparent);mix-blend-mode:soft-light}
+
+.spot-nav-wrap{position:relative;display:flex;flex:1;min-width:0}
+.spot-nav-wrap .spot-nav{width:100%}
+.spot-nav-hint{display:none}
+.depth-error{position:absolute;z-index:24;inset:0;display:grid;place-items:center;padding:20px;background:#242b2ac9;backdrop-filter:blur(5px);color:#fff0d5}
+.depth-loading{position:absolute;z-index:22;left:50%;top:50%;transform:translate(-50%,-50%);min-width:185px;padding:17px 22px;text-align:center;background:#3e3b31de;color:#fff2d8;border:1px solid #e9d4ae;font-size:13px;letter-spacing:.16em;box-shadow:0 12px 38px #17191377;pointer-events:none}
+.depth-loading[hidden]{display:none}
+.depth-error[hidden]{display:none}
+.depth-error>div{width:min(390px,100%);padding:28px;background:#473f33;border:1px solid #d7bd8a;box-shadow:0 16px 44px #1719138c}
+.depth-error h2{margin:0 0 8px;font-size:24px;font-weight:500}
+.depth-error p{font-size:13px;line-height:1.8}
+.depth-error button{min-height:44px;margin:10px 10px 0 0;padding:9px 14px;border:1px solid #ead1a0;background:#7b5039;color:#fff2d8}
+
+@media(max-width:700px){
+  .top-github{min-width:44px;min-height:44px}
+  .intro-github{margin-left:auto}
+  .text-btn,.round-btn{min-width:44px;min-height:44px}
+  .zone-nav button{min-width:52px;min-height:44px}
+  .scene-caption{top:129px}
+  .explore-block{max-width:132px}
+  .explore-title{white-space:normal;line-height:1.2}
+  .mode-btn,.zoom-btn{min-width:44px;min-height:44px}
+  .zoom-btn{width:44px;height:44px}
+  .spot-nav-wrap{grid-column:1/-1;grid-row:2;margin-right:-4vw}
+  .spot-nav-wrap .spot-nav{padding-right:72px;overscroll-behavior-inline:contain;scroll-snap-type:x proximity}
+  .spot-nav button{scroll-snap-align:start;min-height:40px}
+  .spot-nav-hint{display:grid;place-items:center;position:absolute;right:0;top:0;bottom:0;min-width:84px;padding-left:18px;background:linear-gradient(90deg,transparent,#eee2cb 23%,#eee2cb 100%);color:#7c4f35;font-size:10px;letter-spacing:.04em;pointer-events:none;transition:opacity .25s}
+  .spot-nav-wrap.at-end .spot-nav-hint{opacity:0}
+  .keyboard-hint{display:block;bottom:calc(137px + env(safe-area-inset-bottom,0px));left:4%;padding:5px 9px;background:#f2e5cbd9;border:1px solid #ceb891;border-radius:14px;font-size:10px}
+  .experience.has-panned .keyboard-hint{display:none}
+  .depth-person-left{left:29%;top:66%}
+  .depth-person-right{left:67%;top:66%}
+  .depth-painted-boat{left:55%;top:82%}
+}
+@media(max-height:570px){.keyboard-hint{display:none}}
+@media(prefers-reduced-motion:reduce){.experience.raining .depth-rain{animation:none}}
 
 /* 静态画卷：人物与画舫保留原画位置，不再摆动或响应呼船。 */
 .walker,.walk-controls{display:none!important}
@@ -213,3 +287,4 @@
 .experience.boating .walker{opacity:.94}
 .experience.boating.aboard .walker{opacity:0}
 .experience.boating.boarding .walker{opacity:.95}
+@media(max-width:700px){.scene-caption{top:132px}}

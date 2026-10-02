@@ -6,6 +6,10 @@
 
 景点位置和建筑造型是依据公开景点资料创作的写意表现，不是官方导览图、测绘成果或历史复原图。磬锤峰位于山庄园外，作为园内视线中的借景呈现。
 
+## 界面图标
+
+`public/art/github-mark.svg` 取自 GitHub 的 [Primer Octicons](https://github.com/primer/octicons/blob/main/icons/mark-github-16.svg)，仅用于标识通往本项目 GitHub 仓库的链接。Octicons 依 MIT 许可发布，版权为 GitHub Inc.；许可文本保存在 [sources/OCTICONS-LICENSE.md](sources/OCTICONS-LICENSE.md)。
+
 ## 背景音乐
 
 - 作品：《平沙落雁》古琴录音，演奏与录制者 Charlie Huang，录制于 2006 年 4 月 23 日。

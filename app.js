@@ -44,18 +44,18 @@ const walkSurfaces={
 const zoneStarts = {lake:0,palace:5,plains:7,mountain:9};
 const zonePanels = {lake:0,palace:3,plains:4,mountain:5};
 const destinationArt={
-  shuixin:['near-shuixin.png','湖上亭榭 · 近景','观榭','63%','44%'],
-  dike:['near-dike.png','长堤水色 · 近景','观堤','54%','51%'],
-  yanyu:['near-yanyu.png','青莲岛 · 烟雨楼近景','观楼','59%','38%'],
-  jinshan:['near-jinshan.png','湖东金山 · 近景','登高','63%','32%'],
-  moon:['near-moon.png','月色江声 · 近景','观院','61%','42%'],
-  lizheng:['near-lizheng.png','宫殿区 · 丽正门近景','观门','53%','46%'],
-  danbo:['near-danbo.png','宫殿区 · 澹泊敬诚近景','观殿','59%','38%'],
-  wanshu:['near-wanshu.png','平原区 · 万树园近景','观林','54%','49%'],
-  wenjin:['near-wenjin.png','平原区 · 文津阁近景','观阁','62%','39%'],
-  simian:['near-simian.png','山峦区 · 四面云山近景','登亭','57%','39%'],
-  chuifeng:['hammer-close.png','园外借景 · 磬锤峰','观峰','66%','27%'],
-  deer:['near-deer.png','平原区 · 梅花鹿观察','观鹿','59%','47%']
+  shuixin:['near-shuixin.webp','湖上亭榭 · 近景','观榭','63%','44%'],
+  dike:['near-dike.webp','长堤水色 · 近景','观堤','54%','51%'],
+  yanyu:['near-yanyu.webp','青莲岛 · 烟雨楼近景','观楼','59%','38%'],
+  jinshan:['near-jinshan.webp','湖东金山 · 近景','登高','63%','32%'],
+  moon:['near-moon.webp','月色江声 · 近景','观院','61%','42%'],
+  lizheng:['near-lizheng.webp','宫殿区 · 丽正门近景','观门','53%','46%'],
+  danbo:['near-danbo.webp','宫殿区 · 澹泊敬诚近景','观殿','59%','38%'],
+  wanshu:['near-wanshu.webp','平原区 · 万树园近景','观林','54%','49%'],
+  wenjin:['near-wenjin.webp','平原区 · 文津阁近景','观阁','62%','39%'],
+  simian:['near-simian.webp','山峦区 · 四面云山近景','登亭','57%','39%'],
+  chuifeng:['hammer-close.webp','园外借景 · 磬锤峰','观峰','66%','27%'],
+  deer:['near-deer.webp','平原区 · 梅花鹿观察','观鹿','59%','47%']
 };
 const guideScripts={
   shuixin:{lines:['先留意亭榭两边的水面。水心榭正处在下湖与银湖之间，始建于康熙年间。','南北两端各有牌坊，建筑既供人经过，也让人停下来观景。顺着檐口望出去，看看亭子怎样把四周湖山收进来。'],source:'https://www.bishushanzhuang.com.cn/index.php/Scenic/spot_view/id/193.html'},
@@ -138,12 +138,12 @@ const deerHerd = [
   return creature;
 });
 const treePatches = [
-  {panel:0,x:.235,y:.27,w:.11,h:.18,strength:.95,phase:.2,art:'yan-yu-lake-clean.png'},
-  {panel:0,x:.775,y:.33,w:.13,h:.2,strength:1.4,phase:1.1,art:'yan-yu-lake-clean.png'},
-  {panel:3,x:.44,y:.02,w:.21,h:.2,strength:.35,phase:2.1,art:'palace-hall.png'},
-  {panel:4,x:.4,y:.405,w:.16,h:.19,strength:1,phase:1.7,art:'plains-wenyuan-clean.png'},
-  {panel:4,x:.74,y:.33,w:.13,h:.18,strength:.4,phase:2.9,art:'plains-wenyuan-clean.png'},
-  {panel:5,x:.46,y:.45,w:.19,h:.17,strength:.5,phase:3.5,art:'mountain-view.png'}
+  {panel:0,x:.235,y:.27,w:.11,h:.18,strength:.95,phase:.2,art:'yan-yu-lake-clean.webp'},
+  {panel:0,x:.775,y:.33,w:.13,h:.2,strength:1.4,phase:1.1,art:'yan-yu-lake-clean.webp'},
+  {panel:3,x:.44,y:.02,w:.21,h:.2,strength:.35,phase:2.1,art:'palace-hall.webp'},
+  {panel:4,x:.4,y:.405,w:.16,h:.19,strength:1,phase:1.7,art:'plains-wenyuan-clean.webp'},
+  {panel:4,x:.74,y:.33,w:.13,h:.18,strength:.4,phase:2.9,art:'plains-wenyuan-clean.webp'},
+  {panel:5,x:.46,y:.45,w:.19,h:.17,strength:.5,phase:3.5,art:'mountain-view.webp'}
 ].filter(tree=>tree.panel!==0).map((tree)=>{
   const element=document.createElement('span');element.className='tree-canopy';
   element.style.backgroundImage=`url('${assetUrl(`art/${tree.art}`)}')`;
@@ -222,7 +222,17 @@ let depthSavedView=null;
 let depthCurrent=null;
 let lastDepthCloseAt=-Infinity;
 let closeDeerNextAt=0;
+let depthFocusReturn=null;
+let depthRetryTarget=null;
+let travelScale=1;
+let travelOrigin={x:.5,y:.5};
+const activePointers=new Map();
+let pinchStart=null;
 const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
+const backgroundControls=['#scene','.topbar','.zone-nav','.bottom-ui','.story-panel','.progress-track','.keyboard-hint'];
+function setBackgroundInert(value){
+  for(const selector of backgroundControls){const element=document.querySelector(selector);if(element)element.inert=value;}
+}
 const debugEnabled=new URLSearchParams(location.search).get('debug')==='1';
 let debugOverlay,debugWalker,debugDeer=[],debugPeople=[],debugWater;
 if(debugEnabled){
@@ -405,6 +415,7 @@ function layout(preserveCenter = true){
   world.style.width = `${totalWidth}px`;
   world.style.height = `${height}px`;
   world.style.top = `${(scene.clientHeight-height)/2}px`;
+  world.style.transformOrigin=`${totalWidth*travelOrigin.x}px ${height*travelOrigin.y}px`;
   world.style.setProperty('--bridge-x',`${bridgeX}px`);
   world.style.setProperty('--panel-two-x',`${panelTwoX}px`);
   world.style.setProperty('--palace-x',`${panelStarts[3]}px`);
@@ -473,7 +484,7 @@ function layout(preserveCenter = true){
 
 function render(){
   offset=clamp(offset,0,maxOffset());
-  world.style.transform=`translate3d(${-offset}px,0,0)`;
+  world.style.transform=`translate3d(${-offset}px,0,0) scale(${travelScale})`;
   experience.dataset.boatPhase=boatPhase;
   experience.dataset.walkSurface=walkerSurfaceId;
   experience.dataset.walkX=walkerWorldX.toFixed(2);
@@ -531,11 +542,13 @@ function showToast(message){
 
 function closeDepth(immediate=false){
   if(depthState==='closed')return;
+  if(depthState==='pending')immediate=true;
   stopGuide();
   lastDepthCloseAt=performance.now();
   depthSerial++;
   clearTimeout(depthTimer);
   const portal=$('depthPortal');
+  $('depthLoading').hidden=true;
   portal.classList.add('closing');
   $('depthGuard').hidden=true;
   $('depthInfo').hidden=true;
@@ -543,12 +556,20 @@ function closeDepth(immediate=false){
   const restore=()=>{
     portal.hidden=true;portal.classList.remove('closing');depthState='closed';depthCurrent=null;
     $('depthGuard').hidden=true;
+    setBackgroundInert(false);
+    travelScale=1;render();
+    if(!reducedMotion.matches){setTimeout(()=>experience.classList.remove('depth-travel'),850);}
+    else experience.classList.remove('depth-travel');
     if(depthSavedView){
       placeWalker(depthSavedView.walkerSurfaceId,depthSavedView.walkerWorldX);
       targetOffset=depthSavedView.offset;velocity=0;
       depthSavedView=null;
     }
+    if(depthFocusReturn?.isConnected&&!depthFocusReturn.closest('[hidden]'))depthFocusReturn.focus({preventScroll:true});
+    else scene.focus({preventScroll:true});
+    depthFocusReturn=null;
   };
+  travelScale=1;render();
   if(immediate||reducedMotion.matches){portal.classList.remove('open','clear-mist','ready');restore();}
   else{
     requestAnimationFrame(()=>{if(depthState==='closing')portal.classList.remove('open','clear-mist','ready');});
@@ -564,13 +585,24 @@ function openDepth(target,creature=deerHerd[0]){
   const spot=typeof target==='string'?null:target;
   const focusX=spot?spotX(spot):creature.worldX;
   const focusY=spot?spot.y*height:paintedPathY(creature.path,creature.x)*height;
+  depthFocusReturn=document.activeElement instanceof HTMLElement?document.activeElement:scene;
+  depthRetryTarget=target;
+  $('depthError').hidden=true;
   depthState='pending';depthCurrent=key;
   $('depthGuard').hidden=false;
+  $('depthLoading').textContent=`正在走近${spot?.name||'画中景点'}…`;
+  $('depthLoading').hidden=false;
+  setBackgroundInert(true);
+  $('depthLoading').focus({preventScroll:true});
   if(boating)setBoating(false);
   depthSavedView={offset,walkerWorldX,walkerSurfaceId};
   closeStory();
   const desired=clamp(focusX-scene.clientWidth*.58,0,maxOffset());
   const shift=Math.abs(desired-offset);
+  travelOrigin={x:focusX/totalWidth,y:focusY/height};
+  world.style.transformOrigin=`${focusX}px ${focusY}px`;
+  experience.classList.add('depth-travel');
+  travelScale=reducedMotion.matches?1:1.12;
   targetOffset=desired;velocity=0;
   const foreground=key==='chuifeng'||key==='simian'?'hammer-foreground.png':
     ['shuixin','dike','yanyu','jinshan','moon'].includes(key)?'lake-foreground.png':
@@ -578,7 +610,9 @@ function openDepth(target,creature=deerHerd[0]){
   const begin=()=>{
     if(serial!==depthSerial||depthState!=='pending')return;
     const portal=$('depthPortal');
+    $('depthLoading').hidden=true;
     portal.hidden=false;portal.classList.remove('open','clear-mist','ready','closing');
+    portal.classList.toggle('yanyu-close',key==='yanyu');
     portal.style.setProperty('--origin-x',`${clamp(focusX-offset,30,scene.clientWidth-30)}px`);
     portal.style.setProperty('--origin-y',`${clamp(focusY,35,scene.clientHeight-35)}px`);
     portal.style.setProperty('--depth-image',`url('${assetUrl(`art/${art[0]}`)}')`);
@@ -591,22 +625,38 @@ function openDepth(target,creature=deerHerd[0]){
     $('depthInfoBody').textContent=key==='deer'?'平原林缘的梅花鹿会停步、觅食，也会警觉地抬头。观察它们时宜保持距离，不追逐惊扰。':key==='chuifeng'?'磬锤峰是避暑山庄视野中的园外借景。近景为依据山形创作的景观延伸，并非山庄园内步道。':spot.description;
     $('depthInfo').hidden=true;
     $('depthCloud').textContent=key==='deer'?'静观鹿影　↗':'拨云观景　↗';
+    $('depthCloud').setAttribute('aria-pressed','false');
     portal.classList.toggle('deer-close',key==='deer');
     portal.classList.toggle('peak-close',key==='chuifeng');
     prepareGuide(key);
     if(key==='deer'){$('depthDeer').dataset.pose='alert';closeDeerNextAt=performance.now()+2400;}
     depthState='opening';
-    requestAnimationFrame(()=>requestAnimationFrame(()=>{if(depthState==='opening')portal.classList.add('open');}));
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      if(depthState==='opening'){portal.classList.add('open');$('depthBack').focus({preventScroll:true});}
+    }));
     depthTimer=setTimeout(()=>{if(depthState==='opening'){depthState='open';portal.classList.add('ready');}},reducedMotion.matches?30:1700);
   };
-  const preload=(src)=>{
-    const image=new Image();image.src=src;
-    return Promise.race([image.decode().catch(()=>{}),new Promise((resolve)=>setTimeout(resolve,1400))]);
-  };
+  const preload=(src)=>new Promise((resolve,reject)=>{
+    const image=new Image();
+    const timeout=setTimeout(()=>reject(new Error(`Image timed out: ${src}`)),9000);
+    image.onload=()=>{clearTimeout(timeout);image.decode?.().then(resolve,resolve)??resolve();};
+    image.onerror=()=>{clearTimeout(timeout);reject(new Error(`Image failed: ${src}`));};
+    image.src=src;
+  });
   Promise.all([
     preload(assetUrl(`art/${art[0]}`)),preload(assetUrl(`art/${foreground}`)),
     new Promise((resolve)=>setTimeout(resolve,reducedMotion.matches?30:shift>scene.clientWidth*.35?850:90))
-  ]).then(begin);
+  ]).then(begin).catch(()=>{
+    if(serial!==depthSerial||depthState!=='pending')return;
+    depthState='closed';depthCurrent=null;
+    $('depthGuard').hidden=true;
+    $('depthLoading').hidden=true;
+    travelScale=1;render();
+    experience.classList.remove('depth-travel');
+    setBackgroundInert(true);
+    $('depthError').hidden=false;
+    $('depthRetry').focus({preventScroll:true});
+  });
 }
 
 function showSpot(spot, move=true, enterDepth=true){
@@ -706,6 +756,7 @@ function setNight(value){
   if(!night)experience.classList.remove('lights-awake');
   $('nightBtn').classList.toggle('active',night);
   $('nightBtn').setAttribute('aria-pressed',String(night));
+  $('nightBtn').setAttribute('aria-label',night?'切换至白昼':'切换至夜景');
   $('nightBtn').querySelector('small').textContent=night?'白昼':'夜游';
   $('weatherText').textContent=`${raining?'雨':'晴'} · ${night?'夜色':'午后'}`;
   showToast(night?'月色入湖，万籁俱静':'日光重临，湖山如画');
@@ -716,6 +767,7 @@ function setRaining(value){
   rainElapsed=0;
   $('rainBtn').classList.toggle('active',raining);
   $('rainBtn').setAttribute('aria-pressed',String(raining));
+  $('rainBtn').setAttribute('aria-label',raining?'关闭烟雨':'开启烟雨');
   $('rainBtn').querySelector('small').textContent=raining?'放晴':'烟雨';
   $('weatherText').textContent=`${raining?'雨':'晴'} · ${night?'夜色':'午后'}`;
   showToast(raining?'风起湖面，细雨将至':'云开雨霁，湖光清明');
@@ -965,6 +1017,11 @@ function animate(now){
 }
 
 function bindEvents(){
+  const nav=$('spotNav');
+  const updateNavHint=()=>nav.parentElement.classList.toggle('at-end',nav.scrollLeft+nav.clientWidth>=nav.scrollWidth-6);
+  nav.addEventListener('scroll',updateNavHint,{passive:true});
+  window.addEventListener('resize',updateNavHint);
+  requestAnimationFrame(updateNavHint);
   function enterScene(spotId){
     if(entered)return;entered=true;
     experience.classList.remove('is-hidden');
@@ -982,6 +1039,7 @@ function bindEvents(){
     closeDepth(true);
     setMoving(0);if(boating)setBoating(false);closeStory();
     $('intro').hidden=false;$('intro').classList.remove('leaving');entered=false;
+    $('enterBtn').focus({preventScroll:true});
   }
   $('enterBtn').addEventListener('click',()=>enterScene());
   document.querySelectorAll('[data-enter-spot]').forEach((button)=>button.addEventListener('click',()=>enterScene(button.dataset.enterSpot)));
@@ -993,6 +1051,26 @@ function bindEvents(){
     placeWalker(zoneSurface[zone],panelStarts[zonePanels[zone]]+widths[zonePanels[zone]]*zoneEntryX[zone]);
   }));
   $('depthBack').addEventListener('click',()=>closeDepth());
+  $('depthRetry').addEventListener('click',()=>{
+    $('depthError').hidden=true;setBackgroundInert(false);
+    const source=depthFocusReturn;
+    const savedView=depthSavedView;
+    if(depthRetryTarget){openDepth(depthRetryTarget);depthFocusReturn=source;depthSavedView=savedView;}
+  });
+  $('depthErrorBack').addEventListener('click',()=>{
+    $('depthError').hidden=true;setBackgroundInert(false);
+    if(depthSavedView){targetOffset=depthSavedView.offset;velocity=0;}
+    depthSavedView=null;
+    if(depthFocusReturn?.isConnected)depthFocusReturn.focus({preventScroll:true});
+    else scene.focus({preventScroll:true});
+    depthFocusReturn=null;
+  });
+  $('sceneRetry').addEventListener('click',()=>location.reload());
+  document.querySelectorAll('.art-panel').forEach((image)=>image.addEventListener('error',()=>{
+    $('sceneLoadError').hidden=false;
+    setBackgroundInert(true);
+    $('sceneRetry').focus({preventScroll:true});
+  }));
   $('depthPeak').addEventListener('click',()=>{stopGuide();$('depthInfo').hidden=false;});
   $('guidePlay').addEventListener('click',toggleGuide);
   $('guideReplay').addEventListener('click',startGuide);
@@ -1009,7 +1087,19 @@ function bindEvents(){
   $('depthInfoClose').addEventListener('click',()=>{$('depthInfo').hidden=true;});
   $('depthCloud').addEventListener('click',()=>{
     const portal=$('depthPortal');portal.classList.toggle('clear-mist');
-    $('depthCloud').textContent=portal.classList.contains('clear-mist')?'云开见景　↗':'拨云观景　↗';
+    const clear=portal.classList.contains('clear-mist');
+    $('depthCloud').textContent=clear?'云开见景 · 复云':'拨云观景　↗';
+    $('depthCloud').setAttribute('aria-pressed',String(clear));
+  });
+  $('depthPortal').addEventListener('pointermove',(event)=>{
+    if(depthState!=='open'||reducedMotion.matches)return;
+    const portal=$('depthPortal');
+    const x=clamp((event.clientX/portal.clientWidth-.5)*2,-1,1);
+    const y=clamp((event.clientY/portal.clientHeight-.5)*2,-1,1);
+    portal.style.setProperty('--parallax-back-x',`${-x*8}px`);
+    portal.style.setProperty('--parallax-back-y',`${-y*5}px`);
+    portal.style.setProperty('--parallax-front-x',`${x*15}px`);
+    portal.style.setProperty('--parallax-front-y',`${y*9}px`);
   });
   $('depthDeer').addEventListener('click',()=>{
     const deer=$('depthDeer');deer.dataset.pose='alert';closeDeerNextAt=performance.now()+2000;
@@ -1025,27 +1115,50 @@ function bindEvents(){
   $('soundBtn').addEventListener('click',toggleSound);
   $('zoomInBtn').addEventListener('click',()=>{zoom=clamp(zoom+.15,.85,1.45);layout();showToast(`画卷 ${Math.round(zoom*100)}%`);});
   $('zoomOutBtn').addEventListener('click',()=>{zoom=clamp(zoom-.15,.85,1.45);layout();showToast(`画卷 ${Math.round(zoom*100)}%`);});
-  $('helpBtn').addEventListener('click',()=>{$('helpDialog').hidden=false;$('closeHelp').focus();});
-  function closeHelp(){ $('helpDialog').hidden=true;$('helpBtn').focus(); }
+  $('helpBtn').addEventListener('click',()=>{$('helpDialog').hidden=false;experience.inert=true;$('closeHelp').focus();});
+  function closeHelp(){ $('helpDialog').hidden=true;experience.inert=false;$('helpBtn').focus(); }
   $('closeHelp').addEventListener('click',closeHelp);
   $('resumeBtn').addEventListener('click',closeHelp);
   $('helpDialog').addEventListener('click',(event)=>{if(event.target===$('helpDialog'))closeHelp();});
   scene.addEventListener('pointerdown',(event)=>{
     if(event.target.closest('button'))return;
+    activePointers.set(event.pointerId,{x:event.clientX,y:event.clientY});
+    scene.setPointerCapture(event.pointerId);
+    if(activePointers.size===2){
+      const [a,b]=[...activePointers.values()];
+      pinchStart={distance:Math.hypot(a.x-b.x,a.y-b.y),zoom,worldX:offset+(a.x+b.x)/2,screenX:(a.x+b.x)/2};
+      dragging=false;velocity=0;scene.classList.remove('dragging');return;
+    }
     dragging=true;pointerX=event.clientX;pointerY=event.clientY;pointerOffset=offset;lastDragX=event.clientX;lastDragTime=performance.now();velocity=0;
-    scene.classList.add('dragging');scene.setPointerCapture(event.pointerId);
+    scene.classList.add('dragging');
   });
   scene.addEventListener('pointermove',(event)=>{
+    if(activePointers.has(event.pointerId))activePointers.set(event.pointerId,{x:event.clientX,y:event.clientY});
+    if(pinchStart&&activePointers.size>=2){
+      const [a,b]=[...activePointers.values()];
+      const nextZoom=clamp(pinchStart.zoom*Math.hypot(a.x-b.x,a.y-b.y)/Math.max(1,pinchStart.distance),.85,1.45);
+      if(Math.abs(nextZoom-zoom)>.007){
+        zoom=nextZoom;layout();
+        const centerX=(a.x+b.x)/2;
+        offset=clamp(pinchStart.worldX*zoom/pinchStart.zoom-centerX,0,maxOffset());
+        targetOffset=offset;render();
+      }
+      experience.classList.add('has-panned');suppressClickUntil=performance.now()+350;
+      return;
+    }
     if(!dragging)return;
     const delta=event.clientX-pointerX;
     offset=clamp(pointerOffset-delta,0,maxOffset());targetOffset=offset;
     const now=performance.now(),elapsed=now-lastDragTime;
     if(elapsed>8){velocity=clamp((lastDragX-event.clientX)/elapsed,-1.6,1.6);lastDragX=event.clientX;lastDragTime=now;}
-    if(Math.abs(delta)>8)suppressClickUntil=now+170;
+    if(Math.abs(delta)>8){suppressClickUntil=now+170;experience.classList.add('has-panned');}
     render();
   });
   scene.addEventListener('pointerup',(event)=>{
-    if(dragging&&Math.abs(event.clientX-pointerX)<7&&Math.abs(event.clientY-pointerY)<7){
+    const wasPinching=Boolean(pinchStart);
+    activePointers.delete(event.pointerId);
+    if(activePointers.size<2)pinchStart=null;
+    if(dragging&&!wasPinching&&Math.abs(event.clientX-pointerX)<7&&Math.abs(event.clientY-pointerY)<7){
       const y=(event.clientY-scene.getBoundingClientRect().top-(scene.clientHeight-height)/2)/height;
       const clickWorldX=offset+event.clientX-scene.getBoundingClientRect().left;
       const [left,right]=walkBounds();
@@ -1057,7 +1170,7 @@ function bindEvents(){
     }
     dragging=false;scene.classList.remove('dragging');
   });
-  scene.addEventListener('pointercancel',()=>{dragging=false;scene.classList.remove('dragging');});
+  scene.addEventListener('pointercancel',(event)=>{activePointers.delete(event.pointerId);pinchStart=null;dragging=false;scene.classList.remove('dragging');});
   scene.addEventListener('wheel',(event)=>{event.preventDefault();velocity=0;targetOffset=clamp(targetOffset+(Math.abs(event.deltaX)>Math.abs(event.deltaY)?event.deltaX:event.deltaY)*.7,0,maxOffset());},{passive:false});
   const progress=$('progressFill').parentElement;
   progress.addEventListener('pointerdown',(event)=>{targetOffset=clamp((event.clientX-progress.getBoundingClientRect().left)/progress.clientWidth*maxOffset(),0,maxOffset());velocity=0;});
@@ -1069,8 +1182,36 @@ function bindEvents(){
     button.addEventListener('pointercancel',()=>setMoving(0));
   }
   window.addEventListener('keydown',(event)=>{
+    if(!$('helpDialog').hidden){
+      if(event.key==='Escape'){event.preventDefault();closeHelp();}
+      if(event.key==='Tab'){
+        const buttons=[...$('helpDialog').querySelectorAll('button,a[href]')].filter((element)=>element.getClientRects().length);
+        const first=buttons[0],last=buttons.at(-1);
+        if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus();}
+        else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus();}
+      }
+      return;
+    }
+    if(!$('depthError').hidden){
+      if(event.key==='Escape'){event.preventDefault();$('depthErrorBack').click();}
+      if(event.key==='Tab'&&((event.shiftKey&&document.activeElement===$('depthRetry'))||(!event.shiftKey&&document.activeElement===$('depthErrorBack')))){
+        event.preventDefault();(event.shiftKey?$('depthErrorBack'):$('depthRetry')).focus();
+      }
+      return;
+    }
+    if(!$('sceneLoadError').hidden){
+      if(event.key==='Tab'){event.preventDefault();$('sceneRetry').focus();}
+      return;
+    }
     if(depthState!=='closed'){
       if(event.key==='Escape'){event.preventDefault();closeDepth();}
+      if(event.key==='Tab'&&depthState==='pending'){event.preventDefault();return;}
+      if(event.key==='Tab'&&!$('depthPortal').hidden){
+        const buttons=[...$('depthPortal').querySelectorAll('button')].filter((button)=>!button.disabled&&button.getClientRects().length&&getComputedStyle(button).visibility!=='hidden');
+        const first=buttons[0],last=buttons.at(-1);
+        if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus();}
+        else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus();}
+      }
       return;
     }
     if(!entered||!$('helpDialog').hidden)return;

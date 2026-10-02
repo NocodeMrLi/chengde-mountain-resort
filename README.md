@@ -55,7 +55,7 @@ npm run preview
 | 路径 | 内容 |
 | --- | --- |
 | `index.html`、`style.css`、`app.js` | 页面结构、视觉样式与交互 |
-| `public/art/` | 长卷、景点近景、人物、动物和遮罩素材 |
+| `public/art/` | 长卷、景点近景、人物、动物、遮罩和界面图标；运行时绘景优先使用 WebP |
 | `public/audio/` | 古琴录音转码文件 |
 | `scripts/build.mjs`、`server.mjs` | 静态构建、本地开发与预览 |
 | `docs/images/` | README 展示图 |
@@ -64,7 +64,7 @@ npm run preview
 ## 许可与素材署名
 
 - **源代码**：[MIT 许可](LICENSE)。该许可不适用于下述图像和音乐。
-- **美术**：`public/art/` 为本项目独立构思、借助 AI 图像工具制作和整理的素材；不属于 MIT 许可。单独复用或再发布请先联系维护者。README 展示图是该作品的截图。
+- **美术**：`public/art/` 中的长卷与绘景为本项目独立构思、借助 AI 图像工具制作和整理的素材；不属于 MIT 许可。单独复用或再发布请先联系维护者。README 展示图是该作品的截图。GitHub 链接图标来自 MIT 许可的 Primer Octicons，见 [ASSETS.md](ASSETS.md)。
 - **音乐**：[《平沙落雁》](https://commons.wikimedia.org/wiki/File:Pingsha_Luoyan.ogg)，演奏及录制：**Charlie Huang**，依据 [CC BY 2.5](https://creativecommons.org/licenses/by/2.5/) 使用。本站版本转为 AAC/M4A，并做轻微频段过滤；复用时须保留作者、来源、许可和改动说明。详见 [ASSETS.md](ASSETS.md)。
 
 参考作品仅用于研究互动长卷的呈现方式，本项目没有复制其代码或美术。

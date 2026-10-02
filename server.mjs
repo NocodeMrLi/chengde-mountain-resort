@@ -4,7 +4,7 @@ import {resolve, extname, join} from 'node:path';
 
 const root = resolve(process.argv[2] || '.');
 const port = Number(process.env.PORT || 4173);
-const types = {'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.png':'image/png','.svg':'image/svg+xml','.ico':'image/x-icon','.m4a':'audio/mp4','.ogg':'audio/ogg'};
+const types = {'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.png':'image/png','.webp':'image/webp','.svg':'image/svg+xml','.ico':'image/x-icon','.m4a':'audio/mp4','.ogg':'audio/ogg'};
 
 createServer(async(req,res)=>{
   try{

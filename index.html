@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#e9dfc8" />
     <meta name="description" content="移步入画，游赏承德避暑山庄宫殿、湖泊、平原与山峦四景区。拖动画卷探索景点，感受昼夜晴雨。" />
     <title>山庄入画 · 承德避暑山庄互动长卷</title>
-    <link rel="preload" href="./art/yan-yu-lake.png" as="image" />
+    <link rel="preload" href="./art/yan-yu-lake.webp" as="image" />
     <link rel="stylesheet" href="./style.css" />
     <script type="module" src="./app.js"></script>
   </head>
@@ -17,11 +17,11 @@
       <div id="intro" class="intro">
         <div class="intro-art" aria-hidden="true"></div>
         <div class="intro-shade" aria-hidden="true"></div>
-        <div class="intro-top"><span class="mini-seal">热河</span><span>一卷湖山 · 四时入画</span><span class="intro-index">CHENGDE · 1703</span></div>
+        <div class="intro-top"><span class="mini-seal">热河</span><span>一卷湖山 · 四时入画</span><span class="intro-index">CHENGDE · 1703</span><a class="github-link intro-github" href="https://github.com/NocodeMrLi/chengde-mountain-resort" target="_blank" rel="noopener noreferrer" aria-label="查看 GitHub 源码" title="查看 GitHub 源码"></a></div>
         <div class="intro-content">
           <div class="eyebrow"><span></span> 清 · 避暑山庄湖区 <span></span></div>
           <div class="intro-heading"><span class="intro-aside">御园山水<br/>一日千年</span><h1>山庄<span>入</span>画</h1></div>
-          <p>舟行碧波，步入烟岚。<br />在一幅会呼吸的长卷里，重游承德湖山。</p>
+          <p>湖光铺卷，步入烟岚。<br />在一幅会呼吸的长卷里，重游承德湖山。</p>
           <button id="enterBtn" class="enter-btn" type="button"><span>展卷入园</span><span class="enter-arrow">↗</span></button>
           <div class="intro-hint">建议开启声音 · 拖动看景 · 点击画中景点</div>
           <div class="intro-routes" aria-label="从全景直达胜景"><span>或择一景先行</span><button type="button" data-enter-spot="yanyu">烟雨楼</button><button type="button" data-enter-spot="danbo">澹泊敬诚</button><button type="button" data-enter-spot="wanshu">万树园</button><button type="button" data-enter-spot="simian">四面云山</button></div>
@@ -32,12 +32,12 @@
       <main id="experience" class="experience is-hidden" aria-label="承德避暑山庄互动长卷">
         <div id="scene" class="scene" aria-label="可拖动的山庄湖区长卷" tabindex="0">
           <div id="world" class="world">
-            <img class="art-panel art-one" src="./art/yan-yu-lake.png" alt="淡彩绘制的避暑山庄湖面、烟雨楼与山林" draggable="false" />
-            <img class="art-panel art-bridge" src="./art/lake-passage-no-sun.png" alt="连接烟雨楼与金山的湖上水道" draggable="false" />
-            <img class="art-panel art-two" src="./art/jinshan-moonlight.png" alt="淡彩绘制的金山、登山廊与月色江声庭院" draggable="false" />
-            <img class="art-panel art-palace" src="./art/palace-hall.png" alt="澹泊敬诚殿与丽正门的宫殿区长卷" draggable="false" />
-            <img class="art-panel art-plains" src="./art/plains-wenyuan-clean.png" alt="万树园与文津阁的平原区长卷" draggable="false" />
-            <img class="art-panel art-mountain" src="./art/mountain-view.png" alt="四面云山与锤峰落照的山峦区长卷" draggable="false" />
+            <img class="art-panel art-one" src="./art/yan-yu-lake.webp" alt="淡彩绘制的避暑山庄湖面、烟雨楼与山林" fetchpriority="high" decoding="async" draggable="false" />
+            <img class="art-panel art-bridge" src="./art/lake-passage-no-sun.webp" alt="连接烟雨楼与金山的湖上水道" decoding="async" draggable="false" />
+            <img class="art-panel art-two" src="./art/jinshan-moonlight.webp" alt="淡彩绘制的金山、登山廊与月色江声庭院" decoding="async" draggable="false" />
+            <img class="art-panel art-palace" src="./art/palace-hall.webp" alt="澹泊敬诚殿与丽正门的宫殿区长卷" decoding="async" draggable="false" />
+            <img class="art-panel art-plains" src="./art/plains-wenyuan-clean.webp" alt="万树园与文津阁的平原区长卷" decoding="async" draggable="false" />
+            <img class="art-panel art-mountain" src="./art/mountain-view.webp" alt="四面云山与锤峰落照的山峦区长卷" decoding="async" draggable="false" />
             <div id="treeLayer" class="tree-layer" aria-hidden="true"></div>
             <div id="lampLayer" class="lamp-layer" aria-hidden="true"></div>
             <div class="join-veil" aria-hidden="true"></div>
@@ -65,6 +65,7 @@
           <button id="homeBtn" class="brand" type="button" aria-label="返回入口"><span class="brand-seal">庄</span><span><strong>山庄入画</strong><small>CHENGDE HANDSCROLL</small></span></button>
           <div class="top-center">一 湖 一 山 一 卷 诗</div>
           <div class="top-actions">
+            <a class="github-link top-github" href="https://github.com/NocodeMrLi/chengde-mountain-resort" target="_blank" rel="noopener noreferrer" aria-label="查看 GitHub 源码" title="查看 GitHub 源码"></a>
             <button id="soundBtn" class="text-btn" type="button" aria-label="开启音乐" aria-pressed="false"><span class="control-glyph">♪</span><span class="label">音乐关</span></button>
             <button id="helpBtn" class="round-btn" type="button" aria-label="游览说明">?</button>
           </div>
@@ -84,32 +85,37 @@
         </aside>
 
         <nav class="bottom-ui" aria-label="游园操作">
-          <div class="explore-block"><span class="small-label">游园手帖 <b id="visitedCount">00</b> / 11</span><div class="explore-title">移步换景，心随舟行。</div></div>
-          <div id="spotNav" class="spot-nav" aria-label="景点导航"></div>
+          <div class="explore-block"><span class="small-label">游园手帖 <b id="visitedCount">00</b> / 11</span><div class="explore-title">移步换景，心随卷行。</div></div>
+          <div class="spot-nav-wrap"><div id="spotNav" class="spot-nav" aria-label="景点导航，横向滑动可查看更多景点"></div><span id="spotNavHint" class="spot-nav-hint" aria-hidden="true">滑动看更多　›</span></div>
           <div class="scene-controls">
-            <button id="nightBtn" class="mode-btn" type="button" aria-pressed="false" title="切换昼夜"><span>☾</span><small>夜游</small></button>
-            <button id="rainBtn" class="mode-btn" type="button" aria-pressed="false" title="切换晴雨"><span>☂</span><small>烟雨</small></button>
+            <button id="nightBtn" class="mode-btn" type="button" aria-label="切换至夜景" aria-pressed="false" title="切换昼夜"><span>☾</span><small>夜游</small></button>
+            <button id="rainBtn" class="mode-btn" type="button" aria-label="开启烟雨" aria-pressed="false" title="切换晴雨"><span>☂</span><small>烟雨</small></button>
             <div class="control-divider"></div>
             <button id="zoomOutBtn" class="zoom-btn" type="button" aria-label="缩小画卷">−</button><button id="zoomInBtn" class="zoom-btn" type="button" aria-label="放大画卷">+</button>
           </div>
         </nav>
         <div class="progress-track"><div id="progressFill" class="progress-fill"></div><div id="progressThumb" class="progress-thumb"></div></div>
-        <div class="keyboard-hint">拖动画卷　·　点击景点</div>
+        <div id="swipeHint" class="keyboard-hint">拖动画卷　·　点击景点</div>
         <div id="depthGuard" class="depth-guard" aria-hidden="true" hidden></div>
+        <div id="depthLoading" class="depth-loading" role="status" aria-live="polite" tabindex="-1" hidden>正在走近画中景点…</div>
         <section id="depthPortal" class="depth-portal" aria-label="景点近景探索" hidden>
           <div class="depth-backdrop" aria-hidden="true"></div>
+          <div id="depthLife" class="depth-life" aria-hidden="true"><img class="depth-person depth-person-left" src="./art/person-pavilion-pair.png" alt="" /><img class="depth-person depth-person-right" src="./art/person-terrace-pair.png" alt="" /><img class="depth-painted-boat" src="./art/painted-boat.png" alt="" /></div>
+          <div class="depth-atmosphere" aria-hidden="true"></div><div class="depth-rain" aria-hidden="true"></div>
           <div class="depth-mist" aria-hidden="true"></div>
           <img id="depthForeground" class="depth-foreground" src="./art/hammer-foreground.png" alt="" draggable="false" />
           <button id="depthDeer" class="depth-deer" type="button" aria-label="近看梅花鹿的动作"><img class="near-deer-alert" src="./art/deer-stag-alert.png" alt="" /><img class="near-deer-graze" src="./art/deer-stag-graze.png" alt="" /><img class="near-deer-walk" src="./art/deer-stag-walk.png" alt="" /><i></i></button>
           <header class="depth-header"><button id="depthBack" class="depth-back" type="button">← 回望山庄全景</button><span id="depthKicker">园外借景 · 磬锤峰</span></header>
           <button id="depthPeak" class="depth-target" type="button" aria-label="细看景点"><span id="depthAction">细看</span></button>
-          <button id="depthCloud" class="depth-cloud-button" type="button">拨云观景　↗</button>
+          <button id="depthCloud" class="depth-cloud-button" type="button" aria-pressed="false">拨云观景　↗</button>
           <div id="guidePanel" class="guide-panel" aria-label="景点导览">
             <div class="guide-actions"><span id="guideTitle">随景解说</span><button id="guidePlay" type="button">阅读讲解</button><button id="guideReplay" type="button" hidden>↺ 重播</button></div>
             <p id="guideCaption" aria-live="polite" hidden></p>
           </div>
           <div id="depthInfo" class="depth-info" hidden><button id="depthInfoClose" type="button" aria-label="关闭近景介绍">×</button><small id="depthInfoKicker">湖山深处 · 画中寻胜</small><h2 id="depthInfoTitle">磬锤峰</h2><p id="depthInfoBody"></p></div>
         </section>
+        <div id="depthError" class="depth-error" role="alertdialog" aria-modal="true" aria-labelledby="depthErrorTitle" hidden><div><h2 id="depthErrorTitle">近景暂未展开</h2><p>画面加载遇到问题，可以重试或回到长卷。</p><button id="depthRetry" type="button">重试近景</button><button id="depthErrorBack" type="button">返回长卷</button></div></div>
+        <div id="sceneLoadError" class="depth-error" role="alertdialog" aria-modal="true" aria-labelledby="sceneErrorTitle" hidden><div><h2 id="sceneErrorTitle">画卷加载失败</h2><p>请检查网络后重试。</p><button id="sceneRetry" type="button">重新加载画卷</button></div></div>
       </main>
 
       <div id="helpDialog" class="dialog-backdrop" hidden>
