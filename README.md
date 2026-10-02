@@ -1,82 +1,95 @@
 # 山庄入画 · 承德避暑山庄互动长卷
 
-以承德避暑山庄为灵感创作的国风互动长卷。展开画卷，沿湖山游览，在烟雨楼等景点切换近景，并体验昼夜与晴雨变化。支持桌面和手机浏览器。
+以承德避暑山庄的湖泊、宫苑、平原与山峦为题材的国风互动作品。展开画卷，拖动游览，循着景名走近湖山，切换昼夜晴雨，听一曲古琴《平沙落雁》。支持桌面与手机浏览器。
 
-**本分支为本地验收候选，区域与近景升级尚未发布到线上。在线入口对应 main；本分支进度见下方说明与验收记录。**
+**[在线游览](https://nocodemrli.github.io/chengde-mountain-resort/)** · [线上构建标识](https://nocodemrli.github.io/chengde-mountain-resort/deployment.json)
 
-**[在线游览](https://nocodemrli.github.io/chengde-mountain-resort/)** · [查看最新线上构建](https://nocodemrli.github.io/chengde-mountain-resort/deployment.json)
+> 本开发分支完成七十二景对应画面，尚未合并 `main` 或发布到上述在线入口。公开站仍以 `main` 为准。最新本地验收见 [最终候选记录](docs/final72-review.md)。
 
-![山庄入画的入园画面](docs/images/entrance.jpg)
+![山庄入画入口](docs/review-final72/entrance.png)
+
+## 可以怎样游览
+
+- **展开长卷**：横向拖动或滚轮浏览四大景区，点击景点进入近观；返回时恢复原来的镜头位置。
+- **深入园景**：18幅区域画卷连接康熙、乾隆各三十六景。72个历史题名都有对应可进入画面，其中68景经区域近观，4景经主长卷近观。
+- **细看景物**：区域支持拖动与100%–160%缩放；区域近景支持拖动、滚轮或双指缩放至240%，每景有两个细看焦点，文字可展开或收起。
+- **晴雨昼夜**：湖水、云雾与灯火随环境变化；室内框景和檐下场景将雨层限定在窗外、檐外。人物、画舫与马为静态绘景，梅花鹿保留动作与点击反馈。
+- **七十二景图鉴**：搜索景名或别名，按朝代、区域、游览状态筛选，直接定位对应景物；成功显示近景后才记录“已游览”。
+- **听琴入画**：声音开关可播放或静音古琴录音。景点讲解为文字，尚无语音讲解。
+- **安心返回**：展卷动画可跳过；区域与近景加载失败或超时可重试、返回，迟到请求不会覆盖当前场景。
 
 <details>
-<summary>展开查看画卷与烟雨楼近景</summary>
+<summary>查看金山、长桥与青雀舫画面</summary>
 
-![湖区长卷：烟雨楼与画舫](docs/images/lake-scroll.jpg)
+![金山湖镜区域](docs/review-final72/jinshan-region.png)
 
-![烟雨楼建筑近景](docs/images/yanyu-closeup.jpg)
+![长虹饮练：从长桥南端望向北端](docs/review-final72/k34-near.png)
+
+![青雀舫独立近观](docs/review-final72/q05-near.png)
 
 </details>
 
-## 如何游览
+七十二景指两朝题名的景致，不等于七十二座现存建筑。双湖夹镜与长虹饮练是同一桥的两个角度；临芳墅与知鱼矶是一院两景；青雀舫是历史御舟。作品为这些题景分别创作观看画面，没有将同一张图换标题充数。图鉴的“已游览”只代表在数字作品中打开过画面。
 
-1. 打开[在线作品](https://nocodemrli.github.io/chengde-mountain-resort/)，选择“展卷入园”。首次加载会读取较大的绘景图片，请稍候。
-2. 在画面上拖动，或使用鼠标滚轮浏览长卷；使用画面中的导航、景点标记跳转。点击景点标记可进入近景，再返回全景。
-3. 用底部和侧边控制切换景区、昼夜、烟雨与缩放；点击声音开关播放或静音古琴音乐。手机上可触摸拖动画面和点击控件。
+## 画面与资料边界
 
-主长卷覆盖**四个景区、11 个可点击画面**。结合区域入口，整个作品与七十二景图鉴对应、可进入近景的历史题名共 **52 景**；另有未计入七十二景进度的景观与导览点。湖面、云雾、灯火和山林带有动态效果；梅花鹿可以移动并响应点击。画中的人物和画舫为静态绘景，**不提供人物行走或乘船操作**。景点讲解为文字，尚无语音讲解。
+美术依据已核实的历史题名、组群、形制与观看线索作原创意境演绎。具体院落、家具、植物、岸线和相对位置不是实地测绘或精确历史复原。未核实的当前存状会明确标注；旧址研究不等于建筑已经实体重建。磬锤峰在山庄园外，在本作中作为园内借景呈现。
 
-从长卷可进入**如意洲、山地、千尺雪、梨花伴月、清舒山馆、榛子峪、青枫绿屿、松云峡、山巅眺望、宫苑居停、林原驻马、泉源水脉与惠迪吉十三个区域**，在二维画面中拖动、双指或按钮缩放选景，再走近景物。区域缩放限于100%–160%。如意洲 **12 景**均有各自的近景画作；山地的四面云山、锤峰落照也可近观。另有千尺雪水系4景、梨花伴月组群4景与清舒山馆3景的独立画作；静好堂表现温室，畅远台表现平台，澄泉绕石表现泉石，不将景名一律画成独立殿堂。区域近景支持拖动、滚轮／双指缩放、两个细节焦点与可收起的景点文字，继承昼夜晴雨。新增山地组景9景，各有独立画作和两个细看焦点，罨画窗表现室内框景。宫苑、平原、泉石与惠迪吉新增14个独立近景；烟波致爽、宿云檐、澄观斋与翠云岩的雨层限定于窗外或檐外。勤政殿和乐成阁等旧景明确标注艺术演绎与已知遗址资料。区域底图及近景均在加载与解码完成后启用探索，失败或超时可重试或返回，成功显示后才计为已游览。入口展卷动画可跳过，逐层返回会恢复原来的浏览位置。
-
-**七十二景图鉴**收录康熙和乾隆各题三十六景的景名与逐景原创介绍，支持搜索、朝代、区域及游览状态筛选。历史题名不等于七十二座现存建筑；图鉴里的“已游览”只代表在此数字作品中打开过画面。景点来源保存在开发研究文档，不在游客界面提供景点外链；未核实的实地现状会显示“待核实”。72 景文字资料已经齐备，目前仅 **52 景**有对应的可进入近景画面，其余 **20 景**仍为筹备状态。近景不是三维场景；镜头在分层绘景中移动。
-
-画卷以景点和山庄地貌为依据进行写意组合，不能用于实地导航、建筑测绘或历史复原。磬锤峰在山庄园外，这里以园内借景呈现。本项目是独立创作，非景区官方产品。
+作品使用二维分层绘景与镜头移动；人物行走、乘船操作、三维漫游和语音导览未实现。主长卷仍有少量色调与地貌视角差异，未宣称全卷完全无缝或达到参考作品全部质感。此项目是独立创作，非景区官方产品。
 
 ## 本地运行
 
-需要 **Node.js 18 或更新版本**；项目没有第三方运行依赖。
+需要 **Node.js 18或更新版本**；项目没有第三方运行依赖。
 
 ```sh
-git clone https://github.com/NocodeMrLi/chengde-mountain-resort.git
+git clone --branch codex/lake-finish-20261002 https://github.com/NocodeMrLi/chengde-mountain-resort.git
 cd chengde-mountain-resort
 npm run dev
 ```
 
-打开 <http://127.0.0.1:4173/>。端口被占用时，可用 `PORT=4174 npm run dev`。
+浏览器打开 <http://127.0.0.1:4173/>。端口被占用时，可用 `PORT=4174 npm run dev`。
+
+检查构建后的版本：
 
 ```sh
 npm run build
 npm run preview
 ```
 
-构建结果在 `dist/`，`preview` 用于本地检查构建后的页面。可在页面的 `data-build` 属性或 `/deployment.json` 中核对构建标识。
+静态文件输出至 `dist/`。可通过页面 `data-build` 属性或 `/deployment.json` 核对构建标识。各幅区域与近景按进入时加载，下载源码中的原始PNG归档不等于网页首次下载全部美术。
 
-## 发布与更新
+## 验证记录
 
-推送到 `main` 后，[Publish handscroll](.github/workflows/pages.yml) 工作流会构建并发布 `dist/` 到 GitHub Pages；Pages 的 Source 需设置为 **GitHub Actions**。部署完成后，仍使用上方同一个在线游览地址。发布及缓存刷新可能需要一些时间；若页面尚未更新，可查看 [Actions](https://github.com/NocodeMrLi/chengde-mountain-resort/actions) 和线上构建标识。
+- [山地批次](docs/mountain-depth-review.md)：新增9景、区域加载错误隔离、17幅透明素材无损WebP，以及初始图片请求约27.23MB降至4.67MB的本机测量。
+- [宫苑与平原批次](docs/palace-plains-review.md)：新增14景、4区域、室内分区雨层与短屏控件命中检查。
+- [最终水岸批次](docs/final72-review.md)：新增20景、5区域、完整72景进度核对、模拟手机与最终候选截图。
 
-构建脚本会给 JavaScript、CSS 文件名及图像、音频 URL 加内容指纹，以便新版本加载对应资源。只修改本地文件不会更新线上版本。
+验证使用本机Chrome及360/390/430宽模拟手机。真机、低端设备、真实带宽性能未测；模拟触摸结果不视作真机验证。具体通过项目与测试范围以各批记录为准。
 
-## 项目文件
+## 项目结构
 
 | 路径 | 内容 |
 | --- | --- |
-| `index.html`、`style.css`、`app.js` | 页面结构、视觉样式与交互 |
-| `public/art/` | 长卷、景点近景、人物、动物、遮罩和界面图标；运行时绘景优先使用 WebP |
-| `public/atlas-data.json`、`public/region.js` | 七十二景资料、区域浏览与图鉴交互 |
-| `sources/region-art/`、`sources/ruyi-depth-art/`、`sources/lake-depth-art/`、`sources/mountain-depth-art/`、`sources/palace-plains-art/` | 区域、近景与形制修正绘景的原始生成文件 |
-| `sources/research/` | 分批研究的历史文案与内部来源编号，尚不代表画面完成 |
+| `index.html`、`style.css`、`app.js` | 入口、主长卷、近景、环境与声音交互 |
+| `public/region.js`、`public/atlas-data.json` | 区域镜头、近观、七十二景资料与图鉴 |
+| `public/art/` | 运行绘景、静态人物、动物、前景与图标 |
 | `public/audio/` | 古琴录音转码文件 |
-| `scripts/build.mjs`、`server.mjs` | 静态构建、本地开发与预览 |
-| `docs/images/`、`docs/review-ruyi/`、`docs/review-lake/`、`docs/review-mountain/`、`docs/review-palace/` | 展示图与本地验收截图 |
-| `docs/ruyi-depth-review.md`、`docs/lake-depth-review.md`、`docs/mountain-depth-review.md`、`docs/palace-plains-review.md` | 各批次真实场景数量、资源量与验证边界 |
-| `ASSETS.md`、`sources/AUDIO-LICENSE.md` | 素材来源、改动及授权说明 |
+| `sources/*-art/` | 原始生成图片、修订与逐文件资源清单 |
+| `sources/research/` | 历史文案与研究来源，仅供开发核对 |
+| `docs/` | 展示图、实际进度与验收证据 |
+| `scripts/build.mjs`、`server.mjs` | 静态构建、资源指纹与本地服务器 |
+| `ASSETS.md`、`sources/AUDIO-LICENSE.md` | 素材授权、署名与改动说明 |
+
+## 发布与更新
+
+[Publish handscroll](.github/workflows/pages.yml) 仅在推送到 `main` 或手动触发时发布GitHub Pages；Pages Source需设为 **GitHub Actions**。独立开发分支用于审阅与备份，推送这些分支不会自动更新公开站。
+
+完成验收并合并发布后，继续使用上方同一个在线入口。可在 [Actions](https://github.com/NocodeMrLi/chengde-mountain-resort/actions) 查看部署状态。JS、CSS与图像、音频URL带内容指纹；只修改本地文件不会更新线上站点。
 
 ## 许可与素材署名
 
-- **源代码**：[MIT 许可](LICENSE)。该许可不适用于下述图像和音乐。
-- **美术**：`public/art/` 中的长卷与绘景为本项目独立构思、借助 AI 图像工具制作和整理的素材；不属于 MIT 许可。单独复用或再发布请先联系维护者。README 展示图是该作品的截图。GitHub 链接图标来自 MIT 许可的 Primer Octicons，见 [ASSETS.md](ASSETS.md)。
-- **音乐**：[《平沙落雁》](https://commons.wikimedia.org/wiki/File:Pingsha_Luoyan.ogg)，演奏及录制：**Charlie Huang**，依据 [CC BY 2.5](https://creativecommons.org/licenses/by/2.5/) 使用。本站版本转为 AAC/M4A，并做轻微频段过滤；复用时须保留作者、来源、许可和改动说明。详见 [ASSETS.md](ASSETS.md)。
+- **源代码**：[MIT](LICENSE)。该许可不涵盖下述绘景和音乐。
+- **美术**：本项目独立构思、借助AI图像工具生成与整理，非景区实拍；未复制参考网站美术。图像单独复用或再发布请先联系维护者。README展示图为本作品截图。GitHub标识来自MIT许可的Primer Octicons，见 [ASSETS.md](ASSETS.md)。
+- **音乐**：[《平沙落雁》](https://commons.wikimedia.org/wiki/File:Pingsha_Luoyan.ogg)，演奏与录制 **Charlie Huang**，按 [CC BY 2.5](https://creativecommons.org/licenses/by/2.5/) 使用。本项目转为AAC/M4A并作轻微频段过滤；复用须保留署名、来源、许可及改动说明，详见 [ASSETS.md](ASSETS.md)。
 
-参考作品仅用于研究互动长卷的呈现方式，本项目没有复制其代码或美术。
-
-透明人物、鹿、画舫与前景采用保留全部 RGBA 像素的无损 WebP；原始 PNG 保留归档，隐藏前景与远处人物、鹿按需加载。详见 `docs/mountain-depth-review.md`。
+参考互动长卷仅用于研究呈现方式，本项目没有复用其代码或美术。
