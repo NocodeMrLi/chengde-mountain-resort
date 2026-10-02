@@ -11,6 +11,11 @@ const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const atlasDialog = $('atlasDialog');
 const mainSelectors = ['#scene','.topbar','.zone-nav','.bottom-ui','.story-panel','.progress-track','.keyboard-hint'];
 const regions = {
+  gongyuan:{"title":"宫苑居停","kicker":"寝宫与东宫 · 历史意境组景","art":"gongyuan-region.webp","alt":"松林殿堂、上下层观景楼、白墙院落与宫墙旁绮望楼的写意长卷","description":"依历史居停关联并置烟波致爽、万壑松风、云山胜地、勤政殿、松鹤斋和绮望楼；不作为实测相邻布局。东宫完整殿堂属于艺术演绎，现状以基址遗存为主。","names":["烟波致爽","万壑松风","云山胜地","勤政殿","松鹤斋","绮望楼"],"positions":{"烟波致爽":[48,70],"万壑松风":[12,23],"云山胜地":[52,30],"勤政殿":[94,20],"松鹤斋":[85,59],"绮望楼":[17,67]}},
+  linyuan:{"title":"林原驻马","kicker":"草地与林荫 · 历史意境组景","art":"linyuan-region.webp","alt":"试马草地、树荫中的嘉树轩与远处乐成阁的写意长卷","description":"试马埭与嘉树轩、乐成阁依平原景观关联作导览并置，不代表实际相邻距离。马与人物静止绘入画作。乐成阁画面是旧景演绎，不代表遗址已实体复建。","names":["试马埭","嘉树轩","乐成阁"],"positions":{"试马埭":[24,58],"嘉树轩":[83,71],"乐成阁":[87,27]}},
+  quanshi:{"title":"泉源水脉","kicker":"泉石与暖流 · 历史意境组景","art":"quanshi-region.webp","alt":"左侧泉源石壁与右侧暖流庭园的写意水景","description":"以泉源石壁和暖流暄波的历史水景为线索组合画面。画中连贯水道属于艺术组织，不据此推断真实同一渠道、今日温泉位置或当前水量。","names":["泉源石壁","暖流暄波"],"positions":{"泉源石壁":[19,51],"暖流暄波":[89,56]}},
+  huidiji:{"title":"惠迪吉","kicker":"檐下书斋与岩色 · 历史组景","art":"huidiji-region.webp","alt":"宿云檐廊下、澄观斋庭园与翠云岩敞厅的写意长卷","description":"宿云檐、澄观斋与翠云岩属于惠迪吉历史组群。画中取檐、窗、岩三种观看方式，位置和立面为意境演绎；不将宿云檐后来的澄晖楼当成原样现存。","names":["宿云檐","澄观斋","翠云岩"],"positions":{"宿云檐":[8,59],"澄观斋":[53,61],"翠云岩":[87,47]}},
+
   zhenzi:{"title":"榛子峪","kicker":"山林奉亲与观鹿 · 意境组景","art":"zhenzi-region.webp","alt":"榛子峪口松鹤殿堂、听泉小院与八角望鹿亭的写意画卷","description":"依历史组群关联组织松鹤清樾、风泉清听与驯鹿坡。风泉清听史料位于松鹤清越西侧；画中采用意境并置，不沿实地方位。院落、坡地与鹿影不代表现存建筑、实时鹿群或测绘坐标。","names":["松鹤清樾","风泉清听","驯鹿坡"],"positions":{"松鹤清樾":[25,36],"风泉清听":[60,65],"驯鹿坡":[90,24]}},
   qingfeng:{"title":"青枫绿屿","kicker":"山中庭院与窗景 · 意境组景","art":"qingfeng-region.webp","alt":"青枫庭院门殿、月门、高台与窗景的写意画卷","description":"历史门殿、月门和平台有据；罨画窗属于这一组群。这里是山中庭院，“屿”不表示湖岛。画中关系为框景创作，非准确原布局。","names":["青枫绿屿","罨画窗"],"positions":{"青枫绿屿":[60,61],"罨画窗":[96,48]}},
   songyun:{"title":"松云峡","kicker":"倚山临水与向西眺望 · 意境组景","art":"songyun-region.webp","alt":"松云峡五间敞轩与山脊单檐方亭的写意画卷","description":"以云容水态的五间敞轩和凌太虚的单檐方亭表现低处临水与高处眺望。路径和地形为意境组合，不是两处建筑的实测相邻图。","names":["云容水态","凌太虚"],"positions":{"云容水态":[30,65],"凌太虚":[88,24]}},
@@ -193,11 +198,12 @@ function closeRegion(restoreFocus=true){
 const percent=(value,fallback=50)=>Number.isFinite(Number(value))?Math.min(100,Math.max(0,Number(value))):fallback;
 function getNearView(item){
   const view=item.regionView||{},focus=Array.isArray(view.focus)?view.focus:[50,50];
+  const rainWindows=(Array.isArray(view.rainWindows)?view.rainWindows:[view.rainWindow]).filter((rect)=>Array.isArray(rect)&&rect.length===4).map((rect)=>rect.map((v)=>percent(v,0)));
   const fallback=[{title:'画中主体',text:'循着画作的主体细看，拖动画面，留意前后景的层次。',x:focus[0],y:focus[1]},{title:'邻近景致',text:'移步看向另一处景致，观察它与主体之间的呼应。',x:percent(focus[0])-20,y:percent(focus[1])+12}];
   return {focus:focus.map((v)=>percent(v)),details:fallback.map((detail,index)=>{
     const source=view.details?.[index]||detail;
     return {title:String(source.title||detail.title),text:String(source.text||detail.text),x:percent(source.x,detail.x),y:percent(source.y,detail.y)};
-  }),water:Array.isArray(view.water)&&view.water.length===4?view.water.map((v)=>percent(v,0)):null,rainWindow:Array.isArray(view.rainWindow)&&view.rainWindow.length===4?view.rainWindow.map((v)=>percent(v,0)):null,interpretation:String(view.interpretation||'画面依据历史景名作写意创作，景物位置不代表实地测绘或今日现状。')};
+  }),water:Array.isArray(view.water)&&view.water.length===4?view.water.map((v)=>percent(v,0)):null,rainWindows,interpretation:String(view.interpretation||'画面依据历史景名作写意创作，景物位置不代表实地测绘或今日现状。')};
 }
 function setNearRegionInert(value){
   for(const node of portal.children)if(node!==near)node.inert=value;
@@ -282,9 +288,14 @@ function renderNearDetails(){
   });
   const water=$('regionNearWater');water.hidden=!nearView.water||nearView.water[2]===0||nearView.water[3]===0;
   if(!water.hidden){const [x,y,w,h]=nearView.water;Object.assign(water.style,{left:`${x}%`,top:`${y}%`,width:`${Math.min(w,100-x)}%`,height:`${Math.min(h,100-y)}%`});}
-  near.classList.toggle('interior-scene',Boolean(nearView.rainWindow));
-  const windowRain=$('regionNearWindowRain');windowRain.hidden=!nearView.rainWindow;
-  if(nearView.rainWindow){const [x,y,w,h]=nearView.rainWindow;Object.assign(windowRain.style,{left:`${x}%`,top:`${y}%`,width:`${Math.min(w,100-x)}%`,height:`${Math.min(h,100-y)}%`});}
+  near.classList.toggle('interior-scene',nearView.rainWindows.length>0);
+  nearCanvas.querySelectorAll('[data-extra-window-rain]').forEach((node)=>node.remove());
+  const windowRain=$('regionNearWindowRain');windowRain.hidden=nearView.rainWindows.length===0;
+  nearView.rainWindows.forEach(([x,y,w,h],index)=>{
+    const layer=index===0?windowRain:document.createElement('div');
+    if(index>0){layer.className='region-rain region-near-window-rain';layer.dataset.extraWindowRain='';layer.setAttribute('aria-hidden','true');nearCanvas.append(layer);}
+    Object.assign(layer.style,{left:`${x}%`,top:`${y}%`,width:`${Math.min(w,100-x)}%`,height:`${Math.min(h,100-y)}%`});
+  });
 }
 function updateNearWeather(){
   const night=experience.classList.contains('night'),rain=experience.classList.contains('raining');

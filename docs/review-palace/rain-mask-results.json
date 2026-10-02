@@ -1,0 +1,60 @@
+[
+  {
+    "name": "澄观斋",
+    "layers": [
+      {
+        "l": "26%",
+        "t": "14%",
+        "w": "17%",
+        "h": "52%"
+      },
+      {
+        "l": "63%",
+        "t": "0%",
+        "w": "37%",
+        "h": "100%"
+      }
+    ],
+    "viewportRain": "none",
+    "interior": true
+  },
+  {
+    "name": "烟波致爽",
+    "layers": [
+      {
+        "l": "0%",
+        "t": "7%",
+        "w": "31%",
+        "h": "58%"
+      }
+    ],
+    "viewportRain": "none",
+    "interior": true
+  },
+  {
+    "name": "罨画窗",
+    "layers": [
+      {
+        "l": "20%",
+        "t": "14%",
+        "w": "67%",
+        "h": "56%"
+      }
+    ],
+    "viewportRain": "none",
+    "interior": true
+  },
+  {
+    "name": "静好堂",
+    "layers": [
+      {
+        "l": "4%",
+        "t": "5%",
+        "w": "47%",
+        "h": "56%"
+      }
+    ],
+    "viewportRain": "none",
+    "interior": true
+  }
+]

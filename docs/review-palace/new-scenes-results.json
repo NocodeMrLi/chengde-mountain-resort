@@ -1,0 +1,216 @@
+{
+  "scenes": [
+    {
+      "id": "k01",
+      "title": "烟波致爽",
+      "art": "/art/yanbo-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "k06",
+      "title": "万壑松风",
+      "art": "/art/wansong-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "k08",
+      "title": "云山胜地",
+      "art": "/art/yunshan-near.webp",
+      "natural": 1981,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "q02",
+      "title": "勤政殿",
+      "art": "/art/qinzheng-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "q03",
+      "title": "松鹤斋",
+      "art": "/art/songhezhai-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "q06",
+      "title": "绮望楼",
+      "art": "/art/qiwang-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "q21",
+      "title": "试马埭",
+      "art": "/art/shima-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "q22",
+      "title": "嘉树轩",
+      "art": "/art/jiashu-near.webp",
+      "natural": 1984,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "q23",
+      "title": "乐成阁",
+      "art": "/art/lecheng-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "k20",
+      "title": "泉源石壁",
+      "art": "/art/quanyuan-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "k19",
+      "title": "暖流暄波",
+      "art": "/art/nuanliu-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "q24",
+      "title": "宿云檐",
+      "art": "/art/suyun-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "q25",
+      "title": "澄观斋",
+      "art": "/art/chengguan-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    },
+    {
+      "id": "q26",
+      "title": "翠云岩",
+      "art": "/art/cuiyun-near.webp",
+      "natural": 1983,
+      "visited": true,
+      "focusCount": 2,
+      "exactReturn": true
+    }
+  ],
+  "mobile": [
+    {
+      "width": 360,
+      "overflow": false,
+      "title": "烟波致爽",
+      "readingBottom": 765,
+      "tools": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 44,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "title": "澄观斋",
+      "readingBottom": 765,
+      "tools": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 44,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "width": 430,
+      "overflow": false,
+      "title": "乐成阁",
+      "readingBottom": 765,
+      "tools": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 44,
+          "h": 44
+        }
+      ]
+    }
+  ],
+  "regions": [
+    {
+      "key": "gongyuan",
+      "art": 1983
+    },
+    {
+      "key": "linyuan",
+      "art": 1983
+    },
+    {
+      "key": "quanshi",
+      "art": 1983
+    },
+    {
+      "key": "huidiji",
+      "art": 1983
+    }
+  ],
+  "build": "9983afd89b31",
+  "windowRain": {
+    "interior": true,
+    "window": true,
+    "rain": "none"
+  }
+}
