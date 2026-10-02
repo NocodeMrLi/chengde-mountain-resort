@@ -46,6 +46,7 @@ html = html.replace(/(href|src)="\.\/((?:art|audio)\/[^\"]+)"/g,
 html = html.replace('href="./style.css"', `href="./${styleFile}"`);
 html = html.replace('<script type="module" src="./app.js"></script>',
   `<script>window.__ASSET_HASHES__=${manifest}</script>\n    <script type="module" src="./${appFile}"></script>`);
+html = html.replace('src="./region.js"', `src="./region.js?v=${assetHashes['region.js']}"`);
 await writeFile(join('dist', 'index.html'), html);
 await writeFile(join('dist', '.nojekyll'), '');
 await writeFile(join('dist', 'deployment.json'), JSON.stringify({ build: buildId, app: appFile, style: styleFile }) + '\n');

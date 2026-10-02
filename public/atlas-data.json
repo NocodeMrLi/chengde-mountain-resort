@@ -1,0 +1,1110 @@
+{
+  "schemaVersion": 1,
+  "notes": "七十二景为康熙、乾隆各题三十六景，不等于七十二座现存建筑。区域标记是写意导览，不是测绘坐标；未核实的现状和位置如实留白。",
+  "entries": [
+    {
+      "id": "k01",
+      "name": "烟波致爽",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36"
+      ],
+      "description": "已从清代题名资料核对“烟波致爽”属于康熙三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "k02",
+      "name": "芝径云堤",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "湖洲区",
+      "locationHint": "三洲长堤",
+      "presentCondition": "现状待核实",
+      "artStatus": "长卷近观可游览",
+      "overviewSpotId": "dike",
+      "sourceRefs": [
+        "K36",
+        "RESEARCH-K01-12"
+      ],
+      "description": "芝径云堤把湖面上的环碧、如意洲和月色江声三处洲岛联系起来。长堤从万壑松风桥一带向北舒展，再分出不同方向，康熙以灵芝般的曲折形态为它命名。造景借鉴杭州西湖苏堤，又把一池三山的传统意境融入山庄湖区。理解此景，可以先看堤如何分隔水面，再看它怎样把分散的洲岛重新串联。近处的路径与远处的水面交替展开，景名里的“径”与“云”也提示了人在园中行走时不断变化的视线。"
+    },
+    {
+      "id": "k03",
+      "name": "无暑清凉",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "如意洲",
+      "locationHint": "中轴",
+      "presentCondition": "现状待核实",
+      "artStatus": "区域与近观可游览",
+      "overviewSpotId": null,
+      "regionNearArt": "wushu-close.webp",
+      "sourceRefs": [
+        "K36",
+        "RY12",
+        "RESEARCH-K01-12"
+      ],
+      "description": "无暑清凉位于如意洲中轴线的前部，是这组临水宫苑的门殿。它建于1703至1708年间，面阔五间，之后依次展开延薰山馆与水芳岩秀。如意洲本是山庄早期起居理政的重要地方，因此这里的清凉意象，也与皇帝在园中的日常活动相连。读景名时，可把注意力放在门殿、洲岛和湖水的关系：门不仅划分院落，也让内外风景彼此联系。由这处入口理解后面的建筑次序，更容易读懂如意洲的布局。"
+    },
+    {
+      "id": "k04",
+      "name": "延薰山馆",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "如意洲",
+      "locationHint": "中轴",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36",
+        "RY12"
+      ],
+      "description": "康熙三十六景之一，位于如意洲中轴，与无暑清凉、水芳岩秀依次相接。“薰”可指和暖之风，题名把馆舍与园中气候联系起来。具体建筑形制和今日保存情况尚待逐项核实。"
+    },
+    {
+      "id": "k05",
+      "name": "水芳岩秀",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "如意洲",
+      "locationHint": "中轴",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36",
+        "RY12"
+      ],
+      "description": "康熙三十六景之一，位于如意洲中轴。“水芳”与“岩秀”的题名并置水岸和山石意象，使园中视线从建筑转向湖山。中轴次序有景区资料依据，画中的山石与屋宇属于写意组合。"
+    },
+    {
+      "id": "k06",
+      "name": "万壑松风",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36"
+      ],
+      "description": "已从清代题名资料核对“万壑松风”属于康熙三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "k07",
+      "name": "松鹤清樾",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36"
+      ],
+      "description": "已从清代题名资料核对“松鹤清樾”属于康熙三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "k08",
+      "name": "云山胜地",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36"
+      ],
+      "description": "已从清代题名资料核对“云山胜地”属于康熙三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "k09",
+      "name": "四面云山",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "山地",
+      "locationHint": "山地观景",
+      "presentCondition": "现状待核实",
+      "artStatus": "区域与近观可游览",
+      "overviewSpotId": "simian",
+      "regionNearArt": "near-simian.webp",
+      "sourceRefs": [
+        "K36",
+        "RESORT-SIMIAN",
+        "RESEARCH-K01-12"
+      ],
+      "description": "四面云山以高处的开阔视野得名，是康熙三十六景中着重表现山势的一景。景区介绍将其位置记为山庄最高峰，亭为十六柱、单檐攒尖顶的方亭。与临水殿堂收束视线的方式不同，这里的题名引导人把目光投向四周，让远近山岭和云烟成为画面主体。清代皇帝曾在此登高、饮酒赋诗。亭提供停驻的尺度，也把更大的自然景观留在建筑之外。云雾与能见度随天气变化，景名所写的是一种观景意境。"
+    },
+    {
+      "id": "k10",
+      "name": "北枕双峰",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36"
+      ],
+      "description": "已从清代题名资料核对“北枕双峰”属于康熙三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "k11",
+      "name": "西岭晨霞",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "如意洲",
+      "locationHint": "西侧",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36",
+        "RY12"
+      ],
+      "description": "康熙三十六景之一，位于如意洲西侧。题名将视线指向西岭与晨霞：从岛上望山，光色随时间变化。这里用晨光意象组织画面，观景点的具体旧址和实地可达性尚待核实。"
+    },
+    {
+      "id": "k12",
+      "name": "锤峰落照",
+      "dynasty": "康熙",
+      "aliases": [
+        "磬锤峰（借景主峰）"
+      ],
+      "region": "山地",
+      "locationHint": "山地观景",
+      "presentCondition": "现状待核实",
+      "artStatus": "区域与近观可游览",
+      "overviewSpotId": "chuifeng",
+      "regionNearArt": "hammer-close.webp",
+      "sourceRefs": [
+        "K36",
+        "RESORT-CHUIFENG",
+        "RESEARCH-K01-12"
+      ],
+      "description": "锤峰落照的观景点在园内，景名中的锤峰却是山庄东面的磬锤峰。亭所在的榛子峪北侧山冈，与那座突起的山峰隔空相望；傍晚的光线让远峰成为画面的主角。这是理解园林“借景”的直观例子：风景不必全部造在围墙里，远方山势也可以参与园中的构图。读这一景时，可先分清看景的位置与被观看的对象，再理解“落照”强调的是光线与时间。夕阳效果随季节、云量和能见度变化。"
+    },
+    {
+      "id": "k13",
+      "name": "南山积雪",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36"
+      ],
+      "description": "已从清代题名资料核对“南山积雪”属于康熙三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "k14",
+      "name": "梨花伴月",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36"
+      ],
+      "description": "已从清代题名资料核对“梨花伴月”属于康熙三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "k15",
+      "name": "曲水荷香",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36"
+      ],
+      "description": "已从清代题名资料核对“曲水荷香”属于康熙三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "k16",
+      "name": "风泉清听",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36"
+      ],
+      "description": "已从清代题名资料核对“风泉清听”属于康熙三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "k17",
+      "name": "濠濮间想",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36"
+      ],
+      "description": "已从清代题名资料核对“濠濮间想”属于康熙三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "k18",
+      "name": "天宇咸畅",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36"
+      ],
+      "description": "已从清代题名资料核对“天宇咸畅”属于康熙三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "k19",
+      "name": "暖流喧波",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36"
+      ],
+      "description": "已从清代题名资料核对“暖流喧波”属于康熙三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "k20",
+      "name": "泉源石壁",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36"
+      ],
+      "description": "已从清代题名资料核对“泉源石壁”属于康熙三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "k21",
+      "name": "青枫绿屿",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36"
+      ],
+      "description": "已从清代题名资料核对“青枫绿屿”属于康熙三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "k22",
+      "name": "莺啭乔木",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36"
+      ],
+      "description": "已从清代题名资料核对“莺啭乔木”属于康熙三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "k23",
+      "name": "香远益清",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36"
+      ],
+      "description": "已从清代题名资料核对“香远益清”属于康熙三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "k24",
+      "name": "金莲映日",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "如意洲",
+      "locationHint": "西侧",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36",
+        "RY12",
+        "NPM-LOTUS"
+      ],
+      "description": "康熙三十六景之一，位于如意洲西侧。国立故宫博物院展览资料记载，延薰山馆前曾遍植从五台山移来的金莲花，盛夏阳光下花色映日，因而得名。画中花圃为依据题意的写意表现，不能作为今日花圃位置记录。"
+    },
+    {
+      "id": "k25",
+      "name": "远近泉声",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36"
+      ],
+      "description": "已从清代题名资料核对“远近泉声”属于康熙三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "k26",
+      "name": "云帆月舫",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "如意洲",
+      "locationHint": "西侧",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36",
+        "RY12"
+      ],
+      "description": "康熙三十六景之一，位于如意洲西侧。题名把云帆、月色和舫的意象连在一起，呈现水上游赏的诗意。数字画面的船只保持静止，也不据景名推断历史上固定船舫的位置或今日状态。"
+    },
+    {
+      "id": "k27",
+      "name": "芳渚临流",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36"
+      ],
+      "description": "已从清代题名资料核对“芳渚临流”属于康熙三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "k28",
+      "name": "云容水态",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36"
+      ],
+      "description": "已从清代题名资料核对“云容水态”属于康熙三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "k29",
+      "name": "澄泉绕石",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36"
+      ],
+      "description": "已从清代题名资料核对“澄泉绕石”属于康熙三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "k30",
+      "name": "澄波叠翠",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "如意洲",
+      "locationHint": "北侧",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36",
+        "RY12"
+      ],
+      "description": "康熙三十六景之一，位于如意洲北侧。题名把澄明水波与层叠草木相连，说明水面和岸上植被同是观赏对象。此处标记只表达“在岛北”的资料关系，并非测绘坐标。"
+    },
+    {
+      "id": "k31",
+      "name": "石矶观鱼",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36"
+      ],
+      "description": "已从清代题名资料核对“石矶观鱼”属于康熙三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "k32",
+      "name": "镜水云岑",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36"
+      ],
+      "description": "已从清代题名资料核对“镜水云岑”属于康熙三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "k33",
+      "name": "双湖夹镜",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36"
+      ],
+      "description": "已从清代题名资料核对“双湖夹镜”属于康熙三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "k34",
+      "name": "长虹饮练",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36"
+      ],
+      "description": "已从清代题名资料核对“长虹饮练”属于康熙三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "k35",
+      "name": "甫田丛樾",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36"
+      ],
+      "description": "已从清代题名资料核对“甫田丛樾”属于康熙三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "k36",
+      "name": "水流云在",
+      "dynasty": "康熙",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "K36"
+      ],
+      "description": "已从清代题名资料核对“水流云在”属于康熙三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q01",
+      "name": "丽正门",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "长卷近观可游览",
+      "overviewSpotId": "lizheng",
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "乾隆三十六景第一景。丽正门是山庄正门，康熙年间初建，乾隆十九年重修；门额使用多种文字书写园名。进入山庄时，门楼的端整与后方园林的舒展形成第一重空间变化。"
+    },
+    {
+      "id": "q02",
+      "name": "勤政殿",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“勤政殿”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q03",
+      "name": "松鹤斋",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“松鹤斋”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q04",
+      "name": "如意湖",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“如意湖”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q05",
+      "name": "青雀舫",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“青雀舫”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q06",
+      "name": "绮望楼",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“绮望楼”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q07",
+      "name": "驯鹿坡",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“驯鹿坡”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q08",
+      "name": "水心榭",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "长卷近观可游览",
+      "overviewSpotId": "shuixin",
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "乾隆三十六景之一。亭榭位于下湖与银湖之间，南北两侧各有牌坊；人从此经过，也能在水面中央停步看四周湖山。数字画面展示其通行与观景双重关系，细部不作为现状记录。"
+    },
+    {
+      "id": "q09",
+      "name": "颐志堂",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“颐志堂”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q10",
+      "name": "畅远台",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“畅远台”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q11",
+      "name": "静好堂",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“静好堂”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q12",
+      "name": "冷香亭",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“冷香亭”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q13",
+      "name": "采菱渡",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“采菱渡”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q14",
+      "name": "观莲所",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "如意洲",
+      "locationHint": "南侧",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36",
+        "RY12"
+      ],
+      "description": "乾隆三十六景之一，位于如意洲南侧。由题名可知观莲是其游赏主题；画卷以水面与莲叶表达这种视线关系。具体建置、当代荷景和旧址尚待核实，不把画中景物当成现状。"
+    },
+    {
+      "id": "q15",
+      "name": "清晖亭",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "如意洲",
+      "locationHint": "东侧",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36",
+        "RY12"
+      ],
+      "description": "乾隆三十六景之一，位于如意洲东侧。“清晖”让人联想到澄明日光，亭字则提示停步眺望的园林体验。区域画面借此安排观景点；亭子的确切旧址和现存状况尚待核实。"
+    },
+    {
+      "id": "q16",
+      "name": "般若相",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "如意洲",
+      "locationHint": "东侧",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36",
+        "RY12"
+      ],
+      "description": "乾隆三十六景之一，位于如意洲东侧。题名含“般若”这一佛教语汇，提示园中景名还承载宗教与文化意涵。我们已核对到景名和东侧位置，未据此推定殿宇用途、形制或现况。"
+    },
+    {
+      "id": "q17",
+      "name": "沧浪屿",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "如意洲",
+      "locationHint": "西侧",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36",
+        "RY12"
+      ],
+      "description": "乾隆三十六景之一，位于如意洲西侧。“沧浪”与“屿”都把视线引向水边岛景。区域图只标示其在如意洲西侧的相对方位；具体岸线、建筑和实地现状尚待核实。"
+    },
+    {
+      "id": "q18",
+      "name": "一片云",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "如意洲",
+      "locationHint": "东侧",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36",
+        "RY12"
+      ],
+      "description": "乾隆三十六景之一，位于如意洲东侧。题名以一片云写轻灵的天光，适合从岛上的水岸向远处望去；这只是对名称和区域关系的阅读，不等于原建筑的精确朝向。现状仍待核实。"
+    },
+    {
+      "id": "q19",
+      "name": "萍香泮",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“萍香泮”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q20",
+      "name": "万树园",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "长卷近观可游览",
+      "overviewSpotId": "wanshu",
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "乾隆三十六景之一，位于山庄北部平原区。开阔草场与疏林构成区别于湖区的景观气息；清代皇帝曾在这一带设宴，接见王公、各族首领和使节。画面强调林地与开阔地的尺度。"
+    },
+    {
+      "id": "q21",
+      "name": "试马埭",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“试马埭”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q22",
+      "name": "嘉树轩",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“嘉树轩”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q23",
+      "name": "乐成阁",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“乐成阁”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q24",
+      "name": "宿云檐",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“宿云檐”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q25",
+      "name": "澄观斋",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“澄观斋”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q26",
+      "name": "翠云岩",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“翠云岩”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q27",
+      "name": "罨画窗",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“罨画窗”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q28",
+      "name": "凌太虚",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“凌太虚”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q29",
+      "name": "千尺雪",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“千尺雪”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q30",
+      "name": "宁静斋",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“宁静斋”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q31",
+      "name": "玉琴轩",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“玉琴轩”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q32",
+      "name": "临芳墅",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“临芳墅”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q33",
+      "name": "知鱼矶",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“知鱼矶”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q34",
+      "name": "涌翠岩",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“涌翠岩”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q35",
+      "name": "素尚斋",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“素尚斋”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    },
+    {
+      "id": "q36",
+      "name": "永恬居",
+      "dynasty": "乾隆",
+      "aliases": [],
+      "region": "待核实",
+      "locationHint": "区域待核实",
+      "presentCondition": "现状待核实",
+      "artStatus": "筹备中",
+      "overviewSpotId": null,
+      "sourceRefs": [
+        "Q36"
+      ],
+      "description": "已从清代题名资料核对“永恬居”属于乾隆三十六景。本阶段尚缺足以可靠说明其建筑形制、确切方位和今日状态的逐景资料，因此暂不把题名解释成现存建筑，也不制作貌似实景的近观。"
+    }
+  ]
+}

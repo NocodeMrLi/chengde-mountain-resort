@@ -9,6 +9,7 @@
     <link rel="preload" href="./art/yan-yu-lake.webp" as="image" />
     <link rel="stylesheet" href="./style.css" />
     <script type="module" src="./app.js"></script>
+    <script type="module" src="./region.js"></script>
   </head>
   <body>
     <div id="app" class="app">
@@ -26,7 +27,7 @@
           <div class="intro-hint">建议开启声音 · 拖动看景 · 点击画中景点</div>
           <div class="intro-routes" aria-label="从全景直达胜景"><span>或择一景先行</span><button type="button" data-enter-spot="yanyu">烟雨楼</button><button type="button" data-enter-spot="danbo">澹泊敬诚</button><button type="button" data-enter-spot="wanshu">万树园</button><button type="button" data-enter-spot="simian">四面云山</button></div>
         </div>
-        <div class="intro-bottom"><span>承德避暑山庄 · 湖区写意游园</span><span>原创互动长卷</span></div>
+        <div class="intro-bottom"><span>承德避暑山庄 · 湖区写意游园</span><span>作者：NocodeMrLi</span></div>
       </div>
 
       <main id="experience" class="experience is-hidden" aria-label="承德避暑山庄互动长卷">
@@ -66,6 +67,7 @@
           <div class="top-center">一 湖 一 山 一 卷 诗</div>
           <div class="top-actions">
             <a class="github-link top-github" href="https://github.com/NocodeMrLi/chengde-mountain-resort" target="_blank" rel="noopener noreferrer" aria-label="查看 GitHub 源码" title="查看 GitHub 源码"></a>
+            <button id="atlasBtn" class="text-btn atlas-top-btn" type="button" aria-label="打开七十二景图鉴">图鉴 <span aria-hidden="true">72</span></button>
             <button id="soundBtn" class="text-btn" type="button" aria-label="开启音乐" aria-pressed="false"><span class="control-glyph">♪</span><span class="label">音乐关</span></button>
             <button id="helpBtn" class="round-btn" type="button" aria-label="游览说明">?</button>
           </div>
@@ -73,7 +75,7 @@
 
         <div class="vertical-mark" aria-hidden="true"><span>康 熙 四 十 二 年 始 建</span><i></i></div>
         <div class="scene-caption"><span id="regionName">青莲岛 · 烟雨楼</span><span id="weatherText">晴 · 午后</span></div>
-        <nav class="zone-nav" aria-label="四景区游历"><button type="button" data-zone="lake">湖泊</button><button type="button" data-zone="palace">宫殿</button><button type="button" data-zone="plains">平原</button><button type="button" data-zone="mountain">山峦</button></nav>
+        <nav class="zone-nav" aria-label="四景区游历"><button type="button" data-zone="lake">湖泊</button><button type="button" data-zone="palace">宫殿</button><button type="button" data-zone="plains">平原</button><button type="button" data-zone="mountain">山峦</button><button type="button" data-region-entry="ruyi">深入如意洲</button><button type="button" data-region-entry="mountain">深入山地</button></nav>
 
         <aside id="storyPanel" class="story-panel" aria-live="polite">
           <button id="closeStory" class="story-close" type="button" aria-label="关闭景点介绍">×</button>
@@ -100,7 +102,6 @@
         <div id="depthLoading" class="depth-loading" role="status" aria-live="polite" tabindex="-1" hidden>正在走近画中景点…</div>
         <section id="depthPortal" class="depth-portal" aria-label="景点近景探索" hidden>
           <div class="depth-backdrop" aria-hidden="true"></div>
-          <div id="depthLife" class="depth-life" aria-hidden="true"><img class="depth-person depth-person-left" src="./art/person-pavilion-pair.png" alt="" /><img class="depth-person depth-person-right" src="./art/person-terrace-pair.png" alt="" /><img class="depth-painted-boat" src="./art/painted-boat.png" alt="" /></div>
           <div class="depth-atmosphere" aria-hidden="true"></div><div class="depth-rain" aria-hidden="true"></div>
           <div class="depth-mist" aria-hidden="true"></div>
           <img id="depthForeground" class="depth-foreground" src="./art/hammer-foreground.png" alt="" draggable="false" />
@@ -116,6 +117,17 @@
         </section>
         <div id="depthError" class="depth-error" role="alertdialog" aria-modal="true" aria-labelledby="depthErrorTitle" hidden><div><h2 id="depthErrorTitle">近景暂未展开</h2><p>画面加载遇到问题，可以重试或回到长卷。</p><button id="depthRetry" type="button">重试近景</button><button id="depthErrorBack" type="button">返回长卷</button></div></div>
         <div id="sceneLoadError" class="depth-error" role="alertdialog" aria-modal="true" aria-labelledby="sceneErrorTitle" hidden><div><h2 id="sceneErrorTitle">画卷加载失败</h2><p>请检查网络后重试。</p><button id="sceneRetry" type="button">重新加载画卷</button></div></div>
+        <section id="regionPortal" class="region-portal" role="dialog" aria-modal="true" aria-labelledby="regionTitle" hidden>
+          <div id="regionCanvasFrame" class="region-canvas-frame" aria-label="可拖动的区域画卷，拖动画面浏览" tabindex="0"><div id="regionCanvas" class="region-canvas"><img id="regionArt" alt="" draggable="false" /><div id="regionMarkers" class="region-markers"></div></div></div>
+          <div class="region-weather" aria-hidden="true"></div><div class="region-rain" aria-hidden="true"></div>
+          <header class="region-header"><button id="regionBack" type="button">← 返回长卷原位</button><div><small id="regionKicker">区域纵深 · 写意导览</small><h2 id="regionTitle">如意洲</h2></div><button id="regionAtlas" type="button">七十二景图鉴</button></header>
+          <div class="region-tools"><span>拖动画面 · 探访园中景</span><button id="regionDay" type="button" aria-label="切换昼夜">昼夜</button><button id="regionRain" type="button" aria-label="切换晴雨">晴雨</button><button id="regionSound" type="button" aria-label="切换音乐">音乐</button></div>
+          <aside class="region-detail"><small id="regionPosition">中轴 · 写意位置</small><h3 id="regionSpotTitle">无暑清凉</h3><p id="regionSpotBody"></p><p id="regionSpotStatus" class="region-status"></p><div class="region-detail-actions"><button id="regionNearBtn" type="button">走近此景 ↗</button></div></aside>
+          <nav id="regionList" class="region-list" aria-label="区域景点，可横向滑动"></nav>
+          <section id="regionNear" class="region-near" role="dialog" aria-modal="true" aria-labelledby="regionNearTitle" hidden><img id="regionNearArt" alt="" draggable="false" /><div class="region-weather" aria-hidden="true"></div><div class="region-rain" aria-hidden="true"></div><header><button id="regionNearBack" type="button">← 返回区域原位</button><span>景点近观 · 写意复原</span></header><div class="region-near-copy"><small>史料景名 · 画面并非现状测绘</small><h3 id="regionNearTitle"></h3><p id="regionNearText"></p></div></section>
+        </section>
+        <div id="atlasDialog" class="atlas-dialog" role="dialog" aria-modal="true" aria-labelledby="atlasTitle" hidden><div class="atlas-shell"><header><div><small>康熙三十六景 · 乾隆三十六景</small><h2 id="atlasTitle">七十二景图鉴</h2></div><button id="atlasClose" type="button" aria-label="关闭图鉴">×</button></header><p class="atlas-intro">七十二景是两朝题名的景致，不等于七十二座现存建筑。当前仅部分画面可进入；未核实的位置与现状如实标注。</p><div class="atlas-filters"><label>搜索景名或别名<input id="atlasSearch" type="search" placeholder="如：无暑清凉" /></label><label>朝代<select id="atlasDynasty"><option value="">全部</option><option value="康熙">康熙</option><option value="乾隆">乾隆</option></select></label><label>区域<select id="atlasRegion"><option value="">全部</option><option value="如意洲">如意洲</option><option value="湖洲区">湖洲区</option><option value="山地">山地</option><option value="待核实">区域待核实</option></select></label><label>游览状态<select id="atlasStatus"><option value="">全部</option><option value="visited">已游览</option><option value="ready">可游览</option><option value="planned">筹备中</option></select></label></div><div class="atlas-content"><div><p id="atlasCount" class="atlas-count"></p><div id="atlasList" class="atlas-list"></div></div><aside id="atlasDetail" class="atlas-detail" aria-live="polite"></aside></div></div></div>
+        <button id="skipEntryBtn" class="skip-entry" type="button" hidden>跳过展卷动画 →</button>
       </main>
 
       <div id="helpDialog" class="dialog-backdrop" hidden>
@@ -125,6 +137,7 @@
           <h2 id="helpTitle">请君入画</h2>
           <div class="help-grid"><div><b>一 · 游卷</b><p>拖动画面、滚动鼠标漫游长卷；点击上方四景区名称可快速跳转。</p></div><div><b>二 · 寻胜</b><p>点击景点标记游览，轻触湖水泛起涟漪。画中游人与画舫静留原处。</p></div><div><b>三 · 四时</b><p>切换夜色或烟雨；点击右上角可播放舒缓古琴录音。</p></div></div>
           <p class="help-note">本卷为依据景点特征创作的写意游园图，景观相对位置并非精确地图。画面美术为本项目原创生成。景点提供文字讲解。</p>
+          <p class="work-author">作者：NocodeMrLi</p>
           <p class="audio-credit">音乐：<a href="https://commons.wikimedia.org/wiki/File:Pingsha_Luoyan.ogg" target="_blank" rel="noopener noreferrer">《平沙落雁》古琴演奏及录音 · Charlie Huang</a>，依 <a href="https://creativecommons.org/licenses/by/2.5/" target="_blank" rel="noopener noreferrer">CC BY 2.5</a> 使用。本站将原 Ogg 录音转为 AAC，并做轻微低、高频过滤；播放时降低音量，曲首尾淡入淡出。</p>
           <button id="resumeBtn" class="enter-btn dark-btn" type="button"><span>继续游园</span><span>↗</span></button>
         </section>

@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "node server.mjs",
-    "build": "node scripts/build.mjs",
-    "preview": "node server.mjs dist"
+    "build": "npm run check:scenic-links && node scripts/build.mjs",
+    "preview": "node server.mjs dist",
+    "check:scenic-links": "node scripts/check-scenic-links.mjs"
   }
 }

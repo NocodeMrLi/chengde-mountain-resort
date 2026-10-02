@@ -7,18 +7,31 @@ const assetUrl = (path) => {
 };
 
 const spots = [
-  { id:'shuixin', name:'水心榭', area:'下湖 · 水心榭', subtitle:'四面皆景，水光与山色相接。', description:'亭榭位于下湖与银湖之间，南北各有牌坊。穿过水边廊榭，湖山便在四面徐徐展开。', panel:0, x:.105, y:.46, icon:'◇' },
-  { id:'dike', name:'芝径云堤', area:'湖区 · 芝径云堤', subtitle:'长堤如芝，浮于水上。', description:'长堤曲折分作三枝，连起环碧、如意洲与月色江声。沿着水岸缓行，一步便换一处风景。', panel:0, x:.335, y:.52, icon:'⌁' },
-  { id:'yanyu', name:'烟雨楼', area:'青莲岛 · 烟雨楼', subtitle:'青莲岛上，楼阁临水。', description:'烟雨楼面阔五间，分作两层，二层周围设有栏杆。凭栏望去，湖山相映；若逢细雨，楼影更觉空濛。', panel:0, x:.645, y:.39, icon:'✦' },
-  { id:'jinshan', name:'金山', area:'湖东 · 金山', subtitle:'山石叠起，殿阁随势而上。', description:'循石阶与爬山廊登高，层层屋檐间展开一湖风景。金山最高处为三层上帝阁。', panel:2, x:.35, y:.24, icon:'✦' },
-  { id:'moon', name:'月色江声', area:'洲岛 · 月色江声', subtitle:'古松掩映，庭院清幽。', description:'四进庭院藏于洲岛，自南向北由游廊相连。湖光与松声相伴，得一份山庄中的幽静。', panel:2, x:.81, y:.47, icon:'◇' },
-  { id:'lizheng', name:'丽正门', area:'宫殿区 · 丽正门', subtitle:'从御园正门，走入山庄。', description:'丽正门是山庄正门。门额以多种文字书写园名；从此步入，宫殿的庄重与园林的舒展交相展开。', panel:3, x:.15, y:.46, icon:'◇' },
-  { id:'danbo', name:'澹泊敬诚', area:'宫殿区 · 澹泊敬诚殿', subtitle:'朴素殿宇，静看湖山。', description:'澹泊敬诚殿是山庄正宫主殿，素以楠木殿闻名。这里没有繁复的金碧装饰，却自有清雅庄重的气度。', panel:3, x:.62, y:.35, icon:'✦' },
-  { id:'wanshu', name:'万树园', area:'平原区 · 万树园', subtitle:'千树成林，草木自宽。', description:'山庄北部平原林木葱茏、地势开阔。随游径走向万树园，远山、草地与疏林在眼前铺开。', panel:4, x:.35, y:.51, icon:'⌁' },
-  { id:'wenjin', name:'文津阁', area:'平原区 · 文津阁', subtitle:'书藏林泉，阁映清池。', description:'文津阁为清代藏书楼，建于山庄北部平原。阁前池水与假山、林木相映，是湖山之间的一处书香胜境。', panel:4, x:.84, y:.44, icon:'✦' },
-  { id:'simian', name:'四面云山', area:'山峦区 · 四面云山', subtitle:'登临高处，四面皆云山。', description:'沿山径步步登高，亭外峰峦远近错落。山庄的湖区与平原仿佛都在云岚之下舒展。', panel:5, x:.72, y:.37, icon:'✦' },
-  { id:'chuifeng', name:'锤峰落照', area:'园外借景 · 锤峰落照', subtitle:'夕阳西下，磬锤峰如剪影。', description:'磬锤峰在山庄园外，是山峦区遥望可见的借景。峰影映着夕照，为这段画卷游历收束。', panel:5, x:.95, y:.19, icon:'◇' }
+  { id:'shuixin', name:'水心榭', area:'下湖 · 水心榭', subtitle:'四面皆景，水光与山色相接。', description:'水心榭位于下湖与银湖之间，始建于康熙年间，南北两端各有牌坊。它既让人从湖面通行，也让游人停在水中央观看四周景色。画中把亭榭、堤岸与远山组织为连续视线；建筑细部为写意绘制，并非今日实景测绘。', panel:0, x:.105, y:.46, icon:'◇' },
+  { id:'dike', name:'芝径云堤', area:'湖区 · 芝径云堤', subtitle:'长堤如芝，浮于水上。', description:'芝径云堤借鉴杭州西湖苏堤，长堤曲折分作三支，连起环碧、如意洲与月色江声。沿堤前行，脚下道路不断改变水面、洲岛和远山的观看角度。画中堤线着重表现游园节奏，不能用作实地路线图。', panel:0, x:.335, y:.52, icon:'⌁' },
+  { id:'yanyu', name:'烟雨楼', area:'青莲岛 · 烟雨楼', subtitle:'青莲岛上，楼阁临水。', description:'烟雨楼建于乾隆四十五年，借鉴浙江嘉兴南湖的同名楼阁。楼阁面阔五间、分为两层，临水视野开阔；晴时可看湖山层次，细雨中楼影与岸线渐入烟岚。近景画面重在表达这一临水关系，并非现状照片。', panel:0, x:.645, y:.39, icon:'✦' },
+  { id:'jinshan', name:'金山', area:'湖东 · 金山', subtitle:'山石叠起，殿阁随势而上。', description:'金山岛仿镇江金山寺的意趣营造，山体经人工堆筑，建筑顺山势逐层升高。岛上的镜水云岑与天宇咸畅属于康熙三十六景，最高处还有三层上帝阁。画面把石阶、爬山廊与层层屋檐连成登高视线，细部以写意方式呈现。', panel:2, x:.35, y:.24, icon:'✦' },
+  { id:'moon', name:'月色江声', area:'洲岛 · 月色江声', subtitle:'古松掩映，庭院清幽。', description:'月色江声始建于康熙四十三年，名称借用苏轼《赤壁赋》的意境。洲岛上的院落一重接一重，由游廊串联；书斋、休憩空间与临水视线相互交织。画卷着重表现庭院与水面的清幽关系，不标注精确旧址。', panel:2, x:.81, y:.47, icon:'◇' },
+  { id:'lizheng', name:'丽正门', area:'宫殿区 · 丽正门', subtitle:'从御园正门，走入山庄。', description:'丽正门是避暑山庄正门，初建于康熙年间，乾隆十九年重修，并列为乾隆三十六景之首。门额以多种文字书写园名，从门楼进入后，宫殿的端整与园林的舒展逐渐转换。画面是依据建筑特征的写意绘制，不作现状测量。', panel:3, x:.15, y:.46, icon:'◇' },
+  { id:'danbo', name:'澹泊敬诚', area:'宫殿区 · 澹泊敬诚殿', subtitle:'朴素殿宇，静看湖山。', description:'澹泊敬诚殿始建于康熙五十年，乾隆十九年以楠木改建，是山庄正宫的重要殿宇。清帝曾在此举行庆典、接受朝觐，并接见边疆首领与外国使节。朴素木构与严整空间共同体现其礼仪性；数字近景不等同实地建筑细部。', panel:3, x:.62, y:.35, icon:'✦' },
+  { id:'wanshu', name:'万树园', area:'平原区 · 万树园', subtitle:'千树成林，草木自宽。', description:'万树园位于山庄北部平原区，疏林与草场交接，呈现有别于湖区的开阔北方原野。清代皇帝曾在这一带设宴，接见王公、各族首领和外国使节。画中保留林地与空地的尺度感，具体树木分布并非历史复原。', panel:4, x:.35, y:.51, icon:'⌁' },
+  { id:'wenjin', name:'文津阁', area:'平原区 · 文津阁', subtitle:'书藏林泉，阁映清池。', description:'文津阁建于乾隆三十九年，借鉴宁波天一阁，是为收藏《四库全书》营造的藏书楼。外观看似两层，内部另设暗层以利避光；阁前池水兼顾园景和防火。画卷呈现书阁、池水、假山的关系，建筑细节仍为写意。', panel:4, x:.84, y:.44, icon:'✦' },
+  { id:'simian', name:'四面云山', area:'山峦区 · 四面云山', subtitle:'登临高处，四面皆云山。', description:'四面云山亭位于山庄高处，始建于康熙四十八年，以十六根柱支撑。亭外山岭远近叠落，登高后视线可向多个方向舒展；清代皇帝也曾在此赋诗。数字区域和近景强调登高望远，不提供真实步道或坐标。', panel:5, x:.72, y:.37, icon:'✦' },
+  { id:'chuifeng', name:'锤峰落照', area:'园外借景 · 锤峰落照', subtitle:'夕阳西下，磬锤峰如剪影。', description:'锤峰落照是山庄园内望向园外磬锤峰的借景。山峰位于武烈河东侧，因形似敲磬之锤得名；夕照让峰影轮廓尤为醒目。画中的远峰依据山形写意创作，不表示山庄园内可以步行抵达峰顶。', panel:5, x:.95, y:.19, icon:'◇' }
 ];
+const spotViewpoints={
+  shuixin:'观赏时可先找南北两端的牌坊，再沿檐口望向左右水面，体会一座榭怎样把通行的路变成四面取景的地方。',
+  dike:'沿着三支堤线从近处追到洲岛，留意堤与水之间时分时合的边界；正是这些转折，让同一片湖面不断呈现新的远近。',
+  yanyu:'可以从湖面向上看石岸、底层廊柱和二层栏杆的层次，再比较晴日与细雨时楼身轮廓的变化。画中静止游人和画舫只用于提示尺度。',
+  jinshan:'先看山脚与湖水的交接，再循登山廊追到高处屋檐；建筑不是平排在岸边，而是借层层高差带出望湖的视线。',
+  moon:'沿南北游廊想象一重重院落的次序，再回望水边的开口，体会书斋空间为何能同时保持内向的安静与临水的开阔。',
+  lizheng:'从门额、门洞和院墙看它的入口秩序，再把视线移向门后山水；“入园”在这里也是从礼仪空间走向游赏空间。',
+  danbo:'把视线放在殿前宽阔的台阶、木柱和屋檐上：克制的装饰与规整的院落共同烘托出接见与典礼场所的庄重。',
+  wanshu:'看疏林之间留下的大块空地，以及树群如何围出开阔的活动场所；平原的气息与湖区细密的亭台很不一样。',
+  wenjin:'先比较外观两层与内部暗层的关系，再看阁前池水。藏书、遮光和防火的需求，与园林观赏并置在同一处空间里。',
+  simian:'试着从亭周的不同方向看近山和远岭：四面都可入画，是题名最直观的体验。画中的上山路径只表示登高过程。',
+  chuifeng:'辨认园内林岭和园外孤峰两重空间，再看斜阳如何压出峰的剪影。借景让视线越过园界，数字画面并不暗示可从此处登峰。'
+};
 
 const scene = $('scene');
 const world = $('world');
@@ -58,18 +71,18 @@ const destinationArt={
   deer:['near-deer.webp','平原区 · 梅花鹿观察','观鹿','59%','47%']
 };
 const guideScripts={
-  shuixin:{lines:['先留意亭榭两边的水面。水心榭正处在下湖与银湖之间，始建于康熙年间。','南北两端各有牌坊，建筑既供人经过，也让人停下来观景。顺着檐口望出去，看看亭子怎样把四周湖山收进来。'],source:'https://www.bishushanzhuang.com.cn/index.php/Scenic/spot_view/id/193.html'},
-  dike:{lines:['顺着长堤的曲线看，湖面被分出远近不同的层次。芝径云堤借鉴杭州西湖苏堤，分成三支。','它连接环碧、如意洲与月色江声，形态像舒展的灵芝。走在这里，堤岸既是脚下的路，也改变着看水、看岛的角度。'],source:'https://www.bishushanzhuang.com.cn/index.php/Scenic/spot_view/id/219.html'},
-  yanyu:{lines:['先看楼阁与湖面的关系。烟雨楼的妙处，就在临水而立的开阔。','它建于乾隆四十五年，借鉴浙江嘉兴南湖的同名楼阁。两层楼向四面展开视野，把不同方向的湖山都纳入眼前。'],source:'https://www.bishushanzhuang.com.cn/index.php/Scenic/spot_view/id/73.html'},
-  jinshan:{lines:['把目光从水边向上移，金山岛的建筑随着山势一层层展开。','这座岛仿镇江金山寺营造，山体经人工堆筑。岛上的镜水云岑和天宇咸畅列入康熙三十六景，制高处还有三层上帝阁。'],source:'https://www.bishushanzhuang.com.cn/index.php/Scenic/spot_view/id/39.html'},
-  moon:{lines:['先沿着临水院落看一看，房屋不是一眼望尽，而是一重接着一重。','月色江声始建于康熙四十三年，名字借用了苏轼《赤壁赋》的意境。岛上有书斋，也有休憩的居所，水与庭院相连，格外清静。'],source:'https://www.bishushanzhuang.com.cn/index.php/Scenic/spot_view/id/42.html'},
-  lizheng:{lines:['先看门楼与院墙的轮廓，这就是山庄正门丽正门。','它初建于康熙年间，乾隆十九年重修，被列为乾隆三十六景的第一景。从这里入园，宫殿的端整与湖山的舒展便接在同一幅画卷里。'],source:'https://www.bishushanzhuang.com.cn/index.php/scenic/spot_view/id/190.html'},
-  danbo:{lines:['把目光停在殿宇和木构上。澹泊敬诚殿沉静朴素，却是山庄重要的礼仪空间。','大殿始建于康熙五十年，乾隆十九年以楠木改建。清帝曾在这里举行庆典、接受朝觐，也接见边疆首领与外国使节。'],source:'https://www.bishushanzhuang.com.cn/index.php/Scenic/spot_view/id/77.html'},
-  wanshu:{lines:['看树木之间留出的大块开阔地，万树园让山庄显出北方原野的气息。','这里位于平原区，草场与林地相接。清代皇帝曾在这一带设宴，接见王公、各族首领和外国使节。眼前疏朗的空间，也曾容纳隆重的交往场面。'],source:'https://www.bishushanzhuang.com.cn/index.php/Scenic/spot_view/id/53.html'},
-  wenjin:{lines:['先看文津阁的外观：能看到两层楼，内部却另藏一层。','它建于乾隆三十九年，借鉴宁波天一阁，是为收藏《四库全书》营造的藏书楼。暗层有利于避光，阁前水池也兼顾防火，园景中藏着实用的心思。'],source:'https://www.bishushanzhuang.com.cn/index.php/Scenic/spot_view/id/75.html'},
-  simian:{lines:['把视线放远，看看山岭怎样一层层延伸。四面云山亭建在山庄高处，始建于康熙四十八年。','亭子由十六根柱子支撑，屋顶收拢到尖顶。清代皇帝曾在这里登高赋诗。我们也换几个方向看看，体会这座山地园林的尺度。'],source:'https://www.bishushanzhuang.com.cn/index.php/Scenic/spot_view/id/48.html'},
-  chuifeng:{lines:['先把目光越过园内山林，望向园外的磬锤峰。锤峰落照是山庄里的观景点，借的主景正是这座山峰。','磬锤峰俗称棒槌山，位于武烈河东侧。康熙因它形似敲磬的锤而赐名。眼前的近景依据山形写意创作，让我们细看它独特的轮廓。'],source:'https://www.bishushanzhuang.com.cn/index.php/Scenic/spot_view/id/158.html'},
-  deer:{lines:['林缘的梅花鹿有时停步觅食，有时抬头警觉。','请在画中安静地观察，不追逐，也不惊扰它们。'],source:null}
+  shuixin:{lines:['先留意亭榭两边的水面。水心榭正处在下湖与银湖之间，始建于康熙年间。','南北两端各有牌坊，建筑既供人经过，也让人停下来观景。顺着檐口望出去，看看亭子怎样把四周湖山收进来。']},
+  dike:{lines:['顺着长堤的曲线看，湖面被分出远近不同的层次。芝径云堤借鉴杭州西湖苏堤，分成三支。','它连接环碧、如意洲与月色江声，形态像舒展的灵芝。走在这里，堤岸既是脚下的路，也改变着看水、看岛的角度。']},
+  yanyu:{lines:['先看楼阁与湖面的关系。烟雨楼的妙处，就在临水而立的开阔。','它建于乾隆四十五年，借鉴浙江嘉兴南湖的同名楼阁。两层楼向四面展开视野，把不同方向的湖山都纳入眼前。']},
+  jinshan:{lines:['把目光从水边向上移，金山岛的建筑随着山势一层层展开。','这座岛仿镇江金山寺营造，山体经人工堆筑。岛上的镜水云岑和天宇咸畅列入康熙三十六景，制高处还有三层上帝阁。']},
+  moon:{lines:['先沿着临水院落看一看，房屋不是一眼望尽，而是一重接着一重。','月色江声始建于康熙四十三年，名字借用了苏轼《赤壁赋》的意境。岛上有书斋，也有休憩的居所，水与庭院相连，格外清静。']},
+  lizheng:{lines:['先看门楼与院墙的轮廓，这就是山庄正门丽正门。','它初建于康熙年间，乾隆十九年重修，被列为乾隆三十六景的第一景。从这里入园，宫殿的端整与湖山的舒展便接在同一幅画卷里。']},
+  danbo:{lines:['把目光停在殿宇和木构上。澹泊敬诚殿沉静朴素，却是山庄重要的礼仪空间。','大殿始建于康熙五十年，乾隆十九年以楠木改建。清帝曾在这里举行庆典、接受朝觐，也接见边疆首领与外国使节。']},
+  wanshu:{lines:['看树木之间留出的大块开阔地，万树园让山庄显出北方原野的气息。','这里位于平原区，草场与林地相接。清代皇帝曾在这一带设宴，接见王公、各族首领和外国使节。眼前疏朗的空间，也曾容纳隆重的交往场面。']},
+  wenjin:{lines:['先看文津阁的外观：能看到两层楼，内部却另藏一层。','它建于乾隆三十九年，借鉴宁波天一阁，是为收藏《四库全书》营造的藏书楼。暗层有利于避光，阁前水池也兼顾防火，园景中藏着实用的心思。']},
+  simian:{lines:['把视线放远，看看山岭怎样一层层延伸。四面云山亭建在山庄高处，始建于康熙四十八年。','亭子由十六根柱子支撑，屋顶收拢到尖顶。清代皇帝曾在这里登高赋诗。我们也换几个方向看看，体会这座山地园林的尺度。']},
+  chuifeng:{lines:['先把目光越过园内山林，望向园外的磬锤峰。锤峰落照是山庄里的观景点，借的主景正是这座山峰。','磬锤峰俗称棒槌山，位于武烈河东侧。康熙因它形似敲磬的锤而赐名。眼前的近景依据山形写意创作，让我们细看它独特的轮廓。']},
+  deer:{lines:['林缘的梅花鹿有时停步觅食，有时抬头警觉。','请在画中安静地观察，不追逐，也不惊扰它们。']}
 };
 const lamps = [
   {panel:0,x:.55,y:.49},{panel:0,x:.62,y:.49},{panel:0,x:.7,y:.49},
@@ -480,6 +493,7 @@ function layout(preserveCenter = true){
   layoutDebug();
   targetOffset=offset;
   render();
+  window.dispatchEvent(new CustomEvent('chengde-layout',{detail:{height,widths:[...widths],panelStarts:[...panelStarts]}}));
 }
 
 function render(){
@@ -622,7 +636,7 @@ function openDepth(target,creature=deerHerd[0]){
     $('depthAction').textContent=art[2];
     $('depthInfoKicker').textContent=art[1];
     $('depthInfoTitle').textContent=key==='deer'?'梅花鹿':key==='chuifeng'?'磬锤峰':spot.name;
-    $('depthInfoBody').textContent=key==='deer'?'平原林缘的梅花鹿会停步、觅食，也会警觉地抬头。观察它们时宜保持距离，不追逐惊扰。':key==='chuifeng'?'磬锤峰是避暑山庄视野中的园外借景。近景为依据山形创作的景观延伸，并非山庄园内步道。':spot.description;
+    $('depthInfoBody').textContent=key==='deer'?'平原林缘的梅花鹿会停步、觅食，也会警觉地抬头。观察它们时宜保持距离，不追逐惊扰。':`${spot.description}\n\n观赏重点：${spotViewpoints[key]}`;
     $('depthInfo').hidden=true;
     $('depthCloud').textContent=key==='deer'?'静观鹿影　↗':'拨云观景　↗';
     $('depthCloud').setAttribute('aria-pressed','false');
@@ -630,6 +644,7 @@ function openDepth(target,creature=deerHerd[0]){
     portal.classList.toggle('peak-close',key==='chuifeng');
     prepareGuide(key);
     if(key==='deer'){$('depthDeer').dataset.pose='alert';closeDeerNextAt=performance.now()+2400;}
+    if(spot)window.dispatchEvent(new CustomEvent('chengde-spot-visited',{detail:{name:spot.name}}));
     depthState='opening';
     requestAnimationFrame(()=>requestAnimationFrame(()=>{
       if(depthState==='opening'){portal.classList.add('open');$('depthBack').focus({preventScroll:true});}
@@ -696,6 +711,7 @@ function createNavigation(){
     hotspot.addEventListener('click',(event)=>{event.stopPropagation();if(performance.now()<suppressClickUntil)return;showSpot(spot);});
     hotspotLayer.append(hotspot);hotspotButtons.set(spot.id,hotspot);
     const nav=document.createElement('button');nav.type='button';nav.textContent=spot.name;
+    nav.dataset.spot=spot.id;
     nav.addEventListener('click',()=>showSpot(spot));
     spotNav.append(nav);navButtons.set(spot.id,nav);
   }
@@ -1028,11 +1044,17 @@ function bindEvents(){
     layout(false);
     experience.classList.add('traveler-visible');
     $('intro').classList.add('leaving');
-    setTimeout(()=>{
+    $('skipEntryBtn').hidden=false;
+    let finished=false;
+    const finishEnter=()=>{
+      if(finished)return;finished=true;
+      $('skipEntryBtn').hidden=true;
       $('intro').hidden=true;scene.focus({preventScroll:true});
       if(spotId){const destination=spots.find((s)=>s.id===spotId);if(destination)showSpot(destination);}
       else showToast('按住画卷，慢慢游赏');
-    },1050);
+    };
+    $('skipEntryBtn').onclick=finishEnter;
+    setTimeout(finishEnter,reducedMotion.matches?0:1050);
   }
   function returnOverview(){
     if(entered&&performance.now()-lastDepthCloseAt<1200)return;
