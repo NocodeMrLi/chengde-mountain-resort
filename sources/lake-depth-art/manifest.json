@@ -1,0 +1,170 @@
+[
+  {
+    "original": "sources/lake-depth-art/changyuan-original.png",
+    "runtime": "public/art/changyuan-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3191800,
+    "runtimeBytes": 503804,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；非景区实拍或精确历史复原"
+  },
+  {
+    "original": "sources/lake-depth-art/chengquan-original.png",
+    "runtime": "public/art/chengquan-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3598265,
+    "runtimeBytes": 664698,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；非景区实拍或精确历史复原"
+  },
+  {
+    "original": "sources/lake-depth-art/jinghao-original.png",
+    "runtime": "public/art/jinghao-near.webp",
+    "dimensions": [
+      1981,
+      793
+    ],
+    "originalBytes": 3167835,
+    "runtimeBytes": 519480,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；非景区实拍或精确历史复原"
+  },
+  {
+    "original": "sources/lake-depth-art/lihua-original.png",
+    "runtime": "public/art/lihua-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3406081,
+    "runtimeBytes": 576114,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；非景区实拍或精确历史复原"
+  },
+  {
+    "original": "sources/lake-depth-art/lihua-region-original.png",
+    "runtime": "public/art/lihua-region.webp",
+    "dimensions": [
+      1981,
+      794
+    ],
+    "originalBytes": 3633361,
+    "runtimeBytes": 655552,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；非景区实拍或精确历史复原"
+  },
+  {
+    "original": "sources/lake-depth-art/ningjing-original.png",
+    "runtime": "public/art/ningjing-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3508637,
+    "runtimeBytes": 609702,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；非景区实拍或精确历史复原"
+  },
+  {
+    "original": "sources/lake-depth-art/qianchixue-original.png",
+    "runtime": "public/art/qianchixue-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3594910,
+    "runtimeBytes": 683530,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；非景区实拍或精确历史复原"
+  },
+  {
+    "original": "sources/lake-depth-art/qianchixue-region-original.png",
+    "runtime": "public/art/qianchixue-region.webp",
+    "dimensions": [
+      1981,
+      793
+    ],
+    "originalBytes": 3487871,
+    "runtimeBytes": 626758,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；非景区实拍或精确历史复原"
+  },
+  {
+    "original": "sources/lake-depth-art/qingshu-region-original.png",
+    "runtime": "public/art/qingshu-region.webp",
+    "dimensions": [
+      1981,
+      793
+    ],
+    "originalBytes": 3454434,
+    "runtimeBytes": 593512,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；非景区实拍或精确历史复原"
+  },
+  {
+    "original": "sources/lake-depth-art/qushui-original.png",
+    "runtime": "public/art/qushui-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3548440,
+    "runtimeBytes": 631672,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；非景区实拍或精确历史复原"
+  },
+  {
+    "original": "sources/lake-depth-art/sushang-original.png",
+    "runtime": "public/art/sushang-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3139128,
+    "runtimeBytes": 492250,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；非景区实拍或精确历史复原"
+  },
+  {
+    "original": "sources/lake-depth-art/yizhi-original.png",
+    "runtime": "public/art/yizhi-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3297788,
+    "runtimeBytes": 537328,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；非景区实拍或精确历史复原"
+  },
+  {
+    "original": "sources/lake-depth-art/yongtian-original.png",
+    "runtime": "public/art/yongtian-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3442569,
+    "runtimeBytes": 596842,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；非景区实拍或精确历史复原"
+  },
+  {
+    "original": "sources/lake-depth-art/yuqin-original.png",
+    "runtime": "public/art/yuqin-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3514989,
+    "runtimeBytes": 627602,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；非景区实拍或精确历史复原"
+  }
+]

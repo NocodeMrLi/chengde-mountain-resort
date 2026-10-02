@@ -1,0 +1,254 @@
+[
+  {
+    "size": [
+      1440,
+      778
+    ],
+    "detail": {
+      "x": 64.796875,
+      "y": 233.390625,
+      "w": 325,
+      "h": 449.59375
+    },
+    "tools": [
+      {
+        "id": "regionDay",
+        "x": 192.5625,
+        "y": 131,
+        "w": 48.890625,
+        "h": 44,
+        "reachable": true
+      },
+      {
+        "id": "regionRain",
+        "x": 247.453125,
+        "y": 131,
+        "w": 48.890625,
+        "h": 44,
+        "reachable": true
+      },
+      {
+        "id": "regionSound",
+        "x": 302.34375,
+        "y": 131,
+        "w": 48.890625,
+        "h": 44,
+        "reachable": true
+      },
+      {
+        "id": "regionZoomOut",
+        "x": 358.234375,
+        "y": 131,
+        "w": 44,
+        "h": 44,
+        "reachable": true
+      },
+      {
+        "id": "regionZoomIn",
+        "x": 445.234375,
+        "y": 131,
+        "w": 44,
+        "h": 44,
+        "reachable": true
+      },
+      {
+        "id": "regionReset",
+        "x": 489.234375,
+        "y": 131,
+        "w": 44,
+        "h": 44,
+        "reachable": true
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "size": [
+      360,
+      844
+    ],
+    "detail": {
+      "x": 14.390625,
+      "y": 494.375,
+      "w": 331.21875,
+      "h": 261.625
+    },
+    "tools": [
+      {
+        "id": "regionDay",
+        "x": 14.390625,
+        "y": 93,
+        "w": 44,
+        "h": 44,
+        "reachable": true
+      },
+      {
+        "id": "regionRain",
+        "x": 60.390625,
+        "y": 93,
+        "w": 44,
+        "h": 44,
+        "reachable": true
+      },
+      {
+        "id": "regionSound",
+        "x": 106.390625,
+        "y": 93,
+        "w": 44,
+        "h": 44,
+        "reachable": true
+      },
+      {
+        "id": "regionZoomOut",
+        "x": 153.390625,
+        "y": 93,
+        "w": 44,
+        "h": 44,
+        "reachable": true
+      },
+      {
+        "id": "regionZoomIn",
+        "x": 229.90625,
+        "y": 93,
+        "w": 44,
+        "h": 44,
+        "reachable": true
+      },
+      {
+        "id": "regionReset",
+        "x": 273.90625,
+        "y": 93,
+        "w": 44,
+        "h": 44,
+        "reachable": true
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "size": [
+      390,
+      844
+    ],
+    "detail": {
+      "x": 15.59375,
+      "y": 494.375,
+      "w": 358.8125,
+      "h": 261.625
+    },
+    "tools": [
+      {
+        "id": "regionDay",
+        "x": 15.59375,
+        "y": 93,
+        "w": 44,
+        "h": 44,
+        "reachable": true
+      },
+      {
+        "id": "regionRain",
+        "x": 62.59375,
+        "y": 93,
+        "w": 44,
+        "h": 44,
+        "reachable": true
+      },
+      {
+        "id": "regionSound",
+        "x": 109.59375,
+        "y": 93,
+        "w": 44,
+        "h": 44,
+        "reachable": true
+      },
+      {
+        "id": "regionZoomOut",
+        "x": 206.40625,
+        "y": 93,
+        "w": 44,
+        "h": 44,
+        "reachable": true
+      },
+      {
+        "id": "regionZoomIn",
+        "x": 285.40625,
+        "y": 93,
+        "w": 44,
+        "h": 44,
+        "reachable": true
+      },
+      {
+        "id": "regionReset",
+        "x": 329.40625,
+        "y": 93,
+        "w": 44,
+        "h": 44,
+        "reachable": true
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "size": [
+      430,
+      844
+    ],
+    "detail": {
+      "x": 17.1875,
+      "y": 506.5,
+      "w": 395.625,
+      "h": 249.5
+    },
+    "tools": [
+      {
+        "id": "regionDay",
+        "x": 17.1875,
+        "y": 93,
+        "w": 44,
+        "h": 44,
+        "reachable": true
+      },
+      {
+        "id": "regionRain",
+        "x": 64.1875,
+        "y": 93,
+        "w": 44,
+        "h": 44,
+        "reachable": true
+      },
+      {
+        "id": "regionSound",
+        "x": 111.1875,
+        "y": 93,
+        "w": 44,
+        "h": 44,
+        "reachable": true
+      },
+      {
+        "id": "regionZoomOut",
+        "x": 244.8125,
+        "y": 93,
+        "w": 44,
+        "h": 44,
+        "reachable": true
+      },
+      {
+        "id": "regionZoomIn",
+        "x": 323.8125,
+        "y": 93,
+        "w": 44,
+        "h": 44,
+        "reachable": true
+      },
+      {
+        "id": "regionReset",
+        "x": 367.8125,
+        "y": 93,
+        "w": 44,
+        "h": 44,
+        "reachable": true
+      }
+    ],
+    "overflow": false
+  }
+]

@@ -1,0 +1,202 @@
+{
+  "scenes": [
+    {
+      "name": "千尺雪",
+      "art": "/art/qianchixue-near.webp",
+      "natural": [
+        1983,
+        793
+      ],
+      "visited": true,
+      "focusCount": 2,
+      "returnExact": true
+    },
+    {
+      "name": "宁静斋",
+      "art": "/art/ningjing-near.webp",
+      "natural": [
+        1983,
+        793
+      ],
+      "visited": true,
+      "focusCount": 2,
+      "returnExact": true
+    },
+    {
+      "name": "玉琴轩",
+      "art": "/art/yuqin-near.webp",
+      "natural": [
+        1983,
+        793
+      ],
+      "visited": true,
+      "focusCount": 2,
+      "returnExact": true
+    },
+    {
+      "name": "曲水荷香",
+      "art": "/art/qushui-near.webp",
+      "natural": [
+        1983,
+        793
+      ],
+      "visited": true,
+      "focusCount": 2,
+      "returnExact": true
+    },
+    {
+      "name": "梨花伴月",
+      "art": "/art/lihua-near.webp",
+      "natural": [
+        1983,
+        793
+      ],
+      "visited": true,
+      "focusCount": 2,
+      "returnExact": true
+    },
+    {
+      "name": "永恬居",
+      "art": "/art/yongtian-near.webp",
+      "natural": [
+        1983,
+        793
+      ],
+      "visited": true,
+      "focusCount": 2,
+      "returnExact": true
+    },
+    {
+      "name": "素尚斋",
+      "art": "/art/sushang-near.webp",
+      "natural": [
+        1983,
+        793
+      ],
+      "visited": true,
+      "focusCount": 2,
+      "returnExact": true
+    },
+    {
+      "name": "澄泉绕石",
+      "art": "/art/chengquan-near.webp",
+      "natural": [
+        1983,
+        793
+      ],
+      "visited": true,
+      "focusCount": 2,
+      "returnExact": true
+    },
+    {
+      "name": "颐志堂",
+      "art": "/art/yizhi-near.webp",
+      "natural": [
+        1983,
+        793
+      ],
+      "visited": true,
+      "focusCount": 2,
+      "returnExact": true
+    },
+    {
+      "name": "畅远台",
+      "art": "/art/changyuan-near.webp",
+      "natural": [
+        1983,
+        793
+      ],
+      "visited": true,
+      "focusCount": 2,
+      "returnExact": true
+    },
+    {
+      "name": "静好堂",
+      "art": "/art/jinghao-near.webp",
+      "natural": [
+        1981,
+        793
+      ],
+      "visited": true,
+      "focusCount": 2,
+      "returnExact": true
+    }
+  ],
+  "mobile": [
+    {
+      "width": 360,
+      "overflow": false,
+      "title": "玉琴轩",
+      "readingBottom": 765,
+      "tools": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 44,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "title": "静好堂",
+      "readingBottom": 765,
+      "tools": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 44,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "width": 430,
+      "overflow": false,
+      "title": "澄泉绕石",
+      "readingBottom": 765,
+      "tools": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 44,
+          "h": 44
+        }
+      ]
+    }
+  ],
+  "atlas": [
+    {
+      "id": "k14",
+      "title": "梨花伴月"
+    },
+    {
+      "id": "q11",
+      "title": "静好堂"
+    },
+    {
+      "id": "q29",
+      "title": "千尺雪"
+    }
+  ],
+  "build": "0d8b6b2d7a4b"
+}

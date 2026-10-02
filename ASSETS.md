@@ -12,6 +12,8 @@
 
 构建保留运行所需的人物、动物、船及透明前景 PNG；22 张已由 WebP 替代或未引用的旧景绘 PNG 留作源文件归档，不复制到 `dist/`，也不列入运行哈希清单。
 
+湖山组团阶段新增千尺雪水系4景、梨花伴月组群4景、清舒山馆3景，共11幅各自独立的近景，另有3幅区域全景。原图与尺寸、压缩参数见 `sources/lake-depth-art/manifest.json`；史料范围与画作审阅见 [湖山组团记录](docs/lake-depth-review.md)。梨花伴月的完整院落为历史意境演绎，不能作为遗址今日仍存建筑的凭据；静好堂室内陈设和画屏为艺术想象，未作历史陈设认定。
+
 ## 界面图标
 
 `public/art/github-mark.svg` 取自 GitHub 的 [Primer Octicons](https://github.com/primer/octicons/blob/main/icons/mark-github-16.svg)，仅用于标识通往本项目 GitHub 仓库的链接。Octicons 依 MIT 许可发布，版权为 GitHub Inc.；许可文本保存在 [sources/OCTICONS-LICENSE.md](sources/OCTICONS-LICENSE.md)。

@@ -365,3 +365,9 @@
 .region-zoom-tools output{min-width:43px;text-align:center;font:11px Georgia,serif}.region-zoom-tools button[aria-disabled="true"]{opacity:.45;cursor:default}
 @media(max-width:700px){.region-tools{right:4%;flex-wrap:wrap}.region-zoom-tools{margin-left:auto}.region-zoom-tools output{min-width:35px}.region-zoom-tools button{min-width:44px;min-height:44px;padding:7px 6px}.region-zoom-tools button:last-child{font-size:10px}.region-tools{gap:3px}.region-tools>button{padding:7px 5px}}
 @media(max-width:380px){.region-zoom-tools{margin-left:0}.region-tools{max-width:100%;gap:2px}.region-tools>button{min-width:44px}.region-zoom-tools output{min-width:31px}}
+/* Keep atmosphere controls above the reading panel on short desktop screens. */
+@media(min-width:701px){.region-detail{top:clamp(195px,30dvh,320px);transform:none;max-height:calc(100dvh - clamp(195px,30dvh,320px) - 95px);overflow:auto;overscroll-behavior:contain}}
+
+.zone-nav{max-width:94vw;overflow-x:auto;scrollbar-width:none}.zone-nav button{flex:none}
+
+.region-near.interior-scene .region-near-viewport>.region-rain,.region-near.interior-scene .region-near-mist{display:none}.region-near-window-rain{inset:auto;mask-image:linear-gradient(90deg,transparent,#000 6% 93%,transparent)}

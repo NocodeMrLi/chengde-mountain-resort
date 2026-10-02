@@ -1,0 +1,11 @@
+{
+  "nearCount": 11,
+  "nearBytes": 6443022,
+  "regionCount": 3,
+  "regionBytes": 1875822,
+  "newArtBytes": 8318844,
+  "buildBytes": 69925442,
+  "build": "040848c18bd1",
+  "ready": 29,
+  "planned": 43
+}

@@ -12,6 +12,9 @@ const atlasDialog = $('atlasDialog');
 const mainSelectors = ['#scene','.topbar','.zone-nav','.bottom-ui','.story-panel','.progress-track','.keyboard-hint'];
 const regions = {
   ruyi:{title:'如意洲',kicker:'湖区岛屿 · 史料方位写意',art:'ruyi-island.webp',alt:'写意绘制的如意洲湖岛，中央庭院和四面园景',description:'景区官网记载如意洲建于康熙四十二年，十二处康乾题名景致汇聚于此。画中标记仅表示东、西、南、北和中轴的相对关系，不是 GPS 或建筑现状图。',names:['无暑清凉','延薰山馆','水芳岩秀','一片云','般若相','清晖亭','金莲映日','沧浪屿','云帆月舫','西岭晨霞','澄波叠翠','观莲所'],positions:{'无暑清凉':[50,71],'延薰山馆':[50,56],'水芳岩秀':[50,43],'一片云':[68,47],'般若相':[75,59],'清晖亭':[84,68],'金莲映日':[36,57],'沧浪屿':[27,68],'云帆月舫':[23,45],'西岭晨霞':[31,36],'澄波叠翠':[52,30],'观莲所':[49,83]}},
+  qianchixue:{title:'千尺雪水景',kicker:'历史水系 · 意境组景',art:'qianchixue-region.webp',alt:'千尺雪飞流、曲水方亭与两处殿堂相联的写意水景',description:'依已核实的历史水系关系组合千尺雪、宁静斋、玉琴轩与曲水荷香，位置为意境分组，不代表测绘或今日存状。',names:['千尺雪','宁静斋','玉琴轩','曲水荷香'],positions:{'千尺雪':[18,28],'宁静斋':[81,29],'玉琴轩':[85,74],'曲水荷香':[43,46]}},
+  lihua:{title:'梨花伴月',kicker:'历史遗址组群 · 意境演绎',art:'lihua-region.webp',alt:'梨树峪历史庭院、门殿与泉石的意境演绎',description:'以已核实的门殿—永恬居—素尚斋中轴关系组织画面，另读澄泉绕石的历史泉景。组群为遗址，完整建筑属于历史意境演绎，非今日现状。',names:['梨花伴月','永恬居','素尚斋','澄泉绕石'],positions:{'梨花伴月':[56,81],'永恬居':[55,45],'素尚斋':[54,21],'澄泉绕石':[22,49]}},
+  qingshu:{title:'清舒山馆',kicker:'历史居停组团 · 意境演绎',art:'qingshu-region.webp',alt:'清舒山馆西所殿、观景平台与东温室相联的写意庭园',description:'依据颐志堂西所殿、畅远台平台与静好堂东温室的组团关系创作。院落、陈设与视线均有艺术演绎，不代表实测布局或现存形态。',names:['颐志堂','畅远台','静好堂'],positions:{'颐志堂':[21,61],'畅远台':[65,30],'静好堂':[88,72]}},
   mountain:{title:'山地云岭',kicker:'山峦区 · 登高与借景',art:'mountain-region-square.webp',alt:'写意绘制的山庄山地、四面云山亭和远处磬锤峰',description:'沿山地画卷由近及远观看四面云山，再遥望园外磬锤峰。画中远峰属于借景；各标记为写意导览位置，不代表实地步道或坐标。',names:['四面云山','锤峰落照'],positions:{'四面云山':[61,29],'锤峰落照':[80,15]}}
 };
 const visitedKey='chengde-atlas-visited-v1';
@@ -155,7 +158,7 @@ function getNearView(item){
   return {focus:focus.map((v)=>percent(v)),details:fallback.map((detail,index)=>{
     const source=view.details?.[index]||detail;
     return {title:String(source.title||detail.title),text:String(source.text||detail.text),x:percent(source.x,detail.x),y:percent(source.y,detail.y)};
-  }),water:Array.isArray(view.water)&&view.water.length===4?view.water.map((v)=>percent(v,0)):null,interpretation:String(view.interpretation||'画面依据历史景名作写意创作，景物位置不代表实地测绘或今日现状。')};
+  }),water:Array.isArray(view.water)&&view.water.length===4?view.water.map((v)=>percent(v,0)):null,rainWindow:Array.isArray(view.rainWindow)&&view.rainWindow.length===4?view.rainWindow.map((v)=>percent(v,0)):null,interpretation:String(view.interpretation||'画面依据历史景名作写意创作，景物位置不代表实地测绘或今日现状。')};
 }
 function setNearRegionInert(value){
   for(const node of portal.children)if(node!==near)node.inert=value;
@@ -240,6 +243,9 @@ function renderNearDetails(){
   });
   const water=$('regionNearWater');water.hidden=!nearView.water||nearView.water[2]===0||nearView.water[3]===0;
   if(!water.hidden){const [x,y,w,h]=nearView.water;Object.assign(water.style,{left:`${x}%`,top:`${y}%`,width:`${Math.min(w,100-x)}%`,height:`${Math.min(h,100-y)}%`});}
+  near.classList.toggle('interior-scene',Boolean(nearView.rainWindow));
+  const windowRain=$('regionNearWindowRain');windowRain.hidden=!nearView.rainWindow;
+  if(nearView.rainWindow){const [x,y,w,h]=nearView.rainWindow;Object.assign(windowRain.style,{left:`${x}%`,top:`${y}%`,width:`${Math.min(w,100-x)}%`,height:`${Math.min(h,100-y)}%`});}
 }
 function updateNearWeather(){
   const night=experience.classList.contains('night'),rain=experience.classList.contains('raining');
@@ -358,9 +364,10 @@ function showAtlasDetail(item){
   const caution=document.createElement('p');caution.className='atlas-caution';caution.textContent='图鉴标记表示历史题名与数字创作进度，不表示建筑今日仍存或准确坐标。';
   pane.append(small,title,text,caution);
   if(item.aliases.length){const alias=document.createElement('p');alias.textContent=`相关称呼：${item.aliases.map((name)=>{const note=item.aliasNotes?.find((entry)=>entry.name===name);return note?`${name}（${note.relation}）`:name;}).join('、')}`;pane.append(alias);}
-  if(item.region==='如意洲'||item.regionNearArt&&item.region==='山地'){
+  const regionKey=item.regionKey||(item.region==='如意洲'?'ruyi':item.regionNearArt&&item.region==='山地'?'mountain':null);
+  if(regionKey&&regions[regionKey]){
     const button=document.createElement('button');button.type='button';button.textContent=item.regionNearArt?'进入区域，走近此景':'查看如意洲写意方位';
-    button.addEventListener('click',()=>{const key=item.region==='如意洲'?'ruyi':'mountain';const source=portal.contains(atlasReturnFocus)?returnFocus:atlasReturnFocus;closeAtlas(false);openRegion(key,source);selectItem(item.name);requestAnimationFrame(()=>locateItem(item.name));});pane.append(button);
+    button.addEventListener('click',()=>{const key=regionKey;const source=portal.contains(atlasReturnFocus)?returnFocus:atlasReturnFocus;closeAtlas(false);openRegion(key,source);selectItem(item.name);requestAnimationFrame(()=>locateItem(item.name));});pane.append(button);
   }else if(item.overviewSpotId){
     const button=document.createElement('button');button.type='button';button.textContent='定位长卷景点';
     button.addEventListener('click',()=>{closeAtlas(false);if(!portal.hidden)closeRegion(false);document.querySelector(`[data-spot="${item.overviewSpotId}"]`)?.click();});pane.append(button);
