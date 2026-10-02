@@ -1,0 +1,42 @@
+{
+  "reviewed_at": "2026-10-02",
+  "records": 36,
+  "original_name_order_preserved": true,
+  "individual_official_scene_entries": 29,
+  "additional_scenes_on_official_group_entry": 2,
+  "remaining_historically_cross_checked": 5,
+  "private_sources": 36,
+  "description_codepoint_range": [
+    151,
+    209
+  ],
+  "no_urls_or_source_ids_in_visitor_payload": true,
+  "no_coordinates": true,
+  "pdf_visual_checks": [
+    "泉源石壁: PDF第22页／原刊115页，核准同名石刻的乾隆题写及半月湖归属",
+    "澄泉绕石: PDF第23页／原刊116页，核准1817年拆去敞厅、移匾梨花伴月宫门"
+  ],
+  "known_cautions": [
+    "松鹤清樾与暖流暄波保留用户展示名，另列松鹤清越、暖溜暄波",
+    "梨花伴月的遗址现状由官方明确说明",
+    "澄泉绕石仅能证明历史拆除、移匾，不能以此声称完成当代现场核验",
+    "其余34景不把官网收录当作当日开放或清代原建筑尚存证明",
+    "云山胜地与四面云山的始建年份有资料差异，本稿省略确年",
+    "泉源石壁同名乾隆题刻不直接等同康熙原刻",
+    "清代原文现代转录有缺损，仅采用可互证内容"
+  ],
+  "files": {
+    "kangxi36.visitor.json": {
+      "bytes": 35544,
+      "sha256": "e4be01ed54d6adde3fdcb5948e0b75d54638196cbb253051514f9efbf2a23f29"
+    },
+    "kangxi36_research.json": {
+      "bytes": 80312,
+      "sha256": "66cb33ae8dae644dd1b28380b43b4c6ed6629634e77e559869c4e305a989e49b"
+    },
+    "kangxi36.research-sources.json": {
+      "bytes": 16322,
+      "sha256": "370750458314fa9a70fe2235f6796f6f4f0c998a615ff564fce04169296a018e"
+    }
+  }
+}

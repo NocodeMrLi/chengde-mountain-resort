@@ -1,0 +1,2000 @@
+{
+  "version": "2026-10-02",
+  "scope": "康熙三十六景原创中文导览资料",
+  "scene_count": 36,
+  "records": [
+    {
+      "id": "kangxi-01",
+      "sequence": 1,
+      "dynasty_group": "康熙三十六景",
+      "name": "烟波致爽",
+      "aliases": [],
+      "region": {
+        "label": "宫殿区",
+        "group": "正宫",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-85",
+          "historical-cdfz"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "1710年始建，列康熙三十六景第一景。",
+          "source_ids": [
+            "official-85",
+            "historical-cdfz"
+          ]
+        },
+        {
+          "text": "为清帝寝宫；嘉庆、咸丰在此去世。",
+          "source_ids": [
+            "official-85",
+            "historical-cdfz"
+          ]
+        },
+        {
+          "text": "1860年咸丰在此批准相关《北京条约》的签订。",
+          "source_ids": [
+            "official-85",
+            "historical-cdfz"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "以周围湖山带来的清爽气息解释景名。",
+        "classification": "source_supported",
+        "source_ids": [
+          "official-85",
+          "historical-cdfz"
+        ]
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "烟波致爽是康熙三十六景的开篇，所在殿宇始建于1710年，曾是清代皇帝在山庄的寝宫。明厅、暖阁与佛堂共同构成起居空间，景名则把周围山岭、湖面与清爽气息联在一起。这处院落也见证了晚清的重要转折：嘉庆、咸丰两帝均在此去世，咸丰还曾在这里批准有关《北京条约》的签订。读这四个字，既能理解离宫寻求清凉的生活愿望，也能看到同一座建筑中叠加的不同历史。看景时不妨把园林意境与宫廷往事放在一起理解。",
+      "private_source_ids": [
+        "official-85",
+        "historical-cdfz"
+      ],
+      "evidence_limits": [],
+      "visitor_character_count": 191,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-02",
+      "sequence": 2,
+      "dynasty_group": "康熙三十六景",
+      "name": "芝径云堤",
+      "aliases": [],
+      "region": {
+        "label": "湖洲区",
+        "group": "三洲长堤",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-219"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "长堤分支连接环碧、如意洲、月色江声。",
+          "source_ids": [
+            "official-219"
+          ]
+        },
+        {
+          "text": "官方介绍说明其借鉴西湖苏堤并体现一池三山意境。",
+          "source_ids": [
+            "official-219"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "灵芝状长堤与水上云影构成景名意象；其中长堤形态为来源所述，行走视线为导览解读。",
+        "classification": "interpretation",
+        "source_ids": []
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "芝径云堤把湖面上的环碧、如意洲和月色江声三处洲岛联系起来。长堤从万壑松风桥一带向北舒展，再分出不同方向，康熙以灵芝般的曲折形态为它命名。造景借鉴杭州西湖苏堤，又把一池三山的传统意境融入山庄湖区。理解此景，可以先看堤如何分隔水面，再看它怎样把分散的洲岛重新串联。近处的路径与远处的水面交替展开，景名里的“径”与“云”便不只是字面风景，也提示了人在园中行走时不断变化的视线。",
+      "private_source_ids": [
+        "official-219"
+      ],
+      "evidence_limits": [],
+      "visitor_character_count": 185,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-03",
+      "sequence": 3,
+      "dynasty_group": "康熙三十六景",
+      "name": "无暑清凉",
+      "aliases": [],
+      "region": {
+        "label": "湖洲区",
+        "group": "如意洲中轴线",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-35",
+          "official-37",
+          "historical-cdfz"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "建于1703至1708年间，面阔五间。",
+          "source_ids": [
+            "official-35",
+            "official-37",
+            "historical-cdfz"
+          ]
+        },
+        {
+          "text": "为如意洲门殿；中轴线后续为延薰山馆、水芳岩秀。",
+          "source_ids": [
+            "official-35",
+            "official-37",
+            "historical-cdfz"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "题名强调夏日迎凉的感受。",
+        "classification": "source_supported",
+        "source_ids": [
+          "official-35",
+          "official-37",
+          "historical-cdfz"
+        ]
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "无暑清凉位于如意洲中轴线的前部，是这组临水宫苑的门殿。它建于1703至1708年间，面阔五间，之后依次展开延薰山馆与水芳岩秀。如意洲本是山庄早期起居理政的重要地方，因此这里的清凉意象，也与皇帝在园中的日常活动相连。读景名时，可把注意力放在门殿、洲岛和湖水的关系：门不仅划分院落，也让内外风景彼此联系。由这处入口理解后面的建筑次序，比把几个四字景名看成互不相干的打卡点，更容易读懂如意洲的布局。",
+      "private_source_ids": [
+        "official-35",
+        "official-37",
+        "historical-cdfz"
+      ],
+      "evidence_limits": [],
+      "visitor_character_count": 196,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-04",
+      "sequence": 4,
+      "dynasty_group": "康熙三十六景",
+      "name": "延薰山馆",
+      "aliases": [],
+      "region": {
+        "label": "湖洲区",
+        "group": "如意洲中轴线",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-36",
+          "official-37"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "1703至1708年间形成，面阔七间。",
+          "source_ids": [
+            "official-36",
+            "official-37"
+          ]
+        },
+        {
+          "text": "山庄营建初期清帝理政处；前有抱厦，前后设廊。",
+          "source_ids": [
+            "official-36",
+            "official-37"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "“延薰”可解作迎纳薰风，属字义导览解读。",
+        "classification": "interpretation",
+        "source_ids": []
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "延薰山馆在如意洲中轴线上承接无暑清凉，是山庄营建初期清帝处理政事的地方。建筑形成于1703至1708年间，面阔七间，前有抱厦，前后设廊，上覆单檐歇山顶。它的看点既在屋宇本身，也在园林与政务空间的并置。“延薰”可以从迎接和暖清风的字意来体会：人在殿内理事，周围仍是湖岛山林。观察时可留意主殿、抱厦与廊的层次，再把它放回无暑清凉、延薰山馆、水芳岩秀的连续轴线中，理解这座早期宫苑由外向内展开的秩序。",
+      "private_source_ids": [
+        "official-36",
+        "official-37"
+      ],
+      "evidence_limits": [],
+      "visitor_character_count": 197,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-05",
+      "sequence": 5,
+      "dynasty_group": "康熙三十六景",
+      "name": "水芳岩秀",
+      "aliases": [],
+      "region": {
+        "label": "湖洲区",
+        "group": "如意洲中轴线后部",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-34",
+          "official-37"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "1703至1708年间形成，为清帝读书颐养之所。",
+          "source_ids": [
+            "official-34",
+            "official-37"
+          ]
+        },
+        {
+          "text": "面阔七间，前出厦五间、后出厦三间。",
+          "source_ids": [
+            "official-34",
+            "official-37"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "官方释为水清、山静所形成的芳与秀。",
+        "classification": "source_supported",
+        "source_ids": [
+          "official-34",
+          "official-37"
+        ]
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "水芳岩秀在如意洲中轴线较深处，接续延薰山馆，曾供清帝读书、休养。建筑形成于1703至1708年间，正面七间，前后又伸出不同尺度的抱厦，空间并非一个简单的长方形。景名把水的清润与山石的秀美合写在一起，适合从“水”与“岩”两种质感的对照来欣赏。读懂此景，不必只寻找一块题额；也可以把殿堂与洲岛周边的山水关系联系起来。它与前方理政殿宇相接，显示同一组皇家园林怎样容纳处理政务、阅读与休憩等不同活动。",
+      "private_source_ids": [
+        "official-34",
+        "official-37"
+      ],
+      "evidence_limits": [],
+      "visitor_character_count": 196,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-06",
+      "sequence": 6,
+      "dynasty_group": "康熙三十六景",
+      "name": "万壑松风",
+      "aliases": [
+        {
+          "name": "纪恩堂",
+          "relationship": "主殿后题名，不等同整个组群更名",
+          "source_ids": [
+            "official-87"
+          ]
+        }
+      ],
+      "region": {
+        "label": "宫殿区",
+        "group": "万壑松风建筑组群",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-87",
+          "official-culture-986"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "建于1708年，供清帝读书理政。",
+          "source_ids": [
+            "official-87",
+            "official-culture-986"
+          ]
+        },
+        {
+          "text": "1741年乾隆将主殿题为纪恩堂。",
+          "source_ids": [
+            "official-87",
+            "official-culture-986"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "松林风声与林壑景观相呼应。",
+        "classification": "source_supported",
+        "source_ids": [
+          "official-87",
+          "official-culture-986"
+        ]
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "万壑松风建于1708年，建筑依岗临水，松林与风声是理解景名的关键。这里并非只有一座殿堂，主殿与静佳室、鉴始斋等屋宇共同构成读书理政的庭院。地形使它的布局富于变化，也让建筑与湖岸相互呼应。1741年，乾隆为主殿题“纪恩堂”，寄托对祖父康熙养育之恩的追念。于是，同一处空间有了两层值得细读的名字：一个把人带入松风林壑，一个留下皇室家族的记忆。看这一景，可同时留意因地安排的建筑和题名背后的历史。",
+      "private_source_ids": [
+        "official-87",
+        "official-culture-986"
+      ],
+      "evidence_limits": [],
+      "visitor_character_count": 195,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-07",
+      "sequence": 7,
+      "dynasty_group": "康熙三十六景",
+      "name": "松鹤清樾",
+      "aliases": [
+        {
+          "name": "松鹤清越",
+          "relationship": "官网及故宫诗册条目采用的异写；未据此裁定现存匾额原字",
+          "source_ids": [
+            "official-196",
+            "dpm-poems"
+          ]
+        }
+      ],
+      "region": {
+        "label": "山岳区",
+        "group": "榛子峪口",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-196"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "官网记载始建1711年，位于榛子峪口，为康熙母后颐养之所。",
+          "source_ids": [
+            "official-196"
+          ]
+        },
+        {
+          "text": "前后各五间殿堂，由两侧游廊相连。",
+          "source_ids": [
+            "official-196"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "“清越”是官方所用字样，解释为松声鹤音清亮；“清樾”为本项目保留名称，不据此改写历史原额。",
+        "classification": "source_supported",
+        "source_ids": [
+          "official-196"
+        ]
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "松鹤清樾在榛子峪口，景区资料与清代文献亦写作“松鹤清越”。这里始建于1711年，是康熙为母后安排的颐养空间。史料所述的前后殿堂各五间，以两侧游廊联系；松树与鹤声则共同构成题名的环境背景。阅读不同写法时，可以把“樾”理解为树荫，把“清越”理解为声音清亮，两者的字义有所不同，不能悄悄混作一个意思。本页保留原景名，并列出文献中的写法，便于对照。欣赏这一景，也可以从山林生活与奉亲意涵两条线索入手。",
+      "private_source_ids": [
+        "official-196"
+      ],
+      "evidence_limits": [
+        "展示名按用户清单保留松鹤清樾；别名字形不得无提示覆盖。"
+      ],
+      "visitor_character_count": 196,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-08",
+      "sequence": 8,
+      "dynasty_group": "康熙三十六景",
+      "name": "云山胜地",
+      "aliases": [],
+      "region": {
+        "label": "宫殿区",
+        "group": "正宫北部",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-81",
+          "historical-cdfz"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "两层楼阁，借楼前假山蹬道上楼，楼内不设楼梯。",
+          "source_ids": [
+            "official-81",
+            "historical-cdfz"
+          ]
+        },
+        {
+          "text": "官方介绍记载下层戏台、上层莲花室。",
+          "source_ids": [
+            "official-81",
+            "historical-cdfz"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "把登高所见云山与楼阁环境联系起来，为导览解读。",
+        "classification": "interpretation",
+        "source_ids": []
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "云山胜地位于烟波致爽之后，是正宫建筑序列中一处有趣的楼阁。它有上下两层，却不在楼内设置通常的楼梯，而是借楼前假山的蹬道联系上层，把登楼与穿行山石结合起来。景区介绍记载，下层曾设戏台，上层有乾隆题名的莲花室，分别承载听戏与礼佛、祈福等活动。景名中的云与山，可以从楼阁面向园林的关系来体会。读懂这里的关键是建筑如何借用地形：山石不只是装饰，也曾参与组织行走路线，让宫殿与园林在转折之间相接。",
+      "private_source_ids": [
+        "official-81",
+        "historical-cdfz"
+      ],
+      "evidence_limits": [
+        "不同介绍对始建年份有1710／1711差异；本文不列确切始建年。"
+      ],
+      "visitor_character_count": 193,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-09",
+      "sequence": 9,
+      "dynasty_group": "康熙三十六景",
+      "name": "四面云山",
+      "aliases": [],
+      "region": {
+        "label": "山岳区",
+        "group": "山庄高峰观景亭",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-48"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "官方介绍称位于山庄最高峰，为十六柱单檐攒尖顶方亭。",
+          "source_ids": [
+            "official-48"
+          ]
+        },
+        {
+          "text": "清帝曾于此登高饮酒赋诗。",
+          "source_ids": [
+            "official-48"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "由高处环看周围云山之景。",
+        "classification": "source_supported",
+        "source_ids": [
+          "official-48"
+        ]
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "四面云山以高处的开阔视野得名，是康熙三十六景中着重表现山势的一景。景区介绍将其位置记为山庄最高峰，亭为十六柱、单檐攒尖顶的方亭。与临水殿堂收束视线的方式不同，这里的题名引导人把目光投向四周，让远近山岭和云烟成为画面主体。清代皇帝曾在此登高、饮酒赋诗。理解这座亭，不妨先想山顶为什么只需一座较简明的建筑：它提供停驻的尺度，也把更大的自然景观留在建筑之外。云雾与能见度随天气变化，景名所写的是一种观景意境。",
+      "private_source_ids": [
+        "official-48"
+      ],
+      "evidence_limits": [
+        "始建年份资料有差异，本稿不列。",
+        "不据历史登高记载保证当日登亭或交通开放。"
+      ],
+      "visitor_character_count": 201,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-10",
+      "sequence": 10,
+      "dynasty_group": "康熙三十六景",
+      "name": "北枕双峰",
+      "aliases": [],
+      "region": {
+        "label": "山岳区",
+        "group": "东北部山峰观景亭",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-204",
+          "historical-cdfz"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "山庄东北部山峰上的观景亭。",
+          "source_ids": [
+            "official-204",
+            "historical-cdfz"
+          ]
+        },
+        {
+          "text": "双峰指西北金山、东北黑山，非湖区金山岛。",
+          "source_ids": [
+            "official-204",
+            "historical-cdfz"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "园内山峰仿佛枕于北方金山与黑山之间。",
+        "classification": "source_supported",
+        "source_ids": [
+          "official-204",
+          "historical-cdfz"
+        ]
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "北枕双峰的名字需要把视线从园内带向远山。它位于山庄东北部山峰上，历史景观以一座攒尖方亭为观景中心，北望所指的双峰为金山与黑山，分别在西北和东北方向。两山的相对位置，使脚下山峰产生枕于其间的联想。这里所说的金山是远方山峰，不是湖区同名的金山岛。欣赏此景时，可把亭、近山与远峰看成三个层次：亭给人一个停驻的位置，真正组成景名的却是更广阔的山川。远景是否清楚取决于天气，不宜把诗意描写理解为每日都能看到的固定画面。",
+      "private_source_ids": [
+        "official-204",
+        "historical-cdfz"
+      ],
+      "evidence_limits": [],
+      "visitor_character_count": 204,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-11",
+      "sequence": 11,
+      "dynasty_group": "康熙三十六景",
+      "name": "西岭晨霞",
+      "aliases": [],
+      "region": {
+        "label": "湖洲区",
+        "group": "如意洲西路",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-37",
+          "historical-cdfz",
+          "dpm-plaques"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "如意洲西路历史楼阁。",
+          "source_ids": [
+            "official-37",
+            "historical-cdfz",
+            "dpm-plaques"
+          ]
+        },
+        {
+          "text": "清代《承德府志》记其邻云帆月舫、临波面山。",
+          "source_ids": [
+            "official-37",
+            "historical-cdfz",
+            "dpm-plaques"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "晨霞映照西岭，是历史文献明确描述的取景关系。",
+        "classification": "source_supported",
+        "source_ids": [
+          "official-37",
+          "historical-cdfz",
+          "dpm-plaques"
+        ]
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "西岭晨霞属于如意洲西侧的历史景观，与云帆月舫相邻。清代记载描述的是临水面山的楼阁，重点在晨光映照西边山岭，楼、湖、远山共同组成取景关系。因此，不宜仅凭景名把它放到山庄西部山顶。把这个名字与锤峰落照并读，也能发现三十六景怎样将清晨与黄昏写入同一座园林。此处具体建筑的保存、复建与开放情况尚未充分核实；本页以有据的历史位置和景意为主，不把旧时楼阁的描写当作今天仍可登临的承诺。",
+      "private_source_ids": [
+        "official-37",
+        "historical-cdfz",
+        "dpm-plaques"
+      ],
+      "evidence_limits": [
+        "未核验当代建筑状态与可达性。"
+      ],
+      "visitor_character_count": 186,
+      "evidence_coverage": "official_group_and_historical_cross_reference",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-12",
+      "sequence": 12,
+      "dynasty_group": "康熙三十六景",
+      "name": "锤峰落照",
+      "aliases": [],
+      "region": {
+        "label": "山岳区",
+        "group": "榛子峪北侧山冈",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-201"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "观景亭在榛子峪北侧山冈。",
+          "source_ids": [
+            "official-201"
+          ]
+        },
+        {
+          "text": "借山庄东面磬锤峰夕照构景。",
+          "source_ids": [
+            "official-201"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "磬锤峰在夕阳中受光，成为园内借景对象。",
+        "classification": "source_supported",
+        "source_ids": [
+          "official-201"
+        ]
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "锤峰落照的观景点在园内，景名中的锤峰却是山庄东面的磬锤峰。亭所在的榛子峪北侧山冈，与那座突起的山峰隔空相望；傍晚的光线让远峰成为画面的主角。这是理解园林“借景”的直观例子：风景不必全部造在围墙里，远方山势也可以参与园中的构图。读这一景时，可先分清看景的位置与被观看的对象，再理解“落照”强调的是光线与时间。夕阳效果随季节、云量和能见度变化，名字记录了可被期待的意境，却不是每天都相同的演出。",
+      "private_source_ids": [
+        "official-201"
+      ],
+      "evidence_limits": [],
+      "visitor_character_count": 195,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-13",
+      "sequence": 13,
+      "dynasty_group": "康熙三十六景",
+      "name": "南山积雪",
+      "aliases": [],
+      "region": {
+        "label": "山岳区",
+        "group": "北部山巅观景亭",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-71",
+          "historical-cdfz"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "观景对象为山庄以南、以僧冠峰为代表的群山。",
+          "source_ids": [
+            "official-71",
+            "historical-cdfz"
+          ]
+        },
+        {
+          "text": "清代文献记亭在山庄北部山巅。",
+          "source_ids": [
+            "official-71",
+            "historical-cdfz"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "在园内高处南望诸峰积雪。",
+        "classification": "source_supported",
+        "source_ids": [
+          "official-71",
+          "historical-cdfz"
+        ]
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "南山积雪写的是从亭中向南望见的远山雪色，而不是说这座亭位于山庄南部。清代记载把亭的位置放在山庄北部山巅，景名所指则是以僧冠峰为代表的南面群山。观景者、园内亭子与园外山岭之间的关系，是读懂这一景的关键。雪把山体的起伏与明暗重新勾勒，也使塞外园林呈现出与夏日湖荷不同的面貌。若在无雪时阅读景名，仍可理解它对季节变化的关注；是否能看到积雪需由当时天气决定，不宜把题名当成全年不变的景观说明。",
+      "private_source_ids": [
+        "official-71",
+        "historical-cdfz"
+      ],
+      "evidence_limits": [],
+      "visitor_character_count": 192,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-14",
+      "sequence": 14,
+      "dynasty_group": "康熙三十六景",
+      "name": "梨花伴月",
+      "aliases": [],
+      "region": {
+        "label": "山岳区",
+        "group": "梨树峪建筑组群",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-202"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "官方页面明确标注遗址，原建筑已不存。",
+          "source_ids": [
+            "official-202"
+          ]
+        },
+        {
+          "text": "位于梨树峪北侧台地，中轴线曾有门殿、永恬居、素尚斋。",
+          "source_ids": [
+            "official-202"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "梨花与月色相伴，是官方介绍所述的命名意境。",
+        "classification": "source_supported",
+        "source_ids": [
+          "official-202"
+        ]
+      },
+      "current_status": {
+        "code": "officially_documented_ruins",
+        "note": "景区官方页面明确标注“梨花伴月（遗址）”，说明原建筑已不存、仅存遗址；不据此保证当日可达。",
+        "verified_at": "2026-10-02"
+      },
+      "visitor_description": "梨花伴月位于梨树峪北侧台地，如今应按遗址理解。历史上的院落沿中轴线依次设置梨花伴月门殿、永恬居和素尚斋，外围还有廊与配属建筑，庭院结合池水、假山与梨树组成山中居处。景名把洁白梨花与月色相伴的意境凝成四字，也让春夜成为这处园林记忆的一部分。阅读遗址时，可以依据已经核实的建筑关系，在心中辨认由前向后的空间层次；不能把文献中的完整殿宇和盛花景象视作眼前现状。这里的价值也在于提醒人们，七十二景包含历史遗存与已经变化的风景。",
+      "private_source_ids": [
+        "official-202"
+      ],
+      "evidence_limits": [],
+      "visitor_character_count": 209,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-15",
+      "sequence": 15,
+      "dynasty_group": "康熙三十六景",
+      "name": "曲水荷香",
+      "aliases": [],
+      "region": {
+        "label": "湖洲区",
+        "group": "千尺雪相关水景组群",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-76",
+          "historical-cdfz",
+          "dpm-plaques"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "1703至1708年间形成，历史形制为重檐方亭，结合假山曲水。",
+          "source_ids": [
+            "official-76",
+            "historical-cdfz",
+            "dpm-plaques"
+          ]
+        },
+        {
+          "text": "与曲水流觞意象有关；不据此确认每一场具体历史活动。",
+          "source_ids": [
+            "official-76",
+            "historical-cdfz",
+            "dpm-plaques"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "曲折流水与荷香共同构成景名。",
+        "classification": "source_supported",
+        "source_ids": [
+          "official-76",
+          "historical-cdfz",
+          "dpm-plaques"
+        ]
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "曲水荷香把曲折水道与荷花香气并写，是康熙三十六景中从嗅觉与水形切入的一景。它形成于1703至1708年间，历史形制为建在假山、水流之间的重檐方亭。景区介绍将其与曲水流觞的传统联系起来，而康熙的题诗也提到了这一古老文人意象。读景时，可以留意流水怎样绕转，亭子怎样把水边的停留变成园林活动。这里的“香”与荷花季节有关，并非随时都有；比起追求固定花况，更值得理解的是建筑、水道和植物如何共同形成一个可以赏景、休憩的空间。",
+      "private_source_ids": [
+        "official-76",
+        "historical-cdfz",
+        "dpm-plaques"
+      ],
+      "evidence_limits": [
+        "不把曲水流觞的造景意象直接写成已核实的宴饮事件。"
+      ],
+      "visitor_character_count": 207,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-16",
+      "sequence": 16,
+      "dynasty_group": "康熙三十六景",
+      "name": "风泉清听",
+      "aliases": [],
+      "region": {
+        "label": "山岳区",
+        "group": "榛子峪／松鹤清越西侧",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-197"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "位于松鹤清越西侧，为康熙请安时暂歇之处。",
+          "source_ids": [
+            "official-197"
+          ]
+        },
+        {
+          "text": "院内有乾隆题秋澄斋；景名取意孟浩然诗句。",
+          "source_ids": [
+            "official-197"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "风中泉声清晰悦耳，典出孟浩然。",
+        "classification": "source_supported",
+        "source_ids": [
+          "official-197"
+        ]
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "风泉清听在榛子峪、松鹤清越的西侧，历史上是一处小庭院，康熙向皇太后请安时曾在此暂歇。院内的大殿由乾隆题名秋澄斋，因此听泉的景意与奉亲的日常在这里相遇。名字取意孟浩然诗中风泉入耳的意境，强调的是清晰悦耳的声音。欣赏这类景观，不妨把目光之外的感受也纳入理解：风声与泉声会使山林空间产生远近和层次。史料中的泉响属于当时环境，今日是否有水、是否可听见，仍要以现场情况为准；题名所保存的，是古人借自然声音营造清静气氛的方式。",
+      "private_source_ids": [
+        "official-197"
+      ],
+      "evidence_limits": [],
+      "visitor_character_count": 207,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-17",
+      "sequence": 17,
+      "dynasty_group": "康熙三十六景",
+      "name": "濠濮间想",
+      "aliases": [],
+      "region": {
+        "label": "湖洲区",
+        "group": "澄湖北岸亭群",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-207"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "位于澄湖北岸。",
+          "source_ids": [
+            "official-207"
+          ]
+        },
+        {
+          "text": "景名关联庄子濠梁观鱼、濮水垂钓典故。",
+          "source_ids": [
+            "official-207"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "由湖景联想到濠、濮典故中的闲适与自得。",
+        "classification": "source_supported",
+        "source_ids": [
+          "official-207"
+        ]
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "濠濮间想位于澄湖北岸，是一处把文学记忆引入园林的景观。“濠”与“濮”都是水名，题名联想到庄子与惠子讨论鱼之乐，以及庄子在濮水垂钓的故事。这里的湖水、树影和禽鱼，因而有了超出眼前形色的意味：人在园中停留，也借自然思考自在与闲适。读这个名字时，无需把园内水面当成真实的濠水或濮水，它运用的是由此地联想到彼地的造景方法。也不必把古典故事当作发生在山庄的历史事件；园林的趣味，正在现实环境与阅读经验相互映照之中。",
+      "private_source_ids": [
+        "official-207"
+      ],
+      "evidence_limits": [
+        "官网叙事把庄子置于“春秋时期”，属明显时代表述问题，本稿不采用该时代说法。"
+      ],
+      "visitor_character_count": 202,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-18",
+      "sequence": 18,
+      "dynasty_group": "康熙三十六景",
+      "name": "天宇咸畅",
+      "aliases": [],
+      "region": {
+        "label": "湖洲区",
+        "group": "金山岛",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-39",
+          "historical-cdfz",
+          "dpm-plaques"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "属金山岛，与镜水云岑分列三十六景。",
+          "source_ids": [
+            "official-39",
+            "historical-cdfz",
+            "dpm-plaques"
+          ]
+        },
+        {
+          "text": "清代记载为三间殿宇；金山岛始建1703年、借鉴镇江金山寺意境。",
+          "source_ids": [
+            "official-39",
+            "historical-cdfz",
+            "dpm-plaques"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "从“天宇”“咸畅”的字面体会空间开阔、感受舒展。",
+        "classification": "interpretation",
+        "source_ids": []
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "天宇咸畅是金山岛建筑景观的一部分，与镜水云岑同列康熙三十六景。金山岛始建于1703年，借鉴镇江金山寺的山寺意境，以叠石与殿阁塑造湖中高地。历史记载中，天宇咸畅为三间殿宇，附近更高处设上帝阁，形成沿山势逐层升起的关系。读景名，可以从天空开阔、胸襟舒展的字义去体会，但这属于对题名的欣赏，不等于新增一段皇帝命名故事。认识这一景时，将它放在整座金山岛的上下层次中，比把天宇咸畅、镜水云岑和上帝阁当成同一座建筑更清楚。",
+      "private_source_ids": [
+        "official-39",
+        "historical-cdfz",
+        "dpm-plaques"
+      ],
+      "evidence_limits": [],
+      "visitor_character_count": 205,
+      "evidence_coverage": "official_group_and_historical_cross_reference",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-19",
+      "sequence": 19,
+      "dynasty_group": "康熙三十六景",
+      "name": "暖流暄波",
+      "aliases": [
+        {
+          "name": "暖溜暄波",
+          "relationship": "故宫诗册与历史匾额研究采用的异写",
+          "source_ids": [
+            "dpm-poems",
+            "dpm-plaques"
+          ]
+        }
+      ],
+      "region": {
+        "label": "平原区（历史分区）",
+        "group": "东北部温泉水系",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "dpm-poems",
+          "dpm-plaques",
+          "historical-cdfz"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "故宫资料用名暖溜暄波，历史建筑记为龙王阁。",
+          "source_ids": [
+            "dpm-poems",
+            "dpm-plaques",
+            "historical-cdfz"
+          ]
+        },
+        {
+          "text": "清代文献记其关联东北部温泉余水入园。",
+          "source_ids": [
+            "dpm-poems",
+            "dpm-plaques",
+            "historical-cdfz"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "景名描写带暖意的泉流与水波；据历史温泉背景解释。",
+        "classification": "source_supported",
+        "source_ids": [
+          "dpm-poems",
+          "dpm-plaques",
+          "historical-cdfz"
+        ]
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "暖流暄波在故宫资料中写作“暖溜暄波”，历史上与山庄东北部的温泉水系相连。清代记载描述温泉余水流入园中，并在水上建阁；它所表现的是温泉、流水与建筑共同构成的景观。今日热河泉的介绍可以帮助理解这一水源背景，但不能直接证明旧阁尚存，也不宜把两者标成同一个精确地点。现阶段保留景名及有据的历史关联，具体建筑遗存和位置仍待进一步核验。",
+      "private_source_ids": [
+        "dpm-poems",
+        "dpm-plaques",
+        "historical-cdfz"
+      ],
+      "evidence_limits": [
+        "热河泉现行景点页不可单独证明康熙景点建筑或精确地点的现状。",
+        "未核验旧阁现存或复建情况。"
+      ],
+      "visitor_character_count": 162,
+      "evidence_coverage": "official_group_and_historical_cross_reference",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-20",
+      "sequence": 20,
+      "dynasty_group": "康熙三十六景",
+      "name": "泉源石壁",
+      "aliases": [],
+      "region": {
+        "label": "平原区北部山麓（历史分区）",
+        "group": "半月湖相关泉源景观",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "historical-cdfz",
+          "dpm-plaques"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "清代文献记为北山山麓石壁、泉流及半月湖相关景观。",
+          "source_ids": [
+            "historical-cdfz",
+            "dpm-plaques"
+          ]
+        },
+        {
+          "text": "故宫研究记录望源亭西侧石山同名乾隆题刻。",
+          "source_ids": [
+            "historical-cdfz",
+            "dpm-plaques"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "由泉源与石壁两种景观要素构成题名。",
+        "classification": "interpretation",
+        "source_ids": []
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "泉源石壁是一处以泉流和崖壁为主题的历史景观，不能仅按一座殿堂来理解。清代文献把它记在北山山麓，并提到附近的半月湖；故宫公布的匾额研究还记录了同名石刻与望源亭的关联。景名让人注意水从何处来，以及石壁怎样衬出水势。本次资料尚不足以核实旧泉、石刻与周边建筑今天的完整对应关系，因此保留历史说明，不提供未经核验的到达点，也不承诺现场仍有旧时瀑泉。",
+      "private_source_ids": [
+        "historical-cdfz",
+        "dpm-plaques"
+      ],
+      "evidence_limits": [
+        "清代记载与后期乾隆题刻须分开；不能将同名石刻直接认定为康熙原刻。",
+        "未核实现状、精确位置及水文条件。"
+      ],
+      "visitor_character_count": 169,
+      "evidence_coverage": "official_group_and_historical_cross_reference",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-21",
+      "sequence": 21,
+      "dynasty_group": "康熙三十六景",
+      "name": "青枫绿屿",
+      "aliases": [],
+      "region": {
+        "label": "山岳区",
+        "group": "北部青枫绿屿建筑组群",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-46"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "始建1709年，因枫树蓊郁得名。",
+          "source_ids": [
+            "official-46"
+          ]
+        },
+        {
+          "text": "为清帝山区休息处，门殿三间、月亮门分院，上部平台与中秋赏月有关。",
+          "source_ids": [
+            "official-46"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "枫树繁茂与山地景色为命名背景；“屿”不等于湖中岛。",
+        "classification": "source_supported",
+        "source_ids": [
+          "official-46"
+        ]
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "青枫绿屿建于1709年，因周围枫树繁茂而得名，曾是清帝游览山地时的休息处。历史建筑有三间门殿，入内以月亮门分隔庭院，再通向正殿；上部平台还与中秋登高赏月有关。这个名字虽然带“屿”，却不宜据此把它误放到湖中洲岛上。欣赏其布局，可以留意一道圆门如何在同一庭院中制造前后层次，再看房屋怎样顺应山地环境。枫树、庭院与高处平台分别提供植物、建筑和远景三种线索，合起来才更接近这个景名所指的完整园林空间。",
+      "private_source_ids": [
+        "official-46"
+      ],
+      "evidence_limits": [],
+      "visitor_character_count": 196,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-22",
+      "sequence": 22,
+      "dynasty_group": "康熙三十六景",
+      "name": "莺啭乔木",
+      "aliases": [],
+      "region": {
+        "label": "湖洲区",
+        "group": "澄湖北岸亭群",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-206"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "位于澄湖北岸、甫田丛樾西，北靠万树园。",
+          "source_ids": [
+            "official-206"
+          ]
+        },
+        {
+          "text": "官方以林中黄莺婉转鸣声解释景名。",
+          "source_ids": [
+            "official-206"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "高大树木间婉转鸟鸣构成景名。",
+        "classification": "source_supported",
+        "source_ids": [
+          "official-206"
+        ]
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "莺啭乔木在澄湖北岸、甫田丛樾亭以西，向南临湖，向北联系万树园的树木景观。名字中的“啭”指婉转的鸟鸣，“乔木”则点出较高大的树木，因此这一景不只为看水，也为听林间生命的声音。官方介绍以清晨莺鸟鸣唱说明题名的由来；这样的自然声景会随季节、天气与鸟类活动改变，不能当成每天按时发生的项目。理解此景时，可把湖岸与树林看作一个连续环境：开阔水面让视线展开，成片树木又带来荫蔽与声响，亭的意义正在两种空间之间。",
+      "private_source_ids": [
+        "official-206"
+      ],
+      "evidence_limits": [],
+      "visitor_character_count": 199,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-23",
+      "sequence": 23,
+      "dynasty_group": "康熙三十六景",
+      "name": "香远益清",
+      "aliases": [],
+      "region": {
+        "label": "湖洲区",
+        "group": "金山北侧／香远益清组群",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-26",
+          "historical-cdfz"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "始建1706年，名取周敦颐《爱莲说》。",
+          "source_ids": [
+            "official-26",
+            "historical-cdfz"
+          ]
+        },
+        {
+          "text": "前殿五间、后殿紫浮三间，前后临池。",
+          "source_ids": [
+            "official-26",
+            "historical-cdfz"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "借莲香寄托清洁品格，来源为《爱莲说》。",
+        "classification": "source_supported",
+        "source_ids": [
+          "official-26",
+          "historical-cdfz"
+        ]
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "香远益清建于1706年，名称取自周敦颐《爱莲说》，把荷花的清香与品格寄意连在一起。历史格局以前后两殿夹着临水空间，前殿五间，后殿三间，后者名为紫浮。荷花与殿堂相互映衬，使赏花不只停留在颜色和形态，也进入了传统文化对清洁、自持的理解。认识此景，可先分清前后建筑，再体会题名如何为植物景观添上一层文意。花叶状态随季节变化，文字中的荷香也不是全年不变的现场感受；即使不在花期，建筑与水面的关系仍是理解旧时造景的重要线索。",
+      "private_source_ids": [
+        "official-26",
+        "historical-cdfz"
+      ],
+      "evidence_limits": [],
+      "visitor_character_count": 207,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-24",
+      "sequence": 24,
+      "dynasty_group": "康熙三十六景",
+      "name": "金莲映日",
+      "aliases": [],
+      "region": {
+        "label": "湖洲区",
+        "group": "如意洲西路",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-33",
+          "official-37"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "如意洲西路，1703至1708年间形成，西向殿堂前有抱厦。",
+          "source_ids": [
+            "official-33",
+            "official-37"
+          ]
+        },
+        {
+          "text": "历史介绍称金莲移自五台山，为夏日黄色花景。",
+          "source_ids": [
+            "official-33",
+            "official-37"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "金莲花在日光下呈现明亮金色。",
+        "classification": "source_supported",
+        "source_ids": [
+          "official-33",
+          "official-37"
+        ]
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "金莲映日在如意洲西路，历史上以殿前成片金莲花与日光相映构景。景区资料记它形成于1703至1708年间，殿堂向西，前有抱厦；所种金莲从五台山移来，夏日的金黄色花朵是景名的重要线索。读这里的“莲”，不宜直接套用湖中荷花的画面，应结合这处陆地花圃的记载理解。它与如意洲中轴线上的殿堂相邻，把较规整的宫苑空间延伸到花木观赏。今天若要追寻花景，花期与种植情况都需看现场；能够确定的是，历史题名着重捕捉了花色受到日光照映的效果。",
+      "private_source_ids": [
+        "official-33",
+        "official-37"
+      ],
+      "evidence_limits": [
+        "不把金莲花写成湖中荷花；不推断当前种植品种、数量及花期。"
+      ],
+      "visitor_character_count": 208,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-25",
+      "sequence": 25,
+      "dynasty_group": "康熙三十六景",
+      "name": "远近泉声",
+      "aliases": [],
+      "region": {
+        "label": "湖洲区",
+        "group": "梨树峪口南／涌翠岩东侧",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-226",
+          "historical-cdfz"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "位于梨树峪口南、涌翠岩东、内湖岸，历史正殿三间。",
+          "source_ids": [
+            "official-226",
+            "historical-cdfz"
+          ]
+        },
+        {
+          "text": "清代记载关联聚香斋、观瀑空间与招凉榭。",
+          "source_ids": [
+            "official-226",
+            "historical-cdfz"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "远近不同方向的泉声形成景意。",
+        "classification": "source_supported",
+        "source_ids": [
+          "official-226",
+          "historical-cdfz"
+        ]
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "远近泉声位于梨树峪口南面、涌翠岩东侧的内湖岸边，历史上以三间正殿为主要建筑。题名让人注意到景观并不只由形色组成，远处和近处的泉流声也能形成层次。清代记载还提到与它相联系的聚香斋、观瀑空间和招凉榭，说明这一景应放在周边水景组群中理解。读名字时，不妨想象不同距离的水声如何被山石与建筑接续，而不要把“远近”当成两眼泉水的专名。旧时泉流、瀑布及建筑之间的完整关系仍需结合历史资料；今日能听到何种水声，则以现场实际环境为准。",
+      "private_source_ids": [
+        "official-226",
+        "historical-cdfz"
+      ],
+      "evidence_limits": [],
+      "visitor_character_count": 208,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-26",
+      "sequence": 26,
+      "dynasty_group": "康熙三十六景",
+      "name": "云帆月舫",
+      "aliases": [],
+      "region": {
+        "label": "湖洲区",
+        "group": "如意洲西路",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-37",
+          "historical-cdfz",
+          "dpm-plaques"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "位于如意洲延薰山馆之西。",
+          "source_ids": [
+            "official-37",
+            "historical-cdfz",
+            "dpm-plaques"
+          ]
+        },
+        {
+          "text": "清代文献记仿舟形作室、上设楼，临湖并接洲渚。",
+          "source_ids": [
+            "official-37",
+            "historical-cdfz",
+            "dpm-plaques"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "以舟形建筑引发云月间泛舟的联想，为造景解读。",
+        "classification": "interpretation",
+        "source_ids": []
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "云帆月舫在如意洲西路，清代记载把它描述为仿舟形的房屋，上部又设楼，面向湖水，后接洲渚。这里的“舫”指造景建筑，不能由名字推断它是一条可乘坐的游船。把云与月放进题名，使固定的屋宇获得泛舟水上的想象；静止的建筑与流动的湖面也形成有趣对照。它与西岭晨霞等景相邻，共同组织了如意洲西侧的水岸层次。现阶段能够确认的是历史位置、舟形构思及题名关系，具体建筑保存和开放情况尚未核实，不宜据旧时描写承诺今天可以进入。",
+      "private_source_ids": [
+        "official-37",
+        "historical-cdfz",
+        "dpm-plaques"
+      ],
+      "evidence_limits": [
+        "不得将历史船房写成当前营业的游船、码头或可进入建筑。"
+      ],
+      "visitor_character_count": 200,
+      "evidence_coverage": "official_group_and_historical_cross_reference",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-27",
+      "sequence": 27,
+      "dynasty_group": "康熙三十六景",
+      "name": "芳渚临流",
+      "aliases": [],
+      "region": {
+        "label": "湖洲区",
+        "group": "临湖山水亭景",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-52",
+          "historical-cdfz"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "始建1703年，为重檐方亭，三面临水、一面依山。",
+          "source_ids": [
+            "official-52",
+            "historical-cdfz"
+          ]
+        },
+        {
+          "text": "清代记载亭景结合山石、流水、岸边草木。",
+          "source_ids": [
+            "official-52",
+            "historical-cdfz"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "芳草洲渚临近流水，是题名字义层面的理解。",
+        "classification": "interpretation",
+        "source_ids": []
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "芳渚临流始建于1703年，是康熙三十六景中较早形成的水边亭景。官方介绍所述为重檐方亭，三面临水、一面依山；清代记载又提到周边山石、岸边草木与倒影，让亭子处在几种景物相接的位置。“渚”是水边洲地，景名可从芳草岸渚与流水相邻来体会。观察这一类园林空间，既要看亭的轮廓，也要看为什么把它安放在这里：水面提供开敞，山石带来依托，植物使岸线有了柔和变化。这样理解，比单独记住建筑名称更能把握湖区因地安排景物的方式。",
+      "private_source_ids": [
+        "official-52",
+        "historical-cdfz"
+      ],
+      "evidence_limits": [],
+      "visitor_character_count": 202,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-28",
+      "sequence": 28,
+      "dynasty_group": "康熙三十六景",
+      "name": "云容水态",
+      "aliases": [],
+      "region": {
+        "label": "山岳区与湖洲区交界",
+        "group": "松云峡口／旷观西南侧",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-231",
+          "official-19"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "位于旷观西南侧、松云峡口，山庄肇建时形成。",
+          "source_ids": [
+            "official-231",
+            "official-19"
+          ]
+        },
+        {
+          "text": "历史形制为倚山临水的五间敞轩。",
+          "source_ids": [
+            "official-231",
+            "official-19"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "云的形态与水的动态相互映照。",
+        "classification": "source_supported",
+        "source_ids": [
+          "official-231",
+          "official-19"
+        ]
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "云容水态在松云峡口旷观的西南侧，山庄肇建时期便已形成。历史形制为倚山临水的五间敞轩，让建筑中的视线朝向外部山水。名字将天空中的云与水面的变化并列，提醒人们这里的景色没有唯一静止的样子：云影、风纹与光线会不断改变画面。理解这一景，可以留意敞轩与山麓、水岸的关系，体会建筑如何为看景提供边框，却不把自然完全框定。有关旧时完整建筑及水景的描写，应与当代保存情况分开阅读；本页呈现有据的历史位置和造景主题，不据此保证室内开放。",
+      "private_source_ids": [
+        "official-231",
+        "official-19"
+      ],
+      "evidence_limits": [],
+      "visitor_character_count": 209,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-29",
+      "sequence": 29,
+      "dynasty_group": "康熙三十六景",
+      "name": "澄泉绕石",
+      "aliases": [],
+      "region": {
+        "label": "山岳区",
+        "group": "梨树峪／梨花伴月相关组群",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "historical-cdfz",
+          "dpm-plaques"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "清代文献记景在梨树峪，泉出石隙。",
+          "source_ids": [
+            "historical-cdfz",
+            "dpm-plaques"
+          ]
+        },
+        {
+          "text": "故宫研究记1817年敞厅拆去，匾移梨花伴月宫门。",
+          "source_ids": [
+            "historical-cdfz",
+            "dpm-plaques"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "清澈泉流绕行山石的景观意象。",
+        "classification": "interpretation",
+        "source_ids": []
+      },
+      "current_status": {
+        "code": "historical_demolition_documented",
+        "note": "1817年拆去敞厅、移匾一事有档案研究支持；这不等于已核实今天的遗址范围或全部建筑状态。",
+        "verified_at": "2026-10-02"
+      },
+      "visitor_description": "澄泉绕石是梨树峪中的历史泉石景观。清代记载写到石隙出泉、依山布置亭宇；故宫刊载的档案研究则指出，1817年其敞厅已被拆去，匾额移挂到梨花伴月宫门。因此，同一景名后来可能随匾额转移，不能只凭名字认定今天某座亭子就是原建筑。这里保留泉水绕石的景意与可核实的沿革；原址对应、现存遗迹和现场水况仍待进一步核验。",
+      "private_source_ids": [
+        "historical-cdfz",
+        "dpm-plaques"
+      ],
+      "evidence_limits": [
+        "不得把1817年拆厅写成2026年现场已核验；不得将移挂匾额与原址混同。"
+      ],
+      "visitor_character_count": 151,
+      "evidence_coverage": "official_group_and_historical_cross_reference",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-30",
+      "sequence": 30,
+      "dynasty_group": "康熙三十六景",
+      "name": "澄波叠翠",
+      "aliases": [],
+      "region": {
+        "label": "湖洲区",
+        "group": "如意洲东北角／澄湖南岸",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-227"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "位于如意洲东北角、澄湖南岸土丘。",
+          "source_ids": [
+            "official-227"
+          ]
+        },
+        {
+          "text": "官方所述为三楹敞亭，以水波、群山倒影构景。",
+          "source_ids": [
+            "official-227"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "水面映照层叠青翠山色；实景与倒影的解读为导览分析。",
+        "classification": "interpretation",
+        "source_ids": []
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "澄波叠翠在如意洲东北角、澄湖南岸的土丘上，历史形制为三间敞亭。名字把清澈水波与层叠山色联系起来，尤其适合用来理解倒影怎样扩展园林的画面：山在湖岸之外，水面又把山色带到近处。“叠”不只可以指山岭重重，也可用来体会实景与水中映像彼此重合的视觉感受。它是如意洲向北展开视线的一处节点，与洲上殿堂的院落空间形成变化。风、光线和水面状态都会影响倒影，历史文字里的完整画面不一定每天出现，但这种借水写山的构思始终值得辨认。",
+      "private_source_ids": [
+        "official-227"
+      ],
+      "evidence_limits": [],
+      "visitor_character_count": 205,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-31",
+      "sequence": 31,
+      "dynasty_group": "康熙三十六景",
+      "name": "石矶观鱼",
+      "aliases": [],
+      "region": {
+        "label": "湖洲区",
+        "group": "内湖西岸／远近泉声下游相关",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-213",
+          "historical-cdfz"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "位于内湖西侧，官方介绍关联清帝休息垂钓。",
+          "source_ids": [
+            "official-213",
+            "historical-cdfz"
+          ]
+        },
+        {
+          "text": "清代记载石矶平广、亭面水，可观游鱼。",
+          "source_ids": [
+            "official-213",
+            "historical-cdfz"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "在临水石矶处看鱼，以观赏小景营造闲适。",
+        "classification": "interpretation",
+        "source_ids": []
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "石矶观鱼位于内湖西侧，历史上是一处面向水面的亭景。清代记载将它放在远近泉声附近的溪流景观中，以较平阔的石矶承托亭子，向水面观察游鱼。景区介绍还把这里与清帝政务之余的休息、垂钓联系起来。名字里的“观”值得留意：人停在岸上，通过水中生命的活动获得闲适感，亭与石矶便成为日常观看的尺度。读这一景，可以把岸石、亭、水面和鱼的关系串起来；文献中的鱼景是历史环境描写，不能据此保证今日一定有鱼可看，更不构成允许垂钓或投喂的提示。",
+      "private_source_ids": [
+        "official-213",
+        "historical-cdfz"
+      ],
+      "evidence_limits": [
+        "历史垂钓记载不代表当代游客可垂钓或投喂。"
+      ],
+      "visitor_character_count": 208,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-32",
+      "sequence": 32,
+      "dynasty_group": "康熙三十六景",
+      "name": "镜水云岑",
+      "aliases": [],
+      "region": {
+        "label": "湖洲区",
+        "group": "金山岛",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-39",
+          "historical-cdfz",
+          "dpm-plaques"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "金山岛上五间殿宇，列康熙第三十二景。",
+          "source_ids": [
+            "official-39",
+            "historical-cdfz",
+            "dpm-plaques"
+          ]
+        },
+        {
+          "text": "与天宇咸畅分属不同景目；金山岛始建1703年。",
+          "source_ids": [
+            "official-39",
+            "historical-cdfz",
+            "dpm-plaques"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "“镜水”取湖面如镜之意，“云岑”关联云山，为字义赏析。",
+        "classification": "interpretation",
+        "source_ids": []
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "镜水云岑是金山岛上的殿堂景观，与更高处的天宇咸畅分列康熙三十六景。金山岛始建于1703年，借叠石与楼阁营造湖中山寺的意境。官方资料记这处殿宇面阔五间；清代记载还说明它依山面水，周边廊宇与水岸相互环抱。“镜水”可理解为如镜的湖面，“云岑”则把云与山峰联系起来，提示观景时兼看近水与远山。认识金山岛，不妨先理清下部殿堂、上部建筑和制高点阁楼的层次，再体会人工山石如何与天然湖面共同组成看似完整的一片山水。",
+      "private_source_ids": [
+        "official-39",
+        "historical-cdfz",
+        "dpm-plaques"
+      ],
+      "evidence_limits": [],
+      "visitor_character_count": 200,
+      "evidence_coverage": "official_group_and_historical_cross_reference",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-33",
+      "sequence": 33,
+      "dynasty_group": "康熙三十六景",
+      "name": "双湖夹镜",
+      "aliases": [],
+      "region": {
+        "label": "湖洲区",
+        "group": "如意湖与内湖之间长桥",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-211",
+          "official-212"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "如意湖与内湖间的石堤长桥，利用天然石岸。",
+          "source_ids": [
+            "official-211",
+            "official-212"
+          ]
+        },
+        {
+          "text": "北端牌坊题双湖夹镜，南端与长虹饮练对应。",
+          "source_ids": [
+            "official-211",
+            "official-212"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "长桥两侧湖面如两面明镜。",
+        "classification": "source_supported",
+        "source_ids": [
+          "official-211",
+          "official-212"
+        ]
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "双湖夹镜与长虹饮练是一座石堤长桥的两个题景角度，不应简单拆成彼此无关的两座桥。长桥利用天然石岸，在如意湖与内湖之间形成分界，两端各设牌坊，北端题“双湖夹镜”。名字把桥两侧的平静水面比作明镜，让一条行走路线同时成为观看两片水域的界面。理解这一景，可以先看桥怎样分水，再想水面倒映如何把远处风景带到近旁。它和南端题名相互补充：一个强调两边水面，一个突出长桥的形象，共同展示同一处园林结构能够产生多种观景主题。",
+      "private_source_ids": [
+        "official-211",
+        "official-212"
+      ],
+      "evidence_limits": [],
+      "visitor_character_count": 202,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-34",
+      "sequence": 34,
+      "dynasty_group": "康熙三十六景",
+      "name": "长虹饮练",
+      "aliases": [],
+      "region": {
+        "label": "湖洲区",
+        "group": "如意湖与内湖之间长桥南端",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-212",
+          "official-211"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "同一石堤长桥南端牌坊题长虹饮练，北端题双湖夹镜。",
+          "source_ids": [
+            "official-212",
+            "official-211"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "以虹比长桥，以白练比水面。",
+        "classification": "source_supported",
+        "source_ids": [
+          "official-212",
+          "official-211"
+        ]
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "长虹饮练与双湖夹镜共同关联如意湖、内湖之间的石堤长桥，其中“长虹饮练”题在南端牌坊。名字把桥比作长虹，把湖面比作舒展的白练，通过比喻让横卧水上的建筑具有动势。这一景的重点不是保证雨后能见到彩虹，而是理解古人怎样用文字重新组织熟悉的桥与水。与北端的双湖夹镜对照，便能看到同一座长桥的两种读法：沿桥行走时，两边湖面像镜；从整体形势看，长桥又像临水的虹。两个景目相互呼应，也说明景名并不总与独立建筑一一对应。",
+      "private_source_ids": [
+        "official-212",
+        "official-211"
+      ],
+      "evidence_limits": [],
+      "visitor_character_count": 201,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-35",
+      "sequence": 35,
+      "dynasty_group": "康熙三十六景",
+      "name": "甫田丛樾",
+      "aliases": [],
+      "region": {
+        "label": "湖洲区／平原区交界",
+        "group": "澄湖北岸亭群／万树园南缘",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-208",
+          "historical-cdfz"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "位于澄湖北岸，历史附近有御稻田与御瓜园。",
+          "source_ids": [
+            "official-208",
+            "historical-cdfz"
+          ]
+        },
+        {
+          "text": "官方释甫田为大块田地、丛樾为连片树荫。",
+          "source_ids": [
+            "official-208",
+            "historical-cdfz"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "广阔田地与连片树荫并置。",
+        "classification": "source_supported",
+        "source_ids": [
+          "official-208",
+          "historical-cdfz"
+        ]
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "甫田丛樾在澄湖北岸，靠近平原与万树园的林木景观。“甫田”指较广阔的田地，“丛樾”指连片树荫，名字同时写出开敞田园和浓密树木两种感受。景区资料记载，附近历史上有御稻田和御瓜园，后来瓜果种植渐多，因此这里不仅供观赏，也曾把农耕景象纳入皇家园林。理解这一景，可以把目光从湖面转向岸后的平原：它使山庄的风景不止于亭台、荷池，还包含田畴与林地的朴野意味。当前种植内容与旧时不同与否，需现场核实，不应依据景名推定仍有同样的作物。",
+      "private_source_ids": [
+        "official-208",
+        "historical-cdfz"
+      ],
+      "evidence_limits": [],
+      "visitor_character_count": 208,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    },
+    {
+      "id": "kangxi-36",
+      "sequence": 36,
+      "dynasty_group": "康熙三十六景",
+      "name": "水流云在",
+      "aliases": [
+        {
+          "name": "十六角亭",
+          "relationship": "根据亭的形制形成的称呼",
+          "source_ids": [
+            "official-205"
+          ]
+        }
+      ],
+      "region": {
+        "label": "湖洲区",
+        "group": "澄湖北岸亭群",
+        "confidence": "high",
+        "scope": "historical_landscape_group",
+        "source_ids": [
+          "official-205"
+        ]
+      },
+      "historical_facts": [
+        {
+          "text": "位于澄湖北岸，康熙第三十六景。",
+          "source_ids": [
+            "official-205"
+          ]
+        },
+        {
+          "text": "中央方亭四面出抱厦，形成十六角；历史关联热河水入澄湖。",
+          "source_ids": [
+            "official-205"
+          ]
+        }
+      ],
+      "name_meaning": {
+        "text": "流水与云影形成动静对照，为导览理解。",
+        "classification": "interpretation",
+        "source_ids": []
+      },
+      "current_status": {
+        "code": "not_verified",
+        "note": "资料可说明历史景观，但本次未核验建筑本体的保存、复建年代及当日开放情况。",
+        "verified_at": null
+      },
+      "visitor_description": "水流云在位于澄湖北岸，是康熙三十六景的收束一景。亭的中央为方形，四面各出抱厦，形成十六个角，因此也称十六角亭。景区资料记载，历史上从暖溜暄波引来的热河水曾由这里汇入澄湖，流水与云影共同成为题名的背景。欣赏此景，可以先辨认亭的组合轮廓，再把它与水流方向、湖面倒影联系起来。名字中的“流”与“在”形成动静对照，是适合放慢观看速度的一种提醒。水源来路属于历史说明，不能仅据这一段记载推断今日每条水道的具体状态。",
+      "private_source_ids": [
+        "official-205"
+      ],
+      "evidence_limits": [],
+      "visitor_character_count": 202,
+      "evidence_coverage": "individual_official_entry",
+      "coordinate_status": "not_provided"
+    }
+  ],
+  "global_notes": [
+    "这36个景目不是36座现存建筑的清单。",
+    "景点页面收录不等于已核实当日开放、原建筑年代或可进入性。",
+    "所有官方与研究链接均只在独立research_sources文件中；游客正文不含链接。",
+    "历史分区是内容组织依据，不能直接用作精准导航。",
+    "不提供未经核验的GPS、门票或营业时间。",
+    "描述中的字义赏析与历史事实分别标记；正文仅作原创建议稿。"
+  ]
+}

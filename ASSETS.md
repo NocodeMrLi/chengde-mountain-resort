@@ -6,7 +6,7 @@
 
 景点位置和建筑造型是依据公开景点资料创作的写意表现，不是官方导览图、测绘成果或历史复原图。磬锤峰位于山庄园外，作为园内视线中的借景呈现。
 
-区域纵深阶段新增 `ruyi-island.webp`、`mountain-region.webp`、`wushu-close.webp`，并重绘 `near-yanyu.webp` 的人物船只及 `palace-hall.webp`、`plains-wenyuan-clean.webp` 的左缘地貌。上述画面由本项目用图像生成工具按原创提示词制作。对应原始 PNG 保存在 `sources/region-art/`，WebP 是运行时压缩版。提示词与资料核对见 [docs/region-stage-1.md](docs/region-stage-1.md)。生成画面不是景区实拍、官方地图或可靠的历史复原。
+区域纵深阶段新增 `ruyi-island.webp`、`mountain-region.webp`、`wushu-close.webp`、`yanxun-close.webp`、`shuifang-close.webp`，并重绘 `near-yanyu.webp` 的人物船只及 `palace-hall.webp`、`plains-wenyuan-clean.webp` 的左缘地貌。上述画面由本项目用图像生成工具按原创提示词制作。对应原始 PNG 保存在 `sources/region-art/`，WebP 是运行时压缩版。提示词与资料核对见 [docs/region-stage-1.md](docs/region-stage-1.md)。生成画面不是景区实拍、官方地图或可靠的历史复原。
 
 ## 界面图标
 

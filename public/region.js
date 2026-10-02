@@ -119,7 +119,7 @@ function openNear(){
   if(!currentItem?.regionNearArt)return;
   regionNearReturnFocus=document.activeElement;
   $('regionNearTitle').textContent=currentItem.name;
-  $('regionNearText').textContent=`${currentItem.description} 此画面根据题名与已核对的区域关系进行写意创作；建筑现状和细部形制尚待核实。`;
+  $('regionNearText').textContent=currentItem.description;
   $('regionNearArt').src=artUrl(currentItem.regionNearArt);
   $('regionNearArt').alt=`${currentItem.name}的写意近景`;
   $('regionNear').hidden=false;
@@ -155,7 +155,7 @@ function showAtlasDetail(item){
   const text=document.createElement('p');text.textContent=`${item.description}\n\n区域：${item.region}（${item.locationHint}）\n实地现状：${item.presentCondition}\n数字画面：${item.artStatus}\n游览状态：${visited.has(item.id)?'已游览':'尚未游览'}`;
   const caution=document.createElement('p');caution.className='atlas-caution';caution.textContent='图鉴标记表示历史题名与数字创作进度，不表示建筑今日仍存或准确坐标。';
   pane.append(small,title,text,caution);
-  if(item.aliases.length){const alias=document.createElement('p');alias.textContent=`相关称呼：${item.aliases.join('、')}`;pane.append(alias);}
+  if(item.aliases.length){const alias=document.createElement('p');alias.textContent=`相关称呼：${item.aliases.map((name)=>{const note=item.aliasNotes?.find((entry)=>entry.name===name);return note?`${name}（${note.relation}）`:name;}).join('、')}`;pane.append(alias);}
   if(item.region==='如意洲'||item.regionNearArt&&item.region==='山地'){
     const button=document.createElement('button');button.type='button';button.textContent=item.regionNearArt?'进入区域，走近此景':'查看如意洲写意方位';
     button.addEventListener('click',()=>{const key=item.region==='如意洲'?'ruyi':'mountain';const source=atlasReturnFocus;closeAtlas(false);openRegion(key,source);selectItem(item.name);requestAnimationFrame(()=>locateItem(item.name));});pane.append(button);
