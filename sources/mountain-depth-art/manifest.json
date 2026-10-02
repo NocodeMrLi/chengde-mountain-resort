@@ -1,0 +1,194 @@
+[
+  {
+    "original": "sources/mountain-depth-art/beizhen-original.png",
+    "runtime": null,
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3088512,
+    "runtimeBytes": null,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；历史形制与意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/mountain-depth-art/qingfeng-region-original.png",
+    "runtime": "public/art/qingfeng-region.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3323717,
+    "runtimeBytes": 548276,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；历史形制与意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/mountain-depth-art/songyun-region-original.png",
+    "runtime": "public/art/songyun-region.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3172815,
+    "runtimeBytes": 488244,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；历史形制与意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/mountain-depth-art/shandian-region-original.png",
+    "runtime": null,
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3262757,
+    "runtimeBytes": null,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；历史形制与意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/mountain-depth-art/songhe-original.png",
+    "runtime": "public/art/songhe-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3432780,
+    "runtimeBytes": 597936,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；历史形制与意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/mountain-depth-art/qingfeng-original.png",
+    "runtime": "public/art/qingfeng-near.webp",
+    "dimensions": [
+      1981,
+      793
+    ],
+    "originalBytes": 3502111,
+    "runtimeBytes": 629240,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；历史形制与意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/mountain-depth-art/xunlu-original.png",
+    "runtime": "public/art/xunlu-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3351904,
+    "runtimeBytes": 579534,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；历史形制与意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/mountain-depth-art/zhenzi-region-original.png",
+    "runtime": "public/art/zhenzi-region.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3454287,
+    "runtimeBytes": 595964,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；历史形制与意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/mountain-depth-art/nanshan-original.png",
+    "runtime": "public/art/nanshan-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3085515,
+    "runtimeBytes": 489500,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；历史形制与意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/mountain-depth-art/yunrong-original.png",
+    "runtime": "public/art/yunrong-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3400674,
+    "runtimeBytes": 570508,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；历史形制与意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/mountain-depth-art/shandian-square-original.png",
+    "runtime": "public/art/shandian-region.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 2985354,
+    "runtimeBytes": 422302,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；历史形制与意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/mountain-depth-art/fengquan-original.png",
+    "runtime": "public/art/fengquan-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3634873,
+    "runtimeBytes": 671932,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；历史形制与意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/mountain-depth-art/yanhua-original.png",
+    "runtime": "public/art/yanhua-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 2889150,
+    "runtimeBytes": 414878,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；历史形制与意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/mountain-depth-art/beizhen-square-original.png",
+    "runtime": "public/art/beizhen-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 2797350,
+    "runtimeBytes": 387642,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；历史形制与意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/mountain-depth-art/lingtai-original.png",
+    "runtime": "public/art/lingtai-near.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 3069270,
+    "runtimeBytes": 465696,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原创提示词，AI图像生成；历史形制与意境演绎，非实拍或精确复原"
+  },
+  {
+    "original": "sources/mountain-depth-art/palace-edge-candidate-original.png",
+    "runtime": "public/art/palace-hall.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "originalBytes": 2854992,
+    "runtimeBytes": 406148,
+    "compression": "cwebp -q 88 -m 6",
+    "creation": "项目原画左岸重绘：衔接金山湖面，细节重绘而非模糊遮盖"
+  }
+]

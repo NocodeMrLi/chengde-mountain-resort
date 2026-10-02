@@ -1,0 +1,136 @@
+{
+  "scenes": [
+    {
+      "id": "k07",
+      "title": "松鹤清樾",
+      "art": "songhe-near.webp",
+      "exactReturn": true,
+      "firstRun": "URL/解码/游览计数/两个焦点/原位返回均在首轮断言通过，截图已保存"
+    },
+    {
+      "id": "k10",
+      "title": "北枕双峰",
+      "art": "beizhen-near.webp",
+      "exactReturn": true,
+      "firstRun": "URL/解码/游览计数/两个焦点/原位返回均在首轮断言通过，截图已保存"
+    },
+    {
+      "id": "k13",
+      "title": "南山积雪",
+      "art": "nanshan-near.webp",
+      "exactReturn": true,
+      "firstRun": "URL/解码/游览计数/两个焦点/原位返回均在首轮断言通过，截图已保存"
+    },
+    {
+      "id": "k16",
+      "title": "风泉清听",
+      "art": "fengquan-near.webp",
+      "exactReturn": true,
+      "firstRun": "URL/解码/游览计数/两个焦点/原位返回均在首轮断言通过，截图已保存"
+    },
+    {
+      "id": "k21",
+      "title": "青枫绿屿",
+      "art": "qingfeng-near.webp",
+      "exactReturn": true,
+      "firstRun": "URL/解码/游览计数/两个焦点/原位返回均在首轮断言通过，截图已保存"
+    },
+    {
+      "id": "k28",
+      "title": "云容水态",
+      "art": "yunrong-near.webp",
+      "exactReturn": true,
+      "firstRun": "URL/解码/游览计数/两个焦点/原位返回均在首轮断言通过，截图已保存"
+    },
+    {
+      "id": "q07",
+      "title": "驯鹿坡",
+      "art": "xunlu-near.webp",
+      "exactReturn": true,
+      "firstRun": "URL/解码/游览计数/两个焦点/原位返回均在首轮断言通过，截图已保存"
+    },
+    {
+      "id": "q27",
+      "title": "罨画窗",
+      "art": "yanhua-near.webp",
+      "exactReturn": true,
+      "firstRun": "URL/解码/游览计数/两个焦点/原位返回均在首轮断言通过，截图已保存"
+    },
+    {
+      "id": "q28",
+      "title": "凌太虚",
+      "art": "lingtai-near.webp",
+      "exactReturn": true,
+      "firstRun": "URL/解码/游览计数/两个焦点/原位返回均在首轮断言通过，截图已保存"
+    }
+  ],
+  "mobile": [
+    {
+      "width": 360,
+      "overflow": false,
+      "title": "驯鹿坡",
+      "readingBottom": 765,
+      "tools": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 44,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "title": "罨画窗",
+      "readingBottom": 765,
+      "tools": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 44,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "width": 430,
+      "overflow": false,
+      "title": "南山积雪",
+      "readingBottom": 765,
+      "tools": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 44,
+          "h": 44
+        }
+      ]
+    }
+  ],
+  "regions": [],
+  "build": "bf8086547bd8",
+  "windowRain": {
+    "interior": true,
+    "window": true,
+    "rain": "none"
+  }
+}

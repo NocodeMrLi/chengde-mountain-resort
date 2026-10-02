@@ -371,3 +371,14 @@
 .zone-nav{max-width:94vw;overflow-x:auto;scrollbar-width:none}.zone-nav button{flex:none}
 
 .region-near.interior-scene .region-near-viewport>.region-rain,.region-near.interior-scene .region-near-mist{display:none}.region-near-window-rain{inset:auto;mask-image:linear-gradient(90deg,transparent,#000 6% 93%,transparent)}
+
+/* A regional image must be decoded before its exploration layer appears. */
+.region-portal[data-state="loading"] .region-canvas-frame,.region-portal[data-state="error"] .region-canvas-frame,
+.region-portal[data-state="loading"] .region-detail,.region-portal[data-state="error"] .region-detail,
+.region-portal[data-state="loading"] .region-list,.region-portal[data-state="error"] .region-list,
+.region-portal[data-state="loading"] .region-tools,.region-portal[data-state="error"] .region-tools{visibility:hidden}
+.region-load{position:absolute;z-index:4;left:50%;top:46%;transform:translate(-50%,-50%);width:min(88%,390px);padding:25px;text-align:center;background:#28392eed;border:1px solid #d6bd8a75;color:#f8eaca;box-shadow:0 8px 28px #15221d44}
+.region-load[hidden]{display:none}.region-load p{margin:0;font-size:13px;letter-spacing:.12em;line-height:1.9}
+.region-load button{min-width:44px;min-height:44px;margin:17px 4px 0;padding:8px 13px;border:1px solid #edd4a38a;background:#364332;color:#fff0d1;font-size:12px}
+.region-portal[data-state="loading"] .region-load p:before{content:'';display:block;width:25px;height:25px;margin:0 auto 17px;border:1px solid #d7bc8870;border-top-color:#f7deb0;border-radius:50%;animation:regionNearLoad 1.2s linear infinite}
+@media(prefers-reduced-motion:reduce){.region-load p:before{animation:none!important}}

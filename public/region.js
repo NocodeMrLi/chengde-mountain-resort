@@ -11,6 +11,11 @@ const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const atlasDialog = $('atlasDialog');
 const mainSelectors = ['#scene','.topbar','.zone-nav','.bottom-ui','.story-panel','.progress-track','.keyboard-hint'];
 const regions = {
+  zhenzi:{"title":"榛子峪","kicker":"山林奉亲与观鹿 · 意境组景","art":"zhenzi-region.webp","alt":"榛子峪口松鹤殿堂、听泉小院与八角望鹿亭的写意画卷","description":"依历史组群关联组织松鹤清樾、风泉清听与驯鹿坡。风泉清听史料位于松鹤清越西侧；画中采用意境并置，不沿实地方位。院落、坡地与鹿影不代表现存建筑、实时鹿群或测绘坐标。","names":["松鹤清樾","风泉清听","驯鹿坡"],"positions":{"松鹤清樾":[25,36],"风泉清听":[60,65],"驯鹿坡":[90,24]}},
+  qingfeng:{"title":"青枫绿屿","kicker":"山中庭院与窗景 · 意境组景","art":"qingfeng-region.webp","alt":"青枫庭院门殿、月门、高台与窗景的写意画卷","description":"历史门殿、月门和平台有据；罨画窗属于这一组群。这里是山中庭院，“屿”不表示湖岛。画中关系为框景创作，非准确原布局。","names":["青枫绿屿","罨画窗"],"positions":{"青枫绿屿":[60,61],"罨画窗":[96,48]}},
+  songyun:{"title":"松云峡","kicker":"倚山临水与向西眺望 · 意境组景","art":"songyun-region.webp","alt":"松云峡五间敞轩与山脊单檐方亭的写意画卷","description":"以云容水态的五间敞轩和凌太虚的单檐方亭表现低处临水与高处眺望。路径和地形为意境组合，不是两处建筑的实测相邻图。","names":["云容水态","凌太虚"],"positions":{"云容水态":[30,65],"凌太虚":[88,24]}},
+  shandian:{"title":"山巅眺望","kicker":"北望双峰与南山雪色 · 借景组景","art":"shandian-region.webp","alt":"两处山巅方亭与双峰、南山雪色的概念组景","description":"北枕双峰和南山积雪有各自的观看方向。此画把北望与南望并置为导览，不表示同一视点可同时看到所有远景，也不把积雪当作全年现状。","names":["北枕双峰","南山积雪"],"positions":{"北枕双峰":[13,44],"南山积雪":[86,62]}},
+
   ruyi:{title:'如意洲',kicker:'湖区岛屿 · 史料方位写意',art:'ruyi-island.webp',alt:'写意绘制的如意洲湖岛，中央庭院和四面园景',description:'景区官网记载如意洲建于康熙四十二年，十二处康乾题名景致汇聚于此。画中标记仅表示东、西、南、北和中轴的相对关系，不是 GPS 或建筑现状图。',names:['无暑清凉','延薰山馆','水芳岩秀','一片云','般若相','清晖亭','金莲映日','沧浪屿','云帆月舫','西岭晨霞','澄波叠翠','观莲所'],positions:{'无暑清凉':[50,71],'延薰山馆':[50,56],'水芳岩秀':[50,43],'一片云':[68,47],'般若相':[75,59],'清晖亭':[84,68],'金莲映日':[36,57],'沧浪屿':[27,68],'云帆月舫':[23,45],'西岭晨霞':[31,36],'澄波叠翠':[52,30],'观莲所':[49,83]}},
   qianchixue:{title:'千尺雪水景',kicker:'历史水系 · 意境组景',art:'qianchixue-region.webp',alt:'千尺雪飞流、曲水方亭与两处殿堂相联的写意水景',description:'依已核实的历史水系关系组合千尺雪、宁静斋、玉琴轩与曲水荷香，位置为意境分组，不代表测绘或今日存状。',names:['千尺雪','宁静斋','玉琴轩','曲水荷香'],positions:{'千尺雪':[18,28],'宁静斋':[81,29],'玉琴轩':[85,74],'曲水荷香':[43,46]}},
   lihua:{title:'梨花伴月',kicker:'历史遗址组群 · 意境演绎',art:'lihua-region.webp',alt:'梨树峪历史庭院、门殿与泉石的意境演绎',description:'以已核实的门殿—永恬居—素尚斋中轴关系组织画面，另读澄泉绕石的历史泉景。组群为遗址，完整建筑属于历史意境演绎，非今日现状。',names:['梨花伴月','永恬居','素尚斋','澄泉绕石'],positions:{'梨花伴月':[56,81],'永恬居':[55,45],'素尚斋':[54,21],'澄泉绕石':[22,49]}},
@@ -28,6 +33,7 @@ const regionZoomLimits={min:1,max:1.6};
 const regionPointers=new Map();
 let regionGesture=null,regionSuppressClickUntil=0;
 let layout=null;
+let regionLoadId=0,regionLoadTimer=0,regionLoadImage=null,regionLoadFrame=0;
 const nearPointers=new Map();
 const nearCamera={x:0,y:0,width:0,height:0,viewportWidth:0,viewportHeight:0,zoom:1};
 const nearZoomLimits={min:1,max:2.4};
@@ -61,13 +67,14 @@ function resetPan(){
   regionCamera.zoom=1;canvas.classList.remove('is-locating');sizeRegion(false);
 }
 function zoomRegion(zoom,x=frame.clientWidth/2,y=frame.clientHeight/2){
-  if(portal.hidden||!near.hidden)return;
+  if(portal.hidden||portal.dataset.state!=='ready'||!near.hidden)return;
   const next=Math.min(regionZoomLimits.max,Math.max(regionZoomLimits.min,zoom)),ratio=next/regionCamera.zoom;
   canvas.classList.remove('is-locating');regionCamera.zoom=next;
   canvas.style.width=`${regionCamera.baseWidth*next}px`;canvas.style.height=`${regionCamera.baseHeight*next}px`;
   pan.x=x-(x-pan.x)*ratio;pan.y=y-(y-pan.y)*ratio;renderPan();
 }
 function locateItem(name){
+  if(portal.dataset.state!=='ready')return;
   const position=regions[currentRegion]?.positions[name];if(!position)return;
   pan.x=frame.clientWidth*.50-canvas.clientWidth*position[0]/100;
   pan.y=frame.clientHeight*.36-canvas.clientHeight*position[1]/100;
@@ -94,14 +101,14 @@ function renderMarkers(){
     const dot=document.createElement('span');dot.textContent=item.regionNearArt?'✦':'·';
     const label=document.createElement('small');label.textContent=name;
     button.append(dot,label);
-    button.addEventListener('click',(event)=>{event.stopPropagation();if(performance.now()>=regionSuppressClickUntil)selectItem(name);});
+    button.addEventListener('click',(event)=>{event.stopPropagation();if(portal.dataset.state==='ready'&&performance.now()>=regionSuppressClickUntil)selectItem(name);});
     container.append(button);
   }
   const list=$('regionList');list.replaceChildren();
   for(const name of regions[currentRegion].names){
     const item=entryByName(name);const button=document.createElement('button');button.type='button';
     button.dataset.name=name;button.textContent=`${name}${item?.regionNearArt?' ↗':' · 筹备中'}`;
-    button.addEventListener('click',()=>selectItem(name,true));list.append(button);
+    button.addEventListener('click',()=>{if(portal.dataset.state==='ready')selectItem(name,true);});list.append(button);
   }
 }
 function selectItem(name,locate=false){
@@ -111,13 +118,54 @@ function selectItem(name,locate=false){
   $('regionPosition').textContent=`${item.locationHint} · 写意相对位置`;
   $('regionSpotBody').textContent=item.description;
   $('regionSpotStatus').textContent=`画面：${item.artStatus} · 实地现状：${item.presentCondition}`;
-  $('regionNearBtn').disabled=!item.regionNearArt;
+  $('regionNearBtn').disabled=portal.dataset.state!=='ready'||!item.regionNearArt;
   $('regionNearBtn').textContent=item.regionNearArt?'走近此景 ↗':'近景筹备中';
   document.querySelectorAll('.region-marker,.region-list button').forEach((button)=>{
     const active=button.dataset.name===name;button.classList.toggle('active',active);
     if(active)button.setAttribute('aria-current','true');else button.removeAttribute('aria-current');
   });
   if(locate)locateItem(name);
+}
+function cancelRegionLoad(){
+  ++regionLoadId;clearTimeout(regionLoadTimer);cancelAnimationFrame(regionLoadFrame);
+  if(regionLoadImage){regionLoadImage.onload=null;regionLoadImage.onerror=null;regionLoadImage.removeAttribute('src');regionLoadImage=null;}
+}
+function setRegionLoadState(state){
+  portal.dataset.state=state;frame.setAttribute('aria-busy',String(state==='loading'));
+  frame.inert=state!=='ready';
+  for(const selector of ['.region-tools','.region-detail','.region-list'])portal.querySelector(selector).inert=state!=='ready';
+  for(const id of ['regionZoomOut','regionZoomIn','regionReset'])$(id).disabled=state!=='ready';
+  $('regionNearBtn').disabled=state!=='ready'||!currentItem?.regionNearArt;
+  $('regionLoad').hidden=state==='ready';$('regionRetry').hidden=state!=='error';
+  $('regionLoadText').textContent=state==='error'?'区域画卷暂未展开，请重试或返回长卷。':'正在展开区域画卷…';
+}
+function loadRegionArt(retry=false){
+  if(portal.hidden||!currentRegion)return;
+  if($('regionLoad').contains(document.activeElement))$('regionBack').focus({preventScroll:true});
+  cancelRegionLoad();clearRegionGestures();
+  const request=regionLoadId,key=currentRegion,region=regions[key],image=new Image();
+  regionLoadImage=image;let settled=false;setRegionLoadState('loading');
+  $('regionArt').removeAttribute('src');
+  const active=()=>request===regionLoadId&&!portal.hidden&&currentRegion===key;
+  const fail=()=>{if(settled||!active())return;settled=true;clearTimeout(regionLoadTimer);setRegionLoadState('error');};
+  image.onload=async()=>{
+    try{await image.decode();}catch{fail();return;}
+    if(settled||!active())return;
+    if(!image.naturalWidth||!image.naturalHeight){fail();return;}
+    const art=$('regionArt');art.src=image.src;art.alt=region.alt;
+    // Decode the presented image as well before enabling its controls.
+    try{await art.decode();}catch{fail();return;}
+    if(settled||!active())return;
+    settled=true;clearTimeout(regionLoadTimer);
+    setRegionLoadState('ready');
+    regionLoadFrame=requestAnimationFrame(()=>{
+      if(!active())return;
+      resetPan();locateItem(currentItem?.name||region.names[0]);
+    });
+  };
+  image.onerror=fail;regionLoadTimer=setTimeout(fail,20000);
+  const url=new URL(artUrl(region.art));if(retry)url.searchParams.set('retry',`${Date.now()}-${request}`);
+  image.src=url.href;
 }
 function openRegion(key,focusSource=document.activeElement){
   if(!records.length||!regions[key])return;
@@ -129,23 +177,14 @@ function openRegion(key,focusSource=document.activeElement){
   portal.hidden=false;
   portal.dataset.region=key;
   $('toast').classList.remove('show');
-  $('regionArt').src=artUrl(region.art);$('regionArt').alt=region.alt;
+  setRegionLoadState('loading');
   $('regionTitle').textContent=region.title;$('regionKicker').textContent=region.kicker;
   renderMarkers();selectItem(region.names[0]);
   setMainInert(true);
-  requestAnimationFrame(()=>{
-    resetPan();
-    if(key==='mountain'&&frame.clientWidth>800){
-      pan.x=frame.clientWidth*.5-canvas.clientWidth*.65;
-      pan.y=frame.clientHeight*.36-canvas.clientHeight*.41;
-      canvas.classList.add('is-locating');renderPan();
-      setTimeout(()=>canvas.classList.remove('is-locating'),680);
-    }else locateItem(region.names[0]);
-    $('regionBack').focus({preventScroll:true});
-  });
+  loadRegionArt();$('regionBack').focus({preventScroll:true});
 }
 function closeRegion(restoreFocus=true){
-  closeNear(false);clearRegionGestures();
+  cancelRegionLoad();closeNear(false);clearRegionGestures();
   canvas.classList.remove('is-locating');
   portal.hidden=true;currentRegion=null;currentItem=null;
   setMainInert(false);
@@ -283,7 +322,7 @@ function loadNearArt(retry=false){
   nearArt.alt=`${item.name}的写意近景`;nearArt.src=url.href;
 }
 function openNear(){
-  if(!currentItem?.regionNearArt)return;
+  if(portal.dataset.state!=='ready'||!currentItem?.regionNearArt)return;
   regionNearReturnFocus=document.activeElement;
   nearRegionPosition={x:pan.x,y:pan.y,zoom:regionCamera.zoom,frameWidth:frame.clientWidth,frameHeight:frame.clientHeight,centerX:(frame.clientWidth/2-pan.x)/canvas.clientWidth,centerY:(frame.clientHeight/2-pan.y)/canvas.clientHeight};
   clearRegionGestures();nearView=getNearView(currentItem);
@@ -413,7 +452,7 @@ window.addEventListener('keydown',(event)=>{
   if(portal.hidden)return;
   if(event.key==='Escape'){event.preventDefault();event.stopImmediatePropagation();if(!$('regionNear').hidden)closeNear();else closeRegion();}
   else if(event.key==='Tab'){event.stopImmediatePropagation();trap(event,$('regionNear').hidden?portal:$('regionNear'));}
-  else if(near.hidden&&frame.contains(document.activeElement)){
+  else if(near.hidden&&portal.dataset.state==='ready'&&frame.contains(document.activeElement)){
     const directions={ArrowLeft:[70,0],ArrowRight:[-70,0],ArrowUp:[0,70],ArrowDown:[0,-70]};
     if(directions[event.key]){event.preventDefault();event.stopImmediatePropagation();canvas.classList.remove('is-locating');const [x,y]=directions[event.key];pan.x+=x;pan.y+=y;renderPan();}
     else if(['+','=','-','_','Home'].includes(event.key)){event.preventDefault();event.stopImmediatePropagation();if(event.key==='Home')$('regionReset').click();else zoomRegion(regionCamera.zoom*(['+','='].includes(event.key)?1.15:1/1.15));}
@@ -447,6 +486,7 @@ function clearRegionGestures(){
 }
 frame.addEventListener('pointerdown',(event)=>{
   const target=event.target.closest('button');
+  if(portal.dataset.state!=='ready'||!near.hidden)return;
   if((target&&event.pointerType!=='touch')||(event.pointerType==='mouse'&&event.button!==0))return;
   canvas.classList.remove('is-locating');dragged=false;
   regionPointers.set(event.pointerId,{x:event.clientX,y:event.clientY,target});
@@ -476,7 +516,7 @@ for(const type of ['pointerup','pointercancel','lostpointercapture'])frame.addEv
   beginRegionGesture();
 });
 frame.addEventListener('wheel',(event)=>{
-  if(!near.hidden)return;event.preventDefault();
+  if(portal.dataset.state!=='ready'||!near.hidden)return;event.preventDefault();
   const rect=frame.getBoundingClientRect(),delta=event.deltaY*(event.deltaMode===1?16:event.deltaMode===2?frame.clientHeight:1);
   zoomRegion(regionCamera.zoom*Math.exp(-delta*.001),event.clientX-rect.left,event.clientY-rect.top);
 },{passive:false});
@@ -488,8 +528,10 @@ window.addEventListener('resize',()=>{
 window.addEventListener('blur',()=>{clearNearGestures();clearRegionGestures();});
 $('regionZoomOut').addEventListener('click',()=>zoomRegion(regionCamera.zoom/1.15));
 $('regionZoomIn').addEventListener('click',()=>zoomRegion(regionCamera.zoom*1.15));
-$('regionReset').addEventListener('click',()=>{resetPan();if(currentItem)locateItem(currentItem.name);});
+$('regionReset').addEventListener('click',()=>{if(portal.dataset.state!=='ready')return;resetPan();if(currentItem)locateItem(currentItem.name);});
 $('regionBack').addEventListener('click',()=>closeRegion());
+$('regionLoadBack').addEventListener('click',()=>closeRegion());
+$('regionRetry').addEventListener('click',()=>loadRegionArt(true));
 $('regionNearBack').addEventListener('click',()=>closeNear());
 $('regionNearBtn').addEventListener('click',openNear);
 $('regionNearRetry').addEventListener('click',()=>loadNearArt(true));

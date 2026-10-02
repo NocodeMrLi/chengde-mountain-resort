@@ -6,6 +6,24 @@ const digest = (bytes) => createHash('sha256').update(bytes).digest('hex').slice
 const publicRoot = 'public';
 // 景绘原图与旧版本留在 public 归档；发布包使用压缩后的 WebP。
 const excludedBuildAssets = new Set([
+  'art/deer-doe-alert.png',
+  'art/deer-doe-graze.png',
+  'art/deer-stag-alert.png',
+  'art/deer-stag-graze.png',
+  'art/deer-stag-walk.png',
+  'art/hammer-foreground.png',
+  'art/lake-foreground.png',
+  'art/painted-boat.png',
+  'art/palace-foreground.png',
+  'art/person-blue-man.png',
+  'art/person-blue-woman.png',
+  'art/person-green-man.png',
+  'art/person-ochre-woman.png',
+  'art/person-pavilion-pair.png',
+  'art/person-red.png',
+  'art/person-terrace-pair.png',
+  'art/plains-foreground.png',
+
   'art/hammer-close.png',
   'art/jinshan-moonlight-clean.png',
   'art/jinshan-moonlight.png',

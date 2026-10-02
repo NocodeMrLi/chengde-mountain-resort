@@ -1,0 +1,127 @@
+{
+  "initial": [
+    {
+      "name": "yan-yu-lake.webp?v=0f1a97645eb3",
+      "bytes": 640384
+    },
+    {
+      "name": "lake-passage-no-sun.webp?v=f005aa5ae1ee",
+      "bytes": 401302
+    },
+    {
+      "name": "jinshan-moonlight.webp?v=f2696b67b6b9",
+      "bytes": 538912
+    },
+    {
+      "name": "palace-hall.webp?v=6f0d2680da5d",
+      "bytes": 513420
+    },
+    {
+      "name": "plains-wenyuan-clean.webp?v=a7cd0118099d",
+      "bytes": 532848
+    },
+    {
+      "name": "mountain-view.webp?v=042fa0d0e792",
+      "bytes": 618870
+    },
+    {
+      "name": "painted-boat-lossless.webp?v=f0d2a24c40fc",
+      "bytes": 967474
+    },
+    {
+      "name": "yan-yu-lake-clean.webp?v=8785d47daf38",
+      "bytes": 559316
+    }
+  ],
+  "initialBytes": 4772526,
+  "palace": [
+    {
+      "src": "http://127.0.0.1:4191/art/person-blue-man-lossless.webp?v=c0b811941da9",
+      "natural": 1024
+    },
+    {
+      "src": "http://127.0.0.1:4191/art/person-blue-woman-lossless.webp?v=86251dee0ef9",
+      "natural": 1024
+    },
+    {
+      "src": "http://127.0.0.1:4191/art/person-ochre-woman-lossless.webp?v=444f4af34f5d",
+      "natural": 1024
+    },
+    {
+      "src": "http://127.0.0.1:4191/art/person-blue-man-lossless.webp?v=c0b811941da9",
+      "natural": 1024
+    },
+    {
+      "src": "http://127.0.0.1:4191/art/person-green-man-lossless.webp?v=60ba97150adf",
+      "natural": 1024
+    },
+    {
+      "src": null,
+      "natural": 0
+    },
+    {
+      "src": null,
+      "natural": 0
+    },
+    {
+      "src": null,
+      "natural": 0
+    }
+  ],
+  "deer": [
+    {
+      "src": "http://127.0.0.1:4191/art/deer-stag-alert-lossless.webp?v=4b2ca650571b",
+      "natural": 1536
+    },
+    {
+      "src": "http://127.0.0.1:4191/art/deer-stag-graze-lossless.webp?v=4ec5d7e8227a",
+      "natural": 1536
+    },
+    {
+      "src": "http://127.0.0.1:4191/art/deer-stag-walk-lossless.webp?v=fc0a161e6cc4",
+      "natural": 1536
+    },
+    {
+      "src": "http://127.0.0.1:4191/art/deer-doe-alert-lossless.webp?v=898d864c43b1",
+      "natural": 1536
+    },
+    {
+      "src": "http://127.0.0.1:4191/art/deer-doe-graze-lossless.webp?v=4e929acacc5e",
+      "natural": 1536
+    },
+    {
+      "src": "http://127.0.0.1:4191/art/deer-doe-alert-lossless.webp?v=898d864c43b1",
+      "natural": 1536
+    },
+    {
+      "src": "http://127.0.0.1:4191/art/deer-doe-graze-lossless.webp?v=4e929acacc5e",
+      "natural": 1536
+    },
+    {
+      "src": "http://127.0.0.1:4191/art/deer-stag-alert-lossless.webp?v=4b2ca650571b",
+      "natural": 1536
+    },
+    {
+      "src": "http://127.0.0.1:4191/art/deer-stag-graze-lossless.webp?v=4ec5d7e8227a",
+      "natural": 1536
+    },
+    {
+      "src": "http://127.0.0.1:4191/art/deer-stag-walk-lossless.webp?v=fc0a161e6cc4",
+      "natural": 1536
+    }
+  ],
+  "near": [
+    {
+      "src": "./art/deer-stag-alert-lossless.webp",
+      "natural": 1536
+    },
+    {
+      "src": "./art/deer-stag-graze-lossless.webp",
+      "natural": 1536
+    },
+    {
+      "src": "./art/deer-stag-walk-lossless.webp",
+      "natural": 1536
+    }
+  ]
+}

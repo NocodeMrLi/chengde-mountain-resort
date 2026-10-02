@@ -48,11 +48,11 @@
             <div id="deerLayer" class="deer-layer" aria-hidden="true"></div>
             <div id="peopleLayer" class="people-layer" aria-hidden="true"></div>
             <div id="boat" class="boat" aria-hidden="true">
-              <img class="boat-painting" src="./art/painted-boat.png" alt="" draggable="false" />
-              <img class="boat-reflection" src="./art/painted-boat.png" alt="" draggable="false" />
+              <img class="boat-painting" src="./art/painted-boat-lossless.webp" alt="" draggable="false" />
+              <img class="boat-reflection" src="./art/painted-boat-lossless.webp" alt="" draggable="false" />
               <i class="ripple ripple-a"></i><i class="ripple ripple-b"></i>
             </div>
-            <div id="walker" class="walker" aria-hidden="true"><img src="./art/person-red.png" alt="" draggable="false" /></div>
+            <div id="walker" class="walker" aria-hidden="true"><img data-art="./art/person-red-lossless.webp" alt="" draggable="false" /></div>
           </div>
           <div id="screenEffects" class="screen-effects" aria-hidden="true"></div>
           <div class="cloud cloud-one" aria-hidden="true"></div><div class="cloud cloud-two" aria-hidden="true"></div>
@@ -75,7 +75,7 @@
 
         <div class="vertical-mark" aria-hidden="true"><span>康 熙 四 十 二 年 始 建</span><i></i></div>
         <div class="scene-caption"><span id="regionName">青莲岛 · 烟雨楼</span><span id="weatherText">晴 · 午后</span></div>
-        <nav class="zone-nav" aria-label="四景区游历"><button type="button" data-zone="lake">湖泊</button><button type="button" data-zone="palace">宫殿</button><button type="button" data-zone="plains">平原</button><button type="button" data-zone="mountain">山峦</button><button type="button" data-region-entry="ruyi">深入如意洲</button><button type="button" data-region-entry="mountain">深入山地</button><button type="button" data-region-entry="qianchixue">千尺雪水景</button><button type="button" data-region-entry="lihua">梨花伴月</button><button type="button" data-region-entry="qingshu">清舒山馆</button></nav>
+        <nav class="zone-nav" aria-label="四景区游历"><button type="button" data-zone="lake">湖泊</button><button type="button" data-zone="palace">宫殿</button><button type="button" data-zone="plains">平原</button><button type="button" data-zone="mountain">山峦</button><button type="button" data-region-entry="ruyi">深入如意洲</button><button type="button" data-region-entry="mountain">深入山地</button><button type="button" data-region-entry="qianchixue">千尺雪水景</button><button type="button" data-region-entry="lihua">梨花伴月</button><button type="button" data-region-entry="qingshu">清舒山馆</button><button type="button" data-region-entry="zhenzi">榛子峪</button><button type="button" data-region-entry="qingfeng">青枫绿屿</button><button type="button" data-region-entry="songyun">松云峡</button><button type="button" data-region-entry="shandian">山巅眺望</button></nav>
 
         <aside id="storyPanel" class="story-panel" aria-live="polite">
           <button id="closeStory" class="story-close" type="button" aria-label="关闭景点介绍">×</button>
@@ -104,8 +104,8 @@
           <div class="depth-backdrop" aria-hidden="true"></div>
           <div class="depth-atmosphere" aria-hidden="true"></div><div class="depth-rain" aria-hidden="true"></div>
           <div class="depth-mist" aria-hidden="true"></div>
-          <img id="depthForeground" class="depth-foreground" src="./art/hammer-foreground.png" alt="" draggable="false" />
-          <button id="depthDeer" class="depth-deer" type="button" aria-label="近看梅花鹿的动作"><img class="near-deer-alert" src="./art/deer-stag-alert.png" alt="" /><img class="near-deer-graze" src="./art/deer-stag-graze.png" alt="" /><img class="near-deer-walk" src="./art/deer-stag-walk.png" alt="" /><i></i></button>
+          <img id="depthForeground" class="depth-foreground"  alt="" draggable="false" />
+          <button id="depthDeer" class="depth-deer" type="button" aria-label="近看梅花鹿的动作"><img class="near-deer-alert" data-art="./art/deer-stag-alert-lossless.webp" alt="" /><img class="near-deer-graze" data-art="./art/deer-stag-graze-lossless.webp" alt="" /><img class="near-deer-walk" data-art="./art/deer-stag-walk-lossless.webp" alt="" /><i></i></button>
           <header class="depth-header"><button id="depthBack" class="depth-back" type="button">← 回望山庄全景</button><span id="depthKicker">园外借景 · 磬锤峰</span></header>
           <button id="depthPeak" class="depth-target" type="button" aria-label="细看景点"><span id="depthAction">细看</span></button>
           <button id="depthCloud" class="depth-cloud-button" type="button" aria-pressed="false">拨云观景　↗</button>
@@ -118,6 +118,7 @@
         <div id="depthError" class="depth-error" role="alertdialog" aria-modal="true" aria-labelledby="depthErrorTitle" hidden><div><h2 id="depthErrorTitle">近景暂未展开</h2><p>画面加载遇到问题，可以重试或回到长卷。</p><button id="depthRetry" type="button">重试近景</button><button id="depthErrorBack" type="button">返回长卷</button></div></div>
         <div id="sceneLoadError" class="depth-error" role="alertdialog" aria-modal="true" aria-labelledby="sceneErrorTitle" hidden><div><h2 id="sceneErrorTitle">画卷加载失败</h2><p>请检查网络后重试。</p><button id="sceneRetry" type="button">重新加载画卷</button></div></div>
         <section id="regionPortal" class="region-portal" role="dialog" aria-modal="true" aria-labelledby="regionTitle" hidden>
+          <div id="regionLoad" class="region-load"><p id="regionLoadText" role="status" aria-live="polite">正在展开区域画卷…</p><button id="regionRetry" type="button" hidden>重新加载区域画卷</button><button id="regionLoadBack" type="button">返回长卷</button></div>
           <div id="regionCanvasFrame" class="region-canvas-frame" aria-label="可拖动的区域画卷，拖动画面浏览" tabindex="0"><div id="regionCanvas" class="region-canvas"><img id="regionArt" alt="" draggable="false" /><div id="regionMarkers" class="region-markers"></div></div></div>
           <div class="region-weather" aria-hidden="true"></div><div class="region-rain" aria-hidden="true"></div>
           <header class="region-header"><button id="regionBack" type="button">← 返回长卷原位</button><div><small id="regionKicker">区域纵深 · 写意导览</small><h2 id="regionTitle">如意洲</h2></div><button id="regionAtlas" type="button">七十二景图鉴</button></header>

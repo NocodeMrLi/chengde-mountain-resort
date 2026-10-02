@@ -1,0 +1,84 @@
+{
+  "baselineImages": 19,
+  "baselineBytes": 27227393,
+  "optimizedImages": 8,
+  "optimizedBytes": 4772526,
+  "baseline": [
+    {
+      "name": "yan-yu-lake.webp?v=0f1a97645eb3",
+      "bytes": 640384
+    },
+    {
+      "name": "lake-passage-no-sun.webp?v=f005aa5ae1ee",
+      "bytes": 401302
+    },
+    {
+      "name": "jinshan-moonlight.webp?v=f2696b67b6b9",
+      "bytes": 538912
+    },
+    {
+      "name": "palace-hall.webp?v=6f0d2680da5d",
+      "bytes": 513420
+    },
+    {
+      "name": "plains-wenyuan-clean.webp?v=a7cd0118099d",
+      "bytes": 532848
+    },
+    {
+      "name": "mountain-view.webp?v=042fa0d0e792",
+      "bytes": 618870
+    },
+    {
+      "name": "painted-boat.png?v=366e558a1b37",
+      "bytes": 1430587
+    },
+    {
+      "name": "person-red.png?v=d043db4d40ab",
+      "bytes": 1861591
+    },
+    {
+      "name": "hammer-foreground.png?v=55cd88b7bc57",
+      "bytes": 1482225
+    },
+    {
+      "name": "deer-stag-alert.png?v=f05f99f9ee48",
+      "bytes": 1688895
+    },
+    {
+      "name": "deer-stag-graze.png?v=287af6ee5f8c",
+      "bytes": 2258645
+    },
+    {
+      "name": "deer-stag-walk.png?v=3328f36a369f",
+      "bytes": 1795333
+    },
+    {
+      "name": "yan-yu-lake-clean.webp?v=8785d47daf38",
+      "bytes": 559316
+    },
+    {
+      "name": "person-blue-man.png?v=e126cc1059af",
+      "bytes": 2103810
+    },
+    {
+      "name": "person-blue-woman.png?v=33281dca2fec",
+      "bytes": 1956274
+    },
+    {
+      "name": "person-ochre-woman.png?v=428c659e2c47",
+      "bytes": 2201776
+    },
+    {
+      "name": "deer-doe-alert.png?v=7e8048e071ed",
+      "bytes": 2241005
+    },
+    {
+      "name": "person-green-man.png?v=5fcb4adbdef8",
+      "bytes": 2026831
+    },
+    {
+      "name": "deer-doe-graze.png?v=4b8badafdd16",
+      "bytes": 2375369
+    }
+  ]
+}

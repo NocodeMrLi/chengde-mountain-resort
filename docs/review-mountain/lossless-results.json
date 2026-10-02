@@ -1,0 +1,206 @@
+[
+  {
+    "original": "public/art/deer-doe-alert.png",
+    "webp": "public/art/deer-doe-alert-lossless.webp",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "pngBytes": 2241005,
+    "webpBytes": 1409608,
+    "rgbaExact": true,
+    "smaller": true
+  },
+  {
+    "original": "public/art/deer-doe-graze.png",
+    "webp": "public/art/deer-doe-graze-lossless.webp",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "pngBytes": 2375369,
+    "webpBytes": 1482968,
+    "rgbaExact": true,
+    "smaller": true
+  },
+  {
+    "original": "public/art/deer-stag-alert.png",
+    "webp": "public/art/deer-stag-alert-lossless.webp",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "pngBytes": 1688895,
+    "webpBytes": 1042944,
+    "rgbaExact": true,
+    "smaller": true
+  },
+  {
+    "original": "public/art/deer-stag-graze.png",
+    "webp": "public/art/deer-stag-graze-lossless.webp",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "pngBytes": 2258645,
+    "webpBytes": 1433178,
+    "rgbaExact": true,
+    "smaller": true
+  },
+  {
+    "original": "public/art/deer-stag-walk.png",
+    "webp": "public/art/deer-stag-walk-lossless.webp",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "pngBytes": 1795333,
+    "webpBytes": 1107134,
+    "rgbaExact": true,
+    "smaller": true
+  },
+  {
+    "original": "public/art/hammer-foreground.png",
+    "webp": "public/art/hammer-foreground-lossless.webp",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "pngBytes": 1482225,
+    "webpBytes": 1115326,
+    "rgbaExact": true,
+    "smaller": true
+  },
+  {
+    "original": "public/art/lake-foreground.png",
+    "webp": "public/art/lake-foreground-lossless.webp",
+    "dimensions": [
+      2172,
+      724
+    ],
+    "pngBytes": 1349778,
+    "webpBytes": 1041676,
+    "rgbaExact": true,
+    "smaller": true
+  },
+  {
+    "original": "public/art/painted-boat.png",
+    "webp": "public/art/painted-boat-lossless.webp",
+    "dimensions": [
+      2048,
+      768
+    ],
+    "pngBytes": 1430587,
+    "webpBytes": 967474,
+    "rgbaExact": true,
+    "smaller": true
+  },
+  {
+    "original": "public/art/palace-foreground.png",
+    "webp": "public/art/palace-foreground-lossless.webp",
+    "dimensions": [
+      2172,
+      724
+    ],
+    "pngBytes": 1777322,
+    "webpBytes": 1339908,
+    "rgbaExact": true,
+    "smaller": true
+  },
+  {
+    "original": "public/art/person-blue-man.png",
+    "webp": "public/art/person-blue-man-lossless.webp",
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "pngBytes": 2103810,
+    "webpBytes": 1332520,
+    "rgbaExact": true,
+    "smaller": true
+  },
+  {
+    "original": "public/art/person-blue-woman.png",
+    "webp": "public/art/person-blue-woman-lossless.webp",
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "pngBytes": 1956274,
+    "webpBytes": 1222198,
+    "rgbaExact": true,
+    "smaller": true
+  },
+  {
+    "original": "public/art/person-green-man.png",
+    "webp": "public/art/person-green-man-lossless.webp",
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "pngBytes": 2026831,
+    "webpBytes": 1252170,
+    "rgbaExact": true,
+    "smaller": true
+  },
+  {
+    "original": "public/art/person-ochre-woman.png",
+    "webp": "public/art/person-ochre-woman-lossless.webp",
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "pngBytes": 2201776,
+    "webpBytes": 1367040,
+    "rgbaExact": true,
+    "smaller": true
+  },
+  {
+    "original": "public/art/person-pavilion-pair.png",
+    "webp": "public/art/person-pavilion-pair-lossless.webp",
+    "dimensions": [
+      1316,
+      1195
+    ],
+    "pngBytes": 1302402,
+    "webpBytes": 868144,
+    "rgbaExact": true,
+    "smaller": true
+  },
+  {
+    "original": "public/art/person-red.png",
+    "webp": "public/art/person-red-lossless.webp",
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "pngBytes": 1861591,
+    "webpBytes": 1149000,
+    "rgbaExact": true,
+    "smaller": true
+  },
+  {
+    "original": "public/art/person-terrace-pair.png",
+    "webp": "public/art/person-terrace-pair-lossless.webp",
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "pngBytes": 2623895,
+    "webpBytes": 1720014,
+    "rgbaExact": true,
+    "smaller": true
+  },
+  {
+    "original": "public/art/plains-foreground.png",
+    "webp": "public/art/plains-foreground-lossless.webp",
+    "dimensions": [
+      2048,
+      768
+    ],
+    "pngBytes": 2173568,
+    "webpBytes": 1464980,
+    "rgbaExact": true,
+    "smaller": true
+  }
+]

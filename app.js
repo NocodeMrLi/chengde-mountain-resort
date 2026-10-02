@@ -95,22 +95,22 @@ const lampElements = lamps.map(()=>{const element=document.createElement('span')
 // the waterside calm; only one short walker route is active per populated area.
 const staticPainting=true;
 const ambientPeople = [
-  {panel:0,x:.165,y:.634,size:.035,art:'person-pavilion-pair.png',direction:1},
-  {panel:0,x:.58,y:.603,size:.024,art:'person-blue-man.png',direction:1},
-  {panel:0,x:.646,y:.604,size:.033,art:'person-terrace-pair.png',direction:1},
-  {panel:3,x:.116,y:.665,size:.024,art:'person-blue-man.png',direction:-1},
-  {panel:3,x:.186,y:.674,size:.030,art:'person-blue-woman.png',direction:1},
-  {panel:3,x:.573,y:.676,size:.029,art:'person-ochre-woman.png',direction:-1},
-  {panel:3,start:.285,end:.395,path:[[.285,.68],[.395,.68]],size:.038,speed:.011,art:'person-blue-man.png',direction:1},
-  {panel:3,x:.792,y:.682,size:.039,art:'person-green-man.png',direction:-1},
-  {panel:4,start:.48,end:.54,path:[[.48,.752],[.54,.764]],size:.029,speed:.008,art:'person-ochre-woman.png',direction:-1},
-  {panel:5,x:.663,y:.565,size:.027,art:'person-green-man.png',direction:1},
-  {panel:5,x:.743,y:.484,size:.024,art:'person-blue-woman.png',direction:-1}
+  {panel:0,x:.165,y:.634,size:.035,art:'person-pavilion-pair-lossless.webp',direction:1},
+  {panel:0,x:.58,y:.603,size:.024,art:'person-blue-man-lossless.webp',direction:1},
+  {panel:0,x:.646,y:.604,size:.033,art:'person-terrace-pair-lossless.webp',direction:1},
+  {panel:3,x:.475,y:.71,size:.024,art:'person-blue-man-lossless.webp',direction:-1},
+  {panel:3,x:.84,y:.7,size:.030,art:'person-blue-woman-lossless.webp',direction:1},
+  {panel:3,x:.573,y:.676,size:.029,art:'person-ochre-woman-lossless.webp',direction:-1},
+  {panel:3,start:.285,end:.395,path:[[.285,.68],[.395,.68]],size:.038,speed:.011,art:'person-blue-man-lossless.webp',direction:1},
+  {panel:3,x:.792,y:.682,size:.039,art:'person-green-man-lossless.webp',direction:-1},
+  {panel:4,start:.48,end:.54,path:[[.48,.752],[.54,.764]],size:.029,speed:.008,art:'person-ochre-woman-lossless.webp',direction:-1},
+  {panel:5,x:.663,y:.565,size:.027,art:'person-green-man-lossless.webp',direction:1},
+  {panel:5,x:.743,y:.484,size:.024,art:'person-blue-woman-lossless.webp',direction:-1}
 ].filter(person=>person.panel!==0).map((person)=>{
   const element=document.createElement('span');element.className='ambient-person';
   element.classList.toggle('moving',Boolean(person.path));
   element.classList.toggle('stationary',!person.path);
-  const img=document.createElement('img');img.src=assetUrl(`art/${person.art}`);img.alt='';img.draggable=false;element.append(img);
+  const img=document.createElement('img');img.dataset.art=assetUrl(`art/${person.art}`);img.decoding='async';img.alt='';img.draggable=false;element.append(img);
   $('peopleLayer').append(element);
   const index=$('peopleLayer').children.length;
   element.style.setProperty('--sway-duration',`${.67+(index%5)*.15}s`);
@@ -126,7 +126,7 @@ const deerHerd = [
   const element=document.createElement('button');element.type='button';element.className=`deer deer-${deer.kind}`;
   element.setAttribute('aria-label','轻点梅花鹿，观察它的反应');
   const names=deer.kind==='stag'?['alert','graze','walk']:['alert','graze'];
-  for(const pose of names){const img=document.createElement('img');img.src=assetUrl(`art/deer-${deer.kind}-${pose}.png`);img.className=`deer-pose deer-${pose}`;img.alt='';img.draggable=false;element.append(img);}
+  for(const pose of names){const img=document.createElement('img');img.dataset.art=assetUrl(`art/deer-${deer.kind}-${pose}-lossless.webp`);img.decoding='async';img.className=`deer-pose deer-${pose}`;img.alt='';img.draggable=false;element.append(img);}
   const ear=document.createElement('i');ear.className='deer-ear';element.append(ear);
   const look=document.createElement('span');look.className='deer-look';look.textContent='近看';element.append(look);
   $('deerLayer').append(element);
@@ -526,12 +526,14 @@ function render(){
   renderDebug(walkerFootY,waterY,boatWidth);
   $('boat').classList.toggle('reverse',boatTripDirection<0);
   for(const person of ambientPeople){
+    if(person.worldX>offset-scene.clientWidth&&person.worldX<offset+scene.clientWidth*2)loadDeferredArt(person.element);
     person.element.style.left=`${person.worldX}px`;
     if(person.path)person.element.style.top=`${paintedPathY(person.path,(person.worldX-panelStarts[person.panel])/widths[person.panel])*height}px`;
     person.element.classList.toggle('reverse',person.direction<0);
     person.element.classList.toggle('resting',Boolean(person.path)&&performance.now()<person.restUntil);
   }
   for(const deer of deerHerd){
+    if(deer.worldX>offset-scene.clientWidth&&deer.worldX<offset+scene.clientWidth*2)loadDeferredArt(deer.element);
     deer.element.style.left=`${deer.worldX}px`;
     deer.element.style.top=`${paintedPathY(deer.path,deer.x)*height}px`;
     deer.element.classList.toggle('reverse',deer.direction<0);
@@ -547,6 +549,12 @@ function render(){
   $('regionName').textContent=nearest.area;
   const activeZone=middle<panelStarts[3]?'lake':middle<panelStarts[4]?'palace':middle<panelStarts[5]?'plains':'mountain';
   document.querySelectorAll('[data-zone]').forEach((button)=>button.classList.toggle('active',button.dataset.zone===activeZone));
+}
+
+function loadDeferredArt(root){
+  if(root.dataset.artReady==='true')return;
+  for(const image of root.querySelectorAll('img[data-art]')){image.src=image.dataset.art;delete image.dataset.art;}
+  root.dataset.artReady='true';
 }
 
 function showToast(message){
@@ -618,9 +626,9 @@ function openDepth(target,creature=deerHerd[0]){
   experience.classList.add('depth-travel');
   travelScale=reducedMotion.matches?1:1.12;
   targetOffset=desired;velocity=0;
-  const foreground=key==='chuifeng'||key==='simian'?'hammer-foreground.png':
-    ['shuixin','dike','yanyu','jinshan','moon'].includes(key)?'lake-foreground.png':
-    ['lizheng','danbo'].includes(key)?'palace-foreground.png':'plains-foreground.png';
+  const foreground=key==='chuifeng'||key==='simian'?'hammer-foreground-lossless.webp':
+    ['shuixin','dike','yanyu','jinshan','moon'].includes(key)?'lake-foreground-lossless.webp':
+    ['lizheng','danbo'].includes(key)?'palace-foreground-lossless.webp':'plains-foreground-lossless.webp';
   const begin=()=>{
     if(serial!==depthSerial||depthState!=='pending')return;
     const portal=$('depthPortal');
@@ -641,6 +649,7 @@ function openDepth(target,creature=deerHerd[0]){
     $('depthCloud').textContent=key==='deer'?'静观鹿影　↗':'拨云观景　↗';
     $('depthCloud').setAttribute('aria-pressed','false');
     portal.classList.toggle('deer-close',key==='deer');
+    if(key==='deer')loadDeferredArt($('depthDeer'));
     portal.classList.toggle('peak-close',key==='chuifeng');
     prepareGuide(key);
     if(key==='deer'){$('depthDeer').dataset.pose='alert';closeDeerNextAt=performance.now()+2400;}
@@ -671,6 +680,7 @@ function openDepth(target,creature=deerHerd[0]){
   });
   Promise.all([
     preload(assetUrl(`art/${art[0]}`)),preload(assetUrl(`art/${foreground}`)),
+    ...(key==='deer'?[...$('depthDeer').querySelectorAll('img')].map(image=>preload(image.dataset.art||image.src)):[]),
     new Promise((resolve)=>setTimeout(resolve,reducedMotion.matches?30:shift>scene.clientWidth*.35?850:90))
   ]).then(begin).catch(()=>{
     if(serial!==depthSerial||depthState!=='pending')return;

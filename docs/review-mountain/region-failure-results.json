@@ -1,0 +1,68 @@
+{
+  "error": {
+    "state": "error",
+    "art": null,
+    "frameInert": true,
+    "nearDisabled": true,
+    "zoomDisabled": true,
+    "markers": "hidden",
+    "retry": true,
+    "visited": null,
+    "title": "千尺雪水景"
+  },
+  "retry": {
+    "state": "ready",
+    "art": "http://127.0.0.1:4191/art/qianchixue-region.webp?v=16c81dd5c34f&retry=1790953515406-4",
+    "frameInert": false,
+    "nearDisabled": false,
+    "zoomDisabled": false,
+    "markers": "visible",
+    "retry": false,
+    "visited": null,
+    "title": "千尺雪水景"
+  },
+  "pending": {
+    "state": "loading",
+    "art": null,
+    "frameInert": true,
+    "nearDisabled": true,
+    "zoomDisabled": true,
+    "markers": "hidden",
+    "retry": false,
+    "visited": "[\"q29\"]",
+    "title": "千尺雪水景"
+  },
+  "timeout": {
+    "state": "error",
+    "art": null,
+    "frameInert": true,
+    "nearDisabled": true,
+    "zoomDisabled": true,
+    "markers": "hidden",
+    "retry": true,
+    "visited": "[\"q29\"]",
+    "title": "千尺雪水景"
+  },
+  "afterLate": {
+    "state": "ready",
+    "art": "http://127.0.0.1:4191/art/qianchixue-region.webp?v=16c81dd5c34f&retry=1790953536821-9",
+    "frameInert": false,
+    "nearDisabled": false,
+    "zoomDisabled": false,
+    "markers": "visible",
+    "retry": false,
+    "visited": "[\"q29\"]",
+    "title": "千尺雪水景"
+  },
+  "switched": {
+    "state": "ready",
+    "art": "http://127.0.0.1:4191/art/lihua-region.webp?v=2cbe046d8a5f",
+    "frameInert": false,
+    "nearDisabled": false,
+    "zoomDisabled": false,
+    "markers": "visible",
+    "retry": false,
+    "visited": "[\"q29\"]",
+    "title": "梨花伴月"
+  }
+}

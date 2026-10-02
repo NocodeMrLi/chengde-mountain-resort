@@ -200,14 +200,38 @@
       "region": "山地",
       "locationHint": "榛子峪口",
       "presentCondition": "现状待核实",
-      "artStatus": "筹备中",
+      "artStatus": "区域与近观可游览",
       "overviewSpotId": null,
       "sourceRefs": [
         "K36",
         "康熙36-RESEARCH"
       ],
       "description": "松鹤清樾在榛子峪口，景区资料与清代文献亦写作“松鹤清越”。这里始建于1711年，是康熙为母后安排的颐养空间。史料所述的前后殿堂各五间，以两侧游廊联系；松树与鹤声则共同构成题名的环境背景。阅读不同写法时，可以把“樾”理解为树荫，把“清越”理解为声音清亮，两者的字义有所不同，不能悄悄混作一个意思。本页保留原景名，并列出文献中的写法，便于对照。欣赏这一景，也可以从山林生活与奉亲意涵两条线索入手。",
-      "researchRegion": "山岳区"
+      "researchRegion": "山岳区",
+      "regionKey": "zhenzi",
+      "regionNearArt": "songhe-near.webp",
+      "regionView": {
+        "focus": [
+          51,
+          47
+        ],
+        "details": [
+          {
+            "title": "前后五间殿堂",
+            "text": "前后各五间、两侧游廊相联是文献有据的形制；画中材质、陈设与树木属于创作。",
+            "x": 52,
+            "y": 48
+          },
+          {
+            "title": "松荫庭院",
+            "text": "亭院在榛子峪口，奉亲与颐养是阅读此景的重要线索。",
+            "x": 24,
+            "y": 65
+          }
+        ],
+        "water": null,
+        "interpretation": "画面依据已核实的历史位置、形制与题名作意境演绎；山水、院落、陈设和相对位置不是实测复原，也不代表今日存状。"
+      }
     },
     {
       "id": "k08",
@@ -276,14 +300,38 @@
       "region": "山地",
       "locationHint": "东北部山峰观景亭",
       "presentCondition": "现状待核实",
-      "artStatus": "筹备中",
+      "artStatus": "区域与近观可游览",
       "overviewSpotId": null,
       "sourceRefs": [
         "K36",
         "康熙36-RESEARCH"
       ],
       "description": "北枕双峰的名字需要把视线从园内带向远山。它位于山庄东北部山峰上，历史景观以一座攒尖方亭为观景中心，北望所指的双峰为金山与黑山，分别在西北和东北方向。两山的相对位置，使脚下山峰产生枕于其间的联想。这里所说的金山是远方山峰，不是湖区同名的金山岛。欣赏此景时，可把亭、近山与远峰看成三个层次：亭给人一个停驻的位置，真正组成景名的却是更广阔的山川。远景是否清楚取决于天气，不宜把诗意描写理解为每日都能看到的固定画面。",
-      "researchRegion": "山岳区"
+      "researchRegion": "山岳区",
+      "regionKey": "shandian",
+      "regionNearArt": "beizhen-near.webp",
+      "regionView": {
+        "focus": [
+          18,
+          49
+        ],
+        "details": [
+          {
+            "title": "山巅方亭",
+            "text": "历史记述为攒尖方亭，位于山庄东北部山峰，近景尺度为写意。",
+            "x": 18,
+            "y": 49
+          },
+          {
+            "title": "金山与黑山",
+            "text": "北望两峰分别在西北与东北，远方金山不是湖区金山岛。画中峰形不是测绘复原。",
+            "x": 60,
+            "y": 26
+          }
+        ],
+        "water": null,
+        "interpretation": "画面依据已核实的历史位置、形制与题名作意境演绎；山水、院落、陈设和相对位置不是实测复原，也不代表今日存状。"
+      }
     },
     {
       "id": "k11",
@@ -383,14 +431,38 @@
       "region": "山地",
       "locationHint": "北部山巅观景亭",
       "presentCondition": "现状待核实",
-      "artStatus": "筹备中",
+      "artStatus": "区域与近观可游览",
       "overviewSpotId": null,
       "sourceRefs": [
         "K36",
         "康熙36-RESEARCH"
       ],
       "description": "南山积雪写的是从亭中向南望见的远山雪色，而不是说这座亭位于山庄南部。清代记载把亭的位置放在山庄北部山巅，景名所指则是以僧冠峰为代表的南面群山。观景者、园内亭子与园外山岭之间的关系，是读懂这一景的关键。雪把山体的起伏与明暗重新勾勒，也使塞外园林呈现出与夏日湖荷不同的面貌。若在无雪时阅读景名，仍可理解它对季节变化的关注；是否能看到积雪需由当时天气决定，不宜把题名当成全年不变的景观说明。",
-      "researchRegion": "山岳区"
+      "researchRegion": "山岳区",
+      "regionKey": "shandian",
+      "regionNearArt": "nanshan-near.webp",
+      "regionView": {
+        "focus": [
+          85,
+          59
+        ],
+        "details": [
+          {
+            "title": "北山观景处",
+            "text": "观景亭在山庄北部山巅，景名说的是从这里望向南面远山。",
+            "x": 85,
+            "y": 59
+          },
+          {
+            "title": "南山雪色",
+            "text": "雪意以僧冠峰等南面群山为借景；积雪取决于季节与天气，不能当作全年现状。",
+            "x": 59,
+            "y": 26
+          }
+        ],
+        "water": null,
+        "interpretation": "画面依据已核实的历史位置、形制与题名作意境演绎；山水、院落、陈设和相对位置不是实测复原，也不代表今日存状。"
+      }
     },
     {
       "id": "k14",
@@ -487,14 +559,43 @@
       "region": "山地",
       "locationHint": "榛子峪／松鹤清越西侧",
       "presentCondition": "现状待核实",
-      "artStatus": "筹备中",
+      "artStatus": "区域与近观可游览",
       "overviewSpotId": null,
       "sourceRefs": [
         "K36",
         "康熙36-RESEARCH"
       ],
       "description": "风泉清听在榛子峪、松鹤清越的西侧，历史上是一处小庭院，康熙向皇太后请安时曾在此暂歇。院内的大殿由乾隆题名秋澄斋，因此听泉的景意与奉亲的日常在这里相遇。名字取意孟浩然诗中风泉入耳的意境，强调的是清晰悦耳的声音。欣赏这类景观，不妨把目光之外的感受也纳入理解：风声与泉声会使山林空间产生远近和层次。史料中的泉响属于当时环境，今日是否有水、是否可听见，仍要以现场情况为准；题名所保存的，是古人借自然声音营造清静气氛的方式。",
-      "researchRegion": "山岳区"
+      "researchRegion": "山岳区",
+      "regionKey": "zhenzi",
+      "regionNearArt": "fengquan-near.webp",
+      "regionView": {
+        "focus": [
+          36,
+          47
+        ],
+        "details": [
+          {
+            "title": "秋澄斋庭院",
+            "text": "旧时暂歇的小院与松鹤清樾相邻；画作不将未核实的开间数当成复原事实。",
+            "x": 36,
+            "y": 47
+          },
+          {
+            "title": "听泉石涧",
+            "text": "风泉清听重在听觉意境，水道、石景及今日有水与否应分开理解。",
+            "x": 74,
+            "y": 75
+          }
+        ],
+        "water": [
+          55,
+          68,
+          37,
+          25
+        ],
+        "interpretation": "画面依据已核实的历史位置、形制与题名作意境演绎；山水、院落、陈设和相对位置不是实测复原，也不代表今日存状。"
+      }
     },
     {
       "id": "k17",
@@ -574,14 +675,38 @@
       "region": "山地",
       "locationHint": "北部青枫绿屿建筑组群",
       "presentCondition": "现状待核实",
-      "artStatus": "筹备中",
+      "artStatus": "区域与近观可游览",
       "overviewSpotId": null,
       "sourceRefs": [
         "K36",
         "康熙36-RESEARCH"
       ],
       "description": "青枫绿屿建于1709年，因周围枫树繁茂而得名，曾是清帝游览山地时的休息处。历史建筑有三间门殿，入内以月亮门分隔庭院，再通向正殿；上部平台还与中秋登高赏月有关。这个名字虽然带“屿”，却不宜据此把它误放到湖中洲岛上。欣赏其布局，可以留意一道圆门如何在同一庭院中制造前后层次，再看房屋怎样顺应山地环境。枫树、庭院与高处平台分别提供植物、建筑和远景三种线索，合起来才更接近这个景名所指的完整园林空间。",
-      "researchRegion": "山岳区"
+      "researchRegion": "山岳区",
+      "regionKey": "qingfeng",
+      "regionNearArt": "qingfeng-near.webp",
+      "regionView": {
+        "focus": [
+          72,
+          64
+        ],
+        "details": [
+          {
+            "title": "三间门殿",
+            "text": "史料记述三间门殿，建筑在山地，名字中的“屿”不表示湖中岛屿。",
+            "x": 72,
+            "y": 64
+          },
+          {
+            "title": "月门分院",
+            "text": "圆门把前后庭院分开；绿枫与高处平台让山中休息空间产生层次。",
+            "x": 29,
+            "y": 72
+          }
+        ],
+        "water": null,
+        "interpretation": "画面依据已核实的历史位置、形制与题名作意境演绎；山水、院落、陈设和相对位置不是实测复原，也不代表今日存状。"
+      }
     },
     {
       "id": "k22",
@@ -752,14 +877,43 @@
       "region": "山地",
       "locationHint": "松云峡口／旷观西南侧",
       "presentCondition": "现状待核实",
-      "artStatus": "筹备中",
+      "artStatus": "区域与近观可游览",
       "overviewSpotId": null,
       "sourceRefs": [
         "K36",
         "康熙36-RESEARCH"
       ],
       "description": "云容水态在松云峡口旷观的西南侧，山庄肇建时期便已形成。历史形制为倚山临水的五间敞轩，让建筑中的视线朝向外部山水。名字将天空中的云与水面的变化并列，提醒人们这里的景色没有唯一静止的样子：云影、风纹与光线会不断改变画面。理解这一景，可以留意敞轩与山麓、水岸的关系，体会建筑如何为看景提供边框，却不把自然完全框定。有关旧时完整建筑及水景的描写，应与当代保存情况分开阅读；本页呈现有据的历史位置和造景主题，不据此保证室内开放。",
-      "researchRegion": "山岳区与湖洲区交界"
+      "researchRegion": "山岳区与湖洲区交界",
+      "regionKey": "songyun",
+      "regionNearArt": "yunrong-near.webp",
+      "regionView": {
+        "focus": [
+          30,
+          42
+        ],
+        "details": [
+          {
+            "title": "五间敞轩",
+            "text": "倚山临水的五间敞轩有历史依据，开敞木构把目光引向山水。",
+            "x": 30,
+            "y": 42
+          },
+          {
+            "title": "云与水态",
+            "text": "此景位于松云峡口旷观西南；溪岸和云影在画中重组，不是现状测绘。",
+            "x": 72,
+            "y": 76
+          }
+        ],
+        "water": [
+          37,
+          68,
+          63,
+          30
+        ],
+        "interpretation": "画面依据已核实的历史位置、形制与题名作意境演绎；山水、院落、陈设和相对位置不是实测复原，也不代表今日存状。"
+      }
     },
     {
       "id": "k29",
@@ -1072,7 +1226,7 @@
       "region": "山地",
       "locationHint": "榛子峪口南坡及对面阳坡",
       "presentCondition": "现状待核实",
-      "artStatus": "筹备中",
+      "artStatus": "区域与近观可游览",
       "overviewSpotId": null,
       "sourceRefs": [
         "Q36",
@@ -1085,7 +1239,31 @@
           "relation": "官网条目标题；亭是坡景中的建筑，不是完全同义词"
         }
       ],
-      "researchRegion": "山岳区"
+      "researchRegion": "山岳区",
+      "regionKey": "zhenzi",
+      "regionNearArt": "xunlu-near.webp",
+      "regionView": {
+        "focus": [
+          73,
+          47
+        ],
+        "details": [
+          {
+            "title": "八角望鹿亭",
+            "text": "景区记述望鹿亭为单檐攒尖八角形制。画中人物为静态绘景。",
+            "x": 73,
+            "y": 47
+          },
+          {
+            "title": "坡上鹿影",
+            "text": "题名“驯鹿”不等于北极驯鹿属；画中以梅花鹿写意，旧记鹿群不保证今日能见。",
+            "x": 22,
+            "y": 78
+          }
+        ],
+        "water": null,
+        "interpretation": "画面依据已核实的历史位置、形制与题名作意境演绎；山水、院落、陈设和相对位置不是实测复原，也不代表今日存状。"
+      }
     },
     {
       "id": "q08",
@@ -1652,14 +1830,44 @@
       "region": "山地",
       "locationHint": "青枫绿屿",
       "presentCondition": "现状待核实",
-      "artStatus": "筹备中",
+      "artStatus": "区域与近观可游览",
       "overviewSpotId": null,
       "sourceRefs": [
         "Q36",
         "乾隆36-RESEARCH"
       ],
       "description": "罨画窗隶属青枫绿屿组群。理解此景，不妨把注意力放在“窗”与“画”的关系上：窗景会限制视线，也使远近山色形成可供凝望的画面。这是一种题名意境的解读。它提醒我们，园林的美不只在建筑本身，也在建筑如何组织观看；具体窗位、原貌和现存情况仍待进一步核实。",
-      "researchRegion": "山岳区"
+      "researchRegion": "山岳区",
+      "regionKey": "qingfeng",
+      "regionNearArt": "yanhua-near.webp",
+      "regionView": {
+        "focus": [
+          55,
+          44
+        ],
+        "details": [
+          {
+            "title": "罨画窗景",
+            "text": "此景属于青枫绿屿组群。以窗为框阅读景物，不虚构独立大殿或确切营建年代。",
+            "x": 55,
+            "y": 44
+          },
+          {
+            "title": "框景与木格",
+            "text": "窗格、室内家具和庭院细部为艺术演绎，非已核实的原样陈设。",
+            "x": 29,
+            "y": 22
+          }
+        ],
+        "water": null,
+        "interpretation": "画面依据已核实的历史位置、形制与题名作意境演绎；山水、院落、陈设和相对位置不是实测复原，也不代表今日存状。",
+        "rainWindow": [
+          20,
+          14,
+          67,
+          56
+        ]
+      }
     },
     {
       "id": "q28",
@@ -1669,14 +1877,38 @@
       "region": "山地",
       "locationHint": "松云峡一带",
       "presentCondition": "现状待核实",
-      "artStatus": "筹备中",
+      "artStatus": "区域与近观可游览",
       "overviewSpotId": null,
       "sourceRefs": [
         "Q36",
         "乾隆36-RESEARCH"
       ],
       "description": "凌太虚是一座以向天空舒展的意趣见长的方亭。景区资料记载，它建于乾隆十六年（1751），坐东朝西，位于松云峡北山麓，采用单檐、四角攒尖的布瓦屋顶。《热河志》以清朗之气和凌云之感描述这里。理解这处景观，可以留意亭子开放的轮廓与周围山林的关系：小体量建筑让人的视线向外延伸，名称也随之把观景体验推向高远。这是对园林意境的解读。",
-      "researchRegion": "山岳区·松云峡北山麓"
+      "researchRegion": "山岳区·松云峡北山麓",
+      "regionKey": "songyun",
+      "regionNearArt": "lingtai-near.webp",
+      "regionView": {
+        "focus": [
+          77,
+          43
+        ],
+        "details": [
+          {
+            "title": "单檐方亭",
+            "text": "1751年营建的历史记述与单檐方亭形制有据，不据此宣称眼前是原存构件。",
+            "x": 77,
+            "y": 43
+          },
+          {
+            "title": "向西远望",
+            "text": "亭坐东朝西；远景、松石及平台是写意组织，非精确实地视线。",
+            "x": 28,
+            "y": 46
+          }
+        ],
+        "water": null,
+        "interpretation": "画面依据已核实的历史位置、形制与题名作意境演绎；山水、院落、陈设和相对位置不是实测复原，也不代表今日存状。"
+      }
     },
     {
       "id": "q29",
