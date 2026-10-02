@@ -8,6 +8,10 @@
 
 区域纵深阶段新增 `ruyi-island.webp`、`mountain-region.webp`、`wushu-close.webp`、`yanxun-close.webp`、`shuifang-close.webp`，并重绘 `near-yanyu.webp` 的人物船只及 `palace-hall.webp`、`plains-wenyuan-clean.webp` 的左缘地貌。上述画面由本项目用图像生成工具按原创提示词制作。对应原始 PNG 保存在 `sources/region-art/`，WebP 是运行时压缩版。提示词与资料核对见 [docs/region-stage-1.md](docs/region-stage-1.md)。生成画面不是景区实拍、官方地图或可靠的历史复原。
 
+如意洲近观阶段另生成西岭晨霞、金莲映日、云帆月舫、澄波叠翠、观莲所、清晖亭、般若相、沧浪屿、一片云九幅独立近景，并以单檐方亭和园外借景关系修正山地画面。原始 PNG 保存在 `sources/ruyi-depth-art/`；`public/art/` 中相应 WebP 是运行压缩版。图像按既有研究资料独立构思，细部属意境演绎，不将未核实的建筑形制、位置和现状画作事实。名单、体积与审图要点见 [如意洲近观验收记录](docs/ruyi-depth-review.md)。
+
+构建保留运行所需的人物、动物、船及透明前景 PNG；22 张已由 WebP 替代或未引用的旧景绘 PNG 留作源文件归档，不复制到 `dist/`，也不列入运行哈希清单。
+
 ## 界面图标
 
 `public/art/github-mark.svg` 取自 GitHub 的 [Primer Octicons](https://github.com/primer/octicons/blob/main/icons/mark-github-16.svg)，仅用于标识通往本项目 GitHub 仓库的链接。Octicons 依 MIT 许可发布，版权为 GitHub Inc.；许可文本保存在 [sources/OCTICONS-LICENSE.md](sources/OCTICONS-LICENSE.md)。

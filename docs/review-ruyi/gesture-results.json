@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "title": "无暑清凉",
+    "details": [
+      "1 · 门殿与中轴",
+      "2 · 入园层次"
+    ],
+    "readingCollapsed": true,
+    "zoom": "108%"
+  },
+  "pinch": {
+    "zoom": "240%",
+    "transform": "translate3d(-2220.34px, -663.378px, 0px) scale(2.4)",
+    "scroll": [
+      0,
+      0
+    ]
+  },
+  "touchPan": "translate3d(-2390.34px, -603.378px, 0px) scale(2.4)",
+  "focus": {
+    "title": "入园层次",
+    "shown": true
+  },
+  "reading": {
+    "expanded": "true",
+    "textVisible": true
+  },
+  "tabWrap": "regionNearViewport",
+  "shiftTabWrap": "regionNearReset",
+  "tabSequence": [
+    {
+      "name": "细看门殿与中轴",
+      "inside": true,
+      "scroll": 0
+    },
+    {
+      "name": "细看入园层次",
+      "inside": true,
+      "scroll": 0
+    },
+    {
+      "name": "regionNearBack",
+      "inside": true,
+      "scroll": 0
+    },
+    {
+      "name": "regionNearFocusClose",
+      "inside": true,
+      "scroll": 0
+    },
+    {
+      "name": "1 · 门殿与中轴",
+      "inside": true,
+      "scroll": 0
+    },
+    {
+      "name": "2 · 入园层次",
+      "inside": true,
+      "scroll": 0
+    },
+    {
+      "name": "regionNearRead",
+      "inside": true,
+      "scroll": 0
+    },
+    {
+      "name": "regionNearZoomOut",
+      "inside": true,
+      "scroll": 0
+    },
+    {
+      "name": "regionNearZoomIn",
+      "inside": true,
+      "scroll": 0
+    },
+    {
+      "name": "regionNearReset",
+      "inside": true,
+      "scroll": 0
+    },
+    {
+      "name": "regionNearViewport",
+      "inside": true,
+      "scroll": 0
+    },
+    {
+      "name": "细看门殿与中轴",
+      "inside": true,
+      "scroll": 0
+    },
+    {
+      "name": "细看入园层次",
+      "inside": true,
+      "scroll": 0
+    }
+  ],
+  "return": {
+    "same": true,
+    "focus": "regionBack",
+    "nearHidden": true
+  },
+  "error": {
+    "state": "error",
+    "retryVisible": true,
+    "viewportInert": true
+  },
+  "retry": {
+    "state": "ready",
+    "retryHidden": true
+  }
+}

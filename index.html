@@ -124,7 +124,27 @@
           <div class="region-tools"><span>拖动画面 · 探访园中景</span><button id="regionDay" type="button" aria-label="切换昼夜">昼夜</button><button id="regionRain" type="button" aria-label="切换晴雨">晴雨</button><button id="regionSound" type="button" aria-label="切换音乐">音乐</button></div>
           <aside class="region-detail"><small id="regionPosition">中轴 · 写意位置</small><h3 id="regionSpotTitle">无暑清凉</h3><p id="regionSpotBody"></p><p id="regionSpotStatus" class="region-status"></p><div class="region-detail-actions"><button id="regionNearBtn" type="button">走近此景 ↗</button></div></aside>
           <nav id="regionList" class="region-list" aria-label="区域景点，可横向滑动"></nav>
-          <section id="regionNear" class="region-near" role="dialog" aria-modal="true" aria-labelledby="regionNearTitle" hidden><img id="regionNearArt" alt="" draggable="false" /><div class="region-weather" aria-hidden="true"></div><div class="region-rain" aria-hidden="true"></div><header><button id="regionNearBack" type="button">← 返回区域原位</button><span>景点近观 · 写意复原</span></header><div class="region-near-copy"><small>史料景名 · 画面并非现状测绘</small><h3 id="regionNearTitle"></h3><p id="regionNearText"></p></div></section>
+          <section id="regionNear" class="region-near" role="dialog" aria-modal="true" aria-labelledby="regionNearTitle" data-state="loading" hidden>
+            <div id="regionNearViewport" class="region-near-viewport" role="group" tabindex="0" aria-label="可探索的近景画作" aria-describedby="regionNearHint" aria-busy="true">
+              <div id="regionNearCanvas" class="region-near-canvas">
+                <img id="regionNearArt" alt="" draggable="false" decoding="async" />
+                <div id="regionNearWater" class="region-near-water" aria-hidden="true" hidden></div>
+                <div class="region-near-mist" aria-hidden="true"></div>
+                <div id="regionNearTargets" class="region-near-targets"></div>
+              </div>
+              <div class="region-weather" aria-hidden="true"></div><div class="region-rain" aria-hidden="true"></div>
+            </div>
+            <header><button id="regionNearBack" type="button">← 返回区域原位</button><span id="regionNearWeather">景点近观 · 意境演绎</span></header>
+            <div id="regionNearLoad" class="region-near-load"><p id="regionNearLoadText" role="status" aria-live="polite">正在展开画作…</p><button id="regionNearRetry" type="button" hidden>重新加载画作</button></div>
+            <aside id="regionNearFocusCard" class="region-near-focus-card" aria-live="polite" hidden><button id="regionNearFocusClose" type="button" aria-label="收起焦点说明">×</button><small>画中细看</small><h4 id="regionNearFocusTitle"></h4><p id="regionNearFocusText"></p></aside>
+            <div class="region-near-copy">
+              <small>史料景名 · 意境演绎</small><h3 id="regionNearTitle"></h3>
+              <div id="regionNearFocusList" class="region-near-focus-list" aria-label="选择画中焦点"></div>
+              <button id="regionNearRead" class="region-near-read" type="button" aria-expanded="false" aria-controls="regionNearReading">读此景 ＋</button>
+              <div id="regionNearReading" class="region-near-reading" hidden><p id="regionNearText"></p><p id="regionNearInterpretation" class="region-near-interpretation"></p></div>
+            </div>
+            <div class="region-near-camera-ui"><p id="regionNearHint">拖动画作 · 双指或滚轮缩放<br /><span>键盘方向键移景，＋／－缩放</span></p><div class="region-near-camera-tools" aria-label="近景镜头控制"><button id="regionNearZoomOut" type="button" aria-label="缩小近景">−</button><output id="regionNearZoom" aria-label="近景缩放比例">100%</output><button id="regionNearZoomIn" type="button" aria-label="放大近景">＋</button><button id="regionNearReset" type="button">归位</button></div></div>
+          </section>
         </section>
         <div id="atlasDialog" class="atlas-dialog" role="dialog" aria-modal="true" aria-labelledby="atlasTitle" hidden><div class="atlas-shell"><header><div><small>康熙三十六景 · 乾隆三十六景</small><h2 id="atlasTitle">七十二景图鉴</h2></div><button id="atlasClose" type="button" aria-label="关闭图鉴">×</button></header><p class="atlas-intro">七十二景是两朝题名的景致，不等于七十二座现存建筑。当前仅部分画面可进入；未核实的位置与现状如实标注。</p><div class="atlas-filters"><label>搜索景名或别名<input id="atlasSearch" type="search" placeholder="如：无暑清凉" /></label><label>朝代<select id="atlasDynasty"><option value="">全部</option><option value="康熙">康熙</option><option value="乾隆">乾隆</option></select></label><label>区域<select id="atlasRegion"><option value="">全部</option><option value="如意洲">如意洲</option><option value="湖洲区">湖洲区</option><option value="宫殿区">宫殿区</option><option value="平原区">平原区</option><option value="山地">山地</option><option value="待核实">区域待核实</option></select></label><label>游览状态<select id="atlasStatus"><option value="">全部</option><option value="visited">已游览</option><option value="ready">可游览</option><option value="planned">筹备中</option></select></label></div><div class="atlas-content"><div><p id="atlasCount" class="atlas-count"></p><div id="atlasList" class="atlas-list"></div></div><aside id="atlasDetail" class="atlas-detail" aria-live="polite"></aside></div></div></div>
         <button id="skipEntryBtn" class="skip-entry" type="button" hidden>跳过展卷动画 →</button>

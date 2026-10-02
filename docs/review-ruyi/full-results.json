@@ -1,0 +1,494 @@
+{
+  "scenes": [
+    {
+      "name": "无暑清凉",
+      "art": "/art/wushu-close.webp",
+      "backgroundInert": true,
+      "focusCount": 2,
+      "natural": [
+        1774,
+        887
+      ],
+      "overflow": false,
+      "title": "无暑清凉",
+      "visited": true,
+      "returnExact": true
+    },
+    {
+      "name": "延薰山馆",
+      "art": "/art/yanxun-close.webp",
+      "backgroundInert": true,
+      "focusCount": 2,
+      "natural": [
+        1983,
+        793
+      ],
+      "overflow": false,
+      "title": "延薰山馆",
+      "visited": true,
+      "returnExact": true
+    },
+    {
+      "name": "水芳岩秀",
+      "art": "/art/shuifang-close.webp",
+      "backgroundInert": true,
+      "focusCount": 2,
+      "natural": [
+        1981,
+        793
+      ],
+      "overflow": false,
+      "title": "水芳岩秀",
+      "visited": true,
+      "returnExact": true
+    },
+    {
+      "name": "一片云",
+      "art": "/art/yipianyun-near.webp",
+      "backgroundInert": true,
+      "focusCount": 2,
+      "natural": [
+        1983,
+        793
+      ],
+      "overflow": false,
+      "title": "一片云",
+      "visited": true,
+      "returnExact": true
+    },
+    {
+      "name": "般若相",
+      "art": "/art/banruo-near.webp",
+      "backgroundInert": true,
+      "focusCount": 2,
+      "natural": [
+        1983,
+        793
+      ],
+      "overflow": false,
+      "title": "般若相",
+      "visited": true,
+      "returnExact": true
+    },
+    {
+      "name": "清晖亭",
+      "art": "/art/qinghui-near.webp",
+      "backgroundInert": true,
+      "focusCount": 2,
+      "natural": [
+        1983,
+        793
+      ],
+      "overflow": false,
+      "title": "清晖亭",
+      "visited": true,
+      "returnExact": true
+    },
+    {
+      "name": "金莲映日",
+      "art": "/art/jinlian-near.webp",
+      "backgroundInert": true,
+      "focusCount": 2,
+      "natural": [
+        1983,
+        793
+      ],
+      "overflow": false,
+      "title": "金莲映日",
+      "visited": true,
+      "returnExact": true
+    },
+    {
+      "name": "沧浪屿",
+      "art": "/art/canglang-near.webp",
+      "backgroundInert": true,
+      "focusCount": 2,
+      "natural": [
+        1983,
+        793
+      ],
+      "overflow": false,
+      "title": "沧浪屿",
+      "visited": true,
+      "returnExact": true
+    },
+    {
+      "name": "云帆月舫",
+      "art": "/art/yunfan-near.webp",
+      "backgroundInert": true,
+      "focusCount": 2,
+      "natural": [
+        1983,
+        793
+      ],
+      "overflow": false,
+      "title": "云帆月舫",
+      "visited": true,
+      "returnExact": true
+    },
+    {
+      "name": "西岭晨霞",
+      "art": "/art/xiling-near.webp",
+      "backgroundInert": true,
+      "focusCount": 2,
+      "natural": [
+        1983,
+        793
+      ],
+      "overflow": false,
+      "title": "西岭晨霞",
+      "visited": true,
+      "returnExact": true
+    },
+    {
+      "name": "澄波叠翠",
+      "art": "/art/chengbo-near.webp",
+      "backgroundInert": true,
+      "focusCount": 2,
+      "natural": [
+        1983,
+        793
+      ],
+      "overflow": false,
+      "title": "澄波叠翠",
+      "visited": true,
+      "returnExact": true
+    },
+    {
+      "name": "观莲所",
+      "art": "/art/guanlian-near.webp",
+      "backgroundInert": true,
+      "focusCount": 2,
+      "natural": [
+        1983,
+        793
+      ],
+      "overflow": false,
+      "title": "观莲所",
+      "visited": true,
+      "returnExact": true
+    },
+    {
+      "name": "四面云山",
+      "art": "/art/simian-square-near.webp",
+      "backgroundInert": true,
+      "focusCount": 2,
+      "natural": [
+        1983,
+        793
+      ],
+      "overflow": false,
+      "title": "四面云山",
+      "visited": true,
+      "returnExact": true
+    },
+    {
+      "name": "锤峰落照",
+      "art": "/art/chuifeng-borrowed-near.webp",
+      "backgroundInert": true,
+      "focusCount": 2,
+      "natural": [
+        1983,
+        793
+      ],
+      "overflow": false,
+      "title": "锤峰落照",
+      "visited": true,
+      "returnExact": true
+    }
+  ],
+  "mobile": [
+    {
+      "back": {
+        "bottom": 57,
+        "h": 44,
+        "right": 118.5625,
+        "w": 104.171875,
+        "x": 14.390625,
+        "y": 13
+      },
+      "controls": [
+        {
+          "h": 44,
+          "id": "regionNearBack",
+          "w": 104.171875
+        },
+        {
+          "h": 44,
+          "id": "",
+          "w": 83.109375
+        },
+        {
+          "h": 44,
+          "id": "",
+          "w": 83.984375
+        },
+        {
+          "h": 44,
+          "id": "regionNearRead",
+          "w": 56.375
+        },
+        {
+          "h": 44,
+          "id": "regionNearZoomOut",
+          "w": 44
+        },
+        {
+          "h": 44,
+          "id": "regionNearZoomIn",
+          "w": 44
+        },
+        {
+          "h": 44,
+          "id": "regionNearReset",
+          "w": 44
+        }
+      ],
+      "overflow": false,
+      "reading": {
+        "bottom": 765,
+        "h": 208.5,
+        "right": 342,
+        "w": 324,
+        "x": 18,
+        "y": 556.5
+      },
+      "scroll": [
+        0,
+        0
+      ],
+      "width": 360
+    },
+    {
+      "back": {
+        "bottom": 57,
+        "h": 44,
+        "right": 119.765625,
+        "w": 104.171875,
+        "x": 15.59375,
+        "y": 13
+      },
+      "controls": [
+        {
+          "h": 44,
+          "id": "regionNearBack",
+          "w": 104.171875
+        },
+        {
+          "h": 44,
+          "id": "",
+          "w": 83.109375
+        },
+        {
+          "h": 44,
+          "id": "",
+          "w": 83.984375
+        },
+        {
+          "h": 44,
+          "id": "regionNearRead",
+          "w": 56.375
+        },
+        {
+          "h": 44,
+          "id": "regionNearZoomOut",
+          "w": 44
+        },
+        {
+          "h": 44,
+          "id": "regionNearZoomIn",
+          "w": 44
+        },
+        {
+          "h": 44,
+          "id": "regionNearReset",
+          "w": 44
+        }
+      ],
+      "overflow": false,
+      "reading": {
+        "bottom": 765,
+        "h": 208.5,
+        "right": 370.5,
+        "w": 351,
+        "x": 19.5,
+        "y": 556.5
+      },
+      "scroll": [
+        0,
+        0
+      ],
+      "width": 390
+    },
+    {
+      "back": {
+        "bottom": 57,
+        "h": 44,
+        "right": 121.359375,
+        "w": 104.171875,
+        "x": 17.1875,
+        "y": 13
+      },
+      "controls": [
+        {
+          "h": 44,
+          "id": "regionNearBack",
+          "w": 104.171875
+        },
+        {
+          "h": 44,
+          "id": "",
+          "w": 83.109375
+        },
+        {
+          "h": 44,
+          "id": "",
+          "w": 83.984375
+        },
+        {
+          "h": 44,
+          "id": "regionNearRead",
+          "w": 56.375
+        },
+        {
+          "h": 44,
+          "id": "regionNearZoomOut",
+          "w": 44
+        },
+        {
+          "h": 44,
+          "id": "regionNearZoomIn",
+          "w": 44
+        },
+        {
+          "h": 44,
+          "id": "regionNearReset",
+          "w": 44
+        }
+      ],
+      "overflow": false,
+      "reading": {
+        "bottom": 765,
+        "h": 189.8125,
+        "right": 408.5,
+        "w": 387,
+        "x": 21.5,
+        "y": 575.1875
+      },
+      "scroll": [
+        0,
+        0
+      ],
+      "width": 430
+    }
+  ],
+  "failures": [],
+  "build": "1cca987bc61d",
+  "initialNetwork": [
+    {
+      "bytes": 640384,
+      "name": "/art/yan-yu-lake.webp"
+    },
+    {
+      "bytes": 67166,
+      "name": "/style.d601df6a0602.css"
+    },
+    {
+      "bytes": 72229,
+      "name": "/app.731370001404.js"
+    },
+    {
+      "bytes": 31714,
+      "name": "/region.js"
+    },
+    {
+      "bytes": 401302,
+      "name": "/art/lake-passage-no-sun.webp"
+    },
+    {
+      "bytes": 538912,
+      "name": "/art/jinshan-moonlight.webp"
+    },
+    {
+      "bytes": 513420,
+      "name": "/art/palace-hall.webp"
+    },
+    {
+      "bytes": 532848,
+      "name": "/art/plains-wenyuan-clean.webp"
+    },
+    {
+      "bytes": 618870,
+      "name": "/art/mountain-view.webp"
+    },
+    {
+      "bytes": 1430587,
+      "name": "/art/painted-boat.png"
+    },
+    {
+      "bytes": 1861591,
+      "name": "/art/person-red.png"
+    },
+    {
+      "bytes": 1688895,
+      "name": "/art/deer-stag-alert.png"
+    },
+    {
+      "bytes": 2258645,
+      "name": "/art/deer-stag-graze.png"
+    },
+    {
+      "bytes": 1482225,
+      "name": "/art/hammer-foreground.png"
+    },
+    {
+      "bytes": 1795333,
+      "name": "/art/deer-stag-walk.png"
+    },
+    {
+      "bytes": 123622,
+      "name": "/css2"
+    },
+    {
+      "bytes": 559316,
+      "name": "/art/yan-yu-lake-clean.webp"
+    },
+    {
+      "bytes": 822,
+      "name": "/art/github-mark.svg"
+    },
+    {
+      "bytes": 637,
+      "name": "/art/palace-seam-mask.svg"
+    },
+    {
+      "bytes": 2103810,
+      "name": "/art/person-blue-man.png"
+    },
+    {
+      "bytes": 2201776,
+      "name": "/art/person-ochre-woman.png"
+    },
+    {
+      "bytes": 1956274,
+      "name": "/art/person-blue-woman.png"
+    },
+    {
+      "bytes": 2375369,
+      "name": "/art/deer-doe-graze.png"
+    },
+    {
+      "bytes": 2241005,
+      "name": "/art/deer-doe-alert.png"
+    },
+    {
+      "bytes": 2026831,
+      "name": "/art/person-green-man.png"
+    },
+    {
+      "bytes": 83395,
+      "name": "/atlas-data.json"
+    }
+  ],
+  "errors": ""
+}

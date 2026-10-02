@@ -4,6 +4,33 @@ import { join, relative, sep } from 'node:path';
 
 const digest = (bytes) => createHash('sha256').update(bytes).digest('hex').slice(0, 12);
 const publicRoot = 'public';
+// 景绘原图与旧版本留在 public 归档；发布包使用压缩后的 WebP。
+const excludedBuildAssets = new Set([
+  'art/hammer-close.png',
+  'art/jinshan-moonlight-clean.png',
+  'art/jinshan-moonlight.png',
+  'art/lake-passage-no-sun.png',
+  'art/lake-passage.png',
+  'art/mountain-view.png',
+  'art/near-danbo.png',
+  'art/near-deer.png',
+  'art/near-dike.png',
+  'art/near-jinshan.png',
+  'art/near-lizheng.png',
+  'art/near-moon.png',
+  'art/near-shuixin.png',
+  'art/near-simian.png',
+  'art/near-wanshu.png',
+  'art/near-wenjin.png',
+  'art/near-yanyu.png',
+  'art/palace-hall.png',
+  'art/plains-wenyuan-clean.png',
+  'art/plains-wenyuan.png',
+  'art/yan-yu-lake-clean.png',
+  'art/yan-yu-lake.png'
+]);
+const assetKey = (path) => relative(publicRoot, path).split(sep).join('/');
+const includeAsset = (path) => !excludedBuildAssets.has(assetKey(path));
 
 async function listFiles(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -16,11 +43,12 @@ async function listFiles(directory) {
 
 await rm('dist', { recursive: true, force: true });
 await mkdir('dist', { recursive: true });
-await cp(publicRoot, 'dist', { recursive: true });
+await cp(publicRoot, 'dist', { recursive: true, filter: includeAsset });
 
 const assetHashes = {};
 for (const path of await listFiles(publicRoot)) {
-  const key = relative(publicRoot, path).split(sep).join('/');
+  if (!includeAsset(path)) continue;
+  const key = assetKey(path);
   assetHashes[key] = digest(await readFile(path));
 }
 

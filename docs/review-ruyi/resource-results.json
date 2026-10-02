@@ -1,0 +1,13 @@
+{
+  "build": "83eed6fbcb9a",
+  "runtimeFiles": 63,
+  "runtimeBytes": 61586000,
+  "imageBytes": 55131329,
+  "audioBytes": 6176928,
+  "atlasEntries": 72,
+  "ready": 18,
+  "regionNearCount": 14,
+  "excludedPngBytes": 71551933,
+  "allManifestFilesExist": true,
+  "retainedForegrounds": true
+}

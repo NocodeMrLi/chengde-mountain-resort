@@ -16,7 +16,7 @@ const spots = [
   { id:'danbo', name:'澹泊敬诚', area:'宫殿区 · 澹泊敬诚殿', subtitle:'朴素殿宇，静看湖山。', description:'澹泊敬诚殿始建于康熙五十年，乾隆十九年以楠木改建，是山庄正宫的重要殿宇。清帝曾在此举行庆典、接受朝觐，并接见边疆首领与外国使节。朴素木构与严整空间共同体现其礼仪性；数字近景不等同实地建筑细部。', panel:3, x:.62, y:.35, icon:'✦' },
   { id:'wanshu', name:'万树园', area:'平原区 · 万树园', subtitle:'千树成林，草木自宽。', description:'万树园位于山庄北部平原区，疏林与草场交接，呈现有别于湖区的开阔北方原野。清代皇帝曾在这一带设宴，接见王公、各族首领和外国使节。画中保留林地与空地的尺度感，具体树木分布并非历史复原。', panel:4, x:.35, y:.51, icon:'⌁' },
   { id:'wenjin', name:'文津阁', area:'平原区 · 文津阁', subtitle:'书藏林泉，阁映清池。', description:'文津阁建于乾隆三十九年，借鉴宁波天一阁，是为收藏《四库全书》营造的藏书楼。外观看似两层，内部另设暗层以利避光；阁前池水兼顾园景和防火。画卷呈现书阁、池水、假山的关系，建筑细节仍为写意。', panel:4, x:.84, y:.44, icon:'✦' },
-  { id:'simian', name:'四面云山', area:'山峦区 · 四面云山', subtitle:'登临高处，四面皆云山。', description:'四面云山亭位于山庄高处，始建于康熙四十八年，以十六根柱支撑。亭外山岭远近叠落，登高后视线可向多个方向舒展；清代皇帝也曾在此赋诗。数字区域和近景强调登高望远，不提供真实步道或坐标。', panel:5, x:.72, y:.37, icon:'✦' },
+  { id:'simian', name:'四面云山', area:'山峦区 · 四面云山', subtitle:'登临高处，四面皆云山。', description:'四面云山亭位于山庄高处，为十六柱、单檐攒尖顶的方亭。亭外山岭远近叠落，登高后视线可向多个方向舒展；清代皇帝也曾在此赋诗。数字区域和近景强调登高望远，不提供真实步道或坐标。', panel:5, x:.72, y:.37, icon:'✦' },
   { id:'chuifeng', name:'锤峰落照', area:'园外借景 · 锤峰落照', subtitle:'夕阳西下，磬锤峰如剪影。', description:'锤峰落照是山庄园内望向园外磬锤峰的借景。山峰位于武烈河东侧，因形似敲磬之锤得名；夕照让峰影轮廓尤为醒目。画中的远峰依据山形写意创作，不表示山庄园内可以步行抵达峰顶。', panel:5, x:.95, y:.19, icon:'◇' }
 ];
 const spotViewpoints={
@@ -66,8 +66,8 @@ const destinationArt={
   danbo:['near-danbo.webp','宫殿区 · 澹泊敬诚近景','观殿','59%','38%'],
   wanshu:['near-wanshu.webp','平原区 · 万树园近景','观林','54%','49%'],
   wenjin:['near-wenjin.webp','平原区 · 文津阁近景','观阁','62%','39%'],
-  simian:['near-simian.webp','山峦区 · 四面云山近景','登亭','57%','39%'],
-  chuifeng:['hammer-close.webp','园外借景 · 磬锤峰','观峰','66%','27%'],
+  simian:['simian-square-near.webp','山峦区 · 四面云山近景','登亭','75%','38%'],
+  chuifeng:['chuifeng-borrowed-near.webp','园外借景 · 磬锤峰','观峰','73%','28%'],
   deer:['near-deer.webp','平原区 · 梅花鹿观察','观鹿','59%','47%']
 };
 const guideScripts={
@@ -80,7 +80,7 @@ const guideScripts={
   danbo:{lines:['把目光停在殿宇和木构上。澹泊敬诚殿沉静朴素，却是山庄重要的礼仪空间。','大殿始建于康熙五十年，乾隆十九年以楠木改建。清帝曾在这里举行庆典、接受朝觐，也接见边疆首领与外国使节。']},
   wanshu:{lines:['看树木之间留出的大块开阔地，万树园让山庄显出北方原野的气息。','这里位于平原区，草场与林地相接。清代皇帝曾在这一带设宴，接见王公、各族首领和外国使节。眼前疏朗的空间，也曾容纳隆重的交往场面。']},
   wenjin:{lines:['先看文津阁的外观：能看到两层楼，内部却另藏一层。','它建于乾隆三十九年，借鉴宁波天一阁，是为收藏《四库全书》营造的藏书楼。暗层有利于避光，阁前水池也兼顾防火，园景中藏着实用的心思。']},
-  simian:{lines:['把视线放远，看看山岭怎样一层层延伸。四面云山亭建在山庄高处，始建于康熙四十八年。','亭子由十六根柱子支撑，屋顶收拢到尖顶。清代皇帝曾在这里登高赋诗。我们也换几个方向看看，体会这座山地园林的尺度。']},
+  simian:{lines:['把视线放远，看看山岭怎样一层层延伸。四面云山亭建在山庄高处，以单檐方亭收拢一处停驻的空间。','亭子由十六根柱子支撑，屋顶收拢到尖顶。清代皇帝曾在这里登高赋诗。我们也换几个方向看看，体会这座山地园林的尺度。']},
   chuifeng:{lines:['先把目光越过园内山林，望向园外的磬锤峰。锤峰落照是山庄里的观景点，借的主景正是这座山峰。','磬锤峰俗称棒槌山，位于武烈河东侧。康熙因它形似敲磬的锤而赐名。眼前的近景依据山形写意创作，让我们细看它独特的轮廓。']},
   deer:{lines:['林缘的梅花鹿有时停步觅食，有时抬头警觉。','请在画中安静地观察，不追逐，也不惊扰它们。']}
 };
@@ -644,17 +644,28 @@ function openDepth(target,creature=deerHerd[0]){
     portal.classList.toggle('peak-close',key==='chuifeng');
     prepareGuide(key);
     if(key==='deer'){$('depthDeer').dataset.pose='alert';closeDeerNextAt=performance.now()+2400;}
-    if(spot)window.dispatchEvent(new CustomEvent('chengde-spot-visited',{detail:{name:spot.name}}));
     depthState='opening';
     requestAnimationFrame(()=>requestAnimationFrame(()=>{
-      if(depthState==='opening'){portal.classList.add('open');$('depthBack').focus({preventScroll:true});}
+      if(serial!==depthSerial||depthState!=='opening')return;
+      portal.classList.add('open');$('depthBack').focus({preventScroll:true});
+      if(spot){
+        visited.add(spot.id);
+        $('visitedCount').textContent=String(visited.size).padStart(2,'0');
+        window.dispatchEvent(new CustomEvent('chengde-spot-visited',{detail:{name:spot.name}}));
+      }
     }));
     depthTimer=setTimeout(()=>{if(depthState==='opening'){depthState='open';portal.classList.add('ready');}},reducedMotion.matches?30:1700);
   };
   const preload=(src)=>new Promise((resolve,reject)=>{
     const image=new Image();
     const timeout=setTimeout(()=>reject(new Error(`Image timed out: ${src}`)),9000);
-    image.onload=()=>{clearTimeout(timeout);image.decode?.().then(resolve,resolve)??resolve();};
+    image.onload=async()=>{
+      try{
+        await image.decode?.();
+        if(!image.naturalWidth||!image.naturalHeight)throw new Error(`Image empty: ${src}`);
+        clearTimeout(timeout);resolve();
+      }catch(error){clearTimeout(timeout);reject(error);}
+    };
     image.onerror=()=>{clearTimeout(timeout);reject(new Error(`Image failed: ${src}`));};
     image.src=src;
   });
@@ -678,8 +689,6 @@ function showSpot(spot, move=true, enterDepth=true){
   if(depthState==='closing')closeDepth(true);
   if(boating && move)setBoating(false);
   activeSpot=spot;
-  visited.add(spot.id);
-  $('visitedCount').textContent=String(visited.size).padStart(2,'0');
   if(move&&enterDepth){openDepth(spot);return;}
   $('storyIndex').textContent=`湖山其${['一','二','三','四','五','六','七','八','九','十','十一'][spots.indexOf(spot)]}`;
   $('storyTitle').textContent=spot.name;

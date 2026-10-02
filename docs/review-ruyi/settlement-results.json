@@ -1,0 +1,27 @@
+{
+  "decodeFailure": {
+    "state": "error",
+    "visited": []
+  },
+  "timeoutLateSuccess": {
+    "state": "error",
+    "visited": []
+  },
+  "retry": {
+    "state": "ready",
+    "visited": [
+      "k03"
+    ]
+  },
+  "keyboardOpenedCard": true,
+  "keyboardClosedCard": {
+    "hidden": true,
+    "focus": "细看门殿与中轴",
+    "pressed": "false",
+    "verification": "agent-browser press Enter（真实键盘按钮激活）"
+  },
+  "atlasRoundtrip": {
+    "focus": "ruyi",
+    "portalHidden": true
+  }
+}
