@@ -2,7 +2,7 @@
 
 以承德避暑山庄为灵感创作的国风互动长卷。展开画卷，沿湖山游览，在烟雨楼等景点切换近景，并体验昼夜与晴雨变化。支持桌面和手机浏览器。
 
-**[在线游览](https://nocodemrli.github.io/chengde-mountain-resort/)** · [查看最新线上构建](https://nocodemrli.github.io/chengde-mountain-resort/deployment.json)
+源码按暂私有方案维护，本次新增成果未推到公开仓库；远端仓库将在新站验证后转为私有。**新版本尚未部署**；迁移前可访问[旧版站点](https://nocodemrli.github.io/chengde-mountain-resort/)，新地址在完成部署验证后更新。当前版本与更新内容见 [CHANGELOG.md](CHANGELOG.md)。
 
 ![山庄入画的入园画面](docs/images/entrance.jpg)
 
@@ -17,23 +17,27 @@
 
 ## 如何游览
 
-1. 打开[在线作品](https://nocodemrli.github.io/chengde-mountain-resort/)，选择“展卷入园”。首次加载会读取较大的绘景图片，请稍候。
+1. 打开公开作品网址，选择“展卷入园”。首次加载会读取较大的绘景图片，请稍候。
 2. 在画面上拖动，或使用鼠标滚轮浏览长卷；使用画面中的导航、景点标记跳转。点击景点标记可进入近景，再返回全景。
 3. 用底部和侧边控制切换景区、昼夜、烟雨与缩放；点击声音开关播放或静音古琴音乐。手机上可触摸拖动画面和点击控件。
 
-目前有**四个景区、11 处景点**。湖面、云雾、灯火和山林带有动态效果；梅花鹿可以移动并响应点击。画中的人物和画舫为静态绘景，**不提供人物行走或乘船操作**。景点讲解为文字，尚无语音讲解。
+主卷有四个景区和 11 处景点，另有 **72 景目录、18 个区域画卷、68 幅区域近观，以及 4 处主卷近观入口**。目录支持搜索，并保留游览进度；只有成功打开画面才计入游览。近观返回后恢复原来的画面位置和焦点，图片加载失败或超时可以重试。
+
+**84 段自托管男声讲解**覆盖主卷和 72 景全文，总长约 62 分钟。点击“听讲解”才加载和播放，可暂停、续播和重听；切景或关闭面板会停止讲解，切到后台会暂停。讲解期间背景音乐自动降低音量。讲解使用固定的普通话合成男声音色，不依赖浏览器随机选择系统声音。
+
+晴雨、昼夜可随时切换。雨滴具有长短、速度、透明度和远近差异，近景根据水面和室内窗口限定雨水与涟漪范围；隐藏页面会暂停，减少运动设置和性能降级会降低特效。夜间在部分建筑窗户与水面叠加暖光。梅花鹿可以移动并响应点击；画中的人物、船只和马保持静态绘景。
+
+“建议反馈”位于入园页和游览工具栏，可发送邮件或复制邮箱；复制不可用时可直接选择文本。网页不会自动发送邮件，也不收集反馈表单。
+
+画作之间仍有写意透视与色调差异，夜间灯光覆盖部分场景。手机布局、触摸及性能检查包含桌面浏览器模拟；真实手机、低端实体设备和物理双指操作尚未验证。音频经过完整解码和文稿覆盖检查，逐字读音与全部段落的听感仍需要人工抽听。
 
 画卷以景点和山庄地貌为依据进行写意组合，不能用于实地导航、建筑测绘或历史复原。磬锤峰在山庄园外，这里以园内借景呈现。本项目是独立创作，非景区官方产品。
 
 ## 本地运行
 
-需要 **Node.js 18 或更新版本**；项目没有第三方运行依赖。
+需要 **Node.js 20 或更新版本**；项目没有第三方运行依赖。构建校验音频时需要安装 `ffmpeg`（包含 `ffprobe`）；GitHub Actions 会检查并安装它。本地播放已有音频不需要语音模型或生成环境。
 
-```sh
-git clone https://github.com/NocodeMrLi/chengde-mountain-resort.git
-cd chengde-mountain-resort
-npm run dev
-```
+源码工作区仅对获授权维护者开放。在已有工作区运行 `npm run dev`。
 
 打开 <http://127.0.0.1:4173/>。端口被占用时，可用 `PORT=4174 npm run dev`。
 
@@ -46,9 +50,9 @@ npm run preview
 
 ## 发布与更新
 
-推送到 `main` 后，[Publish handscroll](.github/workflows/pages.yml) 工作流会构建并发布 `dist/` 到 GitHub Pages；Pages 的 Source 需设置为 **GitHub Actions**。部署完成后，仍使用上方同一个在线游览地址。发布及缓存刷新可能需要一些时间；若页面尚未更新，可查看 [Actions](https://github.com/NocodeMrLi/chengde-mountain-resort/actions) 和线上构建标识。
+私有仓库的 [Validate handscroll](.github/workflows/validate.yml) 工作流只进行校验与静态构建，不部署 GitHub Pages。公开站仅上传已审查的 `dist/`；部署目标需保持固定公开 URL，每次更新后核对 `/deployment.json` 与页面 `data-build`。托管迁移尚未完成，当前没有启用自动公开部署。
 
-构建脚本会给 JavaScript、CSS 文件名及图像、音频 URL 加内容指纹，以便新版本加载对应资源。只修改本地文件不会更新线上版本。
+构建脚本会给 JavaScript、CSS 文件名及图像、音频 URL 加内容指纹，以便新版本加载对应资源。发布包不包含源码映射、开发资料、原稿、母带、模型、推理环境或凭证。公开网页仍会向浏览器交付运行所需 HTML/CSS/JS、绘景和音频，私有源码仓库不保证访问者无法下载这些运行资源；授权范围另按许可说明。
 
 ## 项目文件
 
@@ -56,15 +60,25 @@ npm run preview
 | --- | --- |
 | `index.html`、`style.css`、`app.js` | 页面结构、视觉样式与交互 |
 | `public/art/` | 长卷、景点近景、人物、动物和遮罩素材 |
-| `public/audio/` | 古琴录音转码文件 |
+| `public/audio/` | 古琴录音、84 段讲解与逐段来源及校验清单 |
+| `public/weather.js`、`public/lighting.js` | 雨水、遮挡与夜间建筑光效 |
+| `public/guide.js`、`public/feedback.js` | 讲解播放器与联系入口 |
 | `scripts/build.mjs`、`server.mjs` | 静态构建、本地开发与预览 |
 | `docs/images/` | README 展示图 |
-| `ASSETS.md`、`sources/AUDIO-LICENSE.md` | 素材来源、改动及授权说明 |
+| `scripts/check-scenic-links.mjs`、`scripts/check-guides.mjs` | 72 景入口、文稿覆盖与完整音频解码校验 |
+| `ASSETS.md`、`sources/` | 素材、音乐、合成讲解和图标许可 |
 
 ## 许可与素材署名
 
-- **源代码**：[MIT 许可](LICENSE)。该许可不适用于下述图像和音乐。
+- **本版本自有新增成果**：[保留权利说明](LICENSE)。暂不开放新增代码、文案、绘景和合成讲解的另行使用许可；源码私有，网页提供在线游览。
+- **历史 MIT 版本**：此前已经按 MIT 公开的代码与其合法副本继续适用[原许可](licenses/LEGACY-MIT.md)，保留历史授权；此决定不能收回已授予的旧版本权利。
 - **美术**：`public/art/` 为本项目独立构思、借助 AI 图像工具制作和整理的素材；不属于 MIT 许可。单独复用或再发布请先联系维护者。README 展示图是该作品的截图。
 - **音乐**：[《平沙落雁》](https://commons.wikimedia.org/wiki/File:Pingsha_Luoyan.ogg)，演奏及录制：**Charlie Huang**，依据 [CC BY 2.5](https://creativecommons.org/licenses/by/2.5/) 使用。本站版本转为 AAC/M4A，并做轻微频段过滤；复用时须保留作者、来源、许可和改动说明。详见 [ASSETS.md](ASSETS.md)。
+- **合成讲解**：使用 Qwen3-TTS 的 Dylan 音色和 mlx-audio 离线生成，统一响度后编码为 AAC；模型、工具及输出的许可边界见 [讲解来源说明](sources/NARRATION-LICENSE.md)。发布包不包含模型权重、推理环境或母带。
+- **GitHub 图标**：来自 Octicons，依据 [MIT 许可](sources/OCTICONS-LICENSE.md) 使用。
+
+反馈使用网页的建议反馈邮箱入口。访客可以发送邮件，私有仓库的 Issues 不作为游客反馈入口；没有创建公开反馈仓库。
+
+想参与项目创作与完善的访客，可使用首页“建议反馈”或面板“申请参与项目”，通过邮件介绍方向；网站不会自动发邮件或自动授予协作者权限。
 
 参考作品仅用于研究互动长卷的呈现方式，本项目没有复制其代码或美术。

@@ -1,21 +1,22 @@
-MIT License
+山庄入画 · 当前版本自有新增成果授权说明
 
-Copyright (c) 2026 NocodeMrLi
+Copyright (c) 2026 NocodeMrLi. All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+本说明适用于当前版本中由项目权利人新增、且未另行授予开源许可的
+自有代码、文案、绘景及合成讲解，在项目权利人可适用的权利范围内保留权利。
+网站提供公开在线游览；公开访问、浏览器缓存或下载技术上的可行性，
+不等于授予对上述新增成果的复制、改编、再分发、转售或另行使用许可。
+除适用法律允许的情形或取得项目权利人书面许可外，请勿另行使用上述成果。
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+本说明不撤回、不限制或改写此前已经依据 MIT 许可公开的历史版本
+及其合法副本所获的授权。历史 MIT 许可正文保存在 licenses/LEGACY-MIT.md，
+对应版本的历史提交及许可证继续保留。历史授权不自动扩展到本次尚未
+以开源许可发布的新增成果。
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+第三方代码、音乐、图标、字体、模型和工具的权利及许可仍归各自权利人，
+不受本说明中的自有成果保留权利条款替代。详见 ASSETS.md、sources/。
+Charlie Huang 的背景音乐依据 CC BY 2.5；Octicons 图标依据 MIT；
+Qwen/MLX 模型与 mlx-audio 工具保留各自上游许可，模型和推理环境不随站点发布。
+
+本项目为写意文化展示，按现状提供，不构成官方导览、测绘或历史复原。
+其他用途及反馈请通过网站中的建议反馈入口联系项目权利人。

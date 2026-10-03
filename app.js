@@ -1,3 +1,7 @@
+const { guide: voiceGuide } = await import(assetUrlForModule('guide.js'));
+const { installDepthRain } = await import(assetUrlForModule('weather.js'));
+await import(assetUrlForModule('feedback.js'));
+function assetUrlForModule(path){const u=new URL(path,import.meta.url);const h=window.__ASSET_HASHES__?.[path];if(h)u.searchParams.set('v',h);return u.href;}
 const $ = (id) => document.getElementById(id);
 const assetUrl = (path) => {
   const url = new URL(path, import.meta.url);
@@ -7,22 +11,36 @@ const assetUrl = (path) => {
 };
 
 const spots = [
-  { id:'shuixin', name:'水心榭', area:'下湖 · 水心榭', subtitle:'四面皆景，水光与山色相接。', description:'亭榭位于下湖与银湖之间，南北各有牌坊。穿过水边廊榭，湖山便在四面徐徐展开。', panel:0, x:.105, y:.46, icon:'◇' },
-  { id:'dike', name:'芝径云堤', area:'湖区 · 芝径云堤', subtitle:'长堤如芝，浮于水上。', description:'长堤曲折分作三枝，连起环碧、如意洲与月色江声。沿着水岸缓行，一步便换一处风景。', panel:0, x:.335, y:.52, icon:'⌁' },
-  { id:'yanyu', name:'烟雨楼', area:'青莲岛 · 烟雨楼', subtitle:'青莲岛上，楼阁临水。', description:'烟雨楼面阔五间，分作两层，二层周围设有栏杆。凭栏望去，湖山相映；若逢细雨，楼影更觉空濛。', panel:0, x:.645, y:.39, icon:'✦' },
-  { id:'jinshan', name:'金山', area:'湖东 · 金山', subtitle:'山石叠起，殿阁随势而上。', description:'循石阶与爬山廊登高，层层屋檐间展开一湖风景。金山最高处为三层上帝阁。', panel:2, x:.35, y:.24, icon:'✦' },
-  { id:'moon', name:'月色江声', area:'洲岛 · 月色江声', subtitle:'古松掩映，庭院清幽。', description:'四进庭院藏于洲岛，自南向北由游廊相连。湖光与松声相伴，得一份山庄中的幽静。', panel:2, x:.81, y:.47, icon:'◇' },
-  { id:'lizheng', name:'丽正门', area:'宫殿区 · 丽正门', subtitle:'从御园正门，走入山庄。', description:'丽正门是山庄正门。门额以多种文字书写园名；从此步入，宫殿的庄重与园林的舒展交相展开。', panel:3, x:.15, y:.46, icon:'◇' },
-  { id:'danbo', name:'澹泊敬诚', area:'宫殿区 · 澹泊敬诚殿', subtitle:'朴素殿宇，静看湖山。', description:'澹泊敬诚殿是山庄正宫主殿，素以楠木殿闻名。这里没有繁复的金碧装饰，却自有清雅庄重的气度。', panel:3, x:.62, y:.35, icon:'✦' },
-  { id:'wanshu', name:'万树园', area:'平原区 · 万树园', subtitle:'千树成林，草木自宽。', description:'山庄北部平原林木葱茏、地势开阔。随游径走向万树园，远山、草地与疏林在眼前铺开。', panel:4, x:.35, y:.51, icon:'⌁' },
-  { id:'wenjin', name:'文津阁', area:'平原区 · 文津阁', subtitle:'书藏林泉，阁映清池。', description:'文津阁为清代藏书楼，建于山庄北部平原。阁前池水与假山、林木相映，是湖山之间的一处书香胜境。', panel:4, x:.84, y:.44, icon:'✦' },
-  { id:'simian', name:'四面云山', area:'山峦区 · 四面云山', subtitle:'登临高处，四面皆云山。', description:'沿山径步步登高，亭外峰峦远近错落。山庄的湖区与平原仿佛都在云岚之下舒展。', panel:5, x:.72, y:.37, icon:'✦' },
-  { id:'chuifeng', name:'锤峰落照', area:'园外借景 · 锤峰落照', subtitle:'夕阳西下，磬锤峰如剪影。', description:'磬锤峰在山庄园外，是山峦区遥望可见的借景。峰影映着夕照，为这段画卷游历收束。', panel:5, x:.95, y:.19, icon:'◇' }
+  { id:'shuixin', name:'水心榭', area:'下湖 · 水心榭', subtitle:'四面皆景，水光与山色相接。', description:'水心榭位于下湖与银湖之间，始建于康熙年间，南北两端各有牌坊。它既让人从湖面通行，也让游人停在水中央观看四周景色。画中把亭榭、堤岸与远山组织为连续视线；建筑细部为写意绘制，并非今日实景测绘。', panel:0, x:.105, y:.46, icon:'◇' },
+  { id:'dike', name:'芝径云堤', area:'湖区 · 芝径云堤', subtitle:'长堤如芝，浮于水上。', description:'芝径云堤借鉴杭州西湖苏堤，长堤曲折分作三支，连起环碧、如意洲与月色江声。沿堤前行，脚下道路不断改变水面、洲岛和远山的观看角度。画中堤线着重表现游园节奏，不能用作实地路线图。', panel:0, x:.335, y:.52, icon:'⌁' },
+  { id:'yanyu', name:'烟雨楼', area:'青莲岛 · 烟雨楼', subtitle:'青莲岛上，楼阁临水。', description:'烟雨楼建于乾隆四十五年，借鉴浙江嘉兴南湖的同名楼阁。楼阁面阔五间、分为两层，临水视野开阔；晴时可看湖山层次，细雨中楼影与岸线渐入烟岚。近景画面重在表达这一临水关系，并非现状照片。', panel:0, x:.645, y:.39, icon:'✦' },
+  { id:'jinshan', name:'金山', area:'湖东 · 金山', subtitle:'山石叠起，殿阁随势而上。', description:'金山岛仿镇江金山寺的意趣营造，山体经人工堆筑，建筑顺山势逐层升高。岛上的镜水云岑与天宇咸畅属于康熙三十六景，最高处还有三层上帝阁。画面把石阶、爬山廊与层层屋檐连成登高视线，细部以写意方式呈现。', panel:2, x:.35, y:.24, icon:'✦' },
+  { id:'moon', name:'月色江声', area:'洲岛 · 月色江声', subtitle:'古松掩映，庭院清幽。', description:'月色江声始建于康熙四十三年，名称借用苏轼《赤壁赋》的意境。洲岛上的院落一重接一重，由游廊串联；书斋、休憩空间与临水视线相互交织。画卷着重表现庭院与水面的清幽关系，不标注精确旧址。', panel:2, x:.81, y:.47, icon:'◇' },
+  { id:'lizheng', name:'丽正门', area:'宫殿区 · 丽正门', subtitle:'从御园正门，走入山庄。', description:'丽正门是避暑山庄正门，初建于康熙年间，乾隆十九年重修，并列为乾隆三十六景之首。门额以多种文字书写园名，从门楼进入后，宫殿的端整与园林的舒展逐渐转换。画面是依据建筑特征的写意绘制，不作现状测量。', panel:3, x:.15, y:.46, icon:'◇' },
+  { id:'danbo', name:'澹泊敬诚', area:'宫殿区 · 澹泊敬诚殿', subtitle:'朴素殿宇，静看湖山。', description:'澹泊敬诚殿始建于康熙五十年，乾隆十九年以楠木改建，是山庄正宫的重要殿宇。清帝曾在此举行庆典、接受朝觐，并接见边疆首领与外国使节。朴素木构与严整空间共同体现其礼仪性；数字近景不等同实地建筑细部。', panel:3, x:.62, y:.35, icon:'✦' },
+  { id:'wanshu', name:'万树园', area:'平原区 · 万树园', subtitle:'千树成林，草木自宽。', description:'万树园位于山庄北部平原区，疏林与草场交接，呈现有别于湖区的开阔北方原野。清代皇帝曾在这一带设宴，接见王公、各族首领和外国使节。画中保留林地与空地的尺度感，具体树木分布并非历史复原。', panel:4, x:.35, y:.51, icon:'⌁' },
+  { id:'wenjin', name:'文津阁', area:'平原区 · 文津阁', subtitle:'书藏林泉，阁映清池。', description:'文津阁建于乾隆三十九年，借鉴宁波天一阁，是为收藏《四库全书》营造的藏书楼。外观看似两层，内部另设暗层以利避光；阁前池水兼顾园景和防火。画卷呈现书阁、池水、假山的关系，建筑细节仍为写意。', panel:4, x:.84, y:.44, icon:'✦' },
+  { id:'simian', name:'四面云山', area:'山峦区 · 四面云山', subtitle:'登临高处，四面皆云山。', description:'四面云山亭位于山庄高处，为十六柱、单檐攒尖顶的方亭。亭外山岭远近叠落，登高后视线可向多个方向舒展；清代皇帝也曾在此赋诗。数字区域和近景强调登高望远，不提供真实步道或坐标。', panel:5, x:.72, y:.37, icon:'✦' },
+  { id:'chuifeng', name:'锤峰落照', area:'园外借景 · 锤峰落照', subtitle:'夕阳西下，磬锤峰如剪影。', description:'锤峰落照是山庄园内望向园外磬锤峰的借景。山峰位于武烈河东侧，因形似敲磬之锤得名；夕照让峰影轮廓尤为醒目。画中的远峰依据山形写意创作，不表示山庄园内可以步行抵达峰顶。', panel:5, x:.95, y:.19, icon:'◇' }
 ];
+const spotViewpoints={
+  shuixin:'观赏时可先找南北两端的牌坊，再沿檐口望向左右水面，体会一座榭怎样把通行的路变成四面取景的地方。',
+  dike:'沿着三支堤线从近处追到洲岛，留意堤与水之间时分时合的边界；正是这些转折，让同一片湖面不断呈现新的远近。',
+  yanyu:'可以从湖面向上看石岸、底层廊柱和二层栏杆的层次，再比较晴日与细雨时楼身轮廓的变化。画中静止游人和画舫只用于提示尺度。',
+  jinshan:'先看山脚与湖水的交接，再循登山廊追到高处屋檐；建筑不是平排在岸边，而是借层层高差带出望湖的视线。',
+  moon:'沿南北游廊想象一重重院落的次序，再回望水边的开口，体会书斋空间为何能同时保持内向的安静与临水的开阔。',
+  lizheng:'从门额、门洞和院墙看它的入口秩序，再把视线移向门后山水；“入园”在这里也是从礼仪空间走向游赏空间。',
+  danbo:'把视线放在殿前宽阔的台阶、木柱和屋檐上：克制的装饰与规整的院落共同烘托出接见与典礼场所的庄重。',
+  wanshu:'看疏林之间留下的大块空地，以及树群如何围出开阔的活动场所；平原的气息与湖区细密的亭台很不一样。',
+  wenjin:'先比较外观两层与内部暗层的关系，再看阁前池水。藏书、遮光和防火的需求，与园林观赏并置在同一处空间里。',
+  simian:'试着从亭周的不同方向看近山和远岭：四面都可入画，是题名最直观的体验。画中的上山路径只表示登高过程。',
+  chuifeng:'辨认园内林岭和园外孤峰两重空间，再看斜阳如何压出峰的剪影。借景让视线越过园界，数字画面并不暗示可从此处登峰。'
+};
 
 const scene = $('scene');
 const world = $('world');
 const experience = $('experience');
+installDepthRain(experience,$('depthPortal'),$('regionPortal'));
 const hotspotLayer = $('hotspotLayer');
 const spotNav = $('spotNav');
 const navButtons = new Map();
@@ -44,32 +62,32 @@ const walkSurfaces={
 const zoneStarts = {lake:0,palace:5,plains:7,mountain:9};
 const zonePanels = {lake:0,palace:3,plains:4,mountain:5};
 const destinationArt={
-  shuixin:['near-shuixin.png','湖上亭榭 · 近景','观榭','63%','44%'],
-  dike:['near-dike.png','长堤水色 · 近景','观堤','54%','51%'],
-  yanyu:['near-yanyu.png','青莲岛 · 烟雨楼近景','观楼','59%','38%'],
-  jinshan:['near-jinshan.png','湖东金山 · 近景','登高','63%','32%'],
-  moon:['near-moon.png','月色江声 · 近景','观院','61%','42%'],
-  lizheng:['near-lizheng.png','宫殿区 · 丽正门近景','观门','53%','46%'],
-  danbo:['near-danbo.png','宫殿区 · 澹泊敬诚近景','观殿','59%','38%'],
-  wanshu:['near-wanshu.png','平原区 · 万树园近景','观林','54%','49%'],
-  wenjin:['near-wenjin.png','平原区 · 文津阁近景','观阁','62%','39%'],
-  simian:['near-simian.png','山峦区 · 四面云山近景','登亭','57%','39%'],
-  chuifeng:['hammer-close.png','园外借景 · 磬锤峰','观峰','66%','27%'],
-  deer:['near-deer.png','平原区 · 梅花鹿观察','观鹿','59%','47%']
+  shuixin:['near-shuixin.webp','湖上亭榭 · 近景','观榭','63%','44%'],
+  dike:['near-dike.webp','长堤水色 · 近景','观堤','54%','51%'],
+  yanyu:['near-yanyu.webp','青莲岛 · 烟雨楼近景','观楼','59%','38%'],
+  jinshan:['near-jinshan.webp','湖东金山 · 近景','登高','63%','32%'],
+  moon:['near-moon.webp','月色江声 · 近景','观院','61%','42%'],
+  lizheng:['near-lizheng.webp','宫殿区 · 丽正门近景','观门','53%','46%'],
+  danbo:['near-danbo.webp','宫殿区 · 澹泊敬诚近景','观殿','59%','38%'],
+  wanshu:['near-wanshu.webp','平原区 · 万树园近景','观林','54%','49%'],
+  wenjin:['near-wenjin.webp','平原区 · 文津阁近景','观阁','62%','39%'],
+  simian:['simian-square-near.webp','山峦区 · 四面云山近景','登亭','75%','38%'],
+  chuifeng:['chuifeng-borrowed-near.webp','园外借景 · 磬锤峰','观峰','73%','28%'],
+  deer:['near-deer.webp','平原区 · 梅花鹿观察','观鹿','59%','47%']
 };
 const guideScripts={
-  shuixin:{lines:['先留意亭榭两边的水面。水心榭正处在下湖与银湖之间，始建于康熙年间。','南北两端各有牌坊，建筑既供人经过，也让人停下来观景。顺着檐口望出去，看看亭子怎样把四周湖山收进来。'],source:'https://www.bishushanzhuang.com.cn/index.php/Scenic/spot_view/id/193.html'},
-  dike:{lines:['顺着长堤的曲线看，湖面被分出远近不同的层次。芝径云堤借鉴杭州西湖苏堤，分成三支。','它连接环碧、如意洲与月色江声，形态像舒展的灵芝。走在这里，堤岸既是脚下的路，也改变着看水、看岛的角度。'],source:'https://www.bishushanzhuang.com.cn/index.php/Scenic/spot_view/id/219.html'},
-  yanyu:{lines:['先看楼阁与湖面的关系。烟雨楼的妙处，就在临水而立的开阔。','它建于乾隆四十五年，借鉴浙江嘉兴南湖的同名楼阁。两层楼向四面展开视野，把不同方向的湖山都纳入眼前。'],source:'https://www.bishushanzhuang.com.cn/index.php/Scenic/spot_view/id/73.html'},
-  jinshan:{lines:['把目光从水边向上移，金山岛的建筑随着山势一层层展开。','这座岛仿镇江金山寺营造，山体经人工堆筑。岛上的镜水云岑和天宇咸畅列入康熙三十六景，制高处还有三层上帝阁。'],source:'https://www.bishushanzhuang.com.cn/index.php/Scenic/spot_view/id/39.html'},
-  moon:{lines:['先沿着临水院落看一看，房屋不是一眼望尽，而是一重接着一重。','月色江声始建于康熙四十三年，名字借用了苏轼《赤壁赋》的意境。岛上有书斋，也有休憩的居所，水与庭院相连，格外清静。'],source:'https://www.bishushanzhuang.com.cn/index.php/Scenic/spot_view/id/42.html'},
-  lizheng:{lines:['先看门楼与院墙的轮廓，这就是山庄正门丽正门。','它初建于康熙年间，乾隆十九年重修，被列为乾隆三十六景的第一景。从这里入园，宫殿的端整与湖山的舒展便接在同一幅画卷里。'],source:'https://www.bishushanzhuang.com.cn/index.php/scenic/spot_view/id/190.html'},
-  danbo:{lines:['把目光停在殿宇和木构上。澹泊敬诚殿沉静朴素，却是山庄重要的礼仪空间。','大殿始建于康熙五十年，乾隆十九年以楠木改建。清帝曾在这里举行庆典、接受朝觐，也接见边疆首领与外国使节。'],source:'https://www.bishushanzhuang.com.cn/index.php/Scenic/spot_view/id/77.html'},
-  wanshu:{lines:['看树木之间留出的大块开阔地，万树园让山庄显出北方原野的气息。','这里位于平原区，草场与林地相接。清代皇帝曾在这一带设宴，接见王公、各族首领和外国使节。眼前疏朗的空间，也曾容纳隆重的交往场面。'],source:'https://www.bishushanzhuang.com.cn/index.php/Scenic/spot_view/id/53.html'},
-  wenjin:{lines:['先看文津阁的外观：能看到两层楼，内部却另藏一层。','它建于乾隆三十九年，借鉴宁波天一阁，是为收藏《四库全书》营造的藏书楼。暗层有利于避光，阁前水池也兼顾防火，园景中藏着实用的心思。'],source:'https://www.bishushanzhuang.com.cn/index.php/Scenic/spot_view/id/75.html'},
-  simian:{lines:['把视线放远，看看山岭怎样一层层延伸。四面云山亭建在山庄高处，始建于康熙四十八年。','亭子由十六根柱子支撑，屋顶收拢到尖顶。清代皇帝曾在这里登高赋诗。我们也换几个方向看看，体会这座山地园林的尺度。'],source:'https://www.bishushanzhuang.com.cn/index.php/Scenic/spot_view/id/48.html'},
-  chuifeng:{lines:['先把目光越过园内山林，望向园外的磬锤峰。锤峰落照是山庄里的观景点，借的主景正是这座山峰。','磬锤峰俗称棒槌山，位于武烈河东侧。康熙因它形似敲磬的锤而赐名。眼前的近景依据山形写意创作，让我们细看它独特的轮廓。'],source:'https://www.bishushanzhuang.com.cn/index.php/Scenic/spot_view/id/158.html'},
-  deer:{lines:['林缘的梅花鹿有时停步觅食，有时抬头警觉。','请在画中安静地观察，不追逐，也不惊扰它们。'],source:null}
+  shuixin:{lines:['先留意亭榭两边的水面。水心榭正处在下湖与银湖之间，始建于康熙年间。','南北两端各有牌坊，建筑既供人经过，也让人停下来观景。顺着檐口望出去，看看亭子怎样把四周湖山收进来。']},
+  dike:{lines:['顺着长堤的曲线看，湖面被分出远近不同的层次。芝径云堤借鉴杭州西湖苏堤，分成三支。','它连接环碧、如意洲与月色江声，形态像舒展的灵芝。走在这里，堤岸既是脚下的路，也改变着看水、看岛的角度。']},
+  yanyu:{lines:['先看楼阁与湖面的关系。烟雨楼的妙处，就在临水而立的开阔。','它建于乾隆四十五年，借鉴浙江嘉兴南湖的同名楼阁。两层楼向四面展开视野，把不同方向的湖山都纳入眼前。']},
+  jinshan:{lines:['把目光从水边向上移，金山岛的建筑随着山势一层层展开。','这座岛仿镇江金山寺营造，山体经人工堆筑。岛上的镜水云岑和天宇咸畅列入康熙三十六景，制高处还有三层上帝阁。']},
+  moon:{lines:['先沿着临水院落看一看，房屋不是一眼望尽，而是一重接着一重。','月色江声始建于康熙四十三年，名字借用了苏轼《赤壁赋》的意境。岛上有书斋，也有休憩的居所，水与庭院相连，格外清静。']},
+  lizheng:{lines:['先看门楼与院墙的轮廓，这就是山庄正门丽正门。','它初建于康熙年间，乾隆十九年重修，被列为乾隆三十六景的第一景。从这里入园，宫殿的端整与湖山的舒展便接在同一幅画卷里。']},
+  danbo:{lines:['把目光停在殿宇和木构上。澹泊敬诚殿沉静朴素，却是山庄重要的礼仪空间。','大殿始建于康熙五十年，乾隆十九年以楠木改建。清帝曾在这里举行庆典、接受朝觐，也接见边疆首领与外国使节。']},
+  wanshu:{lines:['看树木之间留出的大块开阔地，万树园让山庄显出北方原野的气息。','这里位于平原区，草场与林地相接。清代皇帝曾在这一带设宴，接见王公、各族首领和外国使节。眼前疏朗的空间，也曾容纳隆重的交往场面。']},
+  wenjin:{lines:['先看文津阁的外观：能看到两层楼，内部却另藏一层。','它建于乾隆三十九年，借鉴宁波天一阁，是为收藏《四库全书》营造的藏书楼。暗层有利于避光，阁前水池也兼顾防火，园景中藏着实用的心思。']},
+  simian:{lines:['把视线放远，看看山岭怎样一层层延伸。四面云山亭建在山庄高处，以单檐方亭收拢一处停驻的空间。','亭子由十六根柱子支撑，屋顶收拢到尖顶。清代皇帝曾在这里登高赋诗。我们也换几个方向看看，体会这座山地园林的尺度。']},
+  chuifeng:{lines:['先把目光越过园内山林，望向园外的磬锤峰。锤峰落照是山庄里的观景点，借的主景正是这座山峰。','磬锤峰俗称棒槌山，位于武烈河东侧。康熙因它形似敲磬的锤而赐名。眼前的近景依据山形写意创作，让我们细看它独特的轮廓。']},
+  deer:{lines:['林缘的梅花鹿有时停步觅食，有时抬头警觉。','请在画中安静地观察，不追逐，也不惊扰它们。']}
 };
 const lamps = [
   {panel:0,x:.55,y:.49},{panel:0,x:.62,y:.49},{panel:0,x:.7,y:.49},
@@ -82,22 +100,22 @@ const lampElements = lamps.map(()=>{const element=document.createElement('span')
 // the waterside calm; only one short walker route is active per populated area.
 const staticPainting=true;
 const ambientPeople = [
-  {panel:0,x:.165,y:.634,size:.035,art:'person-pavilion-pair.png',direction:1},
-  {panel:0,x:.58,y:.603,size:.024,art:'person-blue-man.png',direction:1},
-  {panel:0,x:.646,y:.604,size:.033,art:'person-terrace-pair.png',direction:1},
-  {panel:3,x:.116,y:.665,size:.024,art:'person-blue-man.png',direction:-1},
-  {panel:3,x:.186,y:.674,size:.030,art:'person-blue-woman.png',direction:1},
-  {panel:3,x:.573,y:.676,size:.029,art:'person-ochre-woman.png',direction:-1},
-  {panel:3,start:.285,end:.395,path:[[.285,.68],[.395,.68]],size:.038,speed:.011,art:'person-blue-man.png',direction:1},
-  {panel:3,x:.792,y:.682,size:.039,art:'person-green-man.png',direction:-1},
-  {panel:4,start:.48,end:.54,path:[[.48,.752],[.54,.764]],size:.029,speed:.008,art:'person-ochre-woman.png',direction:-1},
-  {panel:5,x:.663,y:.565,size:.027,art:'person-green-man.png',direction:1},
-  {panel:5,x:.743,y:.484,size:.024,art:'person-blue-woman.png',direction:-1}
+  {panel:0,x:.165,y:.634,size:.035,art:'person-pavilion-pair-lossless.webp',direction:1},
+  {panel:0,x:.58,y:.603,size:.024,art:'person-blue-man-lossless.webp',direction:1},
+  {panel:0,x:.646,y:.604,size:.033,art:'person-terrace-pair-lossless.webp',direction:1},
+  {panel:3,x:.475,y:.71,size:.024,art:'person-blue-man-lossless.webp',direction:-1},
+  {panel:3,x:.84,y:.7,size:.030,art:'person-blue-woman-lossless.webp',direction:1},
+  {panel:3,x:.573,y:.676,size:.029,art:'person-ochre-woman-lossless.webp',direction:-1},
+  {panel:3,start:.285,end:.395,path:[[.285,.68],[.395,.68]],size:.038,speed:.011,art:'person-blue-man-lossless.webp',direction:1},
+  {panel:3,x:.792,y:.682,size:.039,art:'person-green-man-lossless.webp',direction:-1},
+  {panel:4,start:.48,end:.54,path:[[.48,.752],[.54,.764]],size:.029,speed:.008,art:'person-ochre-woman-lossless.webp',direction:-1},
+  {panel:5,x:.663,y:.565,size:.027,art:'person-green-man-lossless.webp',direction:1},
+  {panel:5,x:.743,y:.484,size:.024,art:'person-blue-woman-lossless.webp',direction:-1}
 ].filter(person=>person.panel!==0).map((person)=>{
   const element=document.createElement('span');element.className='ambient-person';
   element.classList.toggle('moving',Boolean(person.path));
   element.classList.toggle('stationary',!person.path);
-  const img=document.createElement('img');img.src=assetUrl(`art/${person.art}`);img.alt='';img.draggable=false;element.append(img);
+  const img=document.createElement('img');img.dataset.art=assetUrl(`art/${person.art}`);img.decoding='async';img.alt='';img.draggable=false;element.append(img);
   $('peopleLayer').append(element);
   const index=$('peopleLayer').children.length;
   element.style.setProperty('--sway-duration',`${.67+(index%5)*.15}s`);
@@ -113,7 +131,7 @@ const deerHerd = [
   const element=document.createElement('button');element.type='button';element.className=`deer deer-${deer.kind}`;
   element.setAttribute('aria-label','轻点梅花鹿，观察它的反应');
   const names=deer.kind==='stag'?['alert','graze','walk']:['alert','graze'];
-  for(const pose of names){const img=document.createElement('img');img.src=assetUrl(`art/deer-${deer.kind}-${pose}.png`);img.className=`deer-pose deer-${pose}`;img.alt='';img.draggable=false;element.append(img);}
+  for(const pose of names){const img=document.createElement('img');img.dataset.art=assetUrl(`art/deer-${deer.kind}-${pose}-lossless.webp`);img.decoding='async';img.className=`deer-pose deer-${pose}`;img.alt='';img.draggable=false;element.append(img);}
   const ear=document.createElement('i');ear.className='deer-ear';element.append(ear);
   const look=document.createElement('span');look.className='deer-look';look.textContent='近看';element.append(look);
   $('deerLayer').append(element);
@@ -138,12 +156,12 @@ const deerHerd = [
   return creature;
 });
 const treePatches = [
-  {panel:0,x:.235,y:.27,w:.11,h:.18,strength:.95,phase:.2,art:'yan-yu-lake-clean.png'},
-  {panel:0,x:.775,y:.33,w:.13,h:.2,strength:1.4,phase:1.1,art:'yan-yu-lake-clean.png'},
-  {panel:3,x:.44,y:.02,w:.21,h:.2,strength:.35,phase:2.1,art:'palace-hall.png'},
-  {panel:4,x:.4,y:.405,w:.16,h:.19,strength:1,phase:1.7,art:'plains-wenyuan-clean.png'},
-  {panel:4,x:.74,y:.33,w:.13,h:.18,strength:.4,phase:2.9,art:'plains-wenyuan-clean.png'},
-  {panel:5,x:.46,y:.45,w:.19,h:.17,strength:.5,phase:3.5,art:'mountain-view.png'}
+  {panel:0,x:.235,y:.27,w:.11,h:.18,strength:.95,phase:.2,art:'yan-yu-lake-clean.webp'},
+  {panel:0,x:.775,y:.33,w:.13,h:.2,strength:1.4,phase:1.1,art:'yan-yu-lake-clean.webp'},
+  {panel:3,x:.44,y:.02,w:.21,h:.2,strength:.35,phase:2.1,art:'palace-hall.webp'},
+  {panel:4,x:.4,y:.405,w:.16,h:.19,strength:1,phase:1.7,art:'plains-wenyuan-clean.webp'},
+  {panel:4,x:.74,y:.33,w:.13,h:.18,strength:.4,phase:2.9,art:'plains-wenyuan-clean.webp'},
+  {panel:5,x:.46,y:.45,w:.19,h:.17,strength:.5,phase:3.5,art:'mountain-view.webp'}
 ].filter(tree=>tree.panel!==0).map((tree)=>{
   const element=document.createElement('span');element.className='tree-canopy';
   element.style.backgroundImage=`url('${assetUrl(`art/${tree.art}`)}')`;
@@ -201,13 +219,7 @@ let musicEnvelopeTimer;
 let soundRequested=false;
 let soundSerial=0;
 let guideKey=null;
-let guideMode='idle';
-let guideLine=0;
-let guideSerial=0;
 let guideSpeaking=false;
-const guideAudio=$('guideAudio');
-// Audio is enabled only after a Mandarin male recording is approved and added.
-const approvedGuideAudio=false;
 const weatherCanvas = $('weatherCanvas');
 const rainContext = weatherCanvas.getContext('2d');
 let rainDrops = [];
@@ -222,7 +234,17 @@ let depthSavedView=null;
 let depthCurrent=null;
 let lastDepthCloseAt=-Infinity;
 let closeDeerNextAt=0;
+let depthFocusReturn=null;
+let depthRetryTarget=null;
+let travelScale=1;
+let travelOrigin={x:.5,y:.5};
+const activePointers=new Map();
+let pinchStart=null;
 const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
+const backgroundControls=['#scene','.topbar','.zone-nav','.bottom-ui','.story-panel','.progress-track','.keyboard-hint'];
+function setBackgroundInert(value){
+  for(const selector of backgroundControls){const element=document.querySelector(selector);if(element)element.inert=value;}
+}
 const debugEnabled=new URLSearchParams(location.search).get('debug')==='1';
 let debugOverlay,debugWalker,debugDeer=[],debugPeople=[],debugWater;
 if(debugEnabled){
@@ -256,6 +278,7 @@ function resizeWeather(){
   rainSplashes=[];
 }
 function drawRain(dt){
+  if(reducedMotion.matches||document.hidden||!$('regionPortal').hidden||!$('depthPortal').hidden){rainContext.clearRect(0,0,scene.clientWidth,scene.clientHeight);return;}
   rainElapsed=raining?rainElapsed+dt:0;
   const target=raining ? clamp(rainElapsed/950,0,1) : 0;
   rainLevel+=(target-rainLevel)*Math.min(1,dt*.006);
@@ -405,6 +428,7 @@ function layout(preserveCenter = true){
   world.style.width = `${totalWidth}px`;
   world.style.height = `${height}px`;
   world.style.top = `${(scene.clientHeight-height)/2}px`;
+  world.style.transformOrigin=`${totalWidth*travelOrigin.x}px ${height*travelOrigin.y}px`;
   world.style.setProperty('--bridge-x',`${bridgeX}px`);
   world.style.setProperty('--panel-two-x',`${panelTwoX}px`);
   world.style.setProperty('--palace-x',`${panelStarts[3]}px`);
@@ -469,11 +493,12 @@ function layout(preserveCenter = true){
   layoutDebug();
   targetOffset=offset;
   render();
+  window.dispatchEvent(new CustomEvent('chengde-layout',{detail:{height,widths:[...widths],panelStarts:[...panelStarts]}}));
 }
 
 function render(){
   offset=clamp(offset,0,maxOffset());
-  world.style.transform=`translate3d(${-offset}px,0,0)`;
+  world.style.transform=`translate3d(${-offset}px,0,0) scale(${travelScale})`;
   experience.dataset.boatPhase=boatPhase;
   experience.dataset.walkSurface=walkerSurfaceId;
   experience.dataset.walkX=walkerWorldX.toFixed(2);
@@ -501,12 +526,14 @@ function render(){
   renderDebug(walkerFootY,waterY,boatWidth);
   $('boat').classList.toggle('reverse',boatTripDirection<0);
   for(const person of ambientPeople){
+    if(person.worldX>offset-scene.clientWidth&&person.worldX<offset+scene.clientWidth*2)loadDeferredArt(person.element);
     person.element.style.left=`${person.worldX}px`;
     if(person.path)person.element.style.top=`${paintedPathY(person.path,(person.worldX-panelStarts[person.panel])/widths[person.panel])*height}px`;
     person.element.classList.toggle('reverse',person.direction<0);
     person.element.classList.toggle('resting',Boolean(person.path)&&performance.now()<person.restUntil);
   }
   for(const deer of deerHerd){
+    if(deer.worldX>offset-scene.clientWidth&&deer.worldX<offset+scene.clientWidth*2)loadDeferredArt(deer.element);
     deer.element.style.left=`${deer.worldX}px`;
     deer.element.style.top=`${paintedPathY(deer.path,deer.x)*height}px`;
     deer.element.classList.toggle('reverse',deer.direction<0);
@@ -524,6 +551,12 @@ function render(){
   document.querySelectorAll('[data-zone]').forEach((button)=>button.classList.toggle('active',button.dataset.zone===activeZone));
 }
 
+function loadDeferredArt(root){
+  if(root.dataset.artReady==='true')return;
+  for(const image of root.querySelectorAll('img[data-art]')){image.src=image.dataset.art;delete image.dataset.art;}
+  root.dataset.artReady='true';
+}
+
 function showToast(message){
   const toast=$('toast');toast.textContent=message;toast.classList.add('show');
   clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2600);
@@ -531,11 +564,13 @@ function showToast(message){
 
 function closeDepth(immediate=false){
   if(depthState==='closed')return;
+  if(depthState==='pending')immediate=true;
   stopGuide();
   lastDepthCloseAt=performance.now();
   depthSerial++;
   clearTimeout(depthTimer);
   const portal=$('depthPortal');
+  $('depthLoading').hidden=true;
   portal.classList.add('closing');
   $('depthGuard').hidden=true;
   $('depthInfo').hidden=true;
@@ -543,12 +578,20 @@ function closeDepth(immediate=false){
   const restore=()=>{
     portal.hidden=true;portal.classList.remove('closing');depthState='closed';depthCurrent=null;
     $('depthGuard').hidden=true;
+    setBackgroundInert(false);
+    travelScale=1;render();
+    if(!reducedMotion.matches){setTimeout(()=>experience.classList.remove('depth-travel'),850);}
+    else experience.classList.remove('depth-travel');
     if(depthSavedView){
       placeWalker(depthSavedView.walkerSurfaceId,depthSavedView.walkerWorldX);
       targetOffset=depthSavedView.offset;velocity=0;
       depthSavedView=null;
     }
+    if(depthFocusReturn?.isConnected&&!depthFocusReturn.closest('[hidden]'))depthFocusReturn.focus({preventScroll:true});
+    else scene.focus({preventScroll:true});
+    depthFocusReturn=null;
   };
+  travelScale=1;render();
   if(immediate||reducedMotion.matches){portal.classList.remove('open','clear-mist','ready');restore();}
   else{
     requestAnimationFrame(()=>{if(depthState==='closing')portal.classList.remove('open','clear-mist','ready');});
@@ -564,21 +607,34 @@ function openDepth(target,creature=deerHerd[0]){
   const spot=typeof target==='string'?null:target;
   const focusX=spot?spotX(spot):creature.worldX;
   const focusY=spot?spot.y*height:paintedPathY(creature.path,creature.x)*height;
+  depthFocusReturn=document.activeElement instanceof HTMLElement?document.activeElement:scene;
+  depthRetryTarget=target;
+  $('depthError').hidden=true;
   depthState='pending';depthCurrent=key;
   $('depthGuard').hidden=false;
+  $('depthLoading').textContent=`正在走近${spot?.name||'画中景点'}…`;
+  $('depthLoading').hidden=false;
+  setBackgroundInert(true);
+  $('depthLoading').focus({preventScroll:true});
   if(boating)setBoating(false);
   depthSavedView={offset,walkerWorldX,walkerSurfaceId};
   closeStory();
   const desired=clamp(focusX-scene.clientWidth*.58,0,maxOffset());
   const shift=Math.abs(desired-offset);
+  travelOrigin={x:focusX/totalWidth,y:focusY/height};
+  world.style.transformOrigin=`${focusX}px ${focusY}px`;
+  experience.classList.add('depth-travel');
+  travelScale=reducedMotion.matches?1:1.12;
   targetOffset=desired;velocity=0;
-  const foreground=key==='chuifeng'||key==='simian'?'hammer-foreground.png':
-    ['shuixin','dike','yanyu','jinshan','moon'].includes(key)?'lake-foreground.png':
-    ['lizheng','danbo'].includes(key)?'palace-foreground.png':'plains-foreground.png';
+  const foreground=key==='chuifeng'||key==='simian'?'hammer-foreground-lossless.webp':
+    ['shuixin','dike','yanyu','jinshan','moon'].includes(key)?'lake-foreground-lossless.webp':
+    ['lizheng','danbo'].includes(key)?'palace-foreground-lossless.webp':'plains-foreground-lossless.webp';
   const begin=()=>{
     if(serial!==depthSerial||depthState!=='pending')return;
     const portal=$('depthPortal');
+    $('depthLoading').hidden=true;
     portal.hidden=false;portal.classList.remove('open','clear-mist','ready','closing');
+    portal.classList.toggle('yanyu-close',key==='yanyu');
     portal.style.setProperty('--origin-x',`${clamp(focusX-offset,30,scene.clientWidth-30)}px`);
     portal.style.setProperty('--origin-y',`${clamp(focusY,35,scene.clientHeight-35)}px`);
     portal.style.setProperty('--depth-image',`url('${assetUrl(`art/${art[0]}`)}')`);
@@ -588,33 +644,61 @@ function openDepth(target,creature=deerHerd[0]){
     $('depthAction').textContent=art[2];
     $('depthInfoKicker').textContent=art[1];
     $('depthInfoTitle').textContent=key==='deer'?'梅花鹿':key==='chuifeng'?'磬锤峰':spot.name;
-    $('depthInfoBody').textContent=key==='deer'?'平原林缘的梅花鹿会停步、觅食，也会警觉地抬头。观察它们时宜保持距离，不追逐惊扰。':key==='chuifeng'?'磬锤峰是避暑山庄视野中的园外借景。近景为依据山形创作的景观延伸，并非山庄园内步道。':spot.description;
+    $('depthInfoBody').textContent=key==='deer'?'平原林缘的梅花鹿会停步、觅食，也会警觉地抬头。观察它们时宜保持距离，不追逐惊扰。':`${spot.description}\n\n观赏重点：${spotViewpoints[key]}`;
     $('depthInfo').hidden=true;
     $('depthCloud').textContent=key==='deer'?'静观鹿影　↗':'拨云观景　↗';
+    $('depthCloud').setAttribute('aria-pressed','false');
     portal.classList.toggle('deer-close',key==='deer');
+    if(key==='deer')loadDeferredArt($('depthDeer'));
     portal.classList.toggle('peak-close',key==='chuifeng');
     prepareGuide(key);
     if(key==='deer'){$('depthDeer').dataset.pose='alert';closeDeerNextAt=performance.now()+2400;}
     depthState='opening';
-    requestAnimationFrame(()=>requestAnimationFrame(()=>{if(depthState==='opening')portal.classList.add('open');}));
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      if(serial!==depthSerial||depthState!=='opening')return;
+      portal.classList.add('open');$('depthBack').focus({preventScroll:true});
+      if(spot){
+        visited.add(spot.id);
+        $('visitedCount').textContent=String(visited.size).padStart(2,'0');
+        window.dispatchEvent(new CustomEvent('chengde-spot-visited',{detail:{name:spot.name}}));
+      }
+    }));
     depthTimer=setTimeout(()=>{if(depthState==='opening'){depthState='open';portal.classList.add('ready');}},reducedMotion.matches?30:1700);
   };
-  const preload=(src)=>{
-    const image=new Image();image.src=src;
-    return Promise.race([image.decode().catch(()=>{}),new Promise((resolve)=>setTimeout(resolve,1400))]);
-  };
+  const preload=(src)=>new Promise((resolve,reject)=>{
+    const image=new Image();
+    const timeout=setTimeout(()=>reject(new Error(`Image timed out: ${src}`)),9000);
+    image.onload=async()=>{
+      try{
+        await image.decode?.();
+        if(!image.naturalWidth||!image.naturalHeight)throw new Error(`Image empty: ${src}`);
+        clearTimeout(timeout);resolve();
+      }catch(error){clearTimeout(timeout);reject(error);}
+    };
+    image.onerror=()=>{clearTimeout(timeout);reject(new Error(`Image failed: ${src}`));};
+    image.src=src;
+  });
   Promise.all([
     preload(assetUrl(`art/${art[0]}`)),preload(assetUrl(`art/${foreground}`)),
+    ...(key==='deer'?[...$('depthDeer').querySelectorAll('img')].map(image=>preload(image.dataset.art||image.src)):[]),
     new Promise((resolve)=>setTimeout(resolve,reducedMotion.matches?30:shift>scene.clientWidth*.35?850:90))
-  ]).then(begin);
+  ]).then(begin).catch(()=>{
+    if(serial!==depthSerial||depthState!=='pending')return;
+    depthState='closed';depthCurrent=null;
+    $('depthGuard').hidden=true;
+    $('depthLoading').hidden=true;
+    travelScale=1;render();
+    experience.classList.remove('depth-travel');
+    setBackgroundInert(true);
+    $('depthError').hidden=false;
+    $('depthRetry').focus({preventScroll:true});
+  });
 }
 
 function showSpot(spot, move=true, enterDepth=true){
   if(depthState==='closing')closeDepth(true);
   if(boating && move)setBoating(false);
   activeSpot=spot;
-  visited.add(spot.id);
-  $('visitedCount').textContent=String(visited.size).padStart(2,'0');
   if(move&&enterDepth){openDepth(spot);return;}
   $('storyIndex').textContent=`湖山其${['一','二','三','四','五','六','七','八','九','十','十一'][spots.indexOf(spot)]}`;
   $('storyTitle').textContent=spot.name;
@@ -646,6 +730,7 @@ function createNavigation(){
     hotspot.addEventListener('click',(event)=>{event.stopPropagation();if(performance.now()<suppressClickUntil)return;showSpot(spot);});
     hotspotLayer.append(hotspot);hotspotButtons.set(spot.id,hotspot);
     const nav=document.createElement('button');nav.type='button';nav.textContent=spot.name;
+    nav.dataset.spot=spot.id;
     nav.addEventListener('click',()=>showSpot(spot));
     spotNav.append(nav);navButtons.set(spot.id,nav);
   }
@@ -706,6 +791,7 @@ function setNight(value){
   if(!night)experience.classList.remove('lights-awake');
   $('nightBtn').classList.toggle('active',night);
   $('nightBtn').setAttribute('aria-pressed',String(night));
+  $('nightBtn').setAttribute('aria-label',night?'切换至白昼':'切换至夜景');
   $('nightBtn').querySelector('small').textContent=night?'白昼':'夜游';
   $('weatherText').textContent=`${raining?'雨':'晴'} · ${night?'夜色':'午后'}`;
   showToast(night?'月色入湖，万籁俱静':'日光重临，湖山如画');
@@ -716,6 +802,7 @@ function setRaining(value){
   rainElapsed=0;
   $('rainBtn').classList.toggle('active',raining);
   $('rainBtn').setAttribute('aria-pressed',String(raining));
+  $('rainBtn').setAttribute('aria-label',raining?'关闭烟雨':'开启烟雨');
   $('rainBtn').querySelector('small').textContent=raining?'放晴':'烟雨';
   $('weatherText').textContent=`${raining?'雨':'晴'} · ${night?'夜色':'午后'}`;
   showToast(raining?'风起湖面，细雨将至':'云开雨霁，湖光清明');
@@ -736,63 +823,26 @@ function updateMusicEnvelope(){
 }
 
 function stopGuide(){
-  guideSerial++;guideMode='idle';guideSpeaking=false;guideLine=0;
-  guideAudio.pause();guideAudio.currentTime=0;
+  voiceGuide.stop();guideSpeaking=false;
   $('guideCaption').hidden=true;$('guideCaption').textContent='';
-  $('guideReplay').hidden=true;
-  $('guidePlay').textContent=approvedGuideAudio?'▶ 听讲解':'阅读讲解';
-  $('depthPortal').classList.remove('guide-active');
-  updateMusicEnvelope();
+  $('guideReplay').hidden=true;$('guidePlay').textContent='▶ 听讲解';
+  $('depthPortal').classList.remove('guide-active');updateMusicEnvelope();
 }
-
 function prepareGuide(key){
   stopGuide();guideKey=key;
-  if(approvedGuideAudio){guideAudio.src=assetUrl(`audio/guide-${key}.m4a`);guideAudio.load();}
-  $('guideTitle').textContent=key==='deer'?'静观鹿影':`随景解说 · ${key==='chuifeng'?'锤峰落照':spots.find((spot)=>spot.id===key)?.name||''}`;
+  $('guideTitle').textContent=key==='deer'?'静观鹿影':`随景解说 · ${spots.find((spot)=>spot.id===key)?.name||''}`;
 }
-
-function toggleGuide(){
-  if(!guideScripts[guideKey])return;
-  if(!approvedGuideAudio){
-    const opening=guideMode!=='reading';guideMode=opening?'reading':'idle';
-    $('depthPortal').classList.toggle('guide-active',opening);
-    $('guideCaption').hidden=!opening;
-    $('guideCaption').textContent=opening?guideScripts[guideKey].lines.join(''):'';
-    $('guidePlay').textContent=opening?'收起讲解':'阅读讲解';
-    return;
-  }
-  if(guideMode==='playing'){
-    guideAudio.pause();guideMode='paused';guideSpeaking=false;
-    $('guidePlay').textContent='▶ 继续';updateMusicEnvelope();return;
-  }
-  if(guideMode==='paused'){
-    guideAudio.play().then(()=>{
-      guideMode='playing';guideSpeaking=true;
-      $('guidePlay').textContent='Ⅱ 暂停';updateMusicEnvelope();
-    }).catch(()=>{$('guidePlay').textContent='▶ 重试声音';});
-    return;
-  }
-  startGuide();
+function showGuideText(){
+  $('depthInfo').hidden=true;$('depthPortal').classList.add('guide-active');
+  $('guideCaption').hidden=false;$('guideCaption').textContent=guideScripts[guideKey]?.lines.join('')||'';
 }
-
-function startGuide(){
-  if(!approvedGuideAudio)return;
-  const lines=guideScripts[guideKey]?.lines;if(!lines)return;
-  const serial=++guideSerial;
-  guideAudio.pause();guideAudio.currentTime=0;guideAudio.volume=.85;
-  guideMode='playing';guideSpeaking=true;
-  $('depthInfo').hidden=true;
-  $('depthPortal').classList.add('guide-active');
-  $('guideCaption').hidden=false;$('guideReplay').hidden=false;
-  $('guideCaption').textContent=lines.join('');
-  $('guidePlay').textContent='Ⅱ 暂停';updateMusicEnvelope();
-  guideAudio.play().catch(()=>{
-    if(serial!==guideSerial)return;
-    guideMode='reading';guideSpeaking=false;updateMusicEnvelope();
-    $('guidePlay').textContent='▶ 重试声音';
-    $('guideReplay').hidden=true;
-  });
-}
+function toggleGuide(){if(!guideScripts[guideKey])return;showGuideText();voiceGuide.play(guideKey);}
+function startGuide(){if(!guideScripts[guideKey])return;showGuideText();voiceGuide.play(guideKey,{replay:true});}
+window.addEventListener('chengde-guide-state',({detail})=>{
+  guideSpeaking=detail.speaking;updateMusicEnvelope();
+  if(detail.key!==guideKey)return;
+  $('guidePlay').textContent=detail.label;$('guideReplay').hidden=detail.mode==='idle'||detail.mode==='loading'||detail.mode==='error';
+});
 
 function ensureMusic(){
   if(music)return;
@@ -849,7 +899,7 @@ function followX(worldX){
 
 function animate(now){
   const dt=Math.min(50,now-lastFrame);lastFrame=now;
-  if(!entered){requestAnimationFrame(animate);return;}
+  if(!entered||document.hidden||!$('regionPortal').hidden){requestAnimationFrame(animate);return;}
   if(depthCurrent==='deer'&&depthState!=='closed'&&now>=closeDeerNextAt){
     const deer=$('depthDeer');
     deer.dataset.pose=deer.dataset.pose==='graze'?'alert':'graze';
@@ -965,23 +1015,35 @@ function animate(now){
 }
 
 function bindEvents(){
+  const nav=$('spotNav');
+  const updateNavHint=()=>nav.parentElement.classList.toggle('at-end',nav.scrollLeft+nav.clientWidth>=nav.scrollWidth-6);
+  nav.addEventListener('scroll',updateNavHint,{passive:true});
+  window.addEventListener('resize',updateNavHint);
+  requestAnimationFrame(updateNavHint);
   function enterScene(spotId){
     if(entered)return;entered=true;
     experience.classList.remove('is-hidden');
     layout(false);
     experience.classList.add('traveler-visible');
     $('intro').classList.add('leaving');
-    setTimeout(()=>{
+    $('skipEntryBtn').hidden=false;
+    let finished=false;
+    const finishEnter=()=>{
+      if(finished)return;finished=true;
+      $('skipEntryBtn').hidden=true;
       $('intro').hidden=true;scene.focus({preventScroll:true});
       if(spotId){const destination=spots.find((s)=>s.id===spotId);if(destination)showSpot(destination);}
       else showToast('按住画卷，慢慢游赏');
-    },1050);
+    };
+    $('skipEntryBtn').onclick=finishEnter;
+    setTimeout(finishEnter,reducedMotion.matches?0:1050);
   }
   function returnOverview(){
     if(entered&&performance.now()-lastDepthCloseAt<1200)return;
     closeDepth(true);
     setMoving(0);if(boating)setBoating(false);closeStory();
     $('intro').hidden=false;$('intro').classList.remove('leaving');entered=false;
+    $('enterBtn').focus({preventScroll:true});
   }
   $('enterBtn').addEventListener('click',()=>enterScene());
   document.querySelectorAll('[data-enter-spot]').forEach((button)=>button.addEventListener('click',()=>enterScene(button.dataset.enterSpot)));
@@ -993,23 +1055,45 @@ function bindEvents(){
     placeWalker(zoneSurface[zone],panelStarts[zonePanels[zone]]+widths[zonePanels[zone]]*zoneEntryX[zone]);
   }));
   $('depthBack').addEventListener('click',()=>closeDepth());
+  $('depthRetry').addEventListener('click',()=>{
+    $('depthError').hidden=true;setBackgroundInert(false);
+    const source=depthFocusReturn;
+    const savedView=depthSavedView;
+    if(depthRetryTarget){openDepth(depthRetryTarget);depthFocusReturn=source;depthSavedView=savedView;}
+  });
+  $('depthErrorBack').addEventListener('click',()=>{
+    $('depthError').hidden=true;setBackgroundInert(false);
+    if(depthSavedView){targetOffset=depthSavedView.offset;velocity=0;}
+    depthSavedView=null;
+    if(depthFocusReturn?.isConnected)depthFocusReturn.focus({preventScroll:true});
+    else scene.focus({preventScroll:true});
+    depthFocusReturn=null;
+  });
+  $('sceneRetry').addEventListener('click',()=>location.reload());
+  document.querySelectorAll('.art-panel').forEach((image)=>image.addEventListener('error',()=>{
+    $('sceneLoadError').hidden=false;
+    setBackgroundInert(true);
+    $('sceneRetry').focus({preventScroll:true});
+  }));
   $('depthPeak').addEventListener('click',()=>{stopGuide();$('depthInfo').hidden=false;});
   $('guidePlay').addEventListener('click',toggleGuide);
   $('guideReplay').addEventListener('click',startGuide);
-  guideAudio.addEventListener('ended',()=>{
-    if(guideMode!=='playing')return;
-    guideMode='done';guideSpeaking=false;updateMusicEnvelope();
-    $('guidePlay').textContent='▶ 重播';
-  });
-  guideAudio.addEventListener('error',()=>{
-    if(guideMode!=='playing')return;
-    guideMode='reading';guideSpeaking=false;updateMusicEnvelope();
-    $('guidePlay').textContent='▶ 重试声音';
-  });
   $('depthInfoClose').addEventListener('click',()=>{$('depthInfo').hidden=true;});
   $('depthCloud').addEventListener('click',()=>{
     const portal=$('depthPortal');portal.classList.toggle('clear-mist');
-    $('depthCloud').textContent=portal.classList.contains('clear-mist')?'云开见景　↗':'拨云观景　↗';
+    const clear=portal.classList.contains('clear-mist');
+    $('depthCloud').textContent=clear?'云开见景 · 复云':'拨云观景　↗';
+    $('depthCloud').setAttribute('aria-pressed',String(clear));
+  });
+  $('depthPortal').addEventListener('pointermove',(event)=>{
+    if(depthState!=='open'||reducedMotion.matches)return;
+    const portal=$('depthPortal');
+    const x=clamp((event.clientX/portal.clientWidth-.5)*2,-1,1);
+    const y=clamp((event.clientY/portal.clientHeight-.5)*2,-1,1);
+    portal.style.setProperty('--parallax-back-x',`${-x*8}px`);
+    portal.style.setProperty('--parallax-back-y',`${-y*5}px`);
+    portal.style.setProperty('--parallax-front-x',`${x*15}px`);
+    portal.style.setProperty('--parallax-front-y',`${y*9}px`);
   });
   $('depthDeer').addEventListener('click',()=>{
     const deer=$('depthDeer');deer.dataset.pose='alert';closeDeerNextAt=performance.now()+2000;
@@ -1025,27 +1109,50 @@ function bindEvents(){
   $('soundBtn').addEventListener('click',toggleSound);
   $('zoomInBtn').addEventListener('click',()=>{zoom=clamp(zoom+.15,.85,1.45);layout();showToast(`画卷 ${Math.round(zoom*100)}%`);});
   $('zoomOutBtn').addEventListener('click',()=>{zoom=clamp(zoom-.15,.85,1.45);layout();showToast(`画卷 ${Math.round(zoom*100)}%`);});
-  $('helpBtn').addEventListener('click',()=>{$('helpDialog').hidden=false;$('closeHelp').focus();});
-  function closeHelp(){ $('helpDialog').hidden=true;$('helpBtn').focus(); }
+  $('helpBtn').addEventListener('click',()=>{$('helpDialog').hidden=false;experience.inert=true;$('closeHelp').focus();});
+  function closeHelp(){ $('helpDialog').hidden=true;experience.inert=false;$('helpBtn').focus(); }
   $('closeHelp').addEventListener('click',closeHelp);
   $('resumeBtn').addEventListener('click',closeHelp);
   $('helpDialog').addEventListener('click',(event)=>{if(event.target===$('helpDialog'))closeHelp();});
   scene.addEventListener('pointerdown',(event)=>{
     if(event.target.closest('button'))return;
+    activePointers.set(event.pointerId,{x:event.clientX,y:event.clientY});
+    scene.setPointerCapture(event.pointerId);
+    if(activePointers.size===2){
+      const [a,b]=[...activePointers.values()];
+      pinchStart={distance:Math.hypot(a.x-b.x,a.y-b.y),zoom,worldX:offset+(a.x+b.x)/2,screenX:(a.x+b.x)/2};
+      dragging=false;velocity=0;scene.classList.remove('dragging');return;
+    }
     dragging=true;pointerX=event.clientX;pointerY=event.clientY;pointerOffset=offset;lastDragX=event.clientX;lastDragTime=performance.now();velocity=0;
-    scene.classList.add('dragging');scene.setPointerCapture(event.pointerId);
+    scene.classList.add('dragging');
   });
   scene.addEventListener('pointermove',(event)=>{
+    if(activePointers.has(event.pointerId))activePointers.set(event.pointerId,{x:event.clientX,y:event.clientY});
+    if(pinchStart&&activePointers.size>=2){
+      const [a,b]=[...activePointers.values()];
+      const nextZoom=clamp(pinchStart.zoom*Math.hypot(a.x-b.x,a.y-b.y)/Math.max(1,pinchStart.distance),.85,1.45);
+      if(Math.abs(nextZoom-zoom)>.007){
+        zoom=nextZoom;layout();
+        const centerX=(a.x+b.x)/2;
+        offset=clamp(pinchStart.worldX*zoom/pinchStart.zoom-centerX,0,maxOffset());
+        targetOffset=offset;render();
+      }
+      experience.classList.add('has-panned');suppressClickUntil=performance.now()+350;
+      return;
+    }
     if(!dragging)return;
     const delta=event.clientX-pointerX;
     offset=clamp(pointerOffset-delta,0,maxOffset());targetOffset=offset;
     const now=performance.now(),elapsed=now-lastDragTime;
     if(elapsed>8){velocity=clamp((lastDragX-event.clientX)/elapsed,-1.6,1.6);lastDragX=event.clientX;lastDragTime=now;}
-    if(Math.abs(delta)>8)suppressClickUntil=now+170;
+    if(Math.abs(delta)>8){suppressClickUntil=now+170;experience.classList.add('has-panned');}
     render();
   });
   scene.addEventListener('pointerup',(event)=>{
-    if(dragging&&Math.abs(event.clientX-pointerX)<7&&Math.abs(event.clientY-pointerY)<7){
+    const wasPinching=Boolean(pinchStart);
+    activePointers.delete(event.pointerId);
+    if(activePointers.size<2)pinchStart=null;
+    if(dragging&&!wasPinching&&Math.abs(event.clientX-pointerX)<7&&Math.abs(event.clientY-pointerY)<7){
       const y=(event.clientY-scene.getBoundingClientRect().top-(scene.clientHeight-height)/2)/height;
       const clickWorldX=offset+event.clientX-scene.getBoundingClientRect().left;
       const [left,right]=walkBounds();
@@ -1057,7 +1164,7 @@ function bindEvents(){
     }
     dragging=false;scene.classList.remove('dragging');
   });
-  scene.addEventListener('pointercancel',()=>{dragging=false;scene.classList.remove('dragging');});
+  scene.addEventListener('pointercancel',(event)=>{activePointers.delete(event.pointerId);pinchStart=null;dragging=false;scene.classList.remove('dragging');});
   scene.addEventListener('wheel',(event)=>{event.preventDefault();velocity=0;targetOffset=clamp(targetOffset+(Math.abs(event.deltaX)>Math.abs(event.deltaY)?event.deltaX:event.deltaY)*.7,0,maxOffset());},{passive:false});
   const progress=$('progressFill').parentElement;
   progress.addEventListener('pointerdown',(event)=>{targetOffset=clamp((event.clientX-progress.getBoundingClientRect().left)/progress.clientWidth*maxOffset(),0,maxOffset());velocity=0;});
@@ -1069,8 +1176,36 @@ function bindEvents(){
     button.addEventListener('pointercancel',()=>setMoving(0));
   }
   window.addEventListener('keydown',(event)=>{
+    if(!$('helpDialog').hidden){
+      if(event.key==='Escape'){event.preventDefault();closeHelp();}
+      if(event.key==='Tab'){
+        const buttons=[...$('helpDialog').querySelectorAll('button,a[href]')].filter((element)=>element.getClientRects().length);
+        const first=buttons[0],last=buttons.at(-1);
+        if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus();}
+        else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus();}
+      }
+      return;
+    }
+    if(!$('depthError').hidden){
+      if(event.key==='Escape'){event.preventDefault();$('depthErrorBack').click();}
+      if(event.key==='Tab'&&((event.shiftKey&&document.activeElement===$('depthRetry'))||(!event.shiftKey&&document.activeElement===$('depthErrorBack')))){
+        event.preventDefault();(event.shiftKey?$('depthErrorBack'):$('depthRetry')).focus();
+      }
+      return;
+    }
+    if(!$('sceneLoadError').hidden){
+      if(event.key==='Tab'){event.preventDefault();$('sceneRetry').focus();}
+      return;
+    }
     if(depthState!=='closed'){
       if(event.key==='Escape'){event.preventDefault();closeDepth();}
+      if(event.key==='Tab'&&depthState==='pending'){event.preventDefault();return;}
+      if(event.key==='Tab'&&!$('depthPortal').hidden){
+        const buttons=[...$('depthPortal').querySelectorAll('button')].filter((button)=>!button.disabled&&button.getClientRects().length&&getComputedStyle(button).visibility!=='hidden');
+        const first=buttons[0],last=buttons.at(-1);
+        if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus();}
+        else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus();}
+      }
       return;
     }
     if(!entered||!$('helpDialog').hidden)return;
@@ -1078,7 +1213,6 @@ function bindEvents(){
   });
   window.addEventListener('blur',()=>setMoving(0));
   document.addEventListener('visibilitychange',()=>{
-    if(document.hidden&&guideMode!=='idle')stopGuide();
     if(!music||!soundRequested)return;
     if(document.hidden)music.pause();
     else music.play().then(updateMusicEnvelope).catch(()=>{

@@ -1,0 +1,44 @@
+山庄入画 · 第三方素材与许可
+
+项目新增自有成果的保留权利说明不替代下列第三方许可。
+
+背景音乐：Charlie Huang 演奏及录制《平沙落雁》，CC BY 2.5。
+来源：https://commons.wikimedia.org/wiki/File:Pingsha_Luoyan.ogg
+许可：https://creativecommons.org/licenses/by/2.5/
+本站由 Ogg 转为 AAC，并做轻微低/高频过滤、低音量及首尾淡入淡出。
+
+可选字体：Google Fonts Noto Serif SC，SIL Open Font License 1.1。
+许可：https://github.com/google/fonts/blob/main/ofl/notoserifsc/OFL.txt
+字体由 Google 提供，加载失败时使用系统宋体/衬线字体；字体不包含于站点发布包。
+
+合成讲解生成工具来源：Qwen3-TTS-12Hz-1.7B-CustomVoice（Apache 2.0）；
+mlx-community 的8bit量化（Apache 2.0）；mlx-audio（MIT）。
+https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice
+https://huggingface.co/mlx-community/Qwen3-TTS-12Hz-1.7B-CustomVoice-8bit
+https://github.com/Blaizzy/mlx-audio
+https://www.apache.org/licenses/LICENSE-2.0
+模型权重与推理环境未随本站发布；模型/工具许可不自动规定生成输出许可。
+
+GitHub 图标：Octicons。完整 MIT 许可与版权声明如下。
+
+MIT License
+
+Copyright (c) 2026 GitHub Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

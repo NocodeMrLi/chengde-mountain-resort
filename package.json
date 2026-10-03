@@ -1,11 +1,13 @@
 {
   "name": "chengde-handscroll",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "node server.mjs",
-    "build": "node scripts/build.mjs",
-    "preview": "node server.mjs dist"
+    "build": "npm run check:scenic-links && npm run check:guides && node scripts/build.mjs",
+    "preview": "node server.mjs dist",
+    "check:scenic-links": "node scripts/check-scenic-links.mjs",
+    "check:guides": "node scripts/check-guides.mjs"
   }
 }
