@@ -571,7 +571,7 @@ function closeDepth(immediate=false){
   if(depthState==='pending')immediate=true;
   stopGuide();
   lastDepthCloseAt=performance.now();
-  depthSerial++;
+  const serial=++depthSerial;
   clearTimeout(depthTimer);
   const portal=$('depthPortal');
   $('depthLoading').hidden=true;
@@ -580,11 +580,12 @@ function closeDepth(immediate=false){
   depthIntroduction.hide();
   depthState='closing';
   const restore=()=>{
+    if(serial!==depthSerial||depthState!=='closing')return;
     portal.hidden=true;portal.classList.remove('closing');depthState='closed';depthCurrent=null;
     $('depthGuard').hidden=true;
     setBackgroundInert(false);
     travelScale=1;render();
-    if(!reducedMotion.matches){setTimeout(()=>experience.classList.remove('depth-travel'),850);}
+    if(!reducedMotion.matches){setTimeout(()=>{if(serial===depthSerial)experience.classList.remove('depth-travel');},850);}
     else experience.classList.remove('depth-travel');
     if(depthSavedView){
       placeWalker(depthSavedView.walkerSurfaceId,depthSavedView.walkerWorldX);
@@ -598,7 +599,7 @@ function closeDepth(immediate=false){
   travelScale=1;render();
   if(immediate||reducedMotion.matches){portal.classList.remove('open','clear-mist','ready');restore();}
   else{
-    requestAnimationFrame(()=>{if(depthState==='closing')portal.classList.remove('open','clear-mist','ready');});
+    requestAnimationFrame(()=>{if(serial===depthSerial&&depthState==='closing')portal.classList.remove('open','clear-mist','ready');});
     depthTimer=setTimeout(restore,760);
   }
 }
@@ -658,7 +659,7 @@ function openDepth(target,creature=deerHerd[0]){
     prepareGuide(key);
     if(key==='deer'){$('depthDeer').dataset.pose='alert';closeDeerNextAt=performance.now()+2400;}
     depthState='opening';
-    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    const reveal=()=>{
       if(serial!==depthSerial||depthState!=='opening')return;
       portal.classList.add('open');$('depthBack').focus({preventScroll:true});
       if(spot){
@@ -666,8 +667,12 @@ function openDepth(target,creature=deerHerd[0]){
         $('visitedCount').textContent=String(visited.size).padStart(2,'0');
         window.dispatchEvent(new CustomEvent('chengde-spot-visited',{detail:{name:spot.name}}));
       }
-    }));
-    depthTimer=setTimeout(()=>{if(depthState==='opening'){depthState='open';portal.classList.add('ready');}},reducedMotion.matches?30:1700);
+      const finish=()=>{if(serial===depthSerial&&depthState==='opening'){depthState='open';portal.classList.add('ready');}};
+      if(reducedMotion.matches)finish();
+      else depthTimer=setTimeout(finish,1700);
+    };
+    if(reducedMotion.matches)reveal();
+    else requestAnimationFrame(()=>requestAnimationFrame(reveal));
   };
   const preload=(src)=>new Promise((resolve,reject)=>{
     const image=new Image();
