@@ -1,8 +1,12 @@
 const { guide: voiceGuide } = await import(assetUrlForModule('guide.js'));
 const { installDepthRain } = await import(assetUrlForModule('weather.js'));
+const { bindIntroduction } = await import(assetUrlForModule('introduction.js'));
 await import(assetUrlForModule('feedback.js'));
 function assetUrlForModule(path){const u=new URL(path,import.meta.url);const h=window.__ASSET_HASHES__?.[path];if(h)u.searchParams.set('v',h);return u.href;}
 const $ = (id) => document.getElementById(id);
+const storyIntroduction=bindIntroduction({content:$('storyIntroduction'),close:$('closeStory'),open:$('storyIntroOpen'),panel:$('storyPanel')});
+const depthIntroduction=bindIntroduction({content:$('depthInfo'),close:$('depthInfoClose'),open:$('depthInfoOpen'),onChange:expanded=>{if(expanded)guideIntroduction.hide();}});
+const guideIntroduction=bindIntroduction({content:$('guideCaption'),close:$('guideTextClose'),open:$('guideTextOpen'),panel:$('guidePanel'),onChange:expanded=>{$('depthPortal').classList.toggle('guide-active',expanded);if(expanded)depthIntroduction.hide();}});
 const assetUrl = (path) => {
   const url = new URL(path, import.meta.url);
   const fingerprint = window.__ASSET_HASHES__?.[path];
@@ -573,7 +577,7 @@ function closeDepth(immediate=false){
   $('depthLoading').hidden=true;
   portal.classList.add('closing');
   $('depthGuard').hidden=true;
-  $('depthInfo').hidden=true;
+  depthIntroduction.hide();
   depthState='closing';
   const restore=()=>{
     portal.hidden=true;portal.classList.remove('closing');depthState='closed';depthCurrent=null;
@@ -645,7 +649,7 @@ function openDepth(target,creature=deerHerd[0]){
     $('depthInfoKicker').textContent=art[1];
     $('depthInfoTitle').textContent=key==='deer'?'梅花鹿':key==='chuifeng'?'磬锤峰':spot.name;
     $('depthInfoBody').textContent=key==='deer'?'平原林缘的梅花鹿会停步、觅食，也会警觉地抬头。观察它们时宜保持距离，不追逐惊扰。':`${spot.description}\n\n观赏重点：${spotViewpoints[key]}`;
-    $('depthInfo').hidden=true;
+    depthIntroduction.hide();
     $('depthCloud').textContent=key==='deer'?'静观鹿影　↗':'拨云观景　↗';
     $('depthCloud').setAttribute('aria-pressed','false');
     portal.classList.toggle('deer-close',key==='deer');
@@ -705,6 +709,7 @@ function showSpot(spot, move=true, enterDepth=true){
   $('storySubtitle').textContent=spot.subtitle;
   $('storyDescription').textContent=spot.description;
   $('storyPanel').classList.add('open');
+  storyIntroduction.show();
   for(const [id,button] of navButtons)button.classList.toggle('active',id===spot.id);
   for(const [id,button] of hotspotButtons)button.classList.toggle('active',id===spot.id);
   if(move){
@@ -824,20 +829,21 @@ function updateMusicEnvelope(){
 
 function stopGuide(){
   voiceGuide.stop();guideSpeaking=false;
-  $('guideCaption').hidden=true;$('guideCaption').textContent='';
+  guideIntroduction.hide();$('guideCaption').textContent='';
   $('guideReplay').hidden=true;$('guidePlay').textContent='▶ 听讲解';
   $('depthPortal').classList.remove('guide-active');updateMusicEnvelope();
 }
 function prepareGuide(key){
   stopGuide();guideKey=key;
+  $('guideCaption').textContent=guideScripts[key]?.lines.join('')||'';
   $('guideTitle').textContent=key==='deer'?'静观鹿影':`随景解说 · ${spots.find((spot)=>spot.id===key)?.name||''}`;
 }
 function showGuideText(){
-  $('depthInfo').hidden=true;$('depthPortal').classList.add('guide-active');
-  $('guideCaption').hidden=false;$('guideCaption').textContent=guideScripts[guideKey]?.lines.join('')||'';
+  depthIntroduction.hide();
+  $('guideCaption').textContent=guideScripts[guideKey]?.lines.join('')||'';guideIntroduction.show();
 }
-function toggleGuide(){if(!guideScripts[guideKey])return;showGuideText();voiceGuide.play(guideKey);}
-function startGuide(){if(!guideScripts[guideKey])return;showGuideText();voiceGuide.play(guideKey,{replay:true});}
+function toggleGuide(){if(!guideScripts[guideKey])return;if(voiceGuide.key!==guideKey||voiceGuide.mode==='idle')showGuideText();voiceGuide.play(guideKey);}
+function startGuide(){if(!guideScripts[guideKey])return;if(voiceGuide.key!==guideKey||voiceGuide.mode==='idle')showGuideText();voiceGuide.play(guideKey,{replay:true});}
 window.addEventListener('chengde-guide-state',({detail})=>{
   guideSpeaking=detail.speaking;updateMusicEnvelope();
   if(detail.key!==guideKey)return;
@@ -1075,10 +1081,9 @@ function bindEvents(){
     setBackgroundInert(true);
     $('sceneRetry').focus({preventScroll:true});
   }));
-  $('depthPeak').addEventListener('click',()=>{stopGuide();$('depthInfo').hidden=false;});
+  $('depthPeak').addEventListener('click',()=>{stopGuide();depthIntroduction.show(true);});
   $('guidePlay').addEventListener('click',toggleGuide);
   $('guideReplay').addEventListener('click',startGuide);
-  $('depthInfoClose').addEventListener('click',()=>{$('depthInfo').hidden=true;});
   $('depthCloud').addEventListener('click',()=>{
     const portal=$('depthPortal');portal.classList.toggle('clear-mist');
     const clear=portal.classList.contains('clear-mist');
@@ -1102,7 +1107,6 @@ function bindEvents(){
   });
   $('homeBtn').addEventListener('click',returnOverview);
   $('storyHomeBtn').addEventListener('click',returnOverview);
-  $('closeStory').addEventListener('click',closeStory);
   $('nextSpotBtn').addEventListener('click',()=>showSpot(spots[(spots.indexOf(activeSpot)+1)%spots.length]));
   $('nightBtn').addEventListener('click',()=>setNight(!night));
   $('rainBtn').addEventListener('click',()=>setRaining(!raining));
@@ -1211,7 +1215,7 @@ function bindEvents(){
       return;
     }
     if(depthState!=='closed'){
-      if(event.key==='Escape'){event.preventDefault();closeDepth();}
+      if(event.key==='Escape'){event.preventDefault();if(depthIntroduction.expanded)depthIntroduction.hide(true);else if(guideIntroduction.expanded)guideIntroduction.hide(true);else closeDepth();}
       if(event.key==='Tab'&&depthState==='pending'){event.preventDefault();return;}
       if(event.key==='Tab'&&!$('depthPortal').hidden){
         const buttons=[...$('depthPortal').querySelectorAll('button')].filter((button)=>!button.disabled&&button.getClientRects().length&&getComputedStyle(button).visibility!=='hidden');
@@ -1222,7 +1226,7 @@ function bindEvents(){
       return;
     }
     if(!entered||!$('helpDialog').hidden)return;
-    if(event.key==='Escape')closeStory();
+    if(event.key==='Escape'){if($('storyPanel').classList.contains('open')&&storyIntroduction.expanded)storyIntroduction.hide(true);else closeStory();}
   });
   window.addEventListener('blur',()=>setMoving(0));
   document.addEventListener('visibilitychange',()=>{

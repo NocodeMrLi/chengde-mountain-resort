@@ -79,12 +79,13 @@
         <nav class="zone-nav" aria-label="四景区游历"><button type="button" data-zone="lake">湖泊</button><button type="button" data-zone="palace">宫殿</button><button type="button" data-zone="plains">平原</button><button type="button" data-zone="mountain">山峦</button><button type="button" data-region-entry="ruyi">深入如意洲</button><button type="button" data-region-entry="mountain">深入山地</button><button type="button" data-region-entry="qianchixue">千尺雪水景</button><button type="button" data-region-entry="lihua">梨花伴月</button><button type="button" data-region-entry="qingshu">清舒山馆</button><button type="button" data-region-entry="zhenzi">榛子峪</button><button type="button" data-region-entry="qingfeng">青枫绿屿</button><button type="button" data-region-entry="songyun">松云峡</button><button type="button" data-region-entry="shandian">山巅眺望</button><button type="button" data-region-entry="gongyuan">宫苑居停</button><button type="button" data-region-entry="linyuan">林原驻马</button><button type="button" data-region-entry="quanshi">泉源水脉</button><button type="button" data-region-entry="huidiji">惠迪吉</button><button type="button" data-region-entry="jinshan">金山湖镜</button><button type="button" data-region-entry="beian">北岸林水</button><button type="button" data-region-entry="huzhou">湖洲游赏</button><button type="button" data-region-entry="shuanghu">双湖长桥</button><button type="button" data-region-entry="xishui">内湖泉石</button></nav>
 
         <aside id="storyPanel" class="story-panel" aria-live="polite">
-          <button id="closeStory" class="story-close" type="button" aria-label="关闭景点介绍">×</button>
+          <div id="storyIntroduction" class="intro-description"><div class="intro-card-header"><div>
           <div class="story-top"><span id="storyIndex">湖山其一</span><span class="story-line"></span><span>画中寻胜</span></div>
           <h2 id="storyTitle">烟雨楼</h2>
+          </div><button id="closeStory" class="intro-close" type="button" aria-label="关闭介绍">×</button></div><div class="intro-card-scroll">
           <p id="storySubtitle" class="story-subtitle">青莲岛上，楼阁临水。</p>
           <p id="storyDescription" class="story-description">凭栏望去，湖山相映。</p>
-          <div class="story-actions"><button id="storyHomeBtn" class="story-home" type="button">← 返回全景</button><button id="nextSpotBtn" class="story-next" type="button">继续游赏 <span>→</span></button></div>
+          </div></div><div class="story-actions"><button id="storyIntroOpen" class="intro-reopen" type="button" aria-controls="storyIntroduction" aria-expanded="true" hidden>查看介绍</button><button id="storyHomeBtn" class="story-home" type="button">← 返回全景</button><button id="nextSpotBtn" class="story-next" type="button">继续游赏 <span>→</span></button></div>
         </aside>
 
         <nav class="bottom-ui" aria-label="游园操作">
@@ -111,10 +112,10 @@
           <button id="depthPeak" class="depth-target" type="button" aria-label="细看景点"><span id="depthAction">细看</span></button>
           <button id="depthCloud" class="depth-cloud-button" type="button" aria-pressed="false">拨云观景　↗</button>
           <div id="guidePanel" class="guide-panel" aria-label="景点导览">
-            <div class="guide-actions"><span id="guideTitle">随景解说</span><button id="guidePlay" type="button">▶ 听讲解</button><button id="guideReplay" type="button" hidden>↺ 重播</button></div>
+            <div class="guide-actions intro-card-header"><span id="guideTitle">随景解说</span><button id="guidePlay" type="button">▶ 听讲解</button><button id="guideReplay" type="button" hidden>↺ 重播</button><button id="depthInfoOpen" class="intro-reopen" type="button" aria-controls="depthInfo" aria-expanded="false">查看介绍</button><button id="guideTextOpen" class="intro-reopen" type="button" aria-controls="guideCaption" aria-expanded="false">讲解文字</button><button id="guideTextClose" class="intro-close" type="button" aria-label="关闭介绍" hidden>×</button></div>
             <p id="guideCaption" aria-live="polite" hidden></p>
           </div>
-          <div id="depthInfo" class="depth-info" hidden><button id="depthInfoClose" type="button" aria-label="关闭近景介绍">×</button><small id="depthInfoKicker">湖山深处 · 画中寻胜</small><h2 id="depthInfoTitle">磬锤峰</h2><p id="depthInfoBody"></p></div>
+          <div id="depthInfo" class="depth-info" hidden><div class="intro-card-header"><div><small id="depthInfoKicker">湖山深处 · 画中寻胜</small><h2 id="depthInfoTitle">磬锤峰</h2></div><button id="depthInfoClose" class="intro-close" type="button" aria-label="关闭介绍">×</button></div><div class="intro-card-scroll"><p id="depthInfoBody"></p></div></div>
         </section>
         <div id="depthError" class="depth-error" role="alertdialog" aria-modal="true" aria-labelledby="depthErrorTitle" hidden><div><h2 id="depthErrorTitle">近景暂未展开</h2><p>画面加载遇到问题，可以重试或回到长卷。</p><button id="depthRetry" type="button">重试近景</button><button id="depthErrorBack" type="button">返回长卷</button></div></div>
         <div id="sceneLoadError" class="depth-error" role="alertdialog" aria-modal="true" aria-labelledby="sceneErrorTitle" hidden><div><h2 id="sceneErrorTitle">画卷加载失败</h2><p>请检查网络后重试。</p><button id="sceneRetry" type="button">重新加载画卷</button></div></div>
@@ -124,7 +125,7 @@
           <div class="region-weather" aria-hidden="true"></div><div class="region-rain" aria-hidden="true"></div>
           <header class="region-header"><button id="regionBack" type="button">← 返回长卷原位</button><div><small id="regionKicker">区域纵深 · 写意导览</small><h2 id="regionTitle">如意洲</h2></div><button id="regionAtlas" type="button">七十二景图鉴</button></header>
           <div class="region-tools"><span>拖动画面 · 双指缩放</span><button id="regionDay" type="button" aria-label="切换昼夜">昼夜</button><button id="regionRain" type="button" aria-label="切换晴雨">晴雨</button><button id="regionSound" type="button" aria-label="切换音乐">音乐</button><div class="region-zoom-tools" aria-label="区域画卷缩放"><button id="regionZoomOut" type="button" aria-label="缩小区域">−</button><output id="regionZoom" aria-label="区域缩放比例">100%</output><button id="regionZoomIn" type="button" aria-label="放大区域">＋</button><button id="regionReset" type="button">归位</button></div></div>
-          <aside class="region-detail"><small id="regionPosition">中轴 · 写意位置</small><h3 id="regionSpotTitle">无暑清凉</h3><p id="regionSpotBody"></p><p id="regionSpotStatus" class="region-status"></p><div class="region-detail-actions"><button id="regionGuide" type="button" disabled>▶ 听讲解</button><button id="regionNearBtn" type="button">走近此景 ↗</button></div></aside>
+          <aside id="regionDetail" class="region-detail"><div id="regionIntroduction" class="intro-description"><div class="intro-card-header"><div><small id="regionPosition">中轴 · 写意位置</small><h3 id="regionSpotTitle">无暑清凉</h3></div><button id="regionIntroClose" class="intro-close" type="button" aria-label="关闭介绍">×</button></div><div class="intro-card-scroll"><p id="regionSpotBody"></p><p id="regionSpotStatus" class="region-status"></p></div></div><div class="region-detail-actions"><button id="regionIntroOpen" class="intro-reopen" type="button" aria-controls="regionIntroduction" aria-expanded="true" hidden>查看介绍</button><button id="regionGuide" type="button" disabled>▶ 听讲解</button><button id="regionNearBtn" type="button">走近此景 ↗</button></div></aside>
           <nav id="regionList" class="region-list" aria-label="区域景点，可横向滑动"></nav>
           <section id="regionNear" class="region-near" role="dialog" aria-modal="true" aria-labelledby="regionNearTitle" data-state="loading" hidden>
             <div id="regionNearViewport" class="region-near-viewport" role="group" tabindex="0" aria-label="可探索的近景画作" aria-describedby="regionNearHint" aria-busy="true">
@@ -139,13 +140,13 @@
             </div>
             <header><button id="regionNearBack" type="button">← 返回区域原位</button><span id="regionNearWeather">景点近观 · 意境演绎</span></header>
             <div id="regionNearLoad" class="region-near-load"><p id="regionNearLoadText" role="status" aria-live="polite">正在展开画作…</p><button id="regionNearRetry" type="button" hidden>重新加载画作</button></div>
-            <aside id="regionNearFocusCard" class="region-near-focus-card" aria-live="polite" hidden><button id="regionNearFocusClose" type="button" aria-label="收起焦点说明">×</button><small>画中细看</small><h4 id="regionNearFocusTitle"></h4><p id="regionNearFocusText"></p></aside>
+            <aside id="regionNearFocusCard" class="region-near-focus-card" aria-live="polite" hidden><button id="regionNearFocusClose" type="button" aria-label="关闭介绍">×</button><small>画中细看</small><h4 id="regionNearFocusTitle"></h4><p id="regionNearFocusText"></p></aside>
             <div class="region-near-copy">
               <small>史料景名 · 意境演绎</small><h3 id="regionNearTitle"></h3>
               <div id="regionNearFocusList" class="region-near-focus-list" aria-label="选择画中焦点"></div>
               <div class="region-near-guide-actions"><button id="regionNearGuide" class="region-near-read" type="button" disabled>▶ 听讲解</button>
-              <button id="regionNearRead" class="region-near-read" type="button" aria-expanded="false" aria-controls="regionNearReading">读此景 ＋</button></div>
-              <div id="regionNearReading" class="region-near-reading" hidden><p id="regionNearText"></p><p id="regionNearInterpretation" class="region-near-interpretation"></p></div>
+              <button id="regionNearRead" class="region-near-read intro-reopen" type="button" aria-expanded="false" aria-controls="regionNearReading">查看介绍</button></div>
+              <div id="regionNearReading" class="region-near-reading" hidden><div class="intro-card-header"><span>景点介绍</span><button id="regionNearReadingClose" class="intro-close" type="button" aria-label="关闭介绍">×</button></div><div class="intro-card-scroll"><p id="regionNearText"></p><p id="regionNearInterpretation" class="region-near-interpretation"></p></div></div>
             </div>
             <div class="region-near-camera-ui"><p id="regionNearHint">拖动画作 · 双指或滚轮缩放<br /><span>键盘方向键移景，＋／－缩放</span></p><div class="region-near-camera-tools" aria-label="近景镜头控制"><button id="regionNearZoomOut" type="button" aria-label="缩小近景">−</button><output id="regionNearZoom" aria-label="近景缩放比例">100%</output><button id="regionNearZoomIn" type="button" aria-label="放大近景">＋</button><button id="regionNearReset" type="button">归位</button></div></div>
           </section>

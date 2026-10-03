@@ -1,5 +1,5 @@
 const moduleUrl=(path)=>{const u=new URL(path,import.meta.url);const h=window.__ASSET_HASHES__?.[path];if(h)u.searchParams.set('v',h);return u.href;};
-const [{installRegionRain},{guide:voiceGuide},{lightRegion,lightNear}]=await Promise.all([import(moduleUrl('weather.js')),import(moduleUrl('guide.js')),import(moduleUrl('lighting.js'))]);
+const [{installRegionRain},{guide:voiceGuide},{lightRegion,lightNear},{bindIntroduction}]=await Promise.all([import(moduleUrl('weather.js')),import(moduleUrl('guide.js')),import(moduleUrl('lighting.js')),import(moduleUrl('introduction.js'))]);
 const $ = (id) => document.getElementById(id);
 const experience = $('experience');
 const portal = $('regionPortal');
@@ -10,8 +10,11 @@ const near = $('regionNear');
 const nearViewport = $('regionNearViewport');
 const nearCanvas = $('regionNearCanvas');
 const nearArt = $('regionNearArt');
+const regionIntroduction=bindIntroduction({content:$('regionIntroduction'),close:$('regionIntroClose'),open:$('regionIntroOpen'),panel:$('regionDetail')});
+const nearIntroduction=bindIntroduction({content:$('regionNearReading'),close:$('regionNearReadingClose'),open:$('regionNearRead'),onChange:expanded=>{if(expanded)clearNearFocus();}});
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const atlasDialog = $('atlasDialog');
+let atlasIntroduction=null;
 const mainSelectors = ['#scene','.topbar','.zone-nav','.bottom-ui','.story-panel','.progress-track','.keyboard-hint'];
 const regions = {
   jinshan:{"title":"金山湖镜","kicker":"岛上殿堂与莲池 · 历史组景","art":"jinshan-region.webp","alt":"金山岛上下两层殿堂与北侧香远益清莲池庭园的写意长卷","description":"把金山岛下部镜水云岑、较高处天宇咸畅与金山北侧香远益清联系阅读。三个题景各有独立画面，非同一建筑三名；岛岸、院落和具体位置属于意境组合。","names":["镜水云岑","天宇咸畅","香远益清"],"positions":{"镜水云岑":[28,56],"天宇咸畅":[37,28],"香远益清":[82,56]}},
@@ -133,6 +136,7 @@ function selectItem(name,locate=false){
   $('regionPosition').textContent=`${item.locationHint} · 写意相对位置`;
   $('regionSpotBody').textContent=item.description;
   $('regionSpotStatus').textContent=`画面：${item.artStatus} · 实地现状：${item.presentCondition}`;
+  regionIntroduction.show();
   $('regionGuide').disabled=portal.dataset.state!=='ready';
   $('regionNearBtn').disabled=portal.dataset.state!=='ready'||!item.regionNearArt;
   $('regionNearBtn').textContent=item.regionNearArt?'走近此景 ↗':'近景筹备中';
@@ -354,7 +358,7 @@ function openNear(){
   clearRegionGestures();nearView=getNearView(currentItem);
   $('toast').classList.remove('show');
   $('regionNearTitle').textContent=currentItem.name;$('regionNearText').textContent=currentItem.description;$('regionNearInterpretation').textContent=nearView.interpretation;
-  $('regionNearRead').setAttribute('aria-expanded','false');$('regionNearRead').textContent='读此景 ＋';$('regionNearReading').hidden=true;
+  nearIntroduction.hide();
   near.hidden=false;setNearRegionInert(true);renderNearDetails();updateNearWeather();loadNearArt();
   $('regionNearBack').focus({preventScroll:true});
 }
@@ -423,6 +427,7 @@ function showAtlasDetail(item){
   voiceGuide.stop();
   atlasItem=item;
   const pane=$('atlasDetail');pane.replaceChildren();
+  atlasIntroduction=null;
   if(!item){pane.textContent='没有匹配的景名。试试其他关键词或筛选条件。';return;}
   const small=document.createElement('small');small.textContent=`${item.dynasty}题名 · ${item.id.toUpperCase()}`;
   const title=document.createElement('h3');title.textContent=item.name;
@@ -434,12 +439,22 @@ function showAtlasDetail(item){
   if(item.aliases.length){const alias=document.createElement('p');alias.textContent=`相关称呼：${item.aliases.map((name)=>{const note=item.aliasNotes?.find((entry)=>entry.name===name);return note?`${name}（${note.relation}）`:name;}).join('、')}`;pane.append(alias);}
   const regionKey=item.regionKey||(item.region==='如意洲'?'ruyi':item.regionNearArt&&item.region==='山地'?'mountain':null);
   if(regionKey&&regions[regionKey]){
-    const button=document.createElement('button');button.type='button';button.textContent=item.regionNearArt?'进入区域，走近此景':'查看如意洲写意方位';
+    const button=document.createElement('button');button.type='button';button.dataset.atlasEnter='';button.textContent=item.regionNearArt?'进入区域，走近此景':'查看如意洲写意方位';
     button.addEventListener('click',()=>{const key=regionKey;const source=portal.contains(atlasReturnFocus)?returnFocus:atlasReturnFocus;closeAtlas(false);openRegion(key,source);selectItem(item.name);requestAnimationFrame(()=>locateItem(item.name));});pane.append(button);
   }else if(item.overviewSpotId){
-    const button=document.createElement('button');button.type='button';button.textContent='定位长卷景点';
+    const button=document.createElement('button');button.type='button';button.dataset.atlasEnter='';button.textContent='定位长卷景点';
     button.addEventListener('click',()=>{closeAtlas(false);if(!portal.hidden)closeRegion(false);document.querySelector(`[data-spot="${item.overviewSpotId}"]`)?.click();});pane.append(button);
   }
+  const description=document.createElement('div');description.id='atlasIntroduction';description.className='intro-description';
+  const head=document.createElement('div');head.className='intro-card-header';
+  const heading=document.createElement('div');heading.append(small,title);
+  const close=document.createElement('button');close.id='atlasIntroClose';close.type='button';close.className='intro-close';close.textContent='×';close.setAttribute('aria-label','关闭介绍');head.append(heading,close);
+  const scroll=document.createElement('div');scroll.className='intro-card-scroll';
+  const actions=document.createElement('div');actions.className='atlas-detail-actions';
+  const open=document.createElement('button');open.id='atlasIntroOpen';open.type='button';open.className='intro-reopen';open.textContent='查看介绍';open.setAttribute('aria-controls',description.id);actions.append(open);
+  for(const child of [...pane.children]){if(child.tagName==='BUTTON')actions.append(child);else scroll.append(child);}
+  description.append(head,scroll);pane.replaceChildren(description,actions);
+  atlasIntroduction=bindIntroduction({content:description,close,open,panel:pane});
 }
 function renderAtlas(){
   const items=filtered();$('atlasCount').textContent=`找到 ${items.length} / 72 景 · 已游览 ${visited.size} 景`;
@@ -478,9 +493,14 @@ function trap(event,root){
   else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus();}
 }
 window.addEventListener('keydown',(event)=>{
-  if(!atlasDialog.hidden){if(event.key==='Escape'){event.preventDefault();event.stopImmediatePropagation();closeAtlas();}else if(event.key==='Tab'){event.stopImmediatePropagation();trap(event,atlasDialog);}return;}
+  if(!atlasDialog.hidden){if(event.key==='Escape'){event.preventDefault();event.stopImmediatePropagation();if(atlasIntroduction?.expanded)atlasIntroduction.hide(true);else closeAtlas();}else if(event.key==='Tab'){event.stopImmediatePropagation();trap(event,atlasDialog);}return;}
   if(portal.hidden)return;
-  if(event.key==='Escape'){event.preventDefault();event.stopImmediatePropagation();if(!$('regionNear').hidden)closeNear();else closeRegion();}
+  if(event.key==='Escape'){
+    event.preventDefault();event.stopImmediatePropagation();
+    if(!near.hidden){if(!$('regionNearFocusCard').hidden)clearNearFocus(true);else if(nearIntroduction.expanded)nearIntroduction.hide(true);else closeNear();}
+    else if(regionIntroduction.expanded&&portal.dataset.state==='ready')regionIntroduction.hide(true);
+    else closeRegion();
+  }
   else if(event.key==='Tab'){event.stopImmediatePropagation();trap(event,$('regionNear').hidden?portal:$('regionNear'));}
   else if(near.hidden&&portal.dataset.state==='ready'&&frame.contains(document.activeElement)){
     const directions={ArrowLeft:[70,0],ArrowRight:[-70,0],ArrowUp:[0,70],ArrowDown:[0,-70]};
@@ -569,10 +589,6 @@ $('regionNearFocusClose').addEventListener('click',()=>clearNearFocus(true));
 $('regionNearZoomOut').addEventListener('click',()=>zoomNearCamera(nearCamera.zoom/1.2,undefined,undefined,true));
 $('regionNearZoomIn').addEventListener('click',()=>zoomNearCamera(nearCamera.zoom*1.2,undefined,undefined,true));
 $('regionNearReset').addEventListener('click',()=>{clearNearFocus();moveNearCamera(nearView.focus[0],nearView.focus[1],1.08);});
-$('regionNearRead').addEventListener('click',()=>{
-  const expanded=$('regionNearRead').getAttribute('aria-expanded')==='true';
-  $('regionNearRead').setAttribute('aria-expanded',String(!expanded));$('regionNearRead').textContent=expanded?'读此景 ＋':'收起文字 −';$('regionNearReading').hidden=expanded;
-});
 new MutationObserver(()=>{if(!near.hidden)updateNearWeather();}).observe(experience,{attributes:true,attributeFilter:['class']});
 $('regionAtlas').addEventListener('click',openAtlas);
 $('atlasBtn').addEventListener('click',openAtlas);
