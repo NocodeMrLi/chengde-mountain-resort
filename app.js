@@ -1109,8 +1109,21 @@ function bindEvents(){
   $('soundBtn').addEventListener('click',toggleSound);
   $('zoomInBtn').addEventListener('click',()=>{zoom=clamp(zoom+.15,.85,1.45);layout();showToast(`画卷 ${Math.round(zoom*100)}%`);});
   $('zoomOutBtn').addEventListener('click',()=>{zoom=clamp(zoom-.15,.85,1.45);layout();showToast(`画卷 ${Math.round(zoom*100)}%`);});
-  $('helpBtn').addEventListener('click',()=>{$('helpDialog').hidden=false;experience.inert=true;$('closeHelp').focus();});
-  function closeHelp(){ $('helpDialog').hidden=true;experience.inert=false;$('helpBtn').focus(); }
+  let helpReturnFocus=null,helpBackground=new Map();
+  function openHelp(source){
+    if(!$('helpDialog').hidden)return;
+    helpReturnFocus=source;
+    helpBackground=new Map([...$('app').children].filter(node=>node!==$('helpDialog')).map(node=>[node,node.inert]));
+    for(const node of helpBackground.keys())node.inert=true;
+    $('helpDialog').hidden=false;$('introRights').setAttribute('aria-expanded','true');$('closeHelp').focus();
+  }
+  $('helpBtn').addEventListener('click',()=>openHelp($('helpBtn')));
+  $('introRights').addEventListener('click',()=>openHelp($('introRights')));
+  function closeHelp(){
+    $('helpDialog').hidden=true;$('introRights').setAttribute('aria-expanded','false');
+    for(const [node,inert]of helpBackground)node.inert=inert;helpBackground.clear();
+    if(helpReturnFocus?.isConnected)helpReturnFocus.focus({preventScroll:true});
+  }
   $('closeHelp').addEventListener('click',closeHelp);
   $('resumeBtn').addEventListener('click',closeHelp);
   $('helpDialog').addEventListener('click',(event)=>{if(event.target===$('helpDialog'))closeHelp();});

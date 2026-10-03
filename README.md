@@ -2,7 +2,11 @@
 
 以承德避暑山庄为灵感创作的国风互动长卷。展开画卷，沿湖山游览，在烟雨楼等景点切换近景，并体验昼夜与晴雨变化。支持桌面和手机浏览器。
 
-源码按暂私有方案维护，本次新增成果未推到公开仓库；远端仓库将在新站验证后转为私有。**新版本尚未部署**；迁移前可访问[旧版站点](https://nocodemrli.github.io/chengde-mountain-resort/)，新地址在完成部署验证后更新。当前版本与更新内容见 [CHANGELOG.md](CHANGELOG.md)。
+**[在线游览](https://nocodemrli.github.io/chengde-mountain-resort/)** · [查看线上构建](https://nocodemrli.github.io/chengde-mountain-resort/deployment.json)
+
+仓库公开，供作品展示与查阅；本版本自有新增成果保留权利，不授予另行复用、修改、再分发或商业使用许可，其他用途请先取得授权。此前 MIT 历史版本及第三方素材继续适用各自许可，见 [LICENSE](LICENSE)。公开仓库和网站资源可被查看、下载，权利声明不构成下载限制。当前版本与更新内容见 [CHANGELOG.md](CHANGELOG.md)。
+
+保留权利只适用于项目权利人享有权利、且未受历史或第三方许可约束的新增成果。GitHub 平台依其条款提供的查看、fork 权利及法定允许的使用情形不受本说明剥夺；AI 辅助制作不表示每一项生成素材均已获得法律确认的原创版权。首页“版权与使用说明”提供相同边界及联系入口。
 
 ![山庄入画的入园画面](docs/images/entrance.jpg)
 
@@ -37,7 +41,13 @@
 
 需要 **Node.js 20 或更新版本**；项目没有第三方运行依赖。构建校验音频时需要安装 `ffmpeg`（包含 `ffprobe`）；GitHub Actions 会检查并安装它。本地播放已有音频不需要语音模型或生成环境。
 
-源码工作区仅对获授权维护者开放。在已有工作区运行 `npm run dev`。
+以下命令用于本地展示、查阅与验证本作品；不扩大 [LICENSE](LICENSE) 中新增成果的使用范围。
+
+```sh
+git clone https://github.com/NocodeMrLi/chengde-mountain-resort.git
+cd chengde-mountain-resort
+npm run dev
+```
 
 打开 <http://127.0.0.1:4173/>。端口被占用时，可用 `PORT=4174 npm run dev`。
 
@@ -50,9 +60,9 @@ npm run preview
 
 ## 发布与更新
 
-私有仓库的 [Validate handscroll](.github/workflows/validate.yml) 工作流只进行校验与静态构建，不部署 GitHub Pages。公开站仅上传已审查的 `dist/`；部署目标需保持固定公开 URL，每次更新后核对 `/deployment.json` 与页面 `data-build`。托管迁移尚未完成，当前没有启用自动公开部署。
+推送到 `main` 后，[Publish handscroll](.github/workflows/pages.yml) 工作流会校验、构建并发布 `dist/` 到 GitHub Pages。Pages 的 Source 保持 **GitHub Actions**，部署后使用同一个公开网址，无需 Vercel、额外托管账户或自定义域名。每次更新后核对 `/deployment.json` 与页面 `data-build`；部署和缓存更新可能需要时间，可检查 [Actions](https://github.com/NocodeMrLi/chengde-mountain-resort/actions)。GitHub Pages 的国内访问速度及稳定性受网络影响，不能保证所有地区均稳定可达。
 
-构建脚本会给 JavaScript、CSS 文件名及图像、音频 URL 加内容指纹，以便新版本加载对应资源。发布包不包含源码映射、开发资料、原稿、母带、模型、推理环境或凭证。公开网页仍会向浏览器交付运行所需 HTML/CSS/JS、绘景和音频，私有源码仓库不保证访问者无法下载这些运行资源；授权范围另按许可说明。
+构建脚本会给 JavaScript、CSS 文件名及图像、音频 URL 加内容指纹，以便新版本加载对应资源。网站发布包不包含源码映射、开发资料、原稿、母带、模型、推理环境或凭证。公开仓库可下载源码，网页会向浏览器交付运行所需 HTML/CSS/JS、绘景和音频；可下载不等于允许超出适用许可范围使用。内部 QA、临时样音、模型与母带不上传到仓库或站点。
 
 ## 项目文件
 
@@ -70,14 +80,14 @@ npm run preview
 
 ## 许可与素材署名
 
-- **本版本自有新增成果**：[保留权利说明](LICENSE)。暂不开放新增代码、文案、绘景和合成讲解的另行使用许可；源码私有，网页提供在线游览。
+- **本版本自有新增成果**：[保留权利说明](LICENSE)。仓库公开供展示查阅，网页提供在线游览；新增代码、文案、绘景和合成讲解的另行复用、修改、再分发及商业使用须先取得授权。
 - **历史 MIT 版本**：此前已经按 MIT 公开的代码与其合法副本继续适用[原许可](licenses/LEGACY-MIT.md)，保留历史授权；此决定不能收回已授予的旧版本权利。
 - **美术**：`public/art/` 为本项目独立构思、借助 AI 图像工具制作和整理的素材；不属于 MIT 许可。单独复用或再发布请先联系维护者。README 展示图是该作品的截图。
 - **音乐**：[《平沙落雁》](https://commons.wikimedia.org/wiki/File:Pingsha_Luoyan.ogg)，演奏及录制：**Charlie Huang**，依据 [CC BY 2.5](https://creativecommons.org/licenses/by/2.5/) 使用。本站版本转为 AAC/M4A，并做轻微频段过滤；复用时须保留作者、来源、许可和改动说明。详见 [ASSETS.md](ASSETS.md)。
 - **合成讲解**：使用 Qwen3-TTS 的 Dylan 音色和 mlx-audio 离线生成，统一响度后编码为 AAC；模型、工具及输出的许可边界见 [讲解来源说明](sources/NARRATION-LICENSE.md)。发布包不包含模型权重、推理环境或母带。
 - **GitHub 图标**：来自 Octicons，依据 [MIT 许可](sources/OCTICONS-LICENSE.md) 使用。
 
-反馈使用网页的建议反馈邮箱入口。访客可以发送邮件，私有仓库的 Issues 不作为游客反馈入口；没有创建公开反馈仓库。
+反馈使用网页的建议反馈邮箱入口，参与申请通过邮件介绍方向；没有创建单独的公开反馈仓库。仓库保持公开时，[本仓库 Issues](https://github.com/NocodeMrLi/chengde-mountain-resort/issues) 也可供登录 GitHub 的访客按其规则提交问题。
 
 想参与项目创作与完善的访客，可使用首页“建议反馈”或面板“申请参与项目”，通过邮件介绍方向；网站不会自动发邮件或自动授予协作者权限。
 

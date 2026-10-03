@@ -6,7 +6,7 @@ const digest = (bytes) => createHash('sha256').update(bytes).digest('hex').slice
 const publicRoot = 'public';
 // 景绘原图与旧版本留在 public 归档；发布包使用压缩后的 WebP。
 const excludedBuildAssets = new Set([
-  // Generation provenance belongs to the private source checkout, not the runtime.
+  // Generation provenance stays in the source repository, outside the runtime.
   'audio/guide-manifest.json',
   'art/deer-doe-alert.png',
   'art/deer-doe-graze.png',
