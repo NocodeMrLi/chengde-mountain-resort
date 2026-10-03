@@ -8,16 +8,37 @@
 
 保留权利只适用于项目权利人享有权利、且未受历史或第三方许可约束的新增成果。GitHub 平台依其条款提供的查看、fork 权利及法定允许的使用情形不受本说明剥夺；AI 辅助制作不表示每一项生成素材均已获得法律确认的原创版权。首页“版权与使用说明”提供相同边界及联系入口。
 
-![山庄入画的入园画面](docs/images/entrance.jpg)
+## 画中精选
 
-<details>
-<summary>展开查看画卷与烟雨楼近景</summary>
+湖山成卷，晴夜各有意境。点击任一图片，查看大图。
 
-![湖区长卷：烟雨楼与画舫](docs/images/lake-scroll.jpg)
+<p align="center">
+  <a href="public/art/yan-yu-lake.webp?raw=true"><img src="docs/images/gallery-cover.jpg" alt="湖山长卷：烟雨楼临水而立，远山、岛岸和画舫相映" width="1200" /></a><br />
+  <sub>一卷湖山</sub>
+</p>
 
-![烟雨楼建筑近景](docs/images/yanyu-closeup.jpg)
-
-</details>
+<table width="100%">
+  <tr>
+    <td width="50%" align="center">
+      <a href="public/art/shuanghu-region.webp?raw=true"><img src="docs/images/gallery-lake.jpg" alt="湖景：石堤横跨湖面，岸亭、柳树与静态画舫映入水中" width="100%" /></a><br />
+      <sub>湖上长堤</sub>
+    </td>
+    <td width="50%" align="center">
+      <a href="public/art/mountain-region-square.webp?raw=true"><img src="docs/images/gallery-mountain.jpg" alt="山景：四面云山亭立于岩岭，层山与云海向远处展开" width="100%" /></a><br />
+      <sub>四面云山</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <a href="docs/images/gallery-night-large.jpg?raw=true"><img src="docs/images/gallery-night.jpg" alt="夜景：宫苑楼阁在真实夜色中亮起暖色窗光，林木与建筑层次仍可辨认" width="100%" /></a><br />
+      <sub>宫苑夜色</sub>
+    </td>
+    <td width="50%" align="center">
+      <a href="public/art/near-danbo.webp?raw=true"><img src="docs/images/gallery-detail.jpg" alt="建筑近观：澹泊敬诚殿的彩绘梁枋、廊柱与殿前台阶" width="100%" /></a><br />
+      <sub>澹泊敬诚近观</sub>
+    </td>
+  </tr>
+</table>
 
 ## 如何游览
 
